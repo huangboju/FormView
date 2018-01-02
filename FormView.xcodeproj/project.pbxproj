@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */; };
+		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
+		BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A61FD540FA005D4D3A /* FieldCell.m */; };
+		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
+		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
+		BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */; };
+		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
+		BECCE9F51FD4F2D400CBCC1F /* GroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */; };
+		BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */; };
+		BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */; };
+		BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */; };
+		BECCEA001FD4F2D400CBCC1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9FF1FD4F2D400CBCC1F /* main.m */; };
+		BECCEA0A1FD4F2D400CBCC1F /* FormViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA091FD4F2D400CBCC1F /* FormViewTests.m */; };
+		BECCEA151FD4F2D400CBCC1F /* FormViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA141FD4F2D400CBCC1F /* FormViewUITests.m */; };
+		BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA231FD4F4C900CBCC1F /* Row.m */; };
+		BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA291FD4FDF000CBCC1F /* SignInController.m */; };
+		BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */; };
+		BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA2F1FD4FED300CBCC1F /* AccountFieldCell.m */; };
+		BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA351FD513DB00CBCC1F /* MainViewController.m */; };
+		BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA391FD514DA00CBCC1F /* MainCell.m */; };
+		BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA3C1FD51FC600CBCC1F /* AccountTitleCell.m */; };
+		BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA401FD5285700CBCC1F /* ButtonCell.m */; };
+		BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA441FD52ECC00CBCC1F /* UIView+Extension.m */; };
+		BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA481FD532EA00CBCC1F /* UIColor+Hex.m */; };
+		BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */; };
+		BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */; };
+		BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */; };
+		BEDF26811FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */; };
+		BEDF26821FF5EFE100BFC97B /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF267F1FF5EFE100BFC97B /* EmptyView.m */; };
+		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BECCEA061FD4F2D400CBCC1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BECCE9E51FD4F2D400CBCC1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BECCE9EC1FD4F2D400CBCC1F;
+			remoteInfo = FormView;
+		};
+		BECCEA111FD4F2D400CBCC1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BECCE9E51FD4F2D400CBCC1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BECCE9EC1FD4F2D400CBCC1F;
+			remoteInfo = FormView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18C0FCAE1525CD5B7BE7B060 /* Pods-FormView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.debug.xcconfig"; sourceTree = "<group>"; };
+		1E506532FC8F130A03F1887D /* libPods-FormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
+		BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnptyViewController.h; sourceTree = "<group>"; };
+		BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnptyViewController.m; sourceTree = "<group>"; };
+		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
+		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
+		BE7458A51FD540FA005D4D3A /* FieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldCell.h; sourceTree = "<group>"; };
+		BE7458A61FD540FA005D4D3A /* FieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieldCell.m; sourceTree = "<group>"; };
+		BE7458A81FD544C4005D4D3A /* LicenseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseCell.h; sourceTree = "<group>"; };
+		BE7458A91FD544C4005D4D3A /* LicenseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicenseCell.m; sourceTree = "<group>"; };
+		BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterController.h; sourceTree = "<group>"; };
+		BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
+		BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterCell.h; sourceTree = "<group>"; };
+		BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterCell.m; sourceTree = "<group>"; };
+		BECCE9ED1FD4F2D400CBCC1F /* FormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BECCE9F31FD4F2D400CBCC1F /* GroupTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupTableController.h; sourceTree = "<group>"; };
+		BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupTableController.m; sourceTree = "<group>"; };
+		BECCE9F71FD4F2D400CBCC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECCE9FC1FD4F2D400CBCC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BECCE9FE1FD4F2D400CBCC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECCE9FF1FD4F2D400CBCC1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BECCEA051FD4F2D400CBCC1F /* FormViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECCEA091FD4F2D400CBCC1F /* FormViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormViewTests.m; sourceTree = "<group>"; };
+		BECCEA0B1FD4F2D400CBCC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECCEA101FD4F2D400CBCC1F /* FormViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECCEA141FD4F2D400CBCC1F /* FormViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormViewUITests.m; sourceTree = "<group>"; };
+		BECCEA161FD4F2D400CBCC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECCEA221FD4F4C900CBCC1F /* Row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
+		BECCEA231FD4F4C900CBCC1F /* Row.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
+		BECCEA281FD4FDF000CBCC1F /* SignInController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInController.h; sourceTree = "<group>"; };
+		BECCEA291FD4FDF000CBCC1F /* SignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInController.m; sourceTree = "<group>"; };
+		BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpController.h; sourceTree = "<group>"; };
+		BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpController.m; sourceTree = "<group>"; };
+		BECCEA2E1FD4FED300CBCC1F /* AccountFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountFieldCell.h; sourceTree = "<group>"; };
+		BECCEA2F1FD4FED300CBCC1F /* AccountFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountFieldCell.m; sourceTree = "<group>"; };
+		BECCEA341FD513DB00CBCC1F /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BECCEA351FD513DB00CBCC1F /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BECCEA381FD514DA00CBCC1F /* MainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
+		BECCEA391FD514DA00CBCC1F /* MainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
+		BECCEA3B1FD51FC600CBCC1F /* AccountTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountTitleCell.h; sourceTree = "<group>"; };
+		BECCEA3C1FD51FC600CBCC1F /* AccountTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountTitleCell.m; sourceTree = "<group>"; };
+		BECCEA3F1FD5285700CBCC1F /* ButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		BECCEA401FD5285700CBCC1F /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
+		BECCEA431FD52ECC00CBCC1F /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		BECCEA441FD52ECC00CBCC1F /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		BECCEA481FD532EA00CBCC1F /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		BECCEA491FD532EA00CBCC1F /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		BECCEA4B1FD5371E00CBCC1F /* PasswordLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordLoginCell.h; sourceTree = "<group>"; };
+		BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordLoginCell.m; sourceTree = "<group>"; };
+		BECCEA4E1FD538EC00CBCC1F /* PasswordSignInController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordSignInController.h; sourceTree = "<group>"; };
+		BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSignInController.m; sourceTree = "<group>"; };
+		BECCEA511FD53F3500CBCC1F /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
+		BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
+		BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		BEDF267E1FF5EFE100BFC97B /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
+		BEDF267F1FF5EFE100BFC97B /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
+		BEDF26801FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BECCE9EA1FD4F2D400CBCC1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA021FD4F2D400CBCC1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA0D1FD4F2D400CBCC1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D81689CF0BAD864BA5E57DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E506532FC8F130A03F1887D /* libPods-FormView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		680CD483D932F5C10B7025D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18C0FCAE1525CD5B7BE7B060 /* Pods-FormView.debug.xcconfig */,
+				3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BECCE9E41FD4F2D400CBCC1F = {
+			isa = PBXGroup;
+			children = (
+				BECCE9EF1FD4F2D400CBCC1F /* FormView */,
+				BECCEA081FD4F2D400CBCC1F /* FormViewTests */,
+				BECCEA131FD4F2D400CBCC1F /* FormViewUITests */,
+				BECCE9EE1FD4F2D400CBCC1F /* Products */,
+				680CD483D932F5C10B7025D7 /* Pods */,
+				0D81689CF0BAD864BA5E57DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BECCE9EE1FD4F2D400CBCC1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BECCE9ED1FD4F2D400CBCC1F /* FormView.app */,
+				BECCEA051FD4F2D400CBCC1F /* FormViewTests.xctest */,
+				BECCEA101FD4F2D400CBCC1F /* FormViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF267C1FF5EFE100BFC97B /* EmptyView */,
+				BECCEA471FD532EA00CBCC1F /* UIColor */,
+				BECCEA3E1FD5281A00CBCC1F /* Cells */,
+				BECCEA371FD514AE00CBCC1F /* Main */,
+				BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */,
+				BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */,
+				BECCE9F31FD4F2D400CBCC1F /* GroupTableController.h */,
+				BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */,
+				BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */,
+				BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */,
+				BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */,
+				BECCE9FE1FD4F2D400CBCC1F /* Info.plist */,
+				BECCE9FF1FD4F2D400CBCC1F /* main.m */,
+				BECCEA221FD4F4C900CBCC1F /* Row.h */,
+				BECCEA231FD4F4C900CBCC1F /* Row.m */,
+				BECCEA281FD4FDF000CBCC1F /* SignInController.h */,
+				BECCEA291FD4FDF000CBCC1F /* SignInController.m */,
+				BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */,
+				BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */,
+				BECCEA431FD52ECC00CBCC1F /* UIView+Extension.h */,
+				BECCEA441FD52ECC00CBCC1F /* UIView+Extension.m */,
+				BECCEA4E1FD538EC00CBCC1F /* PasswordSignInController.h */,
+				BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */,
+				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
+				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
+				BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */,
+				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
+				BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */,
+				BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */,
+			);
+			path = FormView;
+			sourceTree = "<group>";
+		};
+		BECCEA081FD4F2D400CBCC1F /* FormViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA091FD4F2D400CBCC1F /* FormViewTests.m */,
+				BECCEA0B1FD4F2D400CBCC1F /* Info.plist */,
+			);
+			path = FormViewTests;
+			sourceTree = "<group>";
+		};
+		BECCEA131FD4F2D400CBCC1F /* FormViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA141FD4F2D400CBCC1F /* FormViewUITests.m */,
+				BECCEA161FD4F2D400CBCC1F /* Info.plist */,
+			);
+			path = FormViewUITests;
+			sourceTree = "<group>";
+		};
+		BECCEA371FD514AE00CBCC1F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA341FD513DB00CBCC1F /* MainViewController.h */,
+				BECCEA351FD513DB00CBCC1F /* MainViewController.m */,
+				BECCEA381FD514DA00CBCC1F /* MainCell.h */,
+				BECCEA391FD514DA00CBCC1F /* MainCell.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BECCEA3E1FD5281A00CBCC1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA2E1FD4FED300CBCC1F /* AccountFieldCell.h */,
+				BECCEA2F1FD4FED300CBCC1F /* AccountFieldCell.m */,
+				BECCEA3B1FD51FC600CBCC1F /* AccountTitleCell.h */,
+				BECCEA3C1FD51FC600CBCC1F /* AccountTitleCell.m */,
+				BECCEA3F1FD5285700CBCC1F /* ButtonCell.h */,
+				BECCEA401FD5285700CBCC1F /* ButtonCell.m */,
+				BECCEA4B1FD5371E00CBCC1F /* PasswordLoginCell.h */,
+				BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */,
+				BECCEA511FD53F3500CBCC1F /* PasswordFieldCell.h */,
+				BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */,
+				BE7458A51FD540FA005D4D3A /* FieldCell.h */,
+				BE7458A61FD540FA005D4D3A /* FieldCell.m */,
+				BE7458A81FD544C4005D4D3A /* LicenseCell.h */,
+				BE7458A91FD544C4005D4D3A /* LicenseCell.m */,
+				BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */,
+				BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BECCEA471FD532EA00CBCC1F /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA481FD532EA00CBCC1F /* UIColor+Hex.m */,
+				BECCEA491FD532EA00CBCC1F /* UIColor+Hex.h */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		BEDF267C1FF5EFE100BFC97B /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF26801FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.h */,
+				BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */,
+				BEDF267E1FF5EFE100BFC97B /* EmptyView.h */,
+				BEDF267F1FF5EFE100BFC97B /* EmptyView.m */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BECCE9EC1FD4F2D400CBCC1F /* FormView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECCEA191FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormView" */;
+			buildPhases = (
+				A55698E27AA1553B59167690 /* [CP] Check Pods Manifest.lock */,
+				BECCE9E91FD4F2D400CBCC1F /* Sources */,
+				BECCE9EA1FD4F2D400CBCC1F /* Frameworks */,
+				BECCE9EB1FD4F2D400CBCC1F /* Resources */,
+				06650D30AD1288F9544A3892 /* [CP] Embed Pods Frameworks */,
+				50DADA6A7061681880C0E9DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FormView;
+			productName = FormView;
+			productReference = BECCE9ED1FD4F2D400CBCC1F /* FormView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BECCEA041FD4F2D400CBCC1F /* FormViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECCEA1C1FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormViewTests" */;
+			buildPhases = (
+				BECCEA011FD4F2D400CBCC1F /* Sources */,
+				BECCEA021FD4F2D400CBCC1F /* Frameworks */,
+				BECCEA031FD4F2D400CBCC1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BECCEA071FD4F2D400CBCC1F /* PBXTargetDependency */,
+			);
+			name = FormViewTests;
+			productName = FormViewTests;
+			productReference = BECCEA051FD4F2D400CBCC1F /* FormViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BECCEA0F1FD4F2D400CBCC1F /* FormViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECCEA1F1FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormViewUITests" */;
+			buildPhases = (
+				BECCEA0C1FD4F2D400CBCC1F /* Sources */,
+				BECCEA0D1FD4F2D400CBCC1F /* Frameworks */,
+				BECCEA0E1FD4F2D400CBCC1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BECCEA121FD4F2D400CBCC1F /* PBXTargetDependency */,
+			);
+			name = FormViewUITests;
+			productName = FormViewUITests;
+			productReference = BECCEA101FD4F2D400CBCC1F /* FormViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BECCE9E51FD4F2D400CBCC1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "黄伯驹";
+				TargetAttributes = {
+					BECCE9EC1FD4F2D400CBCC1F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					BECCEA041FD4F2D400CBCC1F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BECCE9EC1FD4F2D400CBCC1F;
+					};
+					BECCEA0F1FD4F2D400CBCC1F = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BECCE9EC1FD4F2D400CBCC1F;
+					};
+				};
+			};
+			buildConfigurationList = BECCE9E81FD4F2D400CBCC1F /* Build configuration list for PBXProject "FormView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BECCE9E41FD4F2D400CBCC1F;
+			productRefGroup = BECCE9EE1FD4F2D400CBCC1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BECCE9EC1FD4F2D400CBCC1F /* FormView */,
+				BECCEA041FD4F2D400CBCC1F /* FormViewTests */,
+				BECCEA0F1FD4F2D400CBCC1F /* FormViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BECCE9EB1FD4F2D400CBCC1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */,
+				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
+				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA031FD4F2D400CBCC1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA0E1FD4F2D400CBCC1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06650D30AD1288F9544A3892 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FormView/Pods-FormView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50DADA6A7061681880C0E9DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FormView/Pods-FormView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A55698E27AA1553B59167690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BECCE9E91FD4F2D400CBCC1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
+				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
+				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
+				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
+				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
+				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
+				BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */,
+				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
+				BEDF26821FF5EFE100BFC97B /* EmptyView.m in Sources */,
+				BECCE9F51FD4F2D400CBCC1F /* GroupTableController.m in Sources */,
+				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
+				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
+				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
+				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
+				BEDF26811FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m in Sources */,
+				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
+				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
+				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
+				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
+				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
+				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
+				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
+				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
+				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA011FD4F2D400CBCC1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECCEA0A1FD4F2D400CBCC1F /* FormViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BECCEA0C1FD4F2D400CBCC1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECCEA151FD4F2D400CBCC1F /* FormViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BECCEA071FD4F2D400CBCC1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BECCE9EC1FD4F2D400CBCC1F /* FormView */;
+			targetProxy = BECCEA061FD4F2D400CBCC1F /* PBXContainerItemProxy */;
+		};
+		BECCEA121FD4F2D400CBCC1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BECCE9EC1FD4F2D400CBCC1F /* FormView */;
+			targetProxy = BECCEA111FD4F2D400CBCC1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECCE9F71FD4F2D400CBCC1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECCE9FC1FD4F2D400CBCC1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BECCEA171FD4F2D400CBCC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BECCEA181FD4F2D400CBCC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BECCEA1A1FD4F2D400CBCC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18C0FCAE1525CD5B7BE7B060 /* Pods-FormView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NFVM7S86S;
+				INFOPLIST_FILE = FormView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BECCEA1B1FD4F2D400CBCC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NFVM7S86S;
+				INFOPLIST_FILE = FormView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BECCEA1D1FD4F2D400CBCC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FormViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormView.app/FormView";
+			};
+			name = Debug;
+		};
+		BECCEA1E1FD4F2D400CBCC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FormViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormView.app/FormView";
+			};
+			name = Release;
+		};
+		BECCEA201FD4F2D400CBCC1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FormViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FormView;
+			};
+			name = Debug;
+		};
+		BECCEA211FD4F2D400CBCC1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FormViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FormView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BECCE9E81FD4F2D400CBCC1F /* Build configuration list for PBXProject "FormView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECCEA171FD4F2D400CBCC1F /* Debug */,
+				BECCEA181FD4F2D400CBCC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECCEA191FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECCEA1A1FD4F2D400CBCC1F /* Debug */,
+				BECCEA1B1FD4F2D400CBCC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECCEA1C1FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECCEA1D1FD4F2D400CBCC1F /* Debug */,
+				BECCEA1E1FD4F2D400CBCC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECCEA1F1FD4F2D400CBCC1F /* Build configuration list for PBXNativeTarget "FormViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECCEA201FD4F2D400CBCC1F /* Debug */,
+				BECCEA211FD4F2D400CBCC1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BECCE9E51FD4F2D400CBCC1F /* Project object */;
+}
