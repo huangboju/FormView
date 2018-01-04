@@ -8,10 +8,32 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SegmentBar : UICollectionView
+@interface SegmentBar : UIView
 
-@property (nonatomic, strong) NSMutableArray *titles;
+@property (nonatomic, strong) NSArray *titles;
 
+/// Default [UIFont systemFontOfSize:17]
 @property (nonatomic, strong) UIFont *titleFont;
+
+/// Default 0x333333
+@property (nonatomic, strong) UIColor *titleColor;
+
+/// 字体间的间距
+/// Default 8
+@property (nonatomic, assign) CGFloat titleInterval;
+
+/// Default 0
+@property (nonatomic, assign) NSInteger selectedIndex;
+
+/// Default 2
+@property (nonatomic, assign) CGFloat indicatorHeight;
+
+/// 指示线与文字的间距
+/// Default 10
+@property (nonatomic, assign) CGFloat indicatorInterval;
+
+- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
+
+- (void)updateBottomIndicatorX:(CGFloat)newX WithAnimated:(BOOL)animated;
 
 @end
