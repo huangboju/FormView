@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */; };
+		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
+		BE29FB351FFDD5AB00A27373 /* SegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* SegmentBar.m */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A61FD540FA005D4D3A /* FieldCell.m */; };
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
@@ -62,6 +64,10 @@
 		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
 		BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnptyViewController.h; sourceTree = "<group>"; };
 		BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnptyViewController.m; sourceTree = "<group>"; };
+		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
+		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
+		BE29FB331FFDD5AB00A27373 /* SegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentBar.h; sourceTree = "<group>"; };
+		BE29FB341FFDD5AB00A27373 /* SegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentBar.m; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE7458A51FD540FA005D4D3A /* FieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldCell.h; sourceTree = "<group>"; };
@@ -163,6 +169,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE29FB2E1FFDD48700A27373 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BECCEA4E1FD538EC00CBCC1F /* PasswordSignInController.h */,
+				BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */,
+				BECCEA281FD4FDF000CBCC1F /* SignInController.h */,
+				BECCEA291FD4FDF000CBCC1F /* SignInController.m */,
+				BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */,
+				BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		BE29FB321FFDD58000A27373 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */,
+				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
+				BE29FB331FFDD5AB00A27373 /* SegmentBar.h */,
+				BE29FB341FFDD5AB00A27373 /* SegmentBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BECCE9E41FD4F2D400CBCC1F = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +218,8 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				BE29FB321FFDD58000A27373 /* Views */,
+				BE29FB2E1FFDD48700A27373 /* Account */,
 				BEDF267C1FF5EFE100BFC97B /* EmptyView */,
 				BECCEA471FD532EA00CBCC1F /* UIColor */,
 				BECCEA3E1FD5281A00CBCC1F /* Cells */,
@@ -203,20 +235,14 @@
 				BECCE9FF1FD4F2D400CBCC1F /* main.m */,
 				BECCEA221FD4F4C900CBCC1F /* Row.h */,
 				BECCEA231FD4F4C900CBCC1F /* Row.m */,
-				BECCEA281FD4FDF000CBCC1F /* SignInController.h */,
-				BECCEA291FD4FDF000CBCC1F /* SignInController.m */,
-				BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */,
-				BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */,
 				BECCEA431FD52ECC00CBCC1F /* UIView+Extension.h */,
 				BECCEA441FD52ECC00CBCC1F /* UIView+Extension.m */,
-				BECCEA4E1FD538EC00CBCC1F /* PasswordSignInController.h */,
-				BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
 				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
-				BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */,
-				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
 				BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */,
 				BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */,
+				BE29FB2F1FFDD4E300A27373 /* SegmentController.h */,
+				BE29FB301FFDD4E300A27373 /* SegmentController.m */,
 			);
 			path = FormView;
 			sourceTree = "<group>";
@@ -483,6 +509,7 @@
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
+				BE29FB351FFDD5AB00A27373 /* SegmentBar.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
@@ -498,6 +525,7 @@
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
+				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,

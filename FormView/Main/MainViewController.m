@@ -14,6 +14,7 @@
 #import "SignUpController.h"
 #import "MessageCenterController.h"
 #import "EnptyViewController.h"
+#import "SegmentController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -35,6 +36,9 @@
                              ],
                          @[
                              [EnptyViewController class]
+                             ],
+                         @[
+                             [SegmentController class]
                              ]
                          ];
 
@@ -58,6 +62,7 @@
     NSString *clsName = row.model;
     UIViewController *vc = [[NSClassFromString(clsName) alloc] init];
     vc.title = clsName;
+    vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
