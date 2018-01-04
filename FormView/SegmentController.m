@@ -16,6 +16,10 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
+@property (nonatomic, assign) CGPoint lastContentOffset;
+
+@property (nonatomic, strong) NSArray <UIColor *>*colors;
+
 @end
 
 @implementation SegmentController
@@ -23,11 +27,13 @@
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-        layout.itemSize = CGSizeMake(self.view.frame.size.width, 300);
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
+        layout.itemSize = CGSizeMake(self.view.frame.size.width, 200);
         CGRect rect = self.view.frame;
-        rect.origin.y = 104;
-        rect.size.height -= 104;
+        rect.origin.y = 120;
+        rect.size.height = 200;
         _collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
@@ -59,27 +65,53 @@
                         @"科技",
                         @"问吧"
                         ];
+    
+    self.colors = @[
+                    [UIColor redColor],
+                    [UIColor greenColor],
+                    [UIColor blueColor],
+                    [UIColor yellowColor],
+                    [UIColor cyanColor],
+                    [UIColor brownColor],
+                    ];
 
     self.bar = [[SegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
-    self.bar.selectedIndex = 1;
+//    [self.bar setCurrentTabIndex: withAnimation:YES];
     [self.view addSubview:self.bar];
-    
+
     [self.view addSubview:self.collectionView];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return self.colors.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = self.colors[indexPath.row];
     return cell;
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    self.lastContentOffset = scrollView.contentOffset;
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGPoint currentLocation = scrollView.contentOffset;
-    [self.bar updateBottomIndicatorX:currentLocation.x WithAnimated:YES];
+    
+    CGPoint offset = scrollView.contentOffset;
+    if (self.lastContentOffset.x < offset.x) {
+        // 向左
+        [self.bar updateBottomIndicatorX:offset.x WithAnimated:YES];
+    } else {
+        // 向右
+        [self.bar updateBottomIndicatorX:-offset.x WithAnimated:YES];
+    }
+
+    self.lastContentOffset = scrollView.contentOffset;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+        [self.bar setCurrentTabIndex:scrollView.contentOffset.x / scrollView.frame.size.width withAnimation:YES];
 }
 
 - (void)didReceiveMemoryWarning {

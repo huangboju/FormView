@@ -23,7 +23,7 @@
 @property (nonatomic, assign) CGFloat titleInterval;
 
 /// Default 0
-@property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, assign, readonly) NSInteger currentIndex;
 
 /// Default 2
 @property (nonatomic, assign) CGFloat indicatorHeight;
@@ -33,6 +33,8 @@
 @property (nonatomic, assign) CGFloat indicatorInterval;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
+
+- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate;
 
 - (void)updateBottomIndicatorX:(CGFloat)newX WithAnimated:(BOOL)animated;
 

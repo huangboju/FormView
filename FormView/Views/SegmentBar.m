@@ -84,6 +84,13 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, assign) BOOL isFirst;
 
+@property (nonatomic, assign) NSInteger selectedIndex;
+
+
+@property(nonatomic) CGFloat indicatorMinX;
+
+@property(nonatomic) CGFloat indicatorWidth;
+
 @end
 
 @implementation SegmentBar
@@ -100,6 +107,7 @@ UICollectionViewDelegateFlowLayout
         self.indicatorHeight = 2;
         self.indicatorInterval = 8;
         self.titleInterval = 8;
+        self.selectedIndex = 0;
 
         self.isFirst = YES;
 
@@ -146,15 +154,20 @@ UICollectionViewDelegateFlowLayout
     self.collectionView.collectionViewLayout = layout;
 }
 
-- (void)setSelectedIndex:(NSInteger)selectedIndex {
-    _selectedIndex = selectedIndex;
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
+- (NSInteger)currentIndex {
+    return self.selectedIndex;
+}
 
+- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate {
+    self.selectedIndex = currentTabIndex;
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.selectedIndex inSection:0];
     dispatch_block_t block = ^{
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         CGRect newRect = cell.frame;
-        [self updateBottomIndicatorFrame:newRect WithAnimated:YES];
+        self.indicatorMinX = newRect.origin.x;
+        self.indicatorWidth = cell.frame.size.width;
+        [self updateIndicatorWithAnimation:NO];
     };
 
     if (self.isFirst) {
@@ -183,7 +196,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedIndex = indexPath.row;
+    [self setCurrentTabIndex:indexPath.row withAnimation:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -198,13 +211,14 @@ UICollectionViewDelegateFlowLayout
                                    options:NSStringDrawingUsesLineFragmentOrigin
                                 attributes:@{NSFontAttributeName: self.titleFont}
                                    context:nil].size;
-        
+
         CGRect rect = self.collectionView.frame;
         if (rect.size.height != size.height) {
-            self.collectionView.frame = CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, size.height);
-            CGFloat y = CGRectGetMaxY(self.collectionView.frame);
-            CGRect newFrame = CGRectMake(0, y + self.indicatorInterval, size.width, self.indicatorHeight);
-            [self updateBottomIndicatorFrame:newFrame WithAnimated:NO];
+            // 主要为了设置collectionview的高度和indicator的y坐标，一次就好
+            rect.size.height = size.height;
+            self.collectionView.frame = rect;
+            self.indicatorWidth = size.width;
+            [self updateIndicatorWithAnimation:YES];
         }
         self.titleSize[title] = [NSValue valueWithCGSize:size];
     }
@@ -213,19 +227,39 @@ UICollectionViewDelegateFlowLayout
 
 - (void)updateBottomIndicatorX:(CGFloat)newX WithAnimated:(BOOL)animated {
     CGRect oldFrame = self.bottomIndicator.frame;
+    
+    CGSize targetTitleSize;
+    NSInteger backIndex = self.selectedIndex;
+    if (newX > 0) {
+        // 向右
+        backIndex += 1;
+    } else {
+        // 向左
+        backIndex -= 1;
+    }
+    targetTitleSize = [self getTitleSizeAtIndex:backIndex - 1];
+
     newX = oldFrame.origin.x + newX / self.frame.size.width;
-    [self updateBottomIndicatorFrame:CGRectMake(newX, oldFrame.origin.y, oldFrame.size.width, oldFrame.size.height) WithAnimated:YES];
 }
 
-- (void)updateBottomIndicatorFrame:(CGRect)newFrame WithAnimated:(BOOL)animated {
-    if (animated) {
-        CGRect oldFrame = self.bottomIndicator.frame;
-        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            self.bottomIndicator.frame = CGRectMake(newFrame.origin.x, oldFrame.origin.y, newFrame.size.width, oldFrame.size.height);
-        } completion:nil];
-    } else {
-        self.bottomIndicator.frame = newFrame;
-    }
+- (void)updateIndicatorWithAnimation:(BOOL)animation {
+    CGFloat indicatorY = CGRectGetMaxY(self.collectionView.frame) + self.indicatorInterval;
+    
+    [UIView animateWithDuration:animation ? 0.3 : 0
+                     animations:^{
+                         CGRect rect = self.bottomIndicator.frame;
+                         rect.origin.x = self.indicatorMinX;
+                         rect.origin.y = indicatorY;
+                         rect.size.width = self.indicatorWidth;
+                         rect.size.height = self.indicatorHeight;
+                         self.bottomIndicator.frame = rect;
+                     }];
+}
+
+- (CGSize)getTitleSizeAtIndex:(NSInteger)index {
+    index = MIN(MAX(index, 0), self.titles.count - 1);
+    NSString *title = self.titles[index];
+    return self.titleSize[title].CGSizeValue;
 }
 
 - (SegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
