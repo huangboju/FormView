@@ -78,6 +78,8 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSValue *>*titleSize;
 
+@property (nonatomic, strong) NSMutableArray <NSValue *>*cellFrames;
+
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) CALayer *bottomIndicator;
@@ -115,6 +117,7 @@ UICollectionViewDelegateFlowLayout
         self.titleColor = [UIColor colorWithRed:51.f / 255.f green:51.f / 255.f blue:51.f / 255.f alpha:1];
 
         self.titleSize = [NSMutableDictionary dictionary];
+        self.cellFrames = [NSMutableArray arrayWithCapacity:self.titles.count];
 
         [self addSubview:self.collectionView];
 
@@ -191,6 +194,7 @@ UICollectionViewDelegateFlowLayout
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SegmentBarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    self.cellFrames[indexPath.row] = [NSValue valueWithCGRect:cell.frame];
     cell.model = [self generateItemAtIndexPath:indexPath];
     return cell;
 }
@@ -225,21 +229,52 @@ UICollectionViewDelegateFlowLayout
     return size;
 }
 
-- (void)updateBottomIndicatorX:(CGFloat)newX WithAnimated:(BOOL)animated {
-    CGRect oldFrame = self.bottomIndicator.frame;
-    
-    CGSize targetTitleSize;
-    NSInteger backIndex = self.selectedIndex;
-    if (newX > 0) {
-        // 向右
-        backIndex += 1;
-    } else {
-        // 向左
-        backIndex -= 1;
-    }
-    targetTitleSize = [self getTitleSizeAtIndex:backIndex - 1];
+- (void)updateBottomIndicatorX:(CGFloat)offsetX {
 
-    newX = oldFrame.origin.x + newX / self.frame.size.width;
+    CGFloat scrollViewWidth = self.frame.size.width;
+
+    CGFloat newX = fmodf(offsetX, scrollViewWidth);
+    CGRect selectedSegmentFrame = self.cellFrames[self.selectedIndex].CGRectValue;
+    CGFloat selectedSegmentWidth = selectedSegmentFrame.size.width;
+    CGFloat selectedOriginX = selectedSegmentFrame.origin.x;
+
+    if (offsetX < 0) {
+        CGFloat backTabWidth = 0;
+        NSInteger backIndex = self.selectedIndex;
+        if (!(--backIndex < 0)) {
+            backTabWidth = [self getWidthForSegmentAtIndex:backIndex];
+        }
+
+        CGFloat minX = selectedOriginX + newX / scrollViewWidth * backTabWidth;
+        self.indicatorMinX = minX;
+    
+        CGFloat widthDiff = selectedSegmentWidth - backTabWidth;
+        
+        CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
+        self.indicatorWidth = newWidth;
+        [self updateIndicatorWithAnimation:NO];
+
+    } else {
+        CGFloat nextTabWidth = 0;
+        NSInteger nextIndex = self.selectedIndex;
+
+        if (!(++nextIndex >= self.titles.count)) {
+            nextTabWidth = [self getWidthForSegmentAtIndex:nextIndex];
+        }
+        
+        CGFloat minX = selectedOriginX + newX / scrollViewWidth * selectedSegmentWidth;
+        self.indicatorMinX = minX;
+
+        CGFloat widthDiff = nextTabWidth - selectedSegmentWidth;
+        
+        CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
+        self.indicatorWidth = newWidth;
+        [self updateIndicatorWithAnimation:NO];
+    }
+}
+
+- (CGFloat)getWidthForSegmentAtIndex:(NSUInteger)index {
+    return self.cellFrames[index].CGRectValue.size.width;
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {

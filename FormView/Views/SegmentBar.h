@@ -36,6 +36,6 @@
 
 - (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate;
 
-- (void)updateBottomIndicatorX:(CGFloat)newX WithAnimated:(BOOL)animated;
+- (void)updateBottomIndicatorX:(CGFloat)offsetX;
 
 @end

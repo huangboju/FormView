@@ -101,10 +101,10 @@
     CGPoint offset = scrollView.contentOffset;
     if (self.lastContentOffset.x < offset.x) {
         // 向左
-        [self.bar updateBottomIndicatorX:offset.x WithAnimated:YES];
+        [self.bar updateBottomIndicatorX:offset.x];
     } else {
         // 向右
-        [self.bar updateBottomIndicatorX:-offset.x WithAnimated:YES];
+        [self.bar updateBottomIndicatorX:-offset.x];
     }
 
     self.lastContentOffset = scrollView.contentOffset;
