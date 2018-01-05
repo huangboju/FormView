@@ -229,23 +229,43 @@ UICollectionViewDelegateFlowLayout
     return size;
 }
 
-- (void)updateBottomIndicatorWithProgress:(CGFloat)progress fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+- (void)updateBottomIndicatorWithScrollView:(UIScrollView *)scrollView isLeft:(BOOL)isLeft {
 
     if (self.cellFrames.count < self.selectedIndex) {
         return;
     }
 
+    CGFloat offsetX = scrollView.contentOffset.x;
+    CGFloat scrollViewWidth = scrollView.frame.size.width;
+
+    CGFloat progress = fmodf(offsetX, scrollViewWidth) / scrollViewWidth;
+
+    NSInteger fromIndex = 0;
+    NSInteger toIndex = 0;
+    
+    if (isLeft) {
+        fromIndex = floor(offsetX / scrollViewWidth);
+        toIndex = fromIndex + 1;
+    } else {
+        toIndex = floor(offsetX / scrollViewWidth);
+        if (offsetX <= 0) {
+            toIndex = 0;
+        }
+        fromIndex = toIndex + 1;
+        progress = 1 - progress;
+    }
+
     CGFloat selectedIndexMinx = [self getCGRectForSegmentAtIndex:fromIndex].origin.x;
     CGFloat selectedIndexWidth = [self getCGRectForSegmentAtIndex:fromIndex].size.width;
-    
+
     CGFloat targetIndexMinx = [self getCGRectForSegmentAtIndex:toIndex].origin.x;
     CGFloat targetIndexWidth = [self getCGRectForSegmentAtIndex:toIndex].size.width;
-    
+
     self.indicatorMinX = (targetIndexMinx - selectedIndexMinx) * progress + selectedIndexMinx;
     self.indicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
 
     [self updateIndicatorWithAnimation:NO];
-    
+
     self.selectedIndex = toIndex;
 }
 

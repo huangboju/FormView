@@ -96,30 +96,14 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
-    CGFloat offsetX = scrollView.contentOffset.x;
-    CGFloat scrollViewWidth = scrollView.frame.size.width;
 
-    CGFloat progress = fmodf(offsetX, scrollViewWidth) / scrollViewWidth;
-    
-    NSInteger fromIndex = 0;
-    NSInteger toIndex = 0;
-
-    if (self.lastContentOffset.x < offsetX) {
+    if (self.lastContentOffset.x < scrollView.contentOffset.x) {
         // 手指向左滑动
-        fromIndex = floor(offsetX / scrollViewWidth);
-        toIndex = fromIndex + 1;
+        [self.bar updateBottomIndicatorWithScrollView:scrollView isLeft:YES];
     } else {
         // 手指向右滑动
-        toIndex = floor(offsetX / scrollViewWidth);
-        if (offsetX <= 0) {
-            toIndex = 0;
-        }
-        fromIndex = toIndex + 1;
-        progress = 1 - progress;
+        [self.bar updateBottomIndicatorWithScrollView:scrollView isLeft:NO];
     }
-
-    [self.bar updateBottomIndicatorWithProgress:progress fromIndex:fromIndex toIndex:toIndex];
 }
 
 - (void)didReceiveMemoryWarning {
