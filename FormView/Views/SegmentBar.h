@@ -34,8 +34,10 @@
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
 
+/// 设置默认位置
 - (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate;
 
-- (void)updateBottomIndicatorX:(CGFloat)offsetX;
+/// 给外部做联动用
+- (void)updateBottomIndicatorWithProgress:(CGFloat)progress fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
 
 @end

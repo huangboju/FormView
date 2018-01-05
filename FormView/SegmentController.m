@@ -55,15 +55,8 @@
                         @"NBA",
                         @"数码",
                         @"新时代哈哈",
-                        @"科技",
-                        @"问吧",
-                        @"头条",
-                        @"新闻",
-                        @"NBA",
-                        @"数码",
-                        @"新时代哈哈",
-                        @"科技",
-                        @"问吧"
+                        @"今天好天气",
+                        @"小红书"
                         ];
     
     self.colors = @[
@@ -73,6 +66,7 @@
                     [UIColor yellowColor],
                     [UIColor cyanColor],
                     [UIColor brownColor],
+                    [UIColor purpleColor]
                     ];
 
     self.bar = [[SegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
@@ -103,22 +97,29 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    CGPoint offset = scrollView.contentOffset;
+    CGFloat offsetX = scrollView.contentOffset.x;
+    CGFloat scrollViewWidth = scrollView.frame.size.width;
 
-    CGFloat offsetX = fmodf(scrollView.contentOffset.x, scrollView.frame.size.width);
-    if (self.lastContentOffset.x < offset.x) {
-        // 向左
-        [self.bar updateBottomIndicatorX:offsetX];
+    CGFloat progress = fmodf(offsetX, scrollViewWidth) / scrollViewWidth;
+    
+    NSInteger fromIndex = 0;
+    NSInteger toIndex = 0;
+
+    if (self.lastContentOffset.x < offsetX) {
+        // 手指向左滑动
+        fromIndex = floor(offsetX / scrollViewWidth);
+        toIndex = fromIndex + 1;
     } else {
-        // 向右
-        [self.bar updateBottomIndicatorX:-offsetX];
+        // 手指向右滑动
+        toIndex = floor(offsetX / scrollViewWidth);
+        if (offsetX <= 0) {
+            toIndex = 0;
+        }
+        fromIndex = toIndex + 1;
+        progress = 1 - progress;
     }
 
-    self.lastContentOffset = scrollView.contentOffset;
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-        [self.bar setCurrentTabIndex:scrollView.contentOffset.x / scrollView.frame.size.width withAnimation:NO];
+    [self.bar updateBottomIndicatorWithProgress:progress fromIndex:fromIndex toIndex:toIndex];
 }
 
 - (void)didReceiveMemoryWarning {

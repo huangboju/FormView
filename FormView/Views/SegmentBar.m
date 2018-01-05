@@ -229,80 +229,49 @@ UICollectionViewDelegateFlowLayout
     return size;
 }
 
-- (void)updateBottomIndicatorX:(CGFloat)offsetX {
-    
+- (void)updateBottomIndicatorWithProgress:(CGFloat)progress fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
+
     if (self.cellFrames.count < self.selectedIndex) {
         return;
     }
 
-    CGFloat scrollViewWidth = self.frame.size.width;
-
-    CGFloat newX = offsetX;
+    CGFloat selectedIndexMinx = [self getCGRectForSegmentAtIndex:fromIndex].origin.x;
+    CGFloat selectedIndexWidth = [self getCGRectForSegmentAtIndex:fromIndex].size.width;
     
-    if (newX < 0) {
-        newX = -(newX + scrollViewWidth);
-    }
-
-    CGRect selectedSegmentFrame = self.cellFrames[self.selectedIndex].CGRectValue;
-    CGFloat selectedSegmentWidth = selectedSegmentFrame.size.width;
-    CGFloat selectedOriginX = selectedSegmentFrame.origin.x;
-
-    if (offsetX < 0) {
-        CGFloat backTabWidth = 0;
-        NSInteger backIndex = self.selectedIndex;
-        if (!(--backIndex < 0)) {
-            backTabWidth = [self getWidthForSegmentAtIndex:backIndex];
-        }
-
-        CGFloat minX = selectedOriginX + newX / scrollViewWidth * backTabWidth;
-        self.indicatorMinX = minX;
-
-        CGFloat widthDiff = selectedSegmentWidth - backTabWidth;
-        
-        CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
-        self.indicatorWidth = newWidth;
-    } else {
-        CGFloat nextTabWidth = 0;
-        NSInteger nextIndex = self.selectedIndex;
-
-        if (!(++nextIndex >= self.titles.count)) {
-            nextTabWidth = [self getWidthForSegmentAtIndex:nextIndex];
-        }
-        
-        CGFloat minX = selectedOriginX + newX / scrollViewWidth * selectedSegmentWidth;
-        self.indicatorMinX = minX;
-
-        CGFloat widthDiff = nextTabWidth - selectedSegmentWidth;
-        
-        CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
-        self.indicatorWidth = newWidth;
-    }
+    CGFloat targetIndexMinx = [self getCGRectForSegmentAtIndex:toIndex].origin.x;
+    CGFloat targetIndexWidth = [self getCGRectForSegmentAtIndex:toIndex].size.width;
+    
+    self.indicatorMinX = (targetIndexMinx - selectedIndexMinx) * progress + selectedIndexMinx;
+    self.indicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
 
     [self updateIndicatorWithAnimation:NO];
+    
+    self.selectedIndex = toIndex;
 }
 
-- (CGFloat)getWidthForSegmentAtIndex:(NSUInteger)index {
-    return self.cellFrames[index].CGRectValue.size.width;
+- (CGRect)getCGRectForSegmentAtIndex:(NSUInteger)index {
+    index = MIN(MAX(index, 0), self.titles.count - 1);
+    return self.cellFrames[index].CGRectValue;
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {
     CGFloat indicatorY = CGRectGetMaxY(self.collectionView.frame) + self.indicatorInterval;
-    
-    [UIView animateWithDuration:animation ? 0.3 : 0
-                     animations:^{
-                         CGRect rect = self.bottomIndicator.frame;
-                         rect.origin.x = self.indicatorMinX;
-                         rect.origin.y = indicatorY;
-                         rect.size.width = self.indicatorWidth;
-                         rect.size.height = self.indicatorHeight;
-                         self.bottomIndicator.frame = rect;
-                     }];
-}
 
-- (CGSize)getTitleSizeAtIndex:(NSInteger)index {
-    index = MIN(MAX(index, 0), self.titles.count - 1);
-    NSString *title = self.titles[index];
-    return self.titleSize[title].CGSizeValue;
+    dispatch_block_t block = ^{
+        CGRect rect = self.bottomIndicator.frame;
+        rect.origin.x = self.indicatorMinX;
+        rect.origin.y = indicatorY;
+        rect.size.width = self.indicatorWidth;
+        rect.size.height = self.indicatorHeight;
+        self.bottomIndicator.frame = rect;
+    };
+
+    if (animation) {
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:block completion:nil];
+    } else {
+        block();
+    }
+    
 }
 
 - (SegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
