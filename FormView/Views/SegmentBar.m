@@ -67,7 +67,7 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-@property (nonatomic, strong) CALayer *bottomIndicator;
+@property (nonatomic, strong) UIView *bottomIndicator;
 
 @property (nonatomic, assign) BOOL isFirst;
 
@@ -111,7 +111,7 @@ UICollectionViewDelegateFlowLayout
 
         [self addSubview:self.collectionView];
 
-        [self.collectionView.layer addSublayer:self.bottomIndicator];
+        [self.collectionView addSubview:self.bottomIndicator];
     }
     return self;
 }
@@ -131,10 +131,10 @@ UICollectionViewDelegateFlowLayout
     return _collectionView;
 }
 
-- (CALayer *)bottomIndicator {
+- (UIView *)bottomIndicator {
     if (!_bottomIndicator) {
-        _bottomIndicator = [CALayer layer];
-        _bottomIndicator.backgroundColor = [UIColor blackColor].CGColor;
+        _bottomIndicator = [UIView new];
+        _bottomIndicator.backgroundColor = [UIColor blackColor];
     }
     return _bottomIndicator;
 }
