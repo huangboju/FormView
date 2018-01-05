@@ -10,27 +10,15 @@
 
 #pragma mark - SegmentBarCellItem
 
-@interface SegmentBarCellItem : NSObject
-
-@property (nonatomic, copy) NSString *text;
-
-@property (nonatomic, strong) UIColor *textColor;
-
-@property (nonatomic, strong) UIFont *textFont;
-
-@end
-
 @implementation SegmentBarCellItem
 
 @end
 
 #pragma mark - SegmentBarCell
 
-@interface SegmentBarCell : UICollectionViewCell
+@interface SegmentBarCell : UICollectionViewCell <SegmentBarCellUpdatable>
 
 @property (nonatomic, strong) UILabel *textLabel;
-
-@property (nonatomic, strong) SegmentBarCellItem *model;
 
 @end
 
@@ -45,11 +33,10 @@
     return self;
 }
 
-- (void)setModel:(SegmentBarCellItem *)model {
-    _model = model;
-    self.textLabel.text = model.text;
-    self.textLabel.textColor = model.textColor;
-    self.textLabel.font = model.textFont;
+- (void)updateViewData:(SegmentBarCellItem *)viewData {
+    self.textLabel.text = viewData.text;
+    self.textLabel.textColor = viewData.textColor;
+    self.textLabel.font = viewData.textFont;
 }
 
 - (UILabel *)textLabel {
@@ -87,9 +74,11 @@ UICollectionViewDelegateFlowLayout
 @property (nonatomic, assign) NSInteger selectedIndex;
 
 
-@property(nonatomic) CGFloat indicatorMinX;
+@property (nonatomic) CGFloat indicatorMinX;
 
-@property(nonatomic) CGFloat indicatorWidth;
+@property (nonatomic) CGFloat indicatorWidth;
+
+@property (nonatomic, weak) id(^configHandle)(SegmentBarCellItem *);
 
 @end
 
@@ -108,6 +97,10 @@ UICollectionViewDelegateFlowLayout
         self.indicatorInterval = 8;
         self.titleInterval = 8;
         self.selectedIndex = 0;
+
+        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(SegmentBarCellItem *item) {
+            return item;
+        }];
 
         self.isFirst = YES;
 
@@ -134,7 +127,6 @@ UICollectionViewDelegateFlowLayout
         _collectionView.clipsToBounds = NO;
         _collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
         _collectionView.showsHorizontalScrollIndicator = NO;
-        [_collectionView registerClass:[SegmentBarCell class] forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
 }
@@ -145,6 +137,13 @@ UICollectionViewDelegateFlowLayout
         _bottomIndicator.backgroundColor = [UIColor blackColor].CGColor;
     }
     return _bottomIndicator;
+}
+
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(SegmentBarCellItem *item))handle {
+    
+    self.configHandle = handle;
+
+    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)setTitleInterval:(CGFloat)titleInterval {
@@ -171,6 +170,7 @@ UICollectionViewDelegateFlowLayout
     };
 
     if (self.isFirst) {
+        // 第一次进来cell没有画出来
         self.isFirst = NO;
         dispatch_async(dispatch_get_main_queue(), block);
     } else {
@@ -190,8 +190,14 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    SegmentBarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.model = [self generateItemAtIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    if ([cell conformsToProtocol:@protocol(SegmentBarCellUpdatable)]) {
+        id item = [self generateItemAtIndexPath:indexPath];
+        if (self.configHandle) {
+            item = self.configHandle(item);
+        }
+        [cell performSelector:@selector(updateViewData:) withObject:item];
+    }
     return cell;
 }
 

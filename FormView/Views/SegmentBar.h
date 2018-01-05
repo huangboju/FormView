@@ -8,7 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark - SegmentBarCellItem
+@interface SegmentBarCellItem : NSObject
+
+@property (nonatomic, copy) NSString *text;
+
+@property (nonatomic, strong) UIColor *textColor;
+
+@property (nonatomic, strong) UIFont *textFont;
+
+@end
+
+#pragma mark - SegmentBarCellUpdatable
+@protocol SegmentBarCellUpdatable <NSObject>
+
+/// 暂时模型只暴露这个，后期不够再考虑
+- (void)updateViewData:(SegmentBarCellItem *)viewData;
+
+@end
+
 @interface SegmentBar : UIView
+
+/// handle会返回SegmentBarCellItem
+/// 可以拿到text、textColor、textFont
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(SegmentBarCellItem *item))handle;
 
 @property (nonatomic, strong) NSArray *titles;
 

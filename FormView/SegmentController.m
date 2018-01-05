@@ -10,6 +10,44 @@
 
 #import "SegmentBar.h"
 
+@interface MySegmentBarCell : UICollectionViewCell <SegmentBarCellUpdatable>
+
+@property (nonatomic, strong) UILabel *textLabel;
+
+@end
+
+@implementation MySegmentBarCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.contentView.backgroundColor = [UIColor blueColor];
+        [self.contentView addSubview:self.textLabel];
+    }
+    return self;
+}
+
+- (void)updateViewData:(SegmentBarCellItem *)viewData {
+    self.textLabel.text = viewData.text;
+    self.textLabel.textColor = viewData.textColor;
+    self.textLabel.font = viewData.textFont;
+}
+
+- (UILabel *)textLabel {
+    if (!_textLabel) {
+        _textLabel = [UILabel new];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _textLabel;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.textLabel.frame = self.bounds;
+}
+
+@end
+
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) SegmentBar *bar;
@@ -71,6 +109,9 @@
 
     self.bar = [[SegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
     [self.bar setCurrentTabIndex:3 withAnimation:YES];
+    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(SegmentBarCellItem *item) {
+        return item;
+    }];
 
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
     
