@@ -271,7 +271,6 @@ UICollectionViewDelegateFlowLayout
     } else {
         block();
     }
-    
 }
 
 - (SegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
