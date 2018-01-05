@@ -170,7 +170,7 @@ UICollectionViewDelegateFlowLayout
         CGRect newRect = cell.frame;
         self.indicatorMinX = newRect.origin.x;
         self.indicatorWidth = cell.frame.size.width;
-        [self updateIndicatorWithAnimation:NO];
+        [self updateIndicatorWithAnimation:animate];
     };
 
     if (self.isFirst) {
@@ -230,10 +230,19 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)updateBottomIndicatorX:(CGFloat)offsetX {
+    
+    if (self.cellFrames.count < self.selectedIndex) {
+        return;
+    }
 
     CGFloat scrollViewWidth = self.frame.size.width;
 
-    CGFloat newX = fmodf(offsetX, scrollViewWidth);
+    CGFloat newX = offsetX;
+    
+    if (newX < 0) {
+        newX = -(newX + scrollViewWidth);
+    }
+
     CGRect selectedSegmentFrame = self.cellFrames[self.selectedIndex].CGRectValue;
     CGFloat selectedSegmentWidth = selectedSegmentFrame.size.width;
     CGFloat selectedOriginX = selectedSegmentFrame.origin.x;
@@ -247,13 +256,11 @@ UICollectionViewDelegateFlowLayout
 
         CGFloat minX = selectedOriginX + newX / scrollViewWidth * backTabWidth;
         self.indicatorMinX = minX;
-    
+
         CGFloat widthDiff = selectedSegmentWidth - backTabWidth;
         
         CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
         self.indicatorWidth = newWidth;
-        [self updateIndicatorWithAnimation:NO];
-
     } else {
         CGFloat nextTabWidth = 0;
         NSInteger nextIndex = self.selectedIndex;
@@ -269,8 +276,9 @@ UICollectionViewDelegateFlowLayout
         
         CGFloat newWidth = selectedSegmentWidth + newX / scrollViewWidth * widthDiff;
         self.indicatorWidth = newWidth;
-        [self updateIndicatorWithAnimation:NO];
     }
+
+    [self updateIndicatorWithAnimation:NO];
 }
 
 - (CGFloat)getWidthForSegmentAtIndex:(NSUInteger)index {

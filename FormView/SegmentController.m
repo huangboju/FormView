@@ -76,11 +76,16 @@
                     ];
 
     self.bar = [[SegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
-//    [self.bar setCurrentTabIndex: withAnimation:YES];
+    [self.bar setCurrentTabIndex:3 withAnimation:YES];
+
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+    
     [self.view addSubview:self.bar];
 
     [self.view addSubview:self.collectionView];
 }
+
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.colors.count;
@@ -99,19 +104,21 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGPoint offset = scrollView.contentOffset;
+
+    CGFloat offsetX = fmodf(scrollView.contentOffset.x, scrollView.frame.size.width);
     if (self.lastContentOffset.x < offset.x) {
         // 向左
-        [self.bar updateBottomIndicatorX:offset.x];
+        [self.bar updateBottomIndicatorX:offsetX];
     } else {
         // 向右
-        [self.bar updateBottomIndicatorX:-offset.x];
+        [self.bar updateBottomIndicatorX:-offsetX];
     }
 
     self.lastContentOffset = scrollView.contentOffset;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-        [self.bar setCurrentTabIndex:scrollView.contentOffset.x / scrollView.frame.size.width withAnimation:YES];
+        [self.bar setCurrentTabIndex:scrollView.contentOffset.x / scrollView.frame.size.width withAnimation:NO];
 }
 
 - (void)didReceiveMemoryWarning {
