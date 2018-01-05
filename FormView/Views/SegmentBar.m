@@ -78,8 +78,6 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSValue *>*titleSize;
 
-@property (nonatomic, strong) NSMutableArray <NSValue *>*cellFrames;
-
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, strong) CALayer *bottomIndicator;
@@ -105,7 +103,7 @@ UICollectionViewDelegateFlowLayout
         self.titles = titles;
 
         self.backgroundColor = [UIColor redColor];
-        
+
         self.indicatorHeight = 2;
         self.indicatorInterval = 8;
         self.titleInterval = 8;
@@ -117,7 +115,6 @@ UICollectionViewDelegateFlowLayout
         self.titleColor = [UIColor colorWithRed:51.f / 255.f green:51.f / 255.f blue:51.f / 255.f alpha:1];
 
         self.titleSize = [NSMutableDictionary dictionary];
-        self.cellFrames = [NSMutableArray arrayWithCapacity:self.titles.count];
 
         [self addSubview:self.collectionView];
 
@@ -194,7 +191,6 @@ UICollectionViewDelegateFlowLayout
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SegmentBarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    self.cellFrames[indexPath.row] = [NSValue valueWithCGRect:cell.frame];
     cell.model = [self generateItemAtIndexPath:indexPath];
     return cell;
 }
@@ -230,10 +226,6 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)updateBottomIndicatorWithScrollView:(UIScrollView *)scrollView isLeft:(BOOL)isLeft {
-
-    if (self.cellFrames.count < self.selectedIndex) {
-        return;
-    }
 
     CGFloat offsetX = scrollView.contentOffset.x;
     CGFloat scrollViewWidth = scrollView.frame.size.width;
@@ -271,7 +263,7 @@ UICollectionViewDelegateFlowLayout
 
 - (CGRect)getCGRectForSegmentAtIndex:(NSUInteger)index {
     index = MIN(MAX(index, 0), self.titles.count - 1);
-    return self.cellFrames[index].CGRectValue;
+    return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame;
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {
