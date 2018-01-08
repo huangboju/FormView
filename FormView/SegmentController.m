@@ -8,9 +8,9 @@
 
 #import "SegmentController.h"
 
-#import "SegmentBar.h"
+#import "XYSegmentBar.h"
 
-@interface MySegmentBarCell : UICollectionViewCell <SegmentBarCellUpdatable>
+@interface MySegmentBarCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
 
 @property (nonatomic, strong) UILabel *textLabel;
 
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (void)updateViewData:(SegmentBarCellItem *)viewData {
+- (void)updateViewData:(XYSegmentBarCellItem *)viewData {
     self.textLabel.text = viewData.text;
     self.textLabel.textColor = viewData.textColor;
     self.textLabel.font = viewData.textFont;
@@ -50,7 +50,7 @@
 
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) SegmentBar *bar;
+@property (nonatomic, strong) XYSegmentBar *bar;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -107,9 +107,9 @@
                     [UIColor purpleColor]
                     ];
 
-    self.bar = [[SegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
+    self.bar = [[XYSegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
     [self.bar setCurrentTabIndex:3 withAnimation:YES];
-    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(SegmentBarCellItem *item) {
+    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(XYSegmentBarCellItem *item) {
         return item;
     }];
 

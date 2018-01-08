@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #pragma mark - SegmentBarCellItem
-@interface SegmentBarCellItem : NSObject
+@interface XYSegmentBarCellItem : NSObject
 
 @property (nonatomic, copy) NSString *text;
 
@@ -20,18 +20,18 @@
 @end
 
 #pragma mark - SegmentBarCellUpdatable
-@protocol SegmentBarCellUpdatable <NSObject>
+@protocol XYSegmentBarCellUpdatable <NSObject>
 
-/// 暂时模型只暴露这个，后期不够再考虑
-- (void)updateViewData:(SegmentBarCellItem *)viewData;
+
+- (void)updateViewData:(XYSegmentBarCellItem *)viewData;
 
 @end
 
-@interface SegmentBar : UIView
+@interface XYSegmentBar : UIView
 
 /// handle会返回SegmentBarCellItem
 /// 可以拿到text、textColor、textFont
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(SegmentBarCellItem *item))handle;
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentBarCellItem *item))handle;
 
 @property (nonatomic, strong) NSArray *titles;
 
@@ -40,6 +40,8 @@
 
 /// Default 0x333333
 @property (nonatomic, strong) UIColor *titleColor;
+
+@property (nonatomic, strong) UIColor *indicatorBackgrounColor;
 
 /// 字体间的间距
 /// Default 8

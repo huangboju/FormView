@@ -6,17 +6,17 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "SegmentBar.h"
+#import "XYSegmentBar.h"
 
 #pragma mark - SegmentBarCellItem
 
-@implementation SegmentBarCellItem
+@implementation XYSegmentBarCellItem
 
 @end
 
 #pragma mark - SegmentBarCell
 
-@interface SegmentBarCell : UICollectionViewCell <SegmentBarCellUpdatable>
+@interface SegmentBarCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
 
 @property (nonatomic, strong) UILabel *textLabel;
 
@@ -33,7 +33,7 @@
     return self;
 }
 
-- (void)updateViewData:(SegmentBarCellItem *)viewData {
+- (void)updateViewData:(XYSegmentBarCellItem *)viewData {
     self.textLabel.text = viewData.text;
     self.textLabel.textColor = viewData.textColor;
     self.textLabel.font = viewData.textFont;
@@ -57,7 +57,7 @@
 
 #pragma mark - SegmentBar
 
-@interface SegmentBar()
+@interface XYSegmentBar()
 <
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout
@@ -78,11 +78,11 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic) CGFloat indicatorWidth;
 
-@property (nonatomic, weak) id(^configHandle)(SegmentBarCellItem *);
+@property (nonatomic, weak) id(^configHandle)(XYSegmentBarCellItem *);
 
 @end
 
-@implementation SegmentBar
+@implementation XYSegmentBar
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles {
 
@@ -91,14 +91,13 @@ UICollectionViewDelegateFlowLayout
         
         self.titles = titles;
 
-        self.backgroundColor = [UIColor redColor];
-
         self.indicatorHeight = 2;
         self.indicatorInterval = 8;
         self.titleInterval = 8;
         self.selectedIndex = 0;
+        self.indicatorBackgrounColor = [UIColor blackColor];
 
-        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(SegmentBarCellItem *item) {
+        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(XYSegmentBarCellItem *item) {
             return item;
         }];
 
@@ -134,12 +133,16 @@ UICollectionViewDelegateFlowLayout
 - (UIView *)bottomIndicator {
     if (!_bottomIndicator) {
         _bottomIndicator = [UIView new];
-        _bottomIndicator.backgroundColor = [UIColor blackColor];
     }
     return _bottomIndicator;
 }
 
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(SegmentBarCellItem *item))handle {
+- (void)setIndicatorBackgrounColor:(UIColor *)indicatorBackgrounColor {
+    _indicatorBackgrounColor = indicatorBackgrounColor;
+    self.bottomIndicator.backgroundColor = indicatorBackgrounColor;
+}
+
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentBarCellItem *item))handle {
     
     self.configHandle = handle;
 
@@ -180,7 +183,7 @@ UICollectionViewDelegateFlowLayout
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
-//    self.collectionView.backgroundColor = backgroundColor;
+    self.collectionView.backgroundColor = backgroundColor;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -191,7 +194,7 @@ UICollectionViewDelegateFlowLayout
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    if ([cell conformsToProtocol:@protocol(SegmentBarCellUpdatable)]) {
+    if ([cell conformsToProtocol:@protocol(XYSegmentBarCellUpdatable)]) {
         id item = [self generateItemAtIndexPath:indexPath];
         if (self.configHandle) {
             item = self.configHandle(item);
@@ -291,8 +294,8 @@ UICollectionViewDelegateFlowLayout
     }
 }
 
-- (SegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
-    SegmentBarCellItem *item = [SegmentBarCellItem new];
+- (XYSegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
+    XYSegmentBarCellItem *item = [XYSegmentBarCellItem new];
     item.textFont = self.titleFont;
     item.textColor = self.titleColor;
     item.text = self.titles[indexPath.row];
