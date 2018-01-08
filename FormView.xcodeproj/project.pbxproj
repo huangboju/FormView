@@ -11,6 +11,8 @@
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
+		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
+		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
 		BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A61FD540FA005D4D3A /* FieldCell.m */; };
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
@@ -36,8 +38,6 @@
 		BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */; };
 		BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */; };
 		BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */; };
-		BEDF26811FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */; };
-		BEDF26821FF5EFE100BFC97B /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF267F1FF5EFE100BFC97B /* EmptyView.m */; };
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +70,10 @@
 		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
+		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
+		BE4E0A7020037C97005FFD77 /* XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEmptyView.m; sourceTree = "<group>"; };
+		BE4E0A7120037C97005FFD77 /* XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEmptyView.h; sourceTree = "<group>"; };
+		BE4E0A7220037C97005FFD77 /* UIScrollView+XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XYEmptyView.h"; sourceTree = "<group>"; };
 		BE7458A51FD540FA005D4D3A /* FieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldCell.h; sourceTree = "<group>"; };
 		BE7458A61FD540FA005D4D3A /* FieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieldCell.m; sourceTree = "<group>"; };
 		BE7458A81FD544C4005D4D3A /* LicenseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseCell.h; sourceTree = "<group>"; };
@@ -120,10 +124,6 @@
 		BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSignInController.m; sourceTree = "<group>"; };
 		BECCEA511FD53F3500CBCC1F /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
 		BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
-		BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
-		BEDF267E1FF5EFE100BFC97B /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
-		BEDF267F1FF5EFE100BFC97B /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
-		BEDF26801FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,10 +311,10 @@
 		BEDF267C1FF5EFE100BFC97B /* EmptyView */ = {
 			isa = PBXGroup;
 			children = (
-				BEDF26801FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.h */,
-				BEDF267D1FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m */,
-				BEDF267E1FF5EFE100BFC97B /* EmptyView.h */,
-				BEDF267F1FF5EFE100BFC97B /* EmptyView.m */,
+				BE4E0A7220037C97005FFD77 /* UIScrollView+XYEmptyView.h */,
+				BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */,
+				BE4E0A7120037C97005FFD77 /* XYEmptyView.h */,
+				BE4E0A7020037C97005FFD77 /* XYEmptyView.m */,
 			);
 			path = EmptyView;
 			sourceTree = "<group>";
@@ -514,20 +514,20 @@
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */,
+				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
-				BEDF26821FF5EFE100BFC97B /* EmptyView.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* GroupTableController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
-				BEDF26811FF5EFE100BFC97B /* UIScrollView+EmptyDataSet.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
+				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,

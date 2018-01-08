@@ -9,9 +9,9 @@
 #import "EnptyViewController.h"
 //#import "EmptyView.h"
 #import <Masonry.h>
-#import "UIScrollView+EmptyDataSet.h"
+#import "UIScrollView+XYEmptyView.h"
 
-@interface EnptyViewController ()<DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface EnptyViewController ()<XYEmptyDataSetSource, XYEmptyDataSetDelegate>
 
 @property (nonatomic, strong) NSArray <NSString *>*data;
 @end

@@ -108,7 +108,7 @@
                     ];
 
     self.bar = [[XYSegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
-    [self.bar setCurrentTabIndex:3 withAnimation:YES];
+    [self.bar setCurrentTabIndex:3 animated:YES];
     [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(XYSegmentBarCellItem *item) {
         return item;
     }];

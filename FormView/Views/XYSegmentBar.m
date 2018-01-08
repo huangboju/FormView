@@ -160,7 +160,7 @@ UICollectionViewDelegateFlowLayout
     return self.selectedIndex;
 }
 
-- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate {
+- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex animated:(BOOL)animated {
     self.selectedIndex = currentTabIndex;
 
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.selectedIndex inSection:0];
@@ -169,7 +169,7 @@ UICollectionViewDelegateFlowLayout
         CGRect newRect = cell.frame;
         self.indicatorMinX = newRect.origin.x;
         self.indicatorWidth = cell.frame.size.width;
-        [self updateIndicatorWithAnimation:animate];
+        [self updateIndicatorWithAnimation:animated];
     };
 
     if (self.isFirst) {
@@ -209,7 +209,7 @@ UICollectionViewDelegateFlowLayout
         [self.delegate segmentBar:self didSelectItemAtIndex:indexPath.row];
     }
 
-    [self setCurrentTabIndex:indexPath.row withAnimation:YES];
+    [self setCurrentTabIndex:indexPath.row animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -1,5 +1,5 @@
 //
-//  UIScrollView+EmptyDataSet.m
+//  UIScrollView+XYEmptyView.m
 //  DZNEmptyDataSet
 //  https://github.com/dzenbot/DZNEmptyDataSet
 //
@@ -8,8 +8,8 @@
 //  Licence: MIT-Licence
 //
 
-#import "UIScrollView+EmptyDataSet.h"
-#import "EmptyView.h"
+#import "UIScrollView+XYEmptyView.h"
+#import "XYEmptyView.h"
 #import <objc/runtime.h>
 
 @interface DZNWeakObjectContainer : NSObject
@@ -28,19 +28,19 @@ static char const * const kEmptyDataSetDelegate =   "emptyDataSetDelegate";
 static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
 @interface UIScrollView () <UIGestureRecognizerDelegate>
-@property (nonatomic, readonly) EmptyView *emptyDataSetView;
+@property (nonatomic, readonly) XYEmptyView *emptyDataSetView;
 @end
 
-@implementation UIScrollView (DZNEmptyDataSet)
+@implementation UIScrollView (XYEmptyView)
 
 #pragma mark - Getters (Public)
 
-- (id<DZNEmptyDataSetSource>)emptyDataSetSource {
+- (id<XYEmptyDataSetSource>)emptyDataSetSource {
     DZNWeakObjectContainer *container = objc_getAssociatedObject(self, kEmptyDataSetSource);
     return container.weakObject;
 }
 
-- (id<DZNEmptyDataSetDelegate>)emptyDataSetDelegate {
+- (id<XYEmptyDataSetDelegate>)emptyDataSetDelegate {
     DZNWeakObjectContainer *container = objc_getAssociatedObject(self, kEmptyDataSetDelegate);
     return container.weakObject;
 }
@@ -53,11 +53,11 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
 #pragma mark - Getters (Private)
 
-- (EmptyView *)emptyDataSetView {
-    EmptyView *view = objc_getAssociatedObject(self, kEmptyDataSetView);
+- (XYEmptyView *)emptyDataSetView {
+    XYEmptyView *view = objc_getAssociatedObject(self, kEmptyDataSetView);
     
     if (!view) {
-        view = [EmptyView new];
+        view = [[XYEmptyView alloc] init];
         view.hidden = YES;
 
         [self setEmptyDataSetView:view];
@@ -66,7 +66,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 }
 
 - (BOOL)dzn_canDisplay {
-    if (self.emptyDataSetSource && [self.emptyDataSetSource conformsToProtocol:@protocol(DZNEmptyDataSetSource)]) {
+    if (self.emptyDataSetSource && [self.emptyDataSetSource conformsToProtocol:@protocol(XYEmptyDataSetSource)]) {
         if ([self isKindOfClass:[UITableView class]] || [self isKindOfClass:[UICollectionView class]] || [self isKindOfClass:[UIScrollView class]]) {
             return YES;
         }
@@ -159,7 +159,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
         if (color) NSAssert([color isKindOfClass:[UIColor class]], @"You must return a valid UIColor object for -backgroundColorForEmptyDataSet:");
         return color;
     }
-    return [UIColor clearColor];
+    return [UIColor colorWithRed:245.f / 255.0 green:248.f / 255.0 blue:250.f / 255.0 alpha:1];
 }
 
 - (CGFloat)dzn_topInterval {
@@ -219,7 +219,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
 #pragma mark - Setters (Public)
 
-- (void)setEmptyDataSetSource:(id<DZNEmptyDataSetSource>)datasource {
+- (void)setEmptyDataSetSource:(id<XYEmptyDataSetSource>)datasource {
     if (!datasource || ![self dzn_canDisplay]) {
         [self dzn_invalidate];
     }
@@ -235,7 +235,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
     }
 }
 
-- (void)setEmptyDataSetDelegate:(id<DZNEmptyDataSetDelegate>)delegate {
+- (void)setEmptyDataSetDelegate:(id<XYEmptyDataSetDelegate>)delegate {
     if (!delegate) {
         [self dzn_invalidate];
     }
@@ -246,7 +246,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
 #pragma mark - Setters (Private)
 
-- (void)setEmptyDataSetView:(EmptyView *)view {
+- (void)setEmptyDataSetView:(XYEmptyView *)view {
     objc_setAssociatedObject(self, kEmptyDataSetView, view, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
@@ -280,12 +280,11 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
         return;
     }
     
-    if (([self dzn_shouldDisplay] && [self dzn_itemsCount] == 0) || [self dzn_shouldBeForcedToDisplay])
-    {
+    if (([self dzn_shouldDisplay] && [self dzn_itemsCount] == 0) || [self dzn_shouldBeForcedToDisplay]) {
         // Notifies that the empty dataset view will appear
         [self dzn_willAppear];
         
-        EmptyView *view = self.emptyDataSetView;
+        XYEmptyView *view = self.emptyDataSetView;
         
         // Configure empty dataset fade in display
 
@@ -464,6 +463,37 @@ Class dzn_baseClassToSwizzleForTarget(id target) {
         _weakObject = object;
     }
     return self;
+}
+
+@end
+
+@interface XYEmptyViewDataSource() <XYEmptyDataSetSource, XYEmptyDataSetDelegate>
+@end
+
+@implementation XYEmptyViewDataSource
+
+- (instancetype)initWithScrollView:(UIScrollView *)scrollView {
+    if (self = [super init]) {
+        scrollView.emptyDataSetSource = self;
+        scrollView.emptyDataSetDelegate = self;
+    }
+    return self;
+}
+
+- (nullable NSString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.text;
+}
+
+- (nullable UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.image;
+}
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
+    return self.didNetwork;
+}
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.backgroundColor ?: [UIColor whiteColor];
 }
 
 @end
