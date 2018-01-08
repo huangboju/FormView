@@ -20,18 +20,41 @@
 @end
 
 #pragma mark - SegmentBarCellUpdatable
-@protocol XYSegmentBarCellUpdatable <NSObject>
+@class XYSegmentBar;
 
+@protocol XYSegmentBarCellUpdatable <NSObject>
 
 - (void)updateViewData:(XYSegmentBarCellItem *)viewData;
 
 @end
 
+
+@protocol XYSegmentBarDelegate <NSObject>
+
+- (void)segmentBar:(XYSegmentBar *)segmentBar didSelectItemAtIndex:(NSInteger )index;
+
+@end
+
+typedef NS_ENUM(NSUInteger, XYSegmentBarScrollDirection) {
+    XYSegmentBarScrollDirectionLeft,
+    XYSegmentBarScrollDirectionRight,
+};
+
+
+#pragma mark - XYSegmentBar
 @interface XYSegmentBar : UIView
 
-/// handle会返回SegmentBarCellItem
-/// 可以拿到text、textColor、textFont
+/**
+ 自定义segmentItem
+
+ @param cellClass 必须为collecitonview Cell
+ @param handle 会返回SegmentBarCellItem，可以构造自定义model
+ */
 - (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentBarCellItem *item))handle;
+
+
+@property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;
+
 
 @property (nonatomic, strong) NSArray *titles;
 
@@ -60,7 +83,7 @@
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
 
 /// 设置默认位置
-- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex withAnimation:(BOOL)animate;
+- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex animated:(BOOL)animated;
 
 /// 给外部做联动用
 - (void)updateBottomIndicatorWithScrollView:(UIScrollView *)scrollView isLeft:(BOOL)isLeft;

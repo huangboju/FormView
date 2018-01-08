@@ -205,6 +205,10 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(segmentBar:didSelectItemAtIndex:)]) {
+        [self.delegate segmentBar:self didSelectItemAtIndex:indexPath.row];
+    }
+
     [self setCurrentTabIndex:indexPath.row withAnimation:YES];
 }
 
