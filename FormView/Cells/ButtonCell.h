@@ -24,6 +24,6 @@
 
 @interface ButtonCell : UITableViewCell<Updatable>
 
-@property(nonatomic, strong) void (^buttonAction)(void);
+@property (nonatomic, strong) void (^buttonAction)(void);
 
 @end
