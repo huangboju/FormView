@@ -38,6 +38,8 @@
 		BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */; };
 		BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */; };
 		BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */; };
+		BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */; };
+		BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */; };
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,10 @@
 		BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSignInController.m; sourceTree = "<group>"; };
 		BECCEA511FD53F3500CBCC1F /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
 		BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
+		BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
+		BEEF6CA5200CA669001158A9 /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
+		BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectButtonController.h; sourceTree = "<group>"; };
+		BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectButtonController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,7 @@
 		BE29FB321FFDD58000A27373 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEEF6CA3200CA669001158A9 /* AYVibrantButton */,
 				BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */,
 				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
 				BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */,
@@ -243,6 +250,8 @@
 				BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */,
 				BE29FB2F1FFDD4E300A27373 /* SegmentController.h */,
 				BE29FB301FFDD4E300A27373 /* SegmentController.m */,
+				BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */,
+				BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */,
 			);
 			path = FormView;
 			sourceTree = "<group>";
@@ -317,6 +326,15 @@
 				BE4E0A7020037C97005FFD77 /* XYEmptyView.m */,
 			);
 			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		BEEF6CA3200CA669001158A9 /* AYVibrantButton */ = {
+			isa = PBXGroup;
+			children = (
+				BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */,
+				BEEF6CA5200CA669001158A9 /* AYVibrantButton.h */,
+			);
+			path = AYVibrantButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,6 +528,7 @@
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
+				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
@@ -525,6 +544,7 @@
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
+				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
@@ -696,11 +716,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NFVM7S86S;
+				DEVELOPMENT_TEAM = D2CVGDWDEG;
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormVi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -712,11 +732,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3NFVM7S86S;
+				DEVELOPMENT_TEAM = D2CVGDWDEG;
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormVi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

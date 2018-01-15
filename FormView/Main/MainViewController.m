@@ -15,6 +15,7 @@
 #import "MessageCenterController.h"
 #import "EnptyViewController.h"
 #import "SegmentController.h"
+#import "EffectButtonController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -39,6 +40,9 @@
                              ],
                          @[
                              [SegmentController class]
+                             ],
+                         @[
+                             [EffectButtonController class]
                              ]
                          ];
 
