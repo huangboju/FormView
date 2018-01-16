@@ -12,7 +12,6 @@
 #import "AccountTitleCell.h"
 #import "ButtonCell.h"
 #import "PasswordLoginCell.h"
-#import "AccountButtonCell.h"
 
 @interface SignInController ()<ButtonCellActionable>
 
@@ -41,7 +40,6 @@
                       [[Row alloc] initWithClass:[AccountTitleCell class] model:accountTitleCellItem],
                       [[Row alloc] initWithClass:[PasswordLoginCell class]],
                       [[Row alloc] initWithClass:[ButtonCell class] model:buttonCellItem],
-                      [[Row alloc] initWithClass:[AccountButtonCell class] model:buttonCellItem],
                       ]
                   ];
 }

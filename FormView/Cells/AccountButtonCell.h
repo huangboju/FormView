@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Row.h"
+@protocol AccountButtonCellActionable <NSObject>
 
-@interface AccountButtonCell : UITableViewCell<Updatable>
+- (void)signInButtonAction:(UIButton *)sender;
+
+- (void)signUpButtonAction:(UIButton *)sender;
+
+@end
+
+@interface AccountButtonCell : UITableViewCell
 
 @end

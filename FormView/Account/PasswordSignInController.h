@@ -6,8 +6,8 @@
 //  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
-#import "GroupTableController.h"
+#import "XYPHGroupTableController.h"
 
-@interface PasswordSignInController : GroupTableController
+@interface PasswordSignInController : XYPHGroupTableController
 
 @end

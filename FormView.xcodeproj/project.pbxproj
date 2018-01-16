@@ -13,12 +13,13 @@
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
+		BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */; };
 		BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A61FD540FA005D4D3A /* FieldCell.m */; };
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
 		BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
-		BECCE9F51FD4F2D400CBCC1F /* GroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */; };
+		BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */; };
 		BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */; };
 		BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */; };
 		BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */; };
@@ -41,6 +42,8 @@
 		BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */; };
 		BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */; };
 		BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */; };
+		BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB4200DE2A3001158A9 /* WechatButtonCell.m */; };
+		BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB7200DE490001158A9 /* IntroController.m */; };
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,8 @@
 		BE4E0A7020037C97005FFD77 /* XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEmptyView.m; sourceTree = "<group>"; };
 		BE4E0A7120037C97005FFD77 /* XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEmptyView.h; sourceTree = "<group>"; };
 		BE4E0A7220037C97005FFD77 /* UIScrollView+XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XYEmptyView.h"; sourceTree = "<group>"; };
+		BE697A93200DEDFB009C6762 /* ThirdPartButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartButtonCell.h; sourceTree = "<group>"; };
+		BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdPartButtonCell.m; sourceTree = "<group>"; };
 		BE7458A51FD540FA005D4D3A /* FieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldCell.h; sourceTree = "<group>"; };
 		BE7458A61FD540FA005D4D3A /* FieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieldCell.m; sourceTree = "<group>"; };
 		BE7458A81FD544C4005D4D3A /* LicenseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseCell.h; sourceTree = "<group>"; };
@@ -88,8 +93,8 @@
 		BECCE9ED1FD4F2D400CBCC1F /* FormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BECCE9F31FD4F2D400CBCC1F /* GroupTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupTableController.h; sourceTree = "<group>"; };
-		BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupTableController.m; sourceTree = "<group>"; };
+		BECCE9F31FD4F2D400CBCC1F /* XYPHGroupTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHGroupTableController.h; sourceTree = "<group>"; };
+		BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHGroupTableController.m; sourceTree = "<group>"; };
 		BECCE9F71FD4F2D400CBCC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BECCE9FC1FD4F2D400CBCC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +138,10 @@
 		BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectButtonController.m; sourceTree = "<group>"; };
 		BEEF6CB0200DD925001158A9 /* AccountButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountButtonCell.h; sourceTree = "<group>"; };
 		BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountButtonCell.m; sourceTree = "<group>"; };
+		BEEF6CB3200DE2A3001158A9 /* WechatButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WechatButtonCell.h; sourceTree = "<group>"; };
+		BEEF6CB4200DE2A3001158A9 /* WechatButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WechatButtonCell.m; sourceTree = "<group>"; };
+		BEEF6CB6200DE490001158A9 /* IntroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroController.h; sourceTree = "<group>"; };
+		BEEF6CB7200DE490001158A9 /* IntroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +196,8 @@
 				BECCEA291FD4FDF000CBCC1F /* SignInController.m */,
 				BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */,
 				BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */,
+				BEEF6CB6200DE490001158A9 /* IntroController.h */,
+				BEEF6CB7200DE490001158A9 /* IntroController.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -236,8 +247,8 @@
 				BECCEA371FD514AE00CBCC1F /* Main */,
 				BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */,
 				BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */,
-				BECCE9F31FD4F2D400CBCC1F /* GroupTableController.h */,
-				BECCE9F41FD4F2D400CBCC1F /* GroupTableController.m */,
+				BECCE9F31FD4F2D400CBCC1F /* XYPHGroupTableController.h */,
+				BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */,
 				BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */,
 				BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */,
 				BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */,
@@ -309,6 +320,10 @@
 				BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */,
 				BEEF6CB0200DD925001158A9 /* AccountButtonCell.h */,
 				BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */,
+				BEEF6CB3200DE2A3001158A9 /* WechatButtonCell.h */,
+				BEEF6CB4200DE2A3001158A9 /* WechatButtonCell.m */,
+				BE697A93200DEDFB009C6762 /* ThirdPartButtonCell.h */,
+				BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -535,13 +550,14 @@
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
+				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
-				BECCE9F51FD4F2D400CBCC1F /* GroupTableController.m in Sources */,
+				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
@@ -556,7 +572,9 @@
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
+				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
+				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

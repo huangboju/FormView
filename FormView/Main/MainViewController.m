@@ -17,6 +17,8 @@
 #import "SegmentController.h"
 #import "EffectButtonController.h"
 
+#import "IntroController.h"
+
 @interface MainViewController ()<UITableViewDelegate>
 
 @end
@@ -43,6 +45,9 @@
                              ],
                          @[
                              [EffectButtonController class]
+                             ],
+                         @[
+                             [IntroController class]
                              ]
                          ];
 

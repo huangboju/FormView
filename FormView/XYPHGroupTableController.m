@@ -6,13 +6,13 @@
 //  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
-#import "GroupTableController.h"
+#import "XYPHGroupTableController.h"
 
-@interface GroupTableController () <UITableViewDataSource>
+@interface XYPHGroupTableController () <UITableViewDataSource>
 
 @end
 
-@implementation GroupTableController
+@implementation XYPHGroupTableController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,6 +20,8 @@
     [self initSubviews];
 
     [self.view addSubview:self.tableView];
+    
+    [self tableViewDidMoveToSuperView];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -74,9 +76,13 @@
 
 @end
 
-@implementation GroupTableController (SubclassingHooks)
+@implementation XYPHGroupTableController (SubclassingHooks)
 
 - (void)initSubviews {
+    // 子类重写
+}
+
+- (void)tableViewDidMoveToSuperView {
     // 子类重写
 }
 
