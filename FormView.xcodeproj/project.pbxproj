@@ -40,6 +40,7 @@
 		BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */; };
 		BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */; };
 		BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */; };
+		BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */; };
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,8 @@
 		BEEF6CA5200CA669001158A9 /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
 		BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectButtonController.h; sourceTree = "<group>"; };
 		BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EffectButtonController.m; sourceTree = "<group>"; };
+		BEEF6CB0200DD925001158A9 /* AccountButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountButtonCell.h; sourceTree = "<group>"; };
+		BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountButtonCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +307,8 @@
 				BE7458A91FD544C4005D4D3A /* LicenseCell.m */,
 				BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */,
 				BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */,
+				BEEF6CB0200DD925001158A9 /* AccountButtonCell.h */,
+				BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
+				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
