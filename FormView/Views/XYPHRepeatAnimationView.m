@@ -23,8 +23,12 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.firstView];
-
+        
         [self addSubview:self.secondView];
+        
+        UIView *maskView = [[UIView alloc] initWithFrame:self.frame];
+        maskView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+        [self addSubview:maskView];
     }
     return self;
 }
@@ -49,24 +53,28 @@
 
 - (XYPHResumeAnimationImageView *)firstView {
     if (!_firstView) {
-        _firstView = [[XYPHResumeAnimationImageView alloc] initWithImage:[UIImage imageNamed:@"scrollView"]];
-        _firstView.contentMode = UIViewContentModeScaleAspectFit;
-        CGFloat width = self.frame.size.width;
-        CGFloat height = width * _firstView.frame.size.height / _firstView.frame.size.width;
-        _firstView.frame = CGRectMake(0, 0, width, height);
+        _firstView = [self generatImageView];
     }
     return _firstView;
 }
 
 - (XYPHResumeAnimationImageView *)secondView {
     if (!_secondView) {
-        _secondView = [[XYPHResumeAnimationImageView alloc] initWithImage:[UIImage imageNamed:@"scrollView"]];
-        _secondView.contentMode = UIViewContentModeScaleAspectFit;
-        CGFloat width = self.frame.size.width;
-        CGFloat height = width * _secondView.frame.size.height / _secondView.frame.size.width;
-        _secondView.frame = CGRectMake(0, height, width, height);
+        _secondView = [self generatImageView];
+        CGRect rect = _secondView.frame;
+        _secondView.frame = CGRectMake(0, rect.size.height, rect.size.width, rect.size.height);
     }
     return _secondView;
 }
 
+- (XYPHResumeAnimationImageView *)generatImageView {
+    XYPHResumeAnimationImageView *imageView = [[XYPHResumeAnimationImageView alloc] initWithImage:[UIImage imageNamed:@"scrollView"]];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    CGFloat width = self.frame.size.width;
+    CGFloat height = width * imageView.frame.size.height / imageView.frame.size.width;
+    imageView.frame = CGRectMake(0, 0, width, height);
+    return imageView;
+}
+
 @end
+
