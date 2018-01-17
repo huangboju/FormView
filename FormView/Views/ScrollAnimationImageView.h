@@ -18,4 +18,8 @@
 
 @interface ScrollAnimationImageView : UIImageView
 
+- (void)resumeAnimation;
+
+- (void)pauseAnimation;
+
 @end

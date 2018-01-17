@@ -59,11 +59,11 @@
 }
 
 - (void)addObservers {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resumeAnimation) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAnimation) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
-- (void)applicationWillEnterForeground {
+- (void)resumeAnimation {
     [self restoreAnimationsWithKeys:self.persistentAnimations.allKeys];
     [self.persistentAnimations removeAllObjects];
     if (self.persistentSpeed == 1.0) { //if layer was plaiyng before backgorund, resume it
@@ -71,7 +71,7 @@
     }
 }
 
-- (void)applicationDidEnterBackground {
+- (void)pauseAnimation {
     self.persistentSpeed = self.layer.speed;
     self.layer.speed = 1.0; //in case layer was paused from outside, set speed to 1.0 to get all animations
     [self persistAnimationsWithKeys:[self.layer animationKeys]];

@@ -31,13 +31,23 @@
     
     [self.view addSubview:self.secondView];
     
+    [self animation];
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(pushAction)];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [self animation];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self.firstView resumeAnimation];
+    [self.secondView resumeAnimation];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    [self.firstView pauseAnimation];
+    [self.secondView pauseAnimation];
 }
 
 - (void)pushAction {
@@ -46,15 +56,6 @@
 }
 
 - (void)animation {
-    [self.secondView.layer removeAllAnimations];
-    [self.firstView.layer removeAllAnimations];
-
-    CGFloat width = self.firstView.frame.size.width;
-    CGFloat height = self.firstView.frame.size.height;
-
-    self.firstView.frame = CGRectMake(0, 0, width, height);
-    self.secondView.frame = CGRectMake(0, height, width, height);
-
     CGRect rect = self.secondView.frame;
     [UIView animateWithDuration:5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear animations:^{
         self.secondView.frame = CGRectMake(rect.origin.x, 0, rect.size.width, rect.size.height);
