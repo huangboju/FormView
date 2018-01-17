@@ -14,6 +14,8 @@
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
 		BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */; };
+		BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */; };
+		BE697AC1200F3821009C6762 /* ScrollAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697AC0200F3821009C6762 /* ScrollAnimationImageView.m */; };
 		BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A61FD540FA005D4D3A /* FieldCell.m */; };
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
@@ -82,6 +84,10 @@
 		BE4E0A7220037C97005FFD77 /* UIScrollView+XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XYEmptyView.h"; sourceTree = "<group>"; };
 		BE697A93200DEDFB009C6762 /* ThirdPartButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartButtonCell.h; sourceTree = "<group>"; };
 		BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdPartButtonCell.m; sourceTree = "<group>"; };
+		BE697AB8200F1BDE009C6762 /* ScrollAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollAnimationController.h; sourceTree = "<group>"; };
+		BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollAnimationController.m; sourceTree = "<group>"; };
+		BE697ABF200F3821009C6762 /* ScrollAnimationImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollAnimationImageView.h; sourceTree = "<group>"; };
+		BE697AC0200F3821009C6762 /* ScrollAnimationImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollAnimationImageView.m; sourceTree = "<group>"; };
 		BE7458A51FD540FA005D4D3A /* FieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldCell.h; sourceTree = "<group>"; };
 		BE7458A61FD540FA005D4D3A /* FieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieldCell.m; sourceTree = "<group>"; };
 		BE7458A81FD544C4005D4D3A /* LicenseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LicenseCell.h; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
 				BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */,
 				BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */,
+				BE697ABF200F3821009C6762 /* ScrollAnimationImageView.h */,
+				BE697AC0200F3821009C6762 /* ScrollAnimationImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +274,8 @@
 				BE29FB301FFDD4E300A27373 /* SegmentController.m */,
 				BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */,
 				BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */,
+				BE697AB8200F1BDE009C6762 /* ScrollAnimationController.h */,
+				BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */,
 			);
 			path = FormView;
 			sourceTree = "<group>";
@@ -566,6 +576,7 @@
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
+				BE697AC1200F3821009C6762 /* ScrollAnimationImageView.m in Sources */,
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
@@ -575,6 +586,7 @@
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
+				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

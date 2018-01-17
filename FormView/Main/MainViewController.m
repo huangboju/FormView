@@ -16,6 +16,7 @@
 #import "EnptyViewController.h"
 #import "SegmentController.h"
 #import "EffectButtonController.h"
+#import "ScrollAnimationController.h"
 
 #import "IntroController.h"
 
@@ -48,7 +49,10 @@
                              ],
                          @[
                              [IntroController class]
-                             ]
+                             ],
+                         @[
+                             [ScrollAnimationController class]
+                             ],
                          ];
 
     NSMutableArray *sections = [NSMutableArray array];

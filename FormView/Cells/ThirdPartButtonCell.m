@@ -65,9 +65,14 @@
                         }];
                     }
                 }
+                BOOL isIPHONEX = [UIScreen mainScreen].bounds.size.height == 812;
                 [button mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(20);
-                    make.centerY.mas_equalTo(0);
+                    if (isIPHONEX) {
+                        make.bottom.mas_equalTo(-54);
+                    } else {
+                        make.bottom.mas_equalTo(-20);
+                    }
                 }];
                 tmpButton = button;
                 tmpView = dummyView;

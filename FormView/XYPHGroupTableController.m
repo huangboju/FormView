@@ -8,6 +8,8 @@
 
 #import "XYPHGroupTableController.h"
 
+#import <Masonry.h>
+
 @interface XYPHGroupTableController () <UITableViewDataSource>
 
 @end
@@ -20,13 +22,11 @@
     [self initSubviews];
 
     [self.view addSubview:self.tableView];
-    
-    [self tableViewDidMoveToSuperView];
-}
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    self.tableView.frame = self.view.bounds;
+    [self tableViewDidMoveToSuperView];
 }
 
 - (Row *)rowAtIndexPath:(NSIndexPath *)indexPath {
