@@ -35,7 +35,7 @@
 
 - (void)startAnimaiton {
     CGRect rect = self.secondView.frame;
-    [UIView animateWithDuration:5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:40 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear animations:^{
         self.secondView.frame = CGRectMake(rect.origin.x, 0, rect.size.width, rect.size.height);
         self.firstView.frame = CGRectMake(rect.origin.x, -rect.size.height, rect.size.width, rect.size.height);
     } completion:nil];
