@@ -21,8 +21,12 @@
 		BEFC2E5B201412C000643E6E /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5A201412C000643E6E /* ButtonCell.swift */; };
 		BEFC2E5D2014144900643E6E /* LicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5C2014144900643E6E /* LicenseCell.swift */; };
 		BEFC2E5F201414F800643E6E /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5E201414F800643E6E /* InputCell.swift */; };
-		BEFC2E622014166100643E6E /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E612014166100643E6E /* SignInController.swift */; };
+		BEFC2E622014166100643E6E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E612014166100643E6E /* DetailController.swift */; };
 		BEFC2E64201416C800643E6E /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E63201416C800643E6E /* MainCell.swift */; };
+		BEFC2E6720142AF400643E6E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6620142AF400643E6E /* ListController.swift */; };
+		BEFC2E6B201430D800643E6E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6A201430D800643E6E /* ImageCell.swift */; };
+		BEFC2E6D201440E500643E6E /* TwoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6C201440E500643E6E /* TwoImageCell.swift */; };
+		BEFC2E6F2014411000643E6E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6E2014411000643E6E /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +67,13 @@
 		BEFC2E5A201412C000643E6E /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		BEFC2E5C2014144900643E6E /* LicenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseCell.swift; sourceTree = "<group>"; };
 		BEFC2E5E201414F800643E6E /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
-		BEFC2E612014166100643E6E /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		BEFC2E612014166100643E6E /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		BEFC2E63201416C800643E6E /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		BEFC2E652014236400643E6E /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		BEFC2E6620142AF400643E6E /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		BEFC2E6A201430D800643E6E /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		BEFC2E6C201440E500643E6E /* TwoImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoImageCell.swift; sourceTree = "<group>"; };
+		BEFC2E6E2014411000643E6E /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,7 @@
 				BEFC2E2C2012DCA300643E6E /* LaunchScreen.storyboard */,
 				BEFC2E2F2012DCA300643E6E /* Info.plist */,
 				BEFC2E652014236400643E6E /* Bridging.h */,
+				BEFC2E6E2014411000643E6E /* UIHelper.swift */,
 			);
 			path = FormView;
 			sourceTree = "<group>";
@@ -153,11 +162,8 @@
 		BEFC2E57201411E700643E6E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BEFC2E58201411FE00643E6E /* TitleCell.swift */,
-				BEFC2E5A201412C000643E6E /* ButtonCell.swift */,
-				BEFC2E5C2014144900643E6E /* LicenseCell.swift */,
-				BEFC2E5E201414F800643E6E /* InputCell.swift */,
-				BEFC2E63201416C800643E6E /* MainCell.swift */,
+				BEFC2E69201430AA00643E6E /* List */,
+				BEFC2E682014308B00643E6E /* Detail */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -165,9 +171,31 @@
 		BEFC2E602014163C00643E6E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BEFC2E612014166100643E6E /* SignInController.swift */,
+				BEFC2E612014166100643E6E /* DetailController.swift */,
+				BEFC2E6620142AF400643E6E /* ListController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEFC2E682014308B00643E6E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC2E58201411FE00643E6E /* TitleCell.swift */,
+				BEFC2E5A201412C000643E6E /* ButtonCell.swift */,
+				BEFC2E5C2014144900643E6E /* LicenseCell.swift */,
+				BEFC2E5E201414F800643E6E /* InputCell.swift */,
+				BEFC2E63201416C800643E6E /* MainCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		BEFC2E69201430AA00643E6E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC2E6A201430D800643E6E /* ImageCell.swift */,
+				BEFC2E6C201440E500643E6E /* TwoImageCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,14 +335,18 @@
 				BEFC2E562012DDEA00643E6E /* Extensions.swift in Sources */,
 				BEFC2E262012DCA300643E6E /* ViewController.swift in Sources */,
 				BEFC2E522012DD5000643E6E /* Row.swift in Sources */,
-				BEFC2E622014166100643E6E /* SignInController.swift in Sources */,
+				BEFC2E622014166100643E6E /* DetailController.swift in Sources */,
 				BEFC2E542012DDB900643E6E /* GroupTableController.swift in Sources */,
 				BEFC2E64201416C800643E6E /* MainCell.swift in Sources */,
 				BEFC2E5F201414F800643E6E /* InputCell.swift in Sources */,
 				BEFC2E59201411FE00643E6E /* TitleCell.swift in Sources */,
+				BEFC2E6F2014411000643E6E /* UIHelper.swift in Sources */,
 				BEFC2E242012DCA300643E6E /* AppDelegate.swift in Sources */,
 				BEFC2E5B201412C000643E6E /* ButtonCell.swift in Sources */,
 				BEFC2E5D2014144900643E6E /* LicenseCell.swift in Sources */,
+				BEFC2E6720142AF400643E6E /* ListController.swift in Sources */,
+				BEFC2E6D201440E500643E6E /* TwoImageCell.swift in Sources */,
+				BEFC2E6B201430D800643E6E /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

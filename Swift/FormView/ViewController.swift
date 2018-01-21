@@ -11,7 +11,11 @@ class ViewController: GroupTableController {
     override func initSubviews() {
         form = [
             [
-                Row<MainCell>(viewData: MainCellItem(title: "SignInController", dest: .dest(SignInController.self)))
+                Row<MainCell>(viewData: MainCellItem(dest: .dest(DetailController.self)))
+            ],
+            
+            [
+                Row<MainCell>(viewData: MainCellItem(dest: .dest(ListController.self)))
             ]
         ]
         tableView.delegate = self

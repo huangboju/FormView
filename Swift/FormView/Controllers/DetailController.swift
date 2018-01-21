@@ -6,7 +6,7 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-class SignInController: GroupTableController {
+class DetailController: GroupTableController {
     override func initSubviews() {
         form = [
             [
@@ -20,7 +20,7 @@ class SignInController: GroupTableController {
     }
 }
 
-extension SignInController: ButtonCellActionable {
+extension DetailController: ButtonCellActionable {
     func buttonAction(_ sender: UIButton) {
         let phoneNumberCell: InputCell = cellBy(tag: .phoneNumber)
         let phoneNumber = phoneNumberCell.inputText

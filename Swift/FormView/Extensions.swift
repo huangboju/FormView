@@ -106,6 +106,23 @@ public enum Dest {
     case scheme(Scheme)
 }
 
+extension Dest: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .none:
+            return "none"
+        case let .dest(dest):
+            return "\(dest)"
+        case let .controller(vc):
+            return vc.description
+        case let .web(str):
+            return "\(str)"
+        case let .scheme(s):
+            return "\(s.scheme)"
+        }
+    }
+}
+
 // https://github.com/cyanzhong/app-tutorials/blob/master/schemes.md
 // http://www.jianshu.com/p/bb3f42fdbc31
 public enum Scheme {

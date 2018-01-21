@@ -7,7 +7,6 @@
 //
 
 struct MainCellItem {
-    let title: String
     let dest: Dest
 }
 
@@ -15,7 +14,7 @@ class MainCell: UITableViewCell {}
 
 extension MainCell: Updatable {
     func update(viewData: MainCellItem) {
-        textLabel?.text = viewData.title
+        textLabel?.text = viewData.dest.description
         accessoryType = .disclosureIndicator
     }
 }
