@@ -7,11 +7,18 @@
 //
 
 struct UIHelper {
-    static func generatImageView() -> UIImageView {
+    static func generateImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor(white: 0.9, alpha: 1)
         imageView.layer.cornerRadius = 3
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }
+    
+    static func generateTitleLabel() -> UILabel {
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        return titleLabel
     }
 }

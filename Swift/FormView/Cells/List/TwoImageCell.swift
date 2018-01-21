@@ -9,24 +9,22 @@
 class TwoImageCell: UITableViewCell, Updatable {
     
     private lazy var firstImageView: UIImageView = {
-        let imageView = UIHelper.generatImageView()
+        let imageView = UIHelper.generateImageView()
         imageView.backgroundColor = UIColor(hex: 0x4169E1)
         return imageView
     }()
     
     private lazy var secondImageView: UIImageView = {
-        let imageView = UIHelper.generatImageView()
+        let imageView = UIHelper.generateImageView()
         imageView.backgroundColor = UIColor(hex: 0x6495ED)
         return imageView
     }()
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        let titleLabel = UILabel()
-        titleLabel.text = "TwoImageCell"
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        let titleLabel = UIHelper.generateTitleLabel()
+        titleLabel.text = "\(classForCoder)"
         contentView.addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15).isActive = true

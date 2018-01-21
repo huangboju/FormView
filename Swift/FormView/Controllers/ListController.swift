@@ -30,21 +30,21 @@ class ListController: UIViewController {
         for i in 0 ..< 20 {
             let row: RowType
             if i & 1 == 0 {
-                row = generatTwoImageRow()
+                row = generateTwoImageRow()
             } else {
-                row = generatImageRow()
+                row = generateImageRow()
             }
             tableView.register(row.cellClass, forCellReuseIdentifier: row.reuseIdentifier)
             viewModel.rows.append(row)
         }
     }
     
-    func generatTwoImageRow() -> Row<TwoImageCell> {
+    func generateTwoImageRow() -> Row<TwoImageCell> {
         let row = Row<TwoImageCell>(viewData: NoneItem())
         return row
     }
 
-    func generatImageRow() -> Row<ImageCell> {
+    func generateImageRow() -> Row<ImageCell> {
         let row = Row<ImageCell>(viewData: NoneItem())
         return row
     }
