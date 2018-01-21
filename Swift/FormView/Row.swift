@@ -6,8 +6,6 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-import UIKit
-
 struct NoneItem {}
 
 protocol Updatable: class {

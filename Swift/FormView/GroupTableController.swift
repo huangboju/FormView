@@ -6,8 +6,6 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-import UIKit
-
 class GroupTableController: UIViewController {
     
     let tableView = UITableView(frame: .zero, style: .grouped)

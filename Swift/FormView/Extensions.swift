@@ -6,8 +6,6 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-import UIKit
-
 public class NotificationNames {
     fileprivate init() {}
 }
@@ -73,7 +71,7 @@ extension UIViewController {
             vc = c
         case let .dest(c):
             vc = c.init()
-        case let .web(_):
+        case .web(_):
             fatalError("请配置网页")
 //            vc = HTUIControlCenter.webView(withUrl: url)
         case let .scheme(s):

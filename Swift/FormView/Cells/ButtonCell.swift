@@ -6,12 +6,15 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-import UIKit
-
 struct ButtonCellItem {
     let title: String
     let normalState: (UIColor, UIControlState)
     let highlightState: (UIColor, UIControlState)
+}
+
+@objc
+protocol ButtonCellActionable {
+    func buttonAction(_ sender: UIButton)
 }
 
 class ButtonCell: UITableViewCell {
@@ -21,6 +24,9 @@ class ButtonCell: UITableViewCell {
         button.backgroundColor = UIColor(hex: 0xFF2238)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 5
+        // 这里传nil会走响应链
+        // https://www.jianshu.com/p/fcb8bdd5078f
+        button.addTarget(nil, action: #selector(ButtonCellActionable.buttonAction), for: .touchUpInside)
         return button
     }()
     

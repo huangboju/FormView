@@ -6,8 +6,6 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-import UIKit
-
 class ViewController: GroupTableController {
 
     override func initSubviews() {
@@ -23,8 +21,7 @@ class ViewController: GroupTableController {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer { tableView.deselectRow(at: indexPath, animated: true) }
-        let row = self.row(at: indexPath)
-        let item: MainCellItem = row.cellItem()
+        let item: MainCellItem = row(at: indexPath).cellItem()
         transion(to: item.dest)
     }
 }

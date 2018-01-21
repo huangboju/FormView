@@ -19,3 +19,9 @@ class SignInController: GroupTableController {
         ]
     }
 }
+
+extension SignInController: ButtonCellActionable {
+    func buttonAction(_ sender: UIButton) {
+        
+    }
+}
