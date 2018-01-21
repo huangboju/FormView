@@ -27,10 +27,13 @@ class ListController: UIViewController {
         
         view.addSubview(tableView)
 
-        for i in 0 ..< 20 {
+        for _ in 0 ..< 20 {
             let row: RowType
-            if i & 1 == 0 {
+            let i = arc4random_uniform(3)
+            if i == 0 {
                 row = generateTwoImageRow()
+            } else if i == 1 {
+                row = generateImageTextCellRow()
             } else {
                 row = generateImageRow()
             }
@@ -41,6 +44,12 @@ class ListController: UIViewController {
     
     func generateTwoImageRow() -> Row<TwoImageCell> {
         let row = Row<TwoImageCell>(viewData: NoneItem())
+        return row
+    }
+    
+    func generateImageTextCellRow() -> Row<ImageTextCell> {
+        let item = ImageTextCellItem(imageName: "flappy", text: "Pablo Ruiz y Picasso (25 October 1881 – 8 April 1973), also known as Pablo Picasso, was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.")
+        let row = Row<ImageTextCell>(viewData: item)
         return row
     }
 
