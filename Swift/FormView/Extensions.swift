@@ -65,6 +65,73 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
         return alert.action(actionTitle, handle)
     }
+    
+    public func transion<C: UIViewController>(to dest: Dest, animated: Bool = true, handle: ((C) -> Void)? = nil) {
+        let vc: UIViewController
+        switch dest {
+        case let .controller(c):
+            vc = c
+        case let .dest(c):
+            vc = c.init()
+        case let .web(_):
+            fatalError("请配置网页")
+//            vc = HTUIControlCenter.webView(withUrl: url)
+        case let .scheme(s):
+            guard let url = URL(string: s.scheme) else { return }
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+            return
+        default:
+            return
+        }
+        if let c = vc as? C {
+            handle?(c)
+        }
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: animated)
+    }
+}
+
+public enum Dest {
+    case none
+    // 用SegueRow，把创建对象延迟到跳转时
+    case dest(UIViewController.Type)
+    case controller(UIViewController)
+    case web(String)
+    case scheme(Scheme)
+}
+
+// https://github.com/cyanzhong/app-tutorials/blob/master/schemes.md
+// http://www.jianshu.com/p/bb3f42fdbc31
+public enum Scheme {
+    case plain(String)
+    case tel(String)
+    case wifi
+    case appStore
+    case mail(String)
+    case notification
+    
+    var scheme: String {
+        let scheme: String
+        switch self {
+        case let .plain(s):
+            scheme = s
+        case let .tel(s):
+            scheme = "tel://" + s
+        case .wifi:
+            scheme = "App-Prefs:root=WIFI"
+        case .appStore:
+            scheme = "itms-apps://itunes.apple.com/cn/app/id\(1111)?mt=8"
+        case let .mail(s):
+            scheme = "mailto://\(s)"
+        case .notification:
+            scheme = "App-Prefs:root=NOTIFICATIONS_ID"
+        }
+        return scheme
+    }
 }
 
 extension UIAlertController {

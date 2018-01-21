@@ -17,6 +17,12 @@
 		BEFC2E522012DD5000643E6E /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E512012DD5000643E6E /* Row.swift */; };
 		BEFC2E542012DDB900643E6E /* GroupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E532012DDB900643E6E /* GroupTableController.swift */; };
 		BEFC2E562012DDEA00643E6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E552012DDEA00643E6E /* Extensions.swift */; };
+		BEFC2E59201411FE00643E6E /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E58201411FE00643E6E /* TitleCell.swift */; };
+		BEFC2E5B201412C000643E6E /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5A201412C000643E6E /* ButtonCell.swift */; };
+		BEFC2E5D2014144900643E6E /* LicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5C2014144900643E6E /* LicenseCell.swift */; };
+		BEFC2E5F201414F800643E6E /* InputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E5E201414F800643E6E /* InputCell.swift */; };
+		BEFC2E622014166100643E6E /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E612014166100643E6E /* SignInController.swift */; };
+		BEFC2E64201416C800643E6E /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E63201416C800643E6E /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		BEFC2E512012DD5000643E6E /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		BEFC2E532012DDB900643E6E /* GroupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableController.swift; sourceTree = "<group>"; };
 		BEFC2E552012DDEA00643E6E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BEFC2E58201411FE00643E6E /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		BEFC2E5A201412C000643E6E /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		BEFC2E5C2014144900643E6E /* LicenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseCell.swift; sourceTree = "<group>"; };
+		BEFC2E5E201414F800643E6E /* InputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCell.swift; sourceTree = "<group>"; };
+		BEFC2E612014166100643E6E /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		BEFC2E63201416C800643E6E /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,8 @@
 		BEFC2E222012DCA300643E6E /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				BEFC2E602014163C00643E6E /* Controllers */,
+				BEFC2E57201411E700643E6E /* Cells */,
 				BEFC2E552012DDEA00643E6E /* Extensions.swift */,
 				BEFC2E532012DDB900643E6E /* GroupTableController.swift */,
 				BEFC2E512012DD5000643E6E /* Row.swift */,
@@ -132,6 +146,26 @@
 				BEFC2E452012DCA300643E6E /* Info.plist */,
 			);
 			path = FormViewUITests;
+			sourceTree = "<group>";
+		};
+		BEFC2E57201411E700643E6E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC2E58201411FE00643E6E /* TitleCell.swift */,
+				BEFC2E5A201412C000643E6E /* ButtonCell.swift */,
+				BEFC2E5C2014144900643E6E /* LicenseCell.swift */,
+				BEFC2E5E201414F800643E6E /* InputCell.swift */,
+				BEFC2E63201416C800643E6E /* MainCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BEFC2E602014163C00643E6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEFC2E612014166100643E6E /* SignInController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +305,14 @@
 				BEFC2E562012DDEA00643E6E /* Extensions.swift in Sources */,
 				BEFC2E262012DCA300643E6E /* ViewController.swift in Sources */,
 				BEFC2E522012DD5000643E6E /* Row.swift in Sources */,
+				BEFC2E622014166100643E6E /* SignInController.swift in Sources */,
 				BEFC2E542012DDB900643E6E /* GroupTableController.swift in Sources */,
+				BEFC2E64201416C800643E6E /* MainCell.swift in Sources */,
+				BEFC2E5F201414F800643E6E /* InputCell.swift in Sources */,
+				BEFC2E59201411FE00643E6E /* TitleCell.swift in Sources */,
 				BEFC2E242012DCA300643E6E /* AppDelegate.swift in Sources */,
+				BEFC2E5B201412C000643E6E /* ButtonCell.swift in Sources */,
+				BEFC2E5D2014144900643E6E /* LicenseCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

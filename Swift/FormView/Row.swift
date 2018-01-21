@@ -27,11 +27,11 @@ protocol RowType {
     
     var reuseIdentifier: String { get }
     var cellClass: AnyClass { get }
-    
+
     func update(cell: UITableViewCell)
-    
-    
-    func cell<T: UITableViewCell>() -> T
+
+    func cell<C: UITableViewCell>() -> C
+    func cellItem<M>() -> M
 }
 
 class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
@@ -41,17 +41,24 @@ class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
     let viewData: Cell.ViewData
     let reuseIdentifier = "\(Cell.classForCoder())"
     let cellClass: AnyClass = Cell.self
-
+    
     init(viewData: Cell.ViewData, tag: String = "") {
         self.viewData = viewData
         self.tag = tag
     }
 
-    func cell<T: UITableViewCell>() -> T {
-        guard let cell = _cell as? T else {
+    func cell<C: UITableViewCell>() -> C {
+        guard let cell = _cell as? C else {
             fatalError("cell 类型错误")
         }
         return cell
+    }
+    
+    func cellItem<M>() -> M {
+        guard let cellItem = viewData as? M else {
+            fatalError("cellItem 类型错误")
+        }
+        return cellItem
     }
 
     private var _cell: Cell?
