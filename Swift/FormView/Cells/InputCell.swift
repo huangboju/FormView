@@ -8,16 +8,22 @@
 
 struct InputCellItem {
     let placeholder: String
+    let inputText: String
+    
+    init(placeholder: String, inputText: String = "") {
+        self.placeholder = placeholder
+        self.inputText = inputText
+    }
 }
 
 class InputCell: UITableViewCell {
-    
-    public var inputText: String? {
+
+    public var inputText: String {
         set {
             textField.text = inputText
         }
         get {
-            return textField.text
+            return textField.text ?? ""
         }
     }
 
