@@ -29,6 +29,10 @@ public class NotificationName: NotificationNames {
     }
 }
 
+extension NotificationNames {
+    static let testNotificationName = NotificationName("testNotificationName")
+}
+
 extension NotificationCenter {
     static func postNotification(name: NotificationName, object: Any? = nil) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: name._key), object: object)

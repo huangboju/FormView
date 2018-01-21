@@ -49,14 +49,14 @@ class GroupTableController: UIViewController {
         return form[indexPath.section][indexPath.row]
     }
 
-    final var tags: Set<String> {
-        var _tags: Set<String> = []
+    final var tags: Set<RowTag> {
+        var _tags: Set<RowTag> = []
         form.forEach { $0.forEach { _tags.insert($0.tag) } }
 //        let _tags = form.flatMap { $0 }.map { $0.tag }
         return _tags
     }
 
-    final func cellBy<T: UITableViewCell>(tag: String) -> T {
+    final func cellBy<T: UITableViewCell>(tag: RowTag) -> T {
         for section in form {
             for row in section where row.tag == tag {
                 guard let cell = row.cell() as? T else {

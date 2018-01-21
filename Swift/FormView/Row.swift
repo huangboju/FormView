@@ -21,8 +21,8 @@ extension Updatable {
 
 protocol RowType {
     
-    var tag: String { get }
-    
+    var tag: RowTag { get }
+
     var reuseIdentifier: String { get }
     var cellClass: AnyClass { get }
 
@@ -34,13 +34,13 @@ protocol RowType {
 
 class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
 
-    let tag: String
-    
+    let tag: RowTag
+
     let viewData: Cell.ViewData
     let reuseIdentifier = "\(Cell.classForCoder())"
     let cellClass: AnyClass = Cell.self
     
-    init(viewData: Cell.ViewData, tag: String = "") {
+    init(viewData: Cell.ViewData, tag: RowTag = .none) {
         self.viewData = viewData
         self.tag = tag
     }
@@ -71,4 +71,35 @@ class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
 
 extension Row: RowType {}
 
+public class RowTags {
+    fileprivate init() {}
+}
+
+/// Base class for static user defaults keys. Specialize with value type
+/// and pass key name to the initializer to create a key.
+
+public class RowTag: RowTags {
+    // TODO: Can we use protocols to ensure ValueType is a compatible type?
+    
+    public let _key: String
+    
+    public init(_ key: String) {
+        self._key = key
+        super.init()
+    }
+}
+
+extension RowTag: Hashable {
+    public static func ==(lhs: RowTag, rhs: RowTag) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+
+    public var hashValue: Int {
+        return _key.hashValue
+    }
+}
+
+extension RowTags {
+    static let none = RowTag("")
+}
 
