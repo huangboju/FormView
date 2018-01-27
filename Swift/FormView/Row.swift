@@ -51,7 +51,7 @@ class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
         }
         return cell
     }
-    
+
     func cellItem<M>() -> M {
         guard let cellItem = viewData as? M else {
             fatalError("cellItem 类型错误")
@@ -75,12 +75,7 @@ public class RowTags {
     fileprivate init() {}
 }
 
-/// Base class for static user defaults keys. Specialize with value type
-/// and pass key name to the initializer to create a key.
-
 public class RowTag: RowTags {
-    // TODO: Can we use protocols to ensure ValueType is a compatible type?
-    
     public let _key: String
     
     public init(_ key: String) {

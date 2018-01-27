@@ -27,6 +27,10 @@ class ListController: UIViewController {
         
         view.addSubview(tableView)
 
+        initData()
+    }
+
+    func initData() {
         for _ in 0 ..< 20 {
             let row: RowType
             let i = arc4random_uniform(3)
