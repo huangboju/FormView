@@ -14,7 +14,7 @@ struct ButtonCellItem {
 
 @objc
 protocol ButtonCellActionable {
-    func buttonAction(_ sender: UIButton)
+    func buttonAction(_ sender: UIButton, cell: UITableViewCell)
 }
 
 class ButtonCell: UITableViewCell {
@@ -26,7 +26,8 @@ class ButtonCell: UITableViewCell {
         button.layer.cornerRadius = 5
         // 这里传nil会走响应链
         // https://www.jianshu.com/p/fcb8bdd5078f
-        button.addTarget(nil, action: #selector(ButtonCellActionable.buttonAction), for: .touchUpInside)
+//        button.addTarget(nil, action: #selector(ButtonCellActionable.buttonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return button
     }()
     
@@ -49,6 +50,10 @@ class ButtonCell: UITableViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func buttonAction(_ sender: UIButton) {
+        (self.viewController as? ButtonCellActionable)?.buttonAction(sender, cell: self)
     }
 }
 

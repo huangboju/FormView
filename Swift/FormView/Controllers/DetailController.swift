@@ -25,7 +25,7 @@ class DetailController: GroupTableController {
 }
 
 extension DetailController: ButtonCellActionable {
-    func buttonAction(_ sender: UIButton) {
+    func buttonAction(_ sender: UIButton, cell: UITableViewCell) {
         let phoneNumberCell: InputCell = cellBy(tag: .phoneNumber)
         let phoneNumber = phoneNumberCell.inputText
         if phoneNumber.isEmpty {

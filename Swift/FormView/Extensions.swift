@@ -230,3 +230,18 @@ extension UIViewController {
         }
     }
 }
+
+extension UIView {
+    public func viewController<T: UIViewController>() -> T? {
+        var viewController: UIViewController?
+        var next = self.next
+        while let _next = next {
+            if _next.isKind(of: UIViewController.self) {
+                viewController = next as? UIViewController
+                break
+            }
+            next = _next.next
+        }
+        return viewController as? T
+    }
+}
