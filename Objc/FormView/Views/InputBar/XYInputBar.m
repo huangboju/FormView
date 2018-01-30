@@ -52,7 +52,7 @@
         [self addSubview:self.changeKeyboardBtn];
         [self.changeKeyboardBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(margin);
-            make.centerY.mas_equalTo(self.mas_centerY);
+            make.bottom.mas_equalTo(-margin);
         }];
 
         [self addSubview:self.textView];
@@ -85,13 +85,22 @@
 }
 
 - (void)textViewTextDidChange:(NSNotification *)notification {
-    NSUInteger maxNumberOfLines = 4;
+    NSUInteger maxNumberOfLines = 5;
     NSUInteger numLines = self.textView.contentSize.height / self.textView.font.lineHeight;
+
     if (numLines > maxNumberOfLines) {
         self.textView.scrollEnabled = YES;
     } else {
         self.textView.scrollEnabled = NO;
         [self invalidateIntrinsicContentSize];
+    }
+
+    if (numLines > 1) {
+        UIEdgeInsets inset = _textView.textContainerInset;
+        _textView.textContainerInset = UIEdgeInsetsMake(3, inset.left, 3, inset.right);
+    } else {
+        UIEdgeInsets inset = _textView.textContainerInset;
+        _textView.textContainerInset = UIEdgeInsetsMake(8, inset.left, 8, inset.right);
     }
 }
 
