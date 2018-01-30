@@ -25,13 +25,15 @@
 }
 
 + (instancetype)bar {
-    XYInputBar *bar = [[self alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 47)];
+    XYInputBar *bar = [[self alloc] init];
     return bar;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    // 47 参考微信
+    if (self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 47)]) {
 
+        self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         self.backgroundColor = [UIColor whiteColor];
 
         [self addSubview:self.visualView];
@@ -79,11 +81,18 @@
 }
 
 - (CGSize)intrinsicContentSize {
-    return CGSizeMake(self.bounds.size.width, MAX(self.textView.contentSize.height, self.bounds.size.height));
+    return CGSizeMake(self.bounds.size.width, self.textView.contentSize.height);
 }
 
 - (void)textViewTextDidChange:(NSNotification *)notification {
-    [self invalidateIntrinsicContentSize];
+    NSUInteger maxNumberOfLines = 4;
+    NSUInteger numLines = self.textView.contentSize.height / self.textView.font.lineHeight;
+    if (numLines > maxNumberOfLines) {
+        self.textView.scrollEnabled = YES;
+    } else {
+        self.textView.scrollEnabled = NO;
+        [self invalidateIntrinsicContentSize];
+    }
 }
 
 - (UIView *)separatorLine {
@@ -112,9 +121,10 @@
 - (UITextView *)textView {
     if (!_textView) {
         _textView = [[UITextView alloc] init];
-        _textView.font = [UIFont systemFontOfSize:15];
+        _textView.font = [UIFont systemFontOfSize:16];
         _textView.layer.borderWidth = 0.5;
         _textView.layer.cornerRadius = 5;
+        [_textView setContentCompressionResistancePriority:500 forAxis:UILayoutConstraintAxisHorizontal];
         _textView.layer.borderColor = [UIColor colorWithWhite:0.8 alpha:1].CGColor;
         _textView.scrollEnabled = NO;
     }
@@ -137,6 +147,8 @@
 
 - (UIButton *)generateButtonWithImageName:(NSString *)imageName {
     UIButton *button = [UIButton new];
+    [button setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+    [button setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
     [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     return button;
 }
