@@ -20,6 +20,10 @@
 
 @implementation XYInputBar
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 + (instancetype)bar {
     XYInputBar *bar = [[self alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 47)];
     return bar;
@@ -55,21 +59,31 @@
             make.top.mas_equalTo(6);
             make.centerY.mas_equalTo(self.mas_centerY);
         }];
-        
+
         [self addSubview:self.secondButton];
         [self.secondButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(self.textView.mas_trailing).offset(margin);
             make.size.centerY.mas_equalTo(self.changeKeyboardBtn);
         }];
-        
+
         [self addSubview:self.thirdButton];
         [self.thirdButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(self.secondButton.mas_trailing).offset(margin);
             make.size.centerY.mas_equalTo(self.changeKeyboardBtn);
             make.trailing.mas_equalTo(-margin);
         }];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
     }
     return self;
+}
+
+- (CGSize)intrinsicContentSize {
+    return CGSizeMake(self.bounds.size.width, MAX(self.textView.contentSize.height, self.bounds.size.height));
+}
+
+- (void)textViewTextDidChange:(NSNotification *)notification {
+    [self invalidateIntrinsicContentSize];
 }
 
 - (UIView *)separatorLine {
@@ -90,7 +104,7 @@
 
 - (UIButton *)changeKeyboardBtn {
     if (!_changeKeyboardBtn) {
-        _changeKeyboardBtn = [self generateButtonWithImageName:@""];
+        _changeKeyboardBtn = [self generateButtonWithImageName:@"icon_emotion"];
     }
     return _changeKeyboardBtn;
 }
@@ -98,6 +112,7 @@
 - (UITextView *)textView {
     if (!_textView) {
         _textView = [[UITextView alloc] init];
+        _textView.font = [UIFont systemFontOfSize:15];
         _textView.layer.borderWidth = 0.5;
         _textView.layer.cornerRadius = 5;
         _textView.layer.borderColor = [UIColor colorWithWhite:0.8 alpha:1].CGColor;
@@ -108,14 +123,14 @@
 
 - (UIButton *)secondButton {
     if (!_secondButton) {
-        _secondButton = [self generateButtonWithImageName:@""];
+        _secondButton = [self generateButtonWithImageName:@"icon_emotion"];
     }
     return _secondButton;
 }
 
 - (UIButton *)thirdButton {
     if (!_thirdButton) {
-        _thirdButton = [self generateButtonWithImageName:@""];
+        _thirdButton = [self generateButtonWithImageName:@"icon_emotion"];
     }
     return _thirdButton;
 }
