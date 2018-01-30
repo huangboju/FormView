@@ -17,6 +17,7 @@
 #import "SegmentController.h"
 #import "EffectButtonController.h"
 #import "ScrollAnimationController.h"
+#import "InputBarController.h"
 
 #import "IntroController.h"
 
@@ -53,6 +54,9 @@
                          @[
                              [ScrollAnimationController class]
                              ],
+                         @[
+                             [InputBarController class]
+                             ]
                          ];
 
     NSMutableArray *sections = [NSMutableArray array];
