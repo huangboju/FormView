@@ -88,19 +88,19 @@
     NSUInteger maxNumberOfLines = 5;
     NSUInteger numLines = self.textView.contentSize.height / self.textView.font.lineHeight;
 
+    if (numLines > 1) {
+        UIEdgeInsets inset = _textView.textContainerInset;
+        self.textView.textContainerInset = UIEdgeInsetsMake(3, inset.left, 3, inset.right);
+    } else {
+        UIEdgeInsets inset = _textView.textContainerInset;
+        self.textView.textContainerInset = UIEdgeInsetsMake(8, inset.left, 8, inset.right);
+    }
+
     if (numLines > maxNumberOfLines) {
         self.textView.scrollEnabled = YES;
     } else {
         self.textView.scrollEnabled = NO;
         [self invalidateIntrinsicContentSize];
-    }
-
-    if (numLines > 1) {
-        UIEdgeInsets inset = _textView.textContainerInset;
-        _textView.textContainerInset = UIEdgeInsetsMake(3, inset.left, 3, inset.right);
-    } else {
-        UIEdgeInsets inset = _textView.textContainerInset;
-        _textView.textContainerInset = UIEdgeInsetsMake(8, inset.left, 8, inset.right);
     }
 }
 
