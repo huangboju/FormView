@@ -122,6 +122,9 @@
             self.textView.contentOffset = bottomOffset;
         });
     } else {
+        if (numLines == self.maxShowLines - 1 || self.textView.text.length < 1) {
+            [self.textView invalidateIntrinsicContentSize];
+        }
         self.textView.scrollEnabled = NO;
     }
 }
