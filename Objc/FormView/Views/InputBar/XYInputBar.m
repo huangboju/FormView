@@ -88,6 +88,8 @@
 
 - (CGSize)intrinsicContentSize {
     CGFloat height = [self textHeight];
+    NSLog(@"🌕🌕🌕🌕%f", height);
+    NSLog(@"🍀🍀🍀🍀%@", self.textView);
     return CGSizeMake(self.bounds.size.width, height);
 }
 
@@ -117,11 +119,9 @@
     if (numLines > self.maxShowLines - 1) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textView.scrollEnabled = YES;
-            if (numLines > self.maxShowLines) {
-                [self.textView layoutIfNeeded];
-                CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
-                self.textView.contentOffset = bottomOffset;
-            }
+            [self.textView layoutIfNeeded];
+            CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
+            self.textView.contentOffset = bottomOffset;
         });
     } else {
         self.textView.scrollEnabled = NO;
