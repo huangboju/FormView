@@ -20,8 +20,6 @@
 
 @property (nonatomic, assign) NSUInteger oldLines;
 
-@property (nonatomic, strong) NSCache <NSNumber *, NSNumber *>*cache;
-
 @end
 
 @implementation XYInputBar
@@ -43,7 +41,6 @@
         self.backgroundColor = [UIColor whiteColor];
         
         self.maxShowLines = 5;
-        self.cache = [[NSCache alloc] init];
 
         [self addSubview:self.visualView];
         [self.visualView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -133,8 +130,13 @@
 }
 
 - (CGFloat)textHeight {
+    static NSCache <NSNumber *, NSNumber *>*cache;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cache = [[NSCache alloc] init];
+    });
     NSInteger lines = [self numberOflines];
-    CGFloat flattedValue = [self.cache objectForKey:@(lines)].floatValue;
+    CGFloat flattedValue = [cache objectForKey:@(lines)].floatValue;
     if (flattedValue) {
         return flattedValue;
     }
@@ -142,7 +144,7 @@
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.textView.frame.size.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
     CGFloat scale = [UIScreen mainScreen].scale;
     flattedValue = ceil(rect.size.height * scale) / scale;
-    [self.cache setObject:@(lines) forKey:@(flattedValue)];
+    [cache setObject:@(flattedValue) forKey:@(lines)];
     return flattedValue - 2 * scale;
 }
 
