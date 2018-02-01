@@ -18,6 +18,12 @@
 
 @property (nonatomic, strong) UIButton *thirdButton;
 
+/**
+ Default 5
+ 超过5行会滚动，参考微信
+ */
+@property (nonatomic, assign) NSInteger maxShowLines;
+
 + (instancetype)bar;
 
 @end

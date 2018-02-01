@@ -16,11 +16,9 @@
 
 @property (nonatomic, strong) UIView *separatorLine;
 
-@property (nonatomic, copy) NSString *str;
+@property (nonatomic, copy) NSString *oldStr;
 
 @property (nonatomic, assign) NSUInteger oldLines;
-
-@property (nonatomic, assign) CGFloat width;
 
 @end
 
@@ -41,6 +39,8 @@
 
         self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         self.backgroundColor = [UIColor whiteColor];
+        
+        self.maxShowLines = 5;
 
         [self addSubview:self.visualView];
         [self.visualView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -88,16 +88,16 @@
 
 - (CGSize)intrinsicContentSize {
     CGFloat height = [self textHeight];
-    return CGSizeMake(self.bounds.size.width, height);
+    return CGSizeMake(self.bounds.size.width, floor(height));
 }
 
 - (void)textViewTextDidChange:(NSNotification *)notification {
 
     // 这里会走两次
-    if ([self.str isEqualToString:self.textView.text]) {
+    if ([self.oldStr isEqualToString:self.textView.text]) {
         return;
     }
-    self.str = self.textView.text;
+    self.oldStr = self.textView.text;
 
     NSUInteger numLines = [self numberOflines];
 
@@ -107,15 +107,21 @@
     self.oldLines = numLines;
 
     UIEdgeInsets inset = self.textView.textContainerInset;
+    // 超过一行上面间距变化，参考微信
     if (numLines > 1) {
         self.textView.textContainerInset = UIEdgeInsetsMake(3, inset.left, 3, inset.right);
     } else {
         self.textView.textContainerInset = UIEdgeInsetsMake(8, inset.left, 8, inset.right);
     }
 
-    if (numLines > 4) {
+    if (numLines > self.maxShowLines - 1) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textView.scrollEnabled = YES;
+            if (numLines > self.maxShowLines) {
+                [self.textView layoutIfNeeded];
+                CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
+                self.textView.contentOffset = bottomOffset;
+            }
         });
     } else {
         self.textView.scrollEnabled = NO;
@@ -125,9 +131,10 @@
 
 - (CGFloat)textHeight {
     NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
-    self.width = self.textView.frame.size.width;
-    CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
-    return rect.size.height;
+    CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.textView.frame.size.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
+    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat flattedValue = ceil(rect.size.height * scale) / scale;
+    return flattedValue - 2 * scale;
 }
 
 // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
