@@ -88,8 +88,6 @@
 
 - (CGSize)intrinsicContentSize {
     CGFloat height = [self textHeight];
-    NSLog(@"🌕🌕🌕🌕%f", height);
-    NSLog(@"🍀🍀🍀🍀%@", self.textView);
     return CGSizeMake(self.bounds.size.width, height);
 }
 
@@ -126,7 +124,6 @@
     } else {
         self.textView.scrollEnabled = NO;
     }
-    [self invalidateIntrinsicContentSize];
 }
 
 - (CGFloat)textHeight {
