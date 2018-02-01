@@ -88,7 +88,7 @@
 
 - (CGSize)intrinsicContentSize {
     CGFloat height = [self textHeight];
-    return CGSizeMake(self.bounds.size.width, floor(height));
+    return CGSizeMake(self.bounds.size.width, height);
 }
 
 - (void)textViewTextDidChange:(NSNotification *)notification {
@@ -143,9 +143,9 @@
     NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
     CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.textView.frame.size.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
     CGFloat scale = [UIScreen mainScreen].scale;
-    flattedValue = ceil(rect.size.height * scale) / scale;
+    flattedValue = ceil(rect.size.height * scale) / scale - 6;
     [cache setObject:@(flattedValue) forKey:@(lines)];
-    return flattedValue - 2 * scale;
+    return flattedValue;
 }
 
 // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
