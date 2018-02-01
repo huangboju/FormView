@@ -16,6 +16,12 @@
 
 @property (nonatomic, strong) UIView *separatorLine;
 
+@property (nonatomic, copy) NSString *str;
+
+@property (nonatomic, assign) NSUInteger oldLines;
+
+@property (nonatomic, assign) CGFloat width;
+
 @end
 
 @implementation XYInputBar
@@ -47,7 +53,7 @@
             make.height.mas_equalTo(0.5);
         }];
 
-        CGFloat margin = 8;
+        CGFloat margin = 10;
 
         [self addSubview:self.changeKeyboardBtn];
         [self.changeKeyboardBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,27 +87,61 @@
 }
 
 - (CGSize)intrinsicContentSize {
-    return CGSizeMake(self.bounds.size.width, self.textView.contentSize.height);
+    CGFloat height = [self textHeight];
+    return CGSizeMake(self.bounds.size.width, height);
 }
 
 - (void)textViewTextDidChange:(NSNotification *)notification {
-    NSUInteger maxNumberOfLines = 5;
-    NSUInteger numLines = self.textView.contentSize.height / self.textView.font.lineHeight;
 
+    // 这里会走两次
+    if ([self.str isEqualToString:self.textView.text]) {
+        return;
+    }
+    self.str = self.textView.text;
+
+    NSUInteger numLines = [self numberOflines];
+
+    if (self.oldLines == numLines) {
+        return;
+    }
+    self.oldLines = numLines;
+
+    UIEdgeInsets inset = self.textView.textContainerInset;
     if (numLines > 1) {
-        UIEdgeInsets inset = _textView.textContainerInset;
         self.textView.textContainerInset = UIEdgeInsetsMake(3, inset.left, 3, inset.right);
     } else {
-        UIEdgeInsets inset = _textView.textContainerInset;
         self.textView.textContainerInset = UIEdgeInsetsMake(8, inset.left, 8, inset.right);
     }
 
-    if (numLines > maxNumberOfLines) {
-        self.textView.scrollEnabled = YES;
+    if (numLines > 4) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.textView.scrollEnabled = YES;
+        });
     } else {
         self.textView.scrollEnabled = NO;
-        [self invalidateIntrinsicContentSize];
     }
+    [self invalidateIntrinsicContentSize];
+}
+
+- (CGFloat)textHeight {
+    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    self.width = self.textView.frame.size.width;
+    CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
+    return rect.size.height;
+}
+
+// https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
+- (NSUInteger )numberOflines {
+    NSLayoutManager *layoutManager = [self.textView layoutManager];
+    NSUInteger numberOfLines, index;
+    NSUInteger numberOfGlyphs = [layoutManager numberOfGlyphs];
+    NSRange lineRange;
+    for (numberOfLines = 0, index = 0; index < numberOfGlyphs; numberOfLines++){
+        (void) [layoutManager lineFragmentRectForGlyphAtIndex:index
+                                               effectiveRange:&lineRange];
+        index = NSMaxRange(lineRange);
+    }
+    return numberOfLines;
 }
 
 - (UIView *)separatorLine {
@@ -136,6 +176,7 @@
         [_textView setContentCompressionResistancePriority:500 forAxis:UILayoutConstraintAxisHorizontal];
         _textView.layer.borderColor = [UIColor colorWithWhite:0.8 alpha:1].CGColor;
         _textView.scrollEnabled = NO;
+        _textView.layoutManager.allowsNonContiguousLayout = NO;
     }
     return _textView;
 }
