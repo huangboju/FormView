@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) XYInputBar *inputBar;
 
+@property (nonatomic, assign) BOOL flag;
+
 @end
 
 
@@ -24,18 +26,20 @@
 }
 
 - (BOOL)canBecomeFirstResponder {
-    return YES;
+    return self.flag;
 }
 
 - (BOOL)becomeFirstResponder {
+    self.flag = YES;
     BOOL result = [super becomeFirstResponder];
     [self.inputBar.textView becomeFirstResponder];
     return result;
 }
 
 - (BOOL)resignFirstResponder {
-    BOOL result = [super resignFirstResponder];
+    self.flag = NO;
     [self.inputBar.textView resignFirstResponder];
+    BOOL result = [super resignFirstResponder];
     return result;
 }
 
