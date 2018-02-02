@@ -140,10 +140,9 @@
     if (flattedValue) {
         return flattedValue;
     }
-    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
-    CGRect rect = [self.textView.text boundingRectWithSize:CGSizeMake(self.textView.frame.size.width, CGFLOAT_MAX) options:options attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:16]} context:nil];
+    CGFloat height = [self.textView sizeThatFits:CGSizeMake(self.textView.frame.size.width, self.frame.size.height)].height;
     CGFloat scale = [UIScreen mainScreen].scale;
-    flattedValue = ceil(rect.size.height * scale) / scale - 6;
+    flattedValue = ceil(height * scale) / scale - 6;
     [cache setObject:@(flattedValue) forKey:@(lines)];
     return flattedValue;
 }
