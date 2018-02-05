@@ -126,9 +126,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView NS_DESIGNATED_INITIALIZER;
 
 /**
- 这个变量在网络完成时，一定要设置一定要设置为YES
+ 这个变量在网络完成时，一定要调用这个
  */
-@property (nonatomic, assign) BOOL didFinishNetwork;
+- (void)didFinishNetwork;
 
 
 #pragma mark XYEmptyDataSetSource
