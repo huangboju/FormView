@@ -136,24 +136,35 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  提示图片
  */
-@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong, nullable) UIImage *image;
 
 /**
  提示文字
  */
-@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong, nullable) NSString *text;
 
 /**
  背景颜色
- Default F5F8FA
+ 默认 F5F8FA
  */
-@property (nonatomic, strong) UIColor *backgroundColor;
+@property (nonatomic, strong, nullable) UIColor *backgroundColor;
 
 /**
  按钮的文字
  如果设置会有一个默认样式的按钮
  */
-@property (nonatomic, copy) NSString *buttonTitle;
+@property (nonatomic, copy, nullable) NSString *buttonTitle;
+
+/**
+ 上面的间距
+ 默认100pt
+ */
+@property (nonatomic, assign) CGFloat topInterval;
+
+/**
+ 自定义按钮
+ */
+@property (nonatomic, strong, nullable) UIButton *customButton;
 
 @end
 

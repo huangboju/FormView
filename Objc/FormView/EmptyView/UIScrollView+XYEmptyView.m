@@ -496,4 +496,12 @@ Class dzn_baseClassToSwizzleForTarget(id target) {
     return self.backgroundColor ?: [UIColor colorWithRed:245.f / 255.f green:248.f / 255.f blue:250.f / 255.f alpha:1];
 }
 
+- (CGFloat)topIntervalForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.topInterval > 0 ?: 100;
+}
+
+- (UIButton *)customButtonForEmptyDataSet:(UIScrollView *)scrollView {
+    return self.customButton;
+}
+
 @end
