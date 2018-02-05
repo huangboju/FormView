@@ -27,7 +27,7 @@ static char const * const kEmptyDataSetSource =     "emptyDataSetSource";
 static char const * const kEmptyDataSetDelegate =   "emptyDataSetDelegate";
 static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
-@interface UIScrollView () <UIGestureRecognizerDelegate>
+@interface UIScrollView ()
 @property (nonatomic, readonly) XYEmptyView *emptyDataSetView;
 @end
 
