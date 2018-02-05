@@ -493,7 +493,7 @@ Class dzn_baseClassToSwizzleForTarget(id target) {
 }
 
 - (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView {
-    return self.backgroundColor ?: [UIColor whiteColor];
+    return self.backgroundColor ?: [UIColor colorWithRed:245.f / 255.f green:248.f / 255.f blue:250.f / 255.f alpha:1];
 }
 
 @end
