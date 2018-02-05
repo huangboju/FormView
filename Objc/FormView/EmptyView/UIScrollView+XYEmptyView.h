@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  按钮的文字，如果复写会有一个默认样式的按钮
  */
-- (nullable NSString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state;
+- (nullable NSString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView;
 
 
 /**
@@ -125,15 +125,35 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView NS_DESIGNATED_INITIALIZER;
 
+/**
+ 这个变量在网络完成时，一定要设置一定要设置为YES
+ */
+@property (nonatomic, assign) BOOL didFinishNetwork;
+
+
+#pragma mark XYEmptyDataSetSource
+
+/**
+ 提示图片
+ */
 @property (nonatomic, strong) UIImage *image;
 
+/**
+ 提示文字
+ */
 @property (nonatomic, strong) NSString *text;
 
-/// Default 背景色 F5F8FA
+/**
+ 背景颜色
+ Default F5F8FA
+ */
 @property (nonatomic, strong) UIColor *backgroundColor;
 
-// 这个变量在网络完成是一定要设置
-@property (nonatomic, assign) BOOL didNetwork;
+/**
+ 按钮的文字
+ 如果设置会有一个默认样式的按钮
+ */
+@property (nonatomic, copy) NSString *buttonTitle;
 
 @end
 

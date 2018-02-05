@@ -144,9 +144,9 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
     return nil;
 }
 
-- (NSString *)dzn_buttonTitleForState:(UIControlState)state {
-    if (self.emptyDataSetSource && [self.emptyDataSetSource respondsToSelector:@selector(buttonTitleForEmptyDataSet:forState:)]) {
-        NSString *string = [self.emptyDataSetSource buttonTitleForEmptyDataSet:self forState:state];
+- (NSString *)dzn_buttonTitle {
+    if (self.emptyDataSetSource && [self.emptyDataSetSource respondsToSelector:@selector(buttonTitleForEmptyDataSet:)]) {
+        NSString *string = [self.emptyDataSetSource buttonTitleForEmptyDataSet:self];
         if (string) NSAssert([string isKindOfClass:[NSString class]], @"You must return a valid NSAttributedString object for -buttonTitleForEmptyDataSet:forState:");
         return string;
     }
@@ -307,7 +307,7 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
         view.text = [self dzn_titleLabelString];
         
         // Configure button
-        view.buttonTitle = [self dzn_buttonTitleForState:UIControlStateNormal];
+        view.buttonTitle = [self dzn_buttonTitle];
         
         UIButton *customButton = [self dzn_customButton];
         if (customButton) {
@@ -480,16 +480,16 @@ Class dzn_baseClassToSwizzleForTarget(id target) {
     return self;
 }
 
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
+    return self.didFinishNetwork;
+}
+
 - (nullable NSString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
     return self.text;
 }
 
 - (nullable UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView {
     return self.image;
-}
-
-- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
-    return self.didNetwork;
 }
 
 - (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView {

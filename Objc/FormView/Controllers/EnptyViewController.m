@@ -46,7 +46,7 @@
     return [UIImage imageNamed:@"icon_500px"];
 }
 
-- (NSString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView forState:(UIControlState)state {
+- (NSString *)buttonTitleForEmptyDataSet:(UIScrollView *)scrollView {
     return @"刷新";
 }
 
