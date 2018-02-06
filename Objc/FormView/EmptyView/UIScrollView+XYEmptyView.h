@@ -31,6 +31,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @protocol XYEmptyDataSetSource <NSObject>
+
+/**
+ 网络请求是否完成，如果没有完成数据为空，不会显示
+ */
+@required
+- (BOOL)didFinishNetworkForEmptyDataSet:(UIScrollView *)scrollView;
+
 @optional
 
 /**
@@ -64,12 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
  自定义按钮
  */
 - (nullable UIButton *)customButtonForEmptyDataSet:(UIScrollView *)scrollView;
-
-/**
- 网络请求是否完成，如果没有完成数据为空，不会显示
- */
-
-- (BOOL)didFinishNetworkForEmptyDataSet:(UIScrollView *)scrollView;
 
 @end
 
