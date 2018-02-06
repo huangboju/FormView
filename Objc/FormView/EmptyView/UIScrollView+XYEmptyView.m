@@ -169,6 +169,13 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
     return 100.0;
 }
 
+- (BOOL)xy_didFinishNetwork {
+    if (self.emptyDataSetSource && [self.emptyDataSetSource respondsToSelector:@selector(didFinishNetworkForEmptyDataSet:)]) {
+        return [self.emptyDataSetSource didFinishNetworkForEmptyDataSet:self];
+    }
+    return NO;
+}
+
 
 #pragma mark - Delegate Getters & Events (Private)
 
@@ -277,6 +284,11 @@ static char const * const kEmptyDataSetView =       "emptyDataSetView";
 
 - (void)xy_reloadEmptyDataSet {
     if (![self xy_canDisplay]) {
+        return;
+    }
+    
+    // 网络没有完成不显示
+    if (![self xy_didFinishNetwork]) {
         return;
     }
     
@@ -467,7 +479,7 @@ Class xy_baseClassToSwizzleForTarget(id target) {
 
 @end
 
-@interface XYEmptyViewDataSource() <XYEmptyDataSetSource, XYEmptyDataSetDelegate>
+@interface XYEmptyViewDataSource() <XYEmptyDataSetSource>
 
 @property (nonatomic, assign) BOOL isFinishNetwork;
 
@@ -478,7 +490,6 @@ Class xy_baseClassToSwizzleForTarget(id target) {
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView {
     if (self = [super init]) {
         scrollView.emptyDataSetSource = self;
-        scrollView.emptyDataSetDelegate = self;
         self.isFinishNetwork = NO;
     }
     return self;
@@ -488,7 +499,7 @@ Class xy_baseClassToSwizzleForTarget(id target) {
     self.isFinishNetwork = YES;
 }
 
-- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
+- (BOOL)didFinishNetworkForEmptyDataSet:(UIScrollView *)scrollView {
     return self.isFinishNetwork;
 }
 

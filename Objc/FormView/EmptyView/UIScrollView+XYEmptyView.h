@@ -65,6 +65,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable UIButton *)customButtonForEmptyDataSet:(UIScrollView *)scrollView;
 
+/**
+ 网络请求是否完成，如果没有完成数据为空，不会显示
+ */
+
+- (BOOL)didFinishNetworkForEmptyDataSet:(UIScrollView *)scrollView;
+
 @end
 
 
@@ -82,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)emptyDataSetShouldBeForcedToDisplay:(UIScrollView *)scrollView;
 
 /**
- 应该显示，默认YES
+ 是否显示，默认YES
  */
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView;
 
