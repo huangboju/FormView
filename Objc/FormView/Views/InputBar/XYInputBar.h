@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) UIButton *secondButton;
 
-@property (nonatomic, strong) UIButton *thirdButton;
+@property (nonatomic, strong) UIButton *rightButton;
 
 /**
  Default 5

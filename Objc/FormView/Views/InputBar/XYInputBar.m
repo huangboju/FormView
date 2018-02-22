@@ -63,12 +63,18 @@
         CGFloat margin = 10;
 
         [self addSubview:self.leftButton];
-        [self p_constraintWithItem:self.leftButton attribute:NSLayoutAttributeLeading constant:margin];
-        [self p_constraintWithItem:self.leftButton attribute:NSLayoutAttributeBottom constant:-margin];
+        [self p_constraintWithItem:self.leftButton
+                         attribute:NSLayoutAttributeLeading
+                          constant:margin];
+        [self p_constraintWithItem:self.leftButton
+                         attribute:NSLayoutAttributeBottom
+                          constant:-margin];
 
         [self addSubview:self.textView];
-        [self p_constraintWithItem:self.textView attribute:NSLayoutAttributeTop constant:6];
-        [self p_constraintWithItem:self.textView attribute:NSLayoutAttributeCenterY];
+        [self p_constraintWithItem:self.textView
+                         attribute:NSLayoutAttributeTop constant:6];
+        [self p_constraintWithItem:self.textView
+                         attribute:NSLayoutAttributeCenterY];
         
         [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeLeading
@@ -84,40 +90,31 @@
                           constant:margin];
 
         [self p_constraintWithItem:self.secondButton
-                         attribute:NSLayoutAttributeCenterY
-                            toItem:self.leftButton
-                          constant:0];
+                         attribute:NSLayoutAttributeBottom
+                          constant:-margin];
 
         [self p_constraintWithItem:self.secondButton
                          attribute:NSLayoutAttributeWidth
                             toItem:self.leftButton
                           constant:0];
 
-        [self p_constraintWithItem:self.secondButton
-                         attribute:NSLayoutAttributeHeight
-                            toItem:self.leftButton
-                          constant:0];
-
-        [self addSubview:self.thirdButton];
-        [self p_constraintWithItem:self.thirdButton
+        [self addSubview:self.rightButton];
+        [self p_constraintWithItem:self.rightButton
                          attribute:NSLayoutAttributeTrailing
                           constant:-margin];
-        
-        [self p_constraintWithItem:self.thirdButton
+
+        [self p_constraintWithItem:self.rightButton
                          attribute:NSLayoutAttributeLeading
                             toItem:self.secondButton
                          attribute:NSLayoutAttributeTrailing
                           constant:margin];
-        [self p_constraintWithItem:self.thirdButton
+        [self p_constraintWithItem:self.rightButton
                          attribute:NSLayoutAttributeWidth
                             toItem:self.leftButton
                           constant:0];
-        [self p_constraintWithItem:self.thirdButton
-                         attribute:NSLayoutAttributeHeight
-                            toItem:self.leftButton
-                          constant:0];
-        [self p_constraintWithItem:self.thirdButton
-                         attribute:NSLayoutAttributeCenterY];
+        [self p_constraintWithItem:self.rightButton
+                         attribute:NSLayoutAttributeBottom
+                          constant:-margin];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
     }
@@ -274,11 +271,11 @@
     return _secondButton;
 }
 
-- (UIButton *)thirdButton {
-    if (!_thirdButton) {
-        _thirdButton = [self generateButtonWithImageName:@"icon_emotion"];
+- (UIButton *)rightButton {
+    if (!_rightButton) {
+        _rightButton = [self generateButtonWithImageName:@"icon_emotion"];
     }
-    return _thirdButton;
+    return _rightButton;
 }
 
 - (UIButton *)generateButtonWithImageName:(NSString *)imageName {
