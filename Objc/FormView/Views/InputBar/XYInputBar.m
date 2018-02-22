@@ -62,9 +62,9 @@
 
         CGFloat margin = 10;
 
-        [self addSubview:self.changeKeyboardBtn];
-        [self p_constraintWithItem:self.changeKeyboardBtn attribute:NSLayoutAttributeLeading constant:margin];
-        [self p_constraintWithItem:self.changeKeyboardBtn attribute:NSLayoutAttributeBottom constant:-margin];
+        [self addSubview:self.leftButton];
+        [self p_constraintWithItem:self.leftButton attribute:NSLayoutAttributeLeading constant:margin];
+        [self p_constraintWithItem:self.leftButton attribute:NSLayoutAttributeBottom constant:-margin];
 
         [self addSubview:self.textView];
         [self p_constraintWithItem:self.textView attribute:NSLayoutAttributeTop constant:6];
@@ -72,7 +72,7 @@
         
         [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeLeading
-                            toItem:self.changeKeyboardBtn
+                            toItem:self.leftButton
                          attribute:NSLayoutAttributeTrailing
                           constant:margin];
 
@@ -85,18 +85,18 @@
 
         [self p_constraintWithItem:self.secondButton
                          attribute:NSLayoutAttributeCenterY
-                            toItem:self.changeKeyboardBtn
+                            toItem:self.leftButton
                           constant:0];
 
         [self p_constraintWithItem:self.secondButton
                          attribute:NSLayoutAttributeWidth
-                            toItem:self.changeKeyboardBtn
-                          constant:10];
+                            toItem:self.leftButton
+                          constant:0];
 
         [self p_constraintWithItem:self.secondButton
                          attribute:NSLayoutAttributeHeight
-                            toItem:self.changeKeyboardBtn
-                          constant:10];
+                            toItem:self.leftButton
+                          constant:0];
 
         [self addSubview:self.thirdButton];
         [self p_constraintWithItem:self.thirdButton
@@ -110,16 +110,14 @@
                           constant:margin];
         [self p_constraintWithItem:self.thirdButton
                          attribute:NSLayoutAttributeWidth
-                            toItem:self.changeKeyboardBtn
+                            toItem:self.leftButton
                           constant:0];
         [self p_constraintWithItem:self.thirdButton
                          attribute:NSLayoutAttributeHeight
-                            toItem:self.changeKeyboardBtn
+                            toItem:self.leftButton
                           constant:0];
         [self p_constraintWithItem:self.thirdButton
-                         attribute:NSLayoutAttributeCenterY
-                            toItem:self.changeKeyboardBtn
-                          constant:0];
+                         attribute:NSLayoutAttributeCenterY];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
     }
@@ -248,11 +246,11 @@
     return _visualView;
 }
 
-- (UIButton *)changeKeyboardBtn {
-    if (!_changeKeyboardBtn) {
-        _changeKeyboardBtn = [self generateButtonWithImageName:@"icon_emotion"];
+- (UIButton *)leftButton {
+    if (!_leftButton) {
+        _leftButton = [self generateButtonWithImageName:@"icon_emotion"];
     }
-    return _changeKeyboardBtn;
+    return _leftButton;
 }
 
 - (UITextView *)textView {

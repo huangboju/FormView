@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) UITextView *textView;
 
-@property (nonatomic, strong) UIButton *changeKeyboardBtn;
+@property (nonatomic, strong) UIButton *leftButton;
 
 @property (nonatomic, strong) UIButton *secondButton;
 
