@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) UIButton *rightButton;
 
+@property (nonatomic, strong) NSArray <UIButton *> *rightButtons;
+
 /**
  Default 5
  超过5行会滚动，参考微信

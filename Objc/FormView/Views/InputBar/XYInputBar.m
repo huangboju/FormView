@@ -9,6 +9,7 @@
 #import "XYInputBar.h"
 
 static const CGFloat margin = 10;
+static const CGFloat padding = 15;
 
 @interface XYInputBar()
 
@@ -21,6 +22,8 @@ static const CGFloat margin = 10;
 @property (nonatomic, assign) NSUInteger oldLines;
 
 @property (nonatomic, strong) NSLayoutConstraint *leftConstraint;
+
+@property (nonatomic, strong) NSLayoutConstraint *rightConstraint;
 
 @end
 
@@ -73,43 +76,10 @@ static const CGFloat margin = 10;
         
         self.leftConstraint = [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeLeading
-                            toItem:self
-                         attribute:NSLayoutAttributeLeading
-                          constant:15];
-
-        [self addSubview:self.secondButton];
-        [self p_constraintWithItem:self.secondButton
-                         attribute:NSLayoutAttributeLeading
-                            toItem:self.textView
+                          constant:padding];
+        self.rightConstraint = [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeTrailing
-                          constant:margin];
-
-        [self p_constraintWithItem:self.secondButton
-                         attribute:NSLayoutAttributeBottom
-                          constant:-margin];
-
-//        [self p_constraintWithItem:self.secondButton
-//                         attribute:NSLayoutAttributeWidth
-//                            toItem:self.leftButton
-//                          constant:0];
-//        [self p_constraintWithItem:self.rightButton
-//                         attribute:NSLayoutAttributeWidth
-//                            toItem:self.leftButton
-//                          constant:0];
-
-        [self addSubview:self.rightButton];
-        [self p_constraintWithItem:self.rightButton
-                         attribute:NSLayoutAttributeTrailing
-                          constant:-margin];
-
-        [self p_constraintWithItem:self.rightButton
-                         attribute:NSLayoutAttributeLeading
-                            toItem:self.secondButton
-                         attribute:NSLayoutAttributeTrailing
-                          constant:margin];
-        [self p_constraintWithItem:self.rightButton
-                         attribute:NSLayoutAttributeBottom
-                          constant:-margin];
+                          constant:-padding];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
     }
@@ -256,6 +226,23 @@ static const CGFloat margin = 10;
                       constant:margin];
 }
 
+- (void)setRightButton:(UIButton *)rightButton {
+    _rightButton = rightButton;
+    [self addSubview:self.rightButton];
+    [self removeConstraint:self.rightConstraint];
+    [self p_constraintWithItem:self.rightButton
+                     attribute:NSLayoutAttributeTrailing
+                      constant:-margin];
+    [self p_constraintWithItem:self.rightButton
+                     attribute:NSLayoutAttributeLeading
+                        toItem:self.textView
+                     attribute:NSLayoutAttributeTrailing
+                      constant:margin];
+    [self p_constraintWithItem:self.rightButton
+                     attribute:NSLayoutAttributeBottom
+                      constant:-margin];
+}
+
 - (UITextView *)textView {
     if (!_textView) {
         _textView = [[UITextView alloc] init];
@@ -275,13 +262,6 @@ static const CGFloat margin = 10;
         _secondButton = [self generateButtonWithImageName:@"icon_emotion"];
     }
     return _secondButton;
-}
-
-- (UIButton *)rightButton {
-    if (!_rightButton) {
-        _rightButton = [self generateButtonWithImageName:@"icon_emotion"];
-    }
-    return _rightButton;
 }
 
 - (UIButton *)generateButtonWithImageName:(NSString *)imageName {
