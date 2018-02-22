@@ -22,8 +22,11 @@
     [super viewDidLoad];
     
     self.inputBarView = [XYInputBarView new];
-    self.inputBarView.leftButton = [self generateButtonWithImageName:@""];
-    self.inputBarView.rightButton = [self generateButtonWithImageName:@""];
+    UIButton *button1 = [self generateButtonWithImageName:@""];
+    UIButton *button2 = [self generateButtonWithImageName:@""];
+    UIButton *button3 = [self generateButtonWithImageName:@""];
+    self.inputBarView.leftButton = button3;
+    self.inputBarView.rightButtons = @[button1, button2];
     [self.view addSubview:self.inputBarView];
 
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction)];

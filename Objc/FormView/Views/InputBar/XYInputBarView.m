@@ -60,4 +60,9 @@
     self.inputBar.rightButton = rightButton;
 }
 
+- (void)setRightButtons:(NSArray<UIButton *> *)rightButtons {
+    _rightButtons = rightButtons;
+    self.inputBar.rightButtons = rightButtons;
+}
+
 @end

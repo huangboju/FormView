@@ -227,6 +227,37 @@ static const CGFloat padding = 15;
                       constant:margin];
 }
 
+- (void)setRightButtons:(NSArray<UIButton *> *)rightButtons {
+    _rightButtons = rightButtons;
+    __block UIView *tmpView;
+    [self removeConstraint:self.rightConstraint];
+    [rightButtons enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [self setPriorityWithView:obj];
+        [self addSubview:obj];
+        if (idx == 0) {
+            [self p_constraintWithItem:obj
+                             attribute:NSLayoutAttributeLeading
+                                toItem:self.textView
+                             attribute:NSLayoutAttributeTrailing
+                              constant:margin];
+        } else {
+            [self p_constraintWithItem:tmpView
+                             attribute:NSLayoutAttributeTrailing
+                                toItem:obj
+                             attribute:NSLayoutAttributeLeading
+                              constant:-margin];
+        }
+        [self p_constraintWithItem:obj
+                         attribute:NSLayoutAttributeBottom
+                          constant:-margin];
+        if (idx == rightButtons.count - 1) {
+            [self p_constraintWithItem:obj      attribute:NSLayoutAttributeTrailing
+                              constant:-margin];
+        }
+        tmpView = obj;
+    }];
+}
+
 - (void)setRightButton:(UIButton *)rightButton {
     _rightButton = rightButton;
     [self setPriorityWithView:rightButton];
