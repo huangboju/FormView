@@ -8,8 +8,6 @@
 
 #import "XYInputBar.h"
 
-#import <Masonry.h>
-
 @interface XYInputBar()
 
 @property (nonatomic, strong) UIVisualEffectView *visualView;
@@ -43,47 +41,111 @@
         self.maxShowLines = 5;
 
         [self addSubview:self.visualView];
-        [self.visualView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(0);
-        }];
+        [self p_constraintWithItem:self.visualView
+                         attribute:NSLayoutAttributeTop];
+        [self p_constraintWithItem:self.visualView
+                         attribute:NSLayoutAttributeHeight];
+        [self p_constraintWithItem:self.visualView
+                         attribute:NSLayoutAttributeLeading];
+        [self p_constraintWithItem:self.visualView
+                         attribute:NSLayoutAttributeWidth];
 
         [self addSubview:self.separatorLine];
-        [self.separatorLine mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.leading.centerX.mas_equalTo(0);
-            make.height.mas_equalTo(0.5);
-        }];
+        [self p_constraintWithItem:self.separatorLine
+                         attribute:NSLayoutAttributeTop];
+        [self p_constraintWithItem:self.separatorLine
+                         attribute:NSLayoutAttributeLeading];
+        [self p_constraintWithItem:self.separatorLine
+                         attribute:NSLayoutAttributeCenterX];
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.separatorLine attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:0 constant:0.5];
+        [self addConstraint:heightConstraint];
 
         CGFloat margin = 10;
 
         [self addSubview:self.changeKeyboardBtn];
-        [self.changeKeyboardBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.mas_equalTo(margin);
-            make.bottom.mas_equalTo(-margin);
-        }];
+        [self p_constraintWithItem:self.changeKeyboardBtn attribute:NSLayoutAttributeLeading constant:margin];
+        [self p_constraintWithItem:self.changeKeyboardBtn attribute:NSLayoutAttributeBottom constant:-margin];
 
         [self addSubview:self.textView];
-        [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.mas_equalTo(self.changeKeyboardBtn.mas_trailing).offset(margin);
-            make.top.mas_equalTo(6);
-            make.centerY.mas_equalTo(self.mas_centerY);
-        }];
+        [self p_constraintWithItem:self.textView attribute:NSLayoutAttributeTop constant:6];
+        [self p_constraintWithItem:self.textView attribute:NSLayoutAttributeCenterY];
+        [self p_constraintWithItem:self.textView
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeLeading
+                         attribute:NSLayoutAttributeTrailing
+                          constant:margin];
 
         [self addSubview:self.secondButton];
-        [self.secondButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.mas_equalTo(self.textView.mas_trailing).offset(margin);
-            make.size.centerY.mas_equalTo(self.changeKeyboardBtn);
-        }];
+        self.secondButton.translatesAutoresizingMaskIntoConstraints = NO;
+        [self p_constraintWithItem:self.secondButton
+                            toView:self.textView
+                         attribute:NSLayoutAttributeLeading
+                         attribute:NSLayoutAttributeTrailing
+                          constant:margin];
+        
+        [self p_constraintWithItem:self.secondButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeCenterY
+                          constant:0];
+
+        [self p_constraintWithItem:self.secondButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeWidth
+                          constant:10];
+        
+        [self p_constraintWithItem:self.secondButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeHeight
+                          constant:10];
 
         [self addSubview:self.thirdButton];
-        [self.thirdButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.mas_equalTo(self.secondButton.mas_trailing).offset(margin);
-            make.size.centerY.mas_equalTo(self.changeKeyboardBtn);
-            make.trailing.mas_equalTo(-margin);
-        }];
+        [self p_constraintWithItem:self.thirdButton
+                         attribute:NSLayoutAttributeTrailing
+                          constant:-margin];
+        
+        [self p_constraintWithItem:self.thirdButton
+                            toView:self.secondButton
+                         attribute:NSLayoutAttributeLeading
+                         attribute:NSLayoutAttributeTrailing
+                          constant:margin];
+        [self p_constraintWithItem:self.thirdButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeWidth
+                          constant:0];
+        [self p_constraintWithItem:self.thirdButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeHeight
+                          constant:0];
+        [self p_constraintWithItem:self.thirdButton
+                            toView:self.changeKeyboardBtn
+                         attribute:NSLayoutAttributeCenterY
+                          constant:0];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
     }
     return self;
+}
+
+- (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 {
+    [self p_constraintWithItem:view1 attribute:attr1 constant:0];
+}
+
+- (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
+    [self p_constraintWithItem:view1 toView:self attribute:attr1 constant:c];
+}
+
+- (void)p_constraintWithItem:(UIView *)view1 toView:(UIView *)view2 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
+    view1.translatesAutoresizingMaskIntoConstraints = NO;
+    view2.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:NSLayoutRelationEqual toItem:view2 attribute:attr1 multiplier:1 constant:c];
+    [self addConstraint:constraint];
+}
+
+- (void)p_constraintWithItem:(UIView *)view1 toView:(UIView *)view2 attribute:(NSLayoutAttribute)attr1 attribute:(NSLayoutAttribute)attr2 constant:(CGFloat)c {
+    view1.translatesAutoresizingMaskIntoConstraints = NO;
+    view2.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:NSLayoutRelationEqual toItem:view2 attribute:attr2 multiplier:1 constant:c];
+    [self addConstraint:constraint];
 }
 
 - (CGSize)intrinsicContentSize {
@@ -148,12 +210,12 @@
 }
 
 // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
-- (NSUInteger )numberOflines {
+- (NSUInteger)numberOflines {
     NSLayoutManager *layoutManager = [self.textView layoutManager];
     NSUInteger numberOfLines, index;
     NSUInteger numberOfGlyphs = [layoutManager numberOfGlyphs];
     NSRange lineRange;
-    for (numberOfLines = 0, index = 0; index < numberOfGlyphs; numberOfLines++){
+    for (numberOfLines = 0, index = 0; index < numberOfGlyphs; numberOfLines++) {
         (void) [layoutManager lineFragmentRectForGlyphAtIndex:index
                                                effectiveRange:&lineRange];
         index = NSMaxRange(lineRange);
@@ -165,6 +227,7 @@
     if (!_separatorLine) {
         _separatorLine = [UIView new];
         _separatorLine.backgroundColor = [UIColor colorWithWhite:0.75f alpha:1];
+        _separatorLine.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _separatorLine;
 }

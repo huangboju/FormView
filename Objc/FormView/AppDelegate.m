@@ -18,10 +18,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     
-//    [self loadAttachmentForUrlString:@"https://img.xiaohongshu.com/items/e03779831c445d21684d0f323ea27b8b@800w_90Q_1x_2o.jpg" withType:@"image"];
+    [self calculateHexMod:@"2131412EB552"];
     
     
     return YES;
+}
+
+- (long)calculateHexMod:(NSString *)hexString {
+    static NSArray <NSNumber *>*targets;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        targets = @[
+                    @76,
+                    @16,
+                    @56,
+                    @96,
+                    @36
+                    ];
+    });
+    
+    int result = 0;
+    NSInteger strLength = hexString.length;
+    for (int i = 0; i < strLength; i++) {
+        NSString *subStr = [hexString substringWithRange:NSMakeRange(strLength - 1 - i, 1)];
+        int number = (int)strtoull([subStr UTF8String], NULL, 16);
+        if (i == 0) {
+            result = number;
+            continue;
+        }
+        int idx = i % 5;
+        int n = targets[idx].intValue;
+        result += (number * n);
+    }
+
+    result %= 100;
+
+    return result;
 }
 
 - (void)loadAttachmentForUrlString:(NSString *)urlStr
