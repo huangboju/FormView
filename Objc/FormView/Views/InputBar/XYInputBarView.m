@@ -55,4 +55,9 @@
     self.inputBar.leftButton = leftButton;
 }
 
+- (void)setRightButton:(UIButton *)rightButton {
+    _rightButton = rightButton;
+    self.inputBar.rightButton = rightButton;
+}
+
 @end

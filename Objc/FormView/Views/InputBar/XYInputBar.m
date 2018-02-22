@@ -257,13 +257,6 @@ static const CGFloat padding = 15;
     return _textView;
 }
 
-- (UIButton *)secondButton {
-    if (!_secondButton) {
-        _secondButton = [self generateButtonWithImageName:@"icon_emotion"];
-    }
-    return _secondButton;
-}
-
 - (UIButton *)generateButtonWithImageName:(NSString *)imageName {
     UIButton *button = [UIButton new];
     [button setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
