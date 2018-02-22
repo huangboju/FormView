@@ -10,4 +10,6 @@
 
 @interface XYInputBarView : UIView
 
+@property (nonatomic, strong) UIButton *leftButton;
+
 @end

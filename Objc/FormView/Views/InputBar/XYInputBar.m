@@ -242,16 +242,16 @@ static const CGFloat margin = 10;
 - (void)setLeftButton:(UIButton *)leftButton {
     _leftButton = leftButton;
     [self addSubview:leftButton];
+    [self removeConstraint:self.leftConstraint];
     [self p_constraintWithItem:leftButton
                      attribute:NSLayoutAttributeLeading
                       constant:margin];
     [self p_constraintWithItem:leftButton
                      attribute:NSLayoutAttributeBottom
                       constant:-margin];
-    [self removeConstraint:self.leftConstraint];
     [self p_constraintWithItem:self.textView
                      attribute:NSLayoutAttributeLeading
-                        toItem:self
+                        toItem:leftButton
                      attribute:NSLayoutAttributeTrailing
                       constant:margin];
 }

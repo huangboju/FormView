@@ -22,8 +22,9 @@
     [super viewDidLoad];
     
     self.inputBarView = [XYInputBarView new];
+    self.inputBarView.leftButton = [self generateButtonWithImageName:@""];
     [self.view addSubview:self.inputBarView];
-    
+
     UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction)];
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(cancelAction)];
     
@@ -36,6 +37,14 @@
 
 - (void)editAction {
     [self.inputBarView becomeFirstResponder];
+}
+
+- (UIButton *)generateButtonWithImageName:(NSString *)imageName {
+    UIButton *button = [UIButton new];
+    [button setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+    [button setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+    [button setImage:[UIImage imageNamed:@"icon_emotion"] forState:UIControlStateNormal];
+    return button;
 }
 
 

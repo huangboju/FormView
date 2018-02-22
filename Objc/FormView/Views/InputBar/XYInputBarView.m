@@ -50,4 +50,9 @@
     return _inputBar;
 }
 
+- (void)setLeftButton:(UIButton *)leftButton {
+    _leftButton = leftButton;
+    self.inputBar.leftButton = leftButton;
+}
+
 @end
