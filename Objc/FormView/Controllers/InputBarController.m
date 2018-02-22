@@ -42,8 +42,6 @@
 
 - (UIButton *)generateButtonWithImageName:(NSString *)imageName {
     UIButton *button = [UIButton new];
-    [button setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
-    [button setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
     [button setImage:[UIImage imageNamed:@"icon_emotion"] forState:UIControlStateNormal];
     return button;
 }

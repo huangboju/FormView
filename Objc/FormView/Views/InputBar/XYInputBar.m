@@ -211,6 +211,7 @@ static const CGFloat padding = 15;
 
 - (void)setLeftButton:(UIButton *)leftButton {
     _leftButton = leftButton;
+    [self setPriorityWithView:leftButton];
     [self addSubview:leftButton];
     [self removeConstraint:self.leftConstraint];
     [self p_constraintWithItem:leftButton
@@ -228,6 +229,7 @@ static const CGFloat padding = 15;
 
 - (void)setRightButton:(UIButton *)rightButton {
     _rightButton = rightButton;
+    [self setPriorityWithView:rightButton];
     [self addSubview:self.rightButton];
     [self removeConstraint:self.rightConstraint];
     [self p_constraintWithItem:self.rightButton
@@ -257,13 +259,9 @@ static const CGFloat padding = 15;
     return _textView;
 }
 
-- (UIButton *)generateButtonWithImageName:(NSString *)imageName {
-    UIButton *button = [UIButton new];
-    [button setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
-    [button setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
-    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
-    return button;
+- (void)setPriorityWithView:(UIView *)view {
+    [view setContentCompressionResistancePriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+    [view setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
 }
-
 
 @end
