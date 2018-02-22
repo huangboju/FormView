@@ -8,6 +8,8 @@
 
 #import "XYInputBar.h"
 
+static const CGFloat margin = 10;
+
 @interface XYInputBar()
 
 @property (nonatomic, strong) UIVisualEffectView *visualView;
@@ -17,6 +19,8 @@
 @property (nonatomic, copy) NSString *oldStr;
 
 @property (nonatomic, assign) NSUInteger oldLines;
+
+@property (nonatomic, strong) NSLayoutConstraint *leftConstraint;
 
 @end
 
@@ -59,16 +63,7 @@
                          attribute:NSLayoutAttributeCenterX];
         NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.separatorLine attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:0 constant:0.5];
         [self addConstraint:heightConstraint];
-
-        CGFloat margin = 10;
-
-        [self addSubview:self.leftButton];
-        [self p_constraintWithItem:self.leftButton
-                         attribute:NSLayoutAttributeLeading
-                          constant:margin];
-        [self p_constraintWithItem:self.leftButton
-                         attribute:NSLayoutAttributeBottom
-                          constant:-margin];
+        
 
         [self addSubview:self.textView];
         [self p_constraintWithItem:self.textView
@@ -76,11 +71,11 @@
         [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeCenterY];
         
-        [self p_constraintWithItem:self.textView
+        self.leftConstraint = [self p_constraintWithItem:self.textView
                          attribute:NSLayoutAttributeLeading
-                            toItem:self.leftButton
-                         attribute:NSLayoutAttributeTrailing
-                          constant:margin];
+                            toItem:self
+                         attribute:NSLayoutAttributeLeading
+                          constant:15];
 
         [self addSubview:self.secondButton];
         [self p_constraintWithItem:self.secondButton
@@ -93,10 +88,14 @@
                          attribute:NSLayoutAttributeBottom
                           constant:-margin];
 
-        [self p_constraintWithItem:self.secondButton
-                         attribute:NSLayoutAttributeWidth
-                            toItem:self.leftButton
-                          constant:0];
+//        [self p_constraintWithItem:self.secondButton
+//                         attribute:NSLayoutAttributeWidth
+//                            toItem:self.leftButton
+//                          constant:0];
+//        [self p_constraintWithItem:self.rightButton
+//                         attribute:NSLayoutAttributeWidth
+//                            toItem:self.leftButton
+//                          constant:0];
 
         [self addSubview:self.rightButton];
         [self p_constraintWithItem:self.rightButton
@@ -109,10 +108,6 @@
                          attribute:NSLayoutAttributeTrailing
                           constant:margin];
         [self p_constraintWithItem:self.rightButton
-                         attribute:NSLayoutAttributeWidth
-                            toItem:self.leftButton
-                          constant:0];
-        [self p_constraintWithItem:self.rightButton
                          attribute:NSLayoutAttributeBottom
                           constant:-margin];
 
@@ -121,26 +116,26 @@
     return self;
 }
 
-- (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 {
-    [self p_constraintWithItem:view1 attribute:attr1 constant:0];
+- (NSLayoutConstraint *)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 {
+    return [self p_constraintWithItem:view1 attribute:attr1 constant:0];
 }
 
-- (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
-    [self p_constraintWithItem:view1 attribute:attr1 toItem:self constant:c];
+- (NSLayoutConstraint *)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
+    return [self p_constraintWithItem:view1 attribute:attr1 toItem:self constant:c];
 }
 
-- (void)p_constraintWithItem:(UIView *)view1
+- (NSLayoutConstraint *)p_constraintWithItem:(UIView *)view1
                    attribute:(NSLayoutAttribute)attr1
                       toItem:(UIView *)view2
                     constant:(CGFloat)c {
-    [self p_constraintWithItem:view1
+    return [self p_constraintWithItem:view1
                      attribute:attr1
                         toItem:view2
                      attribute:attr1
                       constant: c];
 }
 
-- (void)p_constraintWithItem:(UIView *)view1
+- (NSLayoutConstraint *)p_constraintWithItem:(UIView *)view1
                    attribute:(NSLayoutAttribute)attr1
                       toItem:(UIView *)view2
                    attribute:(NSLayoutAttribute)attr2
@@ -149,6 +144,7 @@
     view2.translatesAutoresizingMaskIntoConstraints = NO;
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:NSLayoutRelationEqual toItem:view2 attribute:attr2 multiplier:1 constant:c];
     [self addConstraint:constraint];
+    return constraint;
 }
 
 - (CGSize)intrinsicContentSize {
@@ -243,11 +239,21 @@
     return _visualView;
 }
 
-- (UIButton *)leftButton {
-    if (!_leftButton) {
-        _leftButton = [self generateButtonWithImageName:@"icon_emotion"];
-    }
-    return _leftButton;
+- (void)setLeftButton:(UIButton *)leftButton {
+    _leftButton = leftButton;
+    [self addSubview:leftButton];
+    [self p_constraintWithItem:leftButton
+                     attribute:NSLayoutAttributeLeading
+                      constant:margin];
+    [self p_constraintWithItem:leftButton
+                     attribute:NSLayoutAttributeBottom
+                      constant:-margin];
+    [self removeConstraint:self.leftConstraint];
+    [self p_constraintWithItem:self.textView
+                     attribute:NSLayoutAttributeLeading
+                        toItem:self
+                     attribute:NSLayoutAttributeTrailing
+                      constant:margin];
 }
 
 - (UITextView *)textView {
