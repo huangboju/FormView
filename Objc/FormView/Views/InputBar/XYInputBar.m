@@ -84,18 +84,18 @@
                           constant:margin];
 
         [self p_constraintWithItem:self.secondButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeCenterY
+                            toItem:self.changeKeyboardBtn
                           constant:0];
 
         [self p_constraintWithItem:self.secondButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeWidth
+                            toItem:self.changeKeyboardBtn
                           constant:10];
 
         [self p_constraintWithItem:self.secondButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeHeight
+                            toItem:self.changeKeyboardBtn
                           constant:10];
 
         [self addSubview:self.thirdButton];
@@ -109,16 +109,16 @@
                          attribute:NSLayoutAttributeTrailing
                           constant:margin];
         [self p_constraintWithItem:self.thirdButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeWidth
+                            toItem:self.changeKeyboardBtn
                           constant:0];
         [self p_constraintWithItem:self.thirdButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeHeight
+                            toItem:self.changeKeyboardBtn
                           constant:0];
         [self p_constraintWithItem:self.thirdButton
-                            toView:self.changeKeyboardBtn
                          attribute:NSLayoutAttributeCenterY
+                            toItem:self.changeKeyboardBtn
                           constant:0];
 
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:nil];
@@ -131,10 +131,13 @@
 }
 
 - (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
-    [self p_constraintWithItem:view1 toView:self attribute:attr1 constant:c];
+    [self p_constraintWithItem:view1 attribute:attr1 toItem:self constant:c];
 }
 
-- (void)p_constraintWithItem:(UIView *)view1 toView:(UIView *)view2 attribute:(NSLayoutAttribute)attr1 constant:(CGFloat)c {
+- (void)p_constraintWithItem:(UIView *)view1
+                   attribute:(NSLayoutAttribute)attr1
+                      toItem:(UIView *)view2
+                    constant:(CGFloat)c {
     [self p_constraintWithItem:view1
                      attribute:attr1
                         toItem:view2
@@ -142,7 +145,11 @@
                       constant: c];
 }
 
-- (void)p_constraintWithItem:(UIView *)view1 attribute:(NSLayoutAttribute)attr1 toItem:(UIView *)view2 attribute:(NSLayoutAttribute)attr2 constant:(CGFloat)c {
+- (void)p_constraintWithItem:(UIView *)view1
+                   attribute:(NSLayoutAttribute)attr1
+                      toItem:(UIView *)view2
+                   attribute:(NSLayoutAttribute)attr2
+                    constant:(CGFloat)c {
     view1.translatesAutoresizingMaskIntoConstraints = NO;
     view2.translatesAutoresizingMaskIntoConstraints = NO;
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:NSLayoutRelationEqual toItem:view2 attribute:attr2 multiplier:1 constant:c];
