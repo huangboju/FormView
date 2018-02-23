@@ -39,11 +39,11 @@
 - (void)readData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"country"
                                                      ofType:@"plist"];
-    NSDictionary *dict = [[NSDictionary alloc]
-                          initWithContentsOfFile:path];
-    
-    for (NSString *key in dict) {
-        XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem itemWithKey:key zones:dict[key]];
+
+    NSArray *dicts = [[NSArray array] initWithContentsOfFile:path];
+
+    for (NSDictionary *dict in dicts) {
+        XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem itemWithDict: dict];
         [self.items addObject:item];
     }
 }

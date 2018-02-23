@@ -16,6 +16,6 @@
 
 @property (nonatomic, strong, readonly) NSArray <XYPHContryItem *>*zones;
 
-+ (instancetype)itemWithKey:(NSString *)key zones:(NSArray *)zones;
++ (instancetype)itemWithDict:(NSDictionary *)dict;
 
 @end

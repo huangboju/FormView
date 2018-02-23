@@ -19,9 +19,10 @@
 
 @implementation XYPHPhoneZonesItem
 
-+ (instancetype)itemWithKey:(NSString *)key zones:(NSArray *)zones {
++ (instancetype)itemWithDict:(NSDictionary *)dict {
     XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem new];
-    item.groupKey = key;
+    item.groupKey = dict[@"group_key"];
+    NSArray *zones = dict[@"group_items"];
     NSMutableArray <XYPHContryItem *>*items = [NSMutableArray arrayWithCapacity:zones.count];
     for (NSDictionary *dict in zones) {
         XYPHContryItem *item = [XYPHContryItem new];
