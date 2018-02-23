@@ -13,8 +13,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let strs = [
+            "朝鲜+850"
+        ]
+        
+        strs.forEach(convert)
+
         return true
+    }
+    
+    func convert(str: String) {
+        let results = str.components(separatedBy: "+")
+        print("<dict>")
+        print("    <key>dial_code</key>")
+        print("    <string>+\(results[1])</string>")
+        print("    <key>name</key>")
+        print("    <string>\(results[0])</string>")
+        print("    <key>content</key>")
+        print("    <string>\(str)</string>")
+        print("</dict>")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
