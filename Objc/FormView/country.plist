@@ -1459,6 +1459,10 @@
 		</dict>
 	</array>
     </dict>
+    <dict>
+        <key>group_key</key>
+        <string>T</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -1533,8 +1537,23 @@
 			<string>土库曼斯坦+993</string>
 		</dict>
 	</array>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>U</string>
+        <key>group_items</key>
 	<array/>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>V</string>
+        <key>group_items</key>
 	<array/>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>W</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -1585,6 +1604,11 @@
 			<string>委内瑞拉+58</string>
 		</dict>
 	</array>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>X</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -1651,6 +1675,7 @@
 			<string>叙利亚+963</string>
 		</dict>
 	</array>
+    </dict>
 	<array>
 		<dict>
 			<key>dial_code</key>
