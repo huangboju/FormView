@@ -10,6 +10,8 @@
 		BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
+		BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */; };
+		BE37437D20401180000D6F41 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE37437C20401180000D6F41 /* country.plist */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
@@ -80,6 +82,9 @@
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
 		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
+		BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesViewController.h; sourceTree = "<group>"; };
+		BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesViewController.m; sourceTree = "<group>"; };
+		BE37437C20401180000D6F41 /* country.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country.plist; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
@@ -263,6 +268,8 @@
 				BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */,
 				BEB2222520206941009DD3B9 /* InputBarController.h */,
 				BEB2222620206941009DD3B9 /* InputBarController.m */,
+				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
+				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +299,7 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				BE37437C20401180000D6F41 /* country.plist */,
 				BEB2222420206924009DD3B9 /* Controllers */,
 				BE29FB321FFDD58000A27373 /* Views */,
 				BE29FB2E1FFDD48700A27373 /* Account */,
@@ -515,6 +523,7 @@
 				BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */,
 				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
 				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
+				BE37437D20401180000D6F41 /* country.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +620,7 @@
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
+				BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,

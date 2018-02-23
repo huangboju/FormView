@@ -20,6 +20,7 @@
 #import "InputBarController.h"
 
 #import "IntroController.h"
+#import "XYPHPhoneZonesViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -56,6 +57,9 @@
                              ],
                          @[
                              [InputBarController class]
+                             ],
+                         @[
+                             [XYPHPhoneZonesViewController class]
                              ]
                          ];
 
