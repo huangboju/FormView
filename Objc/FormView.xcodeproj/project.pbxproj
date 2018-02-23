@@ -12,6 +12,8 @@
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */; };
 		BE37437D20401180000D6F41 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE37437C20401180000D6F41 /* country.plist */; };
+		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
+		BE37438420403941000D6F41 /* XYPHContryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHContryItem.m */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
@@ -85,6 +87,10 @@
 		BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesViewController.h; sourceTree = "<group>"; };
 		BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesViewController.m; sourceTree = "<group>"; };
 		BE37437C20401180000D6F41 /* country.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country.plist; sourceTree = "<group>"; };
+		BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesItem.h; sourceTree = "<group>"; };
+		BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesItem.m; sourceTree = "<group>"; };
+		BE37438220403941000D6F41 /* XYPHContryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHContryItem.h; sourceTree = "<group>"; };
+		BE37438320403941000D6F41 /* XYPHContryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHContryItem.m; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
@@ -242,6 +248,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BE37437E204038F4000D6F41 /* Zones */ = {
+			isa = PBXGroup;
+			children = (
+				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
+				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
+				BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */,
+				BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */,
+				BE37438220403941000D6F41 /* XYPHContryItem.h */,
+				BE37438320403941000D6F41 /* XYPHContryItem.m */,
+			);
+			path = Zones;
+			sourceTree = "<group>";
+		};
 		BEB2222020206161009DD3B9 /* InputBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +275,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE37437E204038F4000D6F41 /* Zones */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
 				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
 				BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */,
@@ -268,8 +288,6 @@
 				BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */,
 				BEB2222520206941009DD3B9 /* InputBarController.h */,
 				BEB2222620206941009DD3B9 /* InputBarController.m */,
-				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
-				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -601,6 +619,7 @@
 			files = (
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
+				BE37438420403941000D6F41 /* XYPHContryItem.m in Sources */,
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
@@ -615,6 +634,7 @@
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
+				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
