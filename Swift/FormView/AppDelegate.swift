@@ -15,15 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let strs = [
-            "哥伦比亚+57",
-            "刚果+242",
-            "哥斯达黎加+506",
-            "古巴+53",
-            "冈比亚+220",
-            "格鲁吉亚+995",
-            "格林纳达+1809",
-            "关岛+1671",
-            "圭亚那+592",
+            "扎伊尔+243",
+            "赞比亚+260",
+            "中非共和国+236",
+            "乍得+235",
+            "中国+86",
+            "直布罗陀+350",
         ]
         
         strs.forEach(convert)
