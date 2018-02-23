@@ -745,7 +745,16 @@
 			</dict>
 		</array>
 	</dict>
+    <dict>
+        <key>group_key</key>
+        <string>I</string>
+        <key>group_items</key>
 	<array/>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>J</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -820,6 +829,11 @@
 			<string>津巴布韦+263</string>
 		</dict>
 	</array>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>K</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -878,6 +892,11 @@
 			<string>卡塔尔+974</string>
 		</dict>
 	</array>
+    </dict>
+    <dict>
+        <key>group_key</key>
+        <string>L</string>
+        <key>group_items</key>
 	<array>
 		<dict>
 			<key>dial_code</key>
@@ -968,6 +987,7 @@
 			<string>罗马尼亚+40</string>
 		</dict>
 	</array>
+    </dict>
 	<array>
 		<dict>
 			<key>dial_code</key>
