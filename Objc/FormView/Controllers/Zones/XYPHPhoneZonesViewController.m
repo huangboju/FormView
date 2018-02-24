@@ -11,7 +11,7 @@
 #import <Masonry.h>
 
 #import "XYPHPhoneZonesItem.h"
-#import "XYPHContryItem.h"
+#import "XYPHCountryItem.h"
 
 #import "XYPHPhoneZonesCell.h"
 
@@ -77,12 +77,12 @@ UISearchBarDelegate
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items[section].contries.count;
+    return self.items[section].countries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XYPHPhoneZonesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-    [cell updateViewWithModel:self.items[indexPath.section].contries[indexPath.row]];
+    [cell updateViewWithModel:self.items[indexPath.section].countries[indexPath.row]];
     return cell;
 }
 
@@ -101,11 +101,11 @@ UISearchBarDelegate
         if ([zone.groupKey isEqualToString:@"热门"]) {
             continue;
         }
-        for (XYPHContryItem *contry in zone.contries) {
-            NSString *contryName = contry.name;
-            NSString *pinyin = [self transformToPinyin:contryName];
-            if ([contryName containsString:searchText] || [pinyin containsString:searchText]) {
-                [result addObject:contry];
+        for (XYPHCountryItem *country in zone.countries) {
+            NSString *countryName = country.name;
+            NSString *pinyin = [self transformToPinyin:countryName];
+            if ([countryName containsString:searchText] || [pinyin containsString:searchText]) {
+                [result addObject:country];
             }
         }
     }

@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYPHContryItem;
+@class XYPHCountryItem;
 
 @interface XYPHPhoneZonesSearchResultsController : UITableViewController
 
-@property (nonatomic, strong) NSArray <XYPHContryItem *>*result;
+@property (nonatomic, strong) NSArray <XYPHCountryItem *>*result;
 
 @end

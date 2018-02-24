@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@class XYPHContryItem;
+@class XYPHCountryItem;
 
 @interface XYPHPhoneZonesItem : NSObject
 
 @property (nonatomic, strong, readonly) NSString *groupKey;
 
-@property (nonatomic, strong, readonly) NSArray <XYPHContryItem *>*contries;
+@property (nonatomic, strong, readonly) NSArray <XYPHCountryItem *>* countries;
 
 + (instancetype)itemWithDict:(NSDictionary *)dict;
 

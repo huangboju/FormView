@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class XYPHContryItem;
+@class XYPHCountryItem;
 
 @interface XYPHPhoneZonesCell : UITableViewCell
 
-- (void)updateViewWithModel:(XYPHContryItem *)model;
+- (void)updateViewWithModel:(XYPHCountryItem *)model;
 
 @end

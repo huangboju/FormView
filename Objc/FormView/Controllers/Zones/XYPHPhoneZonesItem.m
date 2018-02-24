@@ -7,13 +7,13 @@
 //
 
 #import "XYPHPhoneZonesItem.h"
-#import "XYPHContryItem.h"
+#import "XYPHCountryItem.h"
 
 @interface XYPHPhoneZonesItem()
 
 @property (nonatomic, strong, readwrite) NSString *groupKey;
 
-@property (nonatomic, strong, readwrite) NSArray <XYPHContryItem *>*contries;
+@property (nonatomic, strong, readwrite) NSArray <XYPHCountryItem *>*contries;
 
 @end
 
@@ -23,9 +23,9 @@
     XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem new];
     item.groupKey = dict[@"group_key"];
     NSArray *zones = dict[@"group_items"];
-    NSMutableArray <XYPHContryItem *>*items = [NSMutableArray arrayWithCapacity:zones.count];
+    NSMutableArray <XYPHCountryItem *>*items = [NSMutableArray arrayWithCapacity:zones.count];
     for (NSDictionary *dict in zones) {
-        XYPHContryItem *item = [XYPHContryItem new];
+        XYPHCountryItem *item = [XYPHCountryItem new];
         item.name = dict[@"name"];
         item.content = dict[@"content"];
         item.dialCcode = dict[@"dial_code"];

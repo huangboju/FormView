@@ -47,7 +47,7 @@
     return self.result.count > 0 ? NSLocalizedStringFromTable(@"bestMatch", @"PhoneZones", @"最佳匹配") : @"";
 }
 
-- (void)setResult:(NSArray<XYPHContryItem *> *)result {
+- (void)setResult:(NSArray<XYPHCountryItem *> *)result {
     _result = result;
     self.tableView.backgroundView = result.count > 0 ? nil : self.emptyView;
     [self.tableView reloadData];

@@ -7,7 +7,7 @@
 //
 
 #import "XYPHPhoneZonesCell.h"
-#import "XYPHContryItem.h"
+#import "XYPHCountryItem.h"
 
 @implementation XYPHPhoneZonesCell
 
@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void)updateViewWithModel:(XYPHContryItem *)model {
+- (void)updateViewWithModel:(XYPHCountryItem *)model {
     self.textLabel.text = model.name;
     self.detailTextLabel.text = model.dialCcode;
 }

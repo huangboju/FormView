@@ -1,5 +1,5 @@
 //
-//  XYPHContryItem.h
+//  XYPHCountryItem.h
 //  FormView
 //
 //  Created by 黄伯驹 on 23/02/2018.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XYPHContryItem : NSObject
+@interface XYPHCountryItem : NSObject
 
 @property (nonatomic, copy) NSString *name;
 
