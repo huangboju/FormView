@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong, readonly) NSString *groupKey;
 
-@property (nonatomic, strong, readonly) NSArray <XYPHContryItem *>*zones;
+@property (nonatomic, strong, readonly) NSArray <XYPHContryItem *>*contries;
 
 + (instancetype)itemWithDict:(NSDictionary *)dict;
 

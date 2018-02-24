@@ -14,6 +14,9 @@
 		BE37437D20401180000D6F41 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE37437C20401180000D6F41 /* country.plist */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
 		BE37438420403941000D6F41 /* XYPHContryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHContryItem.m */; };
+		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */; };
+		BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */; };
+		BE37438E20414A91000D6F41 /* PhoneZones.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE37439020414A91000D6F41 /* PhoneZones.strings */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
@@ -91,6 +94,12 @@
 		BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesItem.m; sourceTree = "<group>"; };
 		BE37438220403941000D6F41 /* XYPHContryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHContryItem.h; sourceTree = "<group>"; };
 		BE37438320403941000D6F41 /* XYPHContryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHContryItem.m; sourceTree = "<group>"; };
+		BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesSearchResultsController.h; sourceTree = "<group>"; };
+		BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesSearchResultsController.m; sourceTree = "<group>"; };
+		BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesCell.h; sourceTree = "<group>"; };
+		BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesCell.m; sourceTree = "<group>"; };
+		BE37438F20414A91000D6F41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhoneZones.strings; sourceTree = "<group>"; };
+		BE37439120414ADC000D6F41 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PhoneZones.strings"; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
@@ -257,6 +266,11 @@
 				BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */,
 				BE37438220403941000D6F41 /* XYPHContryItem.h */,
 				BE37438320403941000D6F41 /* XYPHContryItem.m */,
+				BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.h */,
+				BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */,
+				BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */,
+				BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */,
+				BE37439020414A91000D6F41 /* PhoneZones.strings */,
 			);
 			path = Zones;
 			sourceTree = "<group>";
@@ -520,6 +534,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = BECCE9E41FD4F2D400CBCC1F;
 			productRefGroup = BECCE9EE1FD4F2D400CBCC1F /* Products */;
@@ -540,6 +555,7 @@
 			files = (
 				BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */,
 				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
+				BE37438E20414A91000D6F41 /* PhoneZones.strings in Resources */,
 				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
 				BE37437D20401180000D6F41 /* country.plist in Resources */,
 			);
@@ -632,6 +648,7 @@
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
+				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
@@ -650,6 +667,7 @@
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
+				BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
@@ -693,6 +711,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BE37439020414A91000D6F41 /* PhoneZones.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE37438F20414A91000D6F41 /* en */,
+				BE37439120414ADC000D6F41 /* zh-Hans */,
+			);
+			name = PhoneZones.strings;
+			sourceTree = "<group>";
+		};
 		BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -716,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -771,6 +799,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

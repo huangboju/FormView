@@ -7,32 +7,20 @@
 //
 
 #import "XYPHPhoneZonesViewController.h"
+#import "XYPHPhoneZonesSearchResultsController.h"
 #import <Masonry.h>
 
 #import "XYPHPhoneZonesItem.h"
 #import "XYPHContryItem.h"
 
-@interface XYPHPhoneZonesCell: UITableViewCell
+#import "XYPHPhoneZonesCell.h"
 
-@end
-
-@implementation XYPHPhoneZonesCell
-
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    if (self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) {
-        
-    }
-    return self;
-}
-
-- (void)updateViewWithModel:(XYPHContryItem *)model {
-    self.textLabel.text = model.name;
-    self.detailTextLabel.text = model.dialCcode;
-}
-
-@end
-
-@interface XYPHPhoneZonesViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface XYPHPhoneZonesViewController ()
+<
+UITableViewDataSource,
+UITableViewDelegate,
+UISearchBarDelegate
+>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -41,6 +29,8 @@
 @property (nonatomic, strong) NSMutableArray <XYPHPhoneZonesItem *>*items;
 
 @property (nonatomic, strong) NSMutableArray <NSString *>*sectionIndexTitles;
+
+@property (nonatomic, strong) XYPHPhoneZonesSearchResultsController *searchResultsController;
 
 @end
 
@@ -87,12 +77,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items[section].zones.count;
+    return self.items[section].contries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XYPHPhoneZonesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-    [cell updateViewWithModel:self.items[indexPath.section].zones[indexPath.row]];
+    [cell updateViewWithModel:self.items[indexPath.section].contries[indexPath.row]];
     return cell;
 }
 
@@ -104,11 +94,45 @@
     return self.sectionIndexTitles;
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSMutableArray *result = [NSMutableArray array];
+
+    for (XYPHPhoneZonesItem *zone in self.items) {
+        if ([zone.groupKey isEqualToString:@"热门"]) {
+            continue;
+        }
+        for (XYPHContryItem *contry in zone.contries) {
+            NSString *contryName = contry.name;
+            NSString *pinyin = [self transformToPinyin:contryName];
+            if ([contryName containsString:searchText] || [pinyin containsString:searchText]) {
+                [result addObject:contry];
+            }
+        }
+    }
+    self.searchResultsController.result = result;
+}
+
+- (NSString *)transformToPinyin:(NSString *)str {
+    NSMutableString *mutableString = [NSMutableString stringWithString:str];
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformToLatin, false);
+    mutableString = (NSMutableString *)[mutableString stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:[NSLocale currentLocale]];
+    return [mutableString stringByReplacingOccurrencesOfString:@"'" withString:@""];
+}
+
 - (UISearchController *)searchController {
     if (!_searchController) {
-        _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        _searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultsController];
+        _searchController.searchBar.delegate = self;
+        _searchController.delegate = self.searchResultsController;
     }
     return _searchController;
+}
+
+- (XYPHPhoneZonesSearchResultsController *)searchResultsController {
+    if (!_searchResultsController) {
+        _searchResultsController = [XYPHPhoneZonesSearchResultsController new];
+    }
+    return _searchResultsController;
 }
 
 @end
