@@ -18,6 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     
+//    NSLocale *locale = [NSLocale currentLocale];
+//    NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
+//
+//    NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//
+//    NSString *country = [usLocale displayNameForKey: NSLocaleCountryCode value: countryCode];
+    
     [self calculateHexMod:@"2131412EB552"];
     
     

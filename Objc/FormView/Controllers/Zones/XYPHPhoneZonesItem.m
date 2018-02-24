@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong, readwrite) NSString *groupKey;
 
-@property (nonatomic, strong, readwrite) NSArray <XYPHCountryItem *>*contries;
+@property (nonatomic, strong, readwrite) NSArray <XYPHCountryItem *>*countries;
 
 @end
 
@@ -31,7 +31,7 @@
         item.dialCcode = dict[@"dial_code"];
         [items addObject:item];
     }
-    item.contries = items;
+    item.countries = items;
     return item;
 }
 
