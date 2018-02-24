@@ -12,6 +12,26 @@
 #import "XYPHPhoneZonesItem.h"
 #import "XYPHContryItem.h"
 
+@interface XYPHPhoneZonesCell: UITableViewCell
+
+@end
+
+@implementation XYPHPhoneZonesCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) {
+        
+    }
+    return self;
+}
+
+- (void)updateViewWithModel:(XYPHContryItem *)model {
+    self.textLabel.text = model.name;
+    self.detailTextLabel.text = model.dialCcode;
+}
+
+@end
+
 @interface XYPHPhoneZonesViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -20,6 +40,8 @@
 
 @property (nonatomic, strong) NSMutableArray <XYPHPhoneZonesItem *>*items;
 
+@property (nonatomic, strong) NSMutableArray <NSString *>*sectionIndexTitles;
+
 @end
 
 @implementation XYPHPhoneZonesViewController
@@ -27,6 +49,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.items = [NSMutableArray array];
+    self.sectionIndexTitles = [NSMutableArray array];
     [self readData];
 
     self.tableView.tableHeaderView = self.searchController.searchBar;
@@ -45,6 +68,7 @@
     for (NSDictionary *dict in dicts) {
         XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem itemWithDict: dict];
         [self.items addObject:item];
+        [self.sectionIndexTitles addObject:item.groupKey];
     }
 }
 
@@ -53,7 +77,7 @@
         _tableView = [UITableView new];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
+        [_tableView registerClass:[XYPHPhoneZonesCell class] forCellReuseIdentifier:@"cellID"];
     }
     return _tableView;
 }
@@ -67,14 +91,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-    cell.textLabel.text = self.items[indexPath.section].zones[indexPath.row].name;
-    cell.detailTextLabel.text = self.items[indexPath.section].zones[indexPath.row].dialCcode;
+    XYPHPhoneZonesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
+    [cell updateViewWithModel:self.items[indexPath.section].zones[indexPath.row]];
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return self.items[section].groupKey;
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.sectionIndexTitles;
 }
 
 - (UISearchController *)searchController {

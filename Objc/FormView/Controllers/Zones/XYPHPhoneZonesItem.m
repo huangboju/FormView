@@ -28,7 +28,7 @@
         XYPHContryItem *item = [XYPHContryItem new];
         item.name = dict[@"name"];
         item.content = dict[@"content"];
-        item.dialCcode = dict[@"dial_ccode"];
+        item.dialCcode = dict[@"dial_code"];
         [items addObject:item];
     }
     item.zones = items;
