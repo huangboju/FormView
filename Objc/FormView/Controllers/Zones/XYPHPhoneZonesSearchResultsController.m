@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[XYPHPhoneZonesCell class] forCellReuseIdentifier:@"cellID"];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - Table view data source
@@ -61,16 +63,6 @@
         _emptyView.textAlignment = NSTextAlignmentCenter;
     }
     return _emptyView;
-}
-
-#pragma mark - UISearchControllerDelegate
-
-- (void)willPresentSearchController:(UISearchController *)searchController {
-    self.navigationController.navigationBar.translucent = YES;
-}
-
-- (void)willDismissSearchController:(UISearchController *)searchController {
-    self.navigationController.navigationBar.translucent = NO;
 }
 
 @end

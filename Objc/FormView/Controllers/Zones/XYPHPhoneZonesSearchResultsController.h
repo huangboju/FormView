@@ -10,7 +10,7 @@
 
 @class XYPHContryItem;
 
-@interface XYPHPhoneZonesSearchResultsController : UITableViewController <UISearchControllerDelegate>
+@interface XYPHPhoneZonesSearchResultsController : UITableViewController
 
 @property (nonatomic, strong) NSArray <XYPHContryItem *>*result;
 

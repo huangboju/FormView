@@ -123,7 +123,6 @@ UISearchBarDelegate
     if (!_searchController) {
         _searchController = [[UISearchController alloc] initWithSearchResultsController:self.searchResultsController];
         _searchController.searchBar.delegate = self;
-        _searchController.delegate = self.searchResultsController;
     }
     return _searchController;
 }
