@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <CommonCrypto/CommonDigest.h>
+
 @interface AppDelegate ()
 
 @end
@@ -16,22 +18,56 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
     
-//    NSLocale *locale = [NSLocale currentLocale];
-//    NSString *countryCode = [locale objectForKey: NSLocaleCountryCode];
+//    NSMutableArray *results1 = [NSMutableArray array];
+//    NSMutableArray *results2 = [NSMutableArray array];
+//    NSMutableArray *results3 = [NSMutableArray array];
+//    NSMutableArray *results4 = [NSMutableArray array];
 //
-//    NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+//    NSRange range1 = NSMakeRange(1, 10);
+//    NSRange range2 = NSMakeRange(21, 10);
+//    NSRange range3 = NSMakeRange(41, 10);
+//    NSRange range4 = NSMakeRange(61, 10);
 //
-//    NSString *country = [usLocale displayNameForKey: NSLocaleCountryCode value: countryCode];
-    
-    [self calculateHexMod:@"2131412EB552"];
-    
-    
+//    for (int i = 0; i < 100000; i++) {
+//        NSString *md5Str = [self strToMD5WithStr:[NSString stringWithFormat:@"%d", i]];
+//        int result = [self calculateHexMod:md5Str] + 1;
+//        if (NSLocationInRange(result, range1)) {
+//            [results1 addObject:[NSNumber numberWithInt:result]];
+//        } else if (NSLocationInRange(result, range2)) {
+//            [results2 addObject:[NSNumber numberWithInt:result]];
+//        } else if (NSLocationInRange(result, range3)) {
+//            [results3 addObject:[NSNumber numberWithInt:result]];
+//        } else if (NSLocationInRange(result, range4)) {
+//            [results4 addObject:[NSNumber numberWithInt:result]];
+//        }
+//    }
+//    NSLog(@"%zd", results1.count);
+//    NSLog(@"%zd", results2.count);
+//    NSLog(@"%zd", results3.count);
+//    NSLog(@"%zd", results4.count);
     return YES;
 }
 
-- (long)calculateHexMod:(NSString *)hexString {
+- (NSString *)strToMD5WithStr:(NSString *)str {
+    //转化为UTF8格式字符串
+    const char *ptr = [str UTF8String];
+    
+    //开辟一个16字节数组
+    unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
+    
+    //调用官方封装的加密方法, 将ptr开始的字符串存储到md5Buffer[]中
+    CC_MD5(ptr, strlen(ptr), md5Buffer);
+    
+    //转换位NSString并返回
+    NSMutableString *output = [NSMutableString stringWithCapacity: CC_MD5_DIGEST_LENGTH * 2];
+    for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i ++) {
+        [output appendFormat: @"%02x", md5Buffer[i]];
+    }
+    return output;
+}
+
+- (int)calculateHexMod:(NSString *)hexString {
     static NSArray <NSNumber *>*targets;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
