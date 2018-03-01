@@ -1893,6 +1893,22 @@
         <string>W</string>
         <key>group_items</key>
 	<array>
+        <dict>
+            <key>dial_code</key>
+            <string>+681</string>
+            <key>name</key>
+            <string>瓦里斯和富图纳</string>
+            <key>content</key>
+            <string>瓦里斯和富图纳+681</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+678</string>
+            <key>name</key>
+            <string>瓦努阿图</string>
+            <key>content</key>
+            <string>瓦努阿图+678</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+502</string>
@@ -1901,6 +1917,22 @@
 			<key>content</key>
 			<string>危地马拉+502</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+58</string>
+            <key>name</key>
+            <string>委内瑞拉</string>
+            <key>content</key>
+            <string>委内瑞拉+58</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+673</string>
+            <key>name</key>
+            <string>文莱</string>
+            <key>content</key>
+            <string>文莱+673</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+256</string>
@@ -1927,19 +1959,11 @@
 		</dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+233</string>
+			<string>+998</string>
 			<key>name</key>
 			<string>乌兹别克斯坦</string>
 			<key>content</key>
-			<string>乌兹别克斯坦+233</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+58</string>
-			<key>name</key>
-			<string>委内瑞拉</string>
-			<key>content</key>
-			<string>委内瑞拉+58</string>
+			<string>乌兹别克斯坦+998</string>
 		</dict>
 	</array>
     </dict>
@@ -1952,10 +1976,18 @@
 			<key>dial_code</key>
 			<string>+852</string>
 			<key>name</key>
-			<string>香港</string>
+			<string>香港（中国）</string>
 			<key>content</key>
-			<string>香港+852</string>
+			<string>香港（中国）+852</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+34</string>
+            <key>name</key>
+            <string>西班牙</string>
+            <key>content</key>
+            <string>西班牙+34</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+30</string>
@@ -1964,6 +1996,30 @@
 			<key>content</key>
 			<string>希腊+30</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+65</string>
+            <key>name</key>
+            <string>新加坡</string>
+            <key>content</key>
+            <string>新加坡+65</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+687</string>
+            <key>name</key>
+            <string>新克里多尼亚</string>
+            <key>content</key>
+            <string>新克里多尼亚+687</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+64</string>
+            <key>name</key>
+            <string>新西兰</string>
+            <key>content</key>
+            <string>新西兰+64</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+36</string>
@@ -1974,35 +2030,11 @@
 		</dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+64</string>
+			<string>+212</string>
 			<key>name</key>
-			<string>新西兰</string>
+			<string>西撒哈拉</string>
 			<key>content</key>
-			<string>新西兰+64</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+685</string>
-			<key>name</key>
-			<string>西萨摩亚</string>
-			<key>content</key>
-			<string>西萨摩亚+685</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+65</string>
-			<key>name</key>
-			<string>新加坡</string>
-			<key>content</key>
-			<string>新加坡+65</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+34</string>
-			<key>name</key>
-			<string>西班牙</string>
-			<key>content</key>
-			<string>西班牙+34</string>
+			<string>西撒哈拉+212</string>
 		</dict>
 		<dict>
 			<key>dial_code</key>
@@ -2019,6 +2051,22 @@
         <string>Y</string>
         <key>group_items</key>
 	<array>
+        <dict>
+            <key>dial_code</key>
+            <string>+1876</string>
+            <key>name</key>
+            <string>牙买加</string>
+            <key>content</key>
+            <string>牙买加+1876</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+374</string>
+            <key>name</key>
+            <string>亚美尼亚</string>
+            <key>content</key>
+            <string>亚美尼亚+374</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+967</string>
@@ -2027,6 +2075,30 @@
 			<key>content</key>
 			<string>也门+967</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+39</string>
+            <key>name</key>
+            <string>意大利</string>
+            <key>content</key>
+            <string>意大利+39</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+964</string>
+            <key>name</key>
+            <string>伊拉克</string>
+            <key>content</key>
+            <string>伊拉克+964</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+98</string>
+            <key>name</key>
+            <string>伊朗</string>
+            <key>content</key>
+            <string>伊朗+98</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+91</string>
@@ -2043,22 +2115,30 @@
 			<key>content</key>
 			<string>印度尼西亚+62</string>
 		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+98</string>
-			<key>name</key>
-			<string>伊朗</string>
-			<key>content</key>
-			<string>伊朗+98</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+964</string>
-			<key>name</key>
-			<string>伊拉克</string>
-			<key>content</key>
-			<string>伊拉克+964</string>
-		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+44</string>
+            <key>name</key>
+            <string>英国</string>
+            <key>content</key>
+            <string>英国+44</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+1284</string>
+            <key>name</key>
+            <string>英属维尔京群岛</string>
+            <key>content</key>
+            <string>英属维尔京群岛+1284</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+246</string>
+            <key>name</key>
+            <string>英属印度洋领地</string>
+            <key>content</key>
+            <string>英属印度洋领地+246</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+972</string>
@@ -2069,35 +2149,11 @@
 		</dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+39</string>
-			<key>name</key>
-			<string>意大利</string>
-			<key>content</key>
-			<string>意大利+39</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+1876</string>
-			<key>name</key>
-			<string>牙买加</string>
-			<key>content</key>
-			<string>牙买加+1876</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
 			<string>+962</string>
 			<key>name</key>
 			<string>约旦</string>
 			<key>content</key>
 			<string>约旦+962</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+44</string>
-			<key>name</key>
-			<string>英国</string>
-			<key>content</key>
-			<string>英国+44</string>
 		</dict>
 		<dict>
 			<key>dial_code</key>
@@ -2114,22 +2170,46 @@
         <string>Z</string>
         <key>group_items</key>
 	<array>
+        <dict>
+            <key>dial_code</key>
+            <string>+260</string>
+            <key>name</key>
+            <string>赞比亚</string>
+            <key>content</key>
+            <string>赞比亚+260</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+44</string>
+            <key>name</key>
+            <string>泽西岛</string>
+            <key>content</key>
+            <string>泽西岛+44</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+235</string>
+            <key>name</key>
+            <string>乍得</string>
+            <key>content</key>
+            <string>乍得+235</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+243</string>
+			<string>+350</string>
 			<key>name</key>
-			<string>扎伊尔</string>
+			<string>直布罗陀</string>
 			<key>content</key>
-			<string>扎伊尔+243</string>
+			<string>直布罗陀+350</string>
 		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+260</string>
-			<key>name</key>
-			<string>赞比亚</string>
-			<key>content</key>
-			<string>赞比亚+260</string>
-		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+56</string>
+            <key>name</key>
+            <string>智利</string>
+            <key>content</key>
+            <string>智利+56</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+236</string>
@@ -2140,28 +2220,20 @@
 		</dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+235</string>
-			<key>name</key>
-			<string>乍得</string>
-			<key>content</key>
-			<string>乍得+235</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+86</string>
-			<key>name</key>
-			<string>中国</string>
-			<key>content</key>
-			<string>中国+86</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
 			<string>+350</string>
 			<key>name</key>
 			<string>直布罗陀</string>
 			<key>content</key>
 			<string>直布罗陀+350</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+86</string>
+            <key>name</key>
+            <string>中国</string>
+            <key>content</key>
+            <string>中国+86</string>
+        </dict>
 	</array>
     </dict>
 </array>
