@@ -1567,6 +1567,38 @@
         <string>S</string>
         <key>group_items</key>
 	<array>
+        <dict>
+            <key>dial_code</key>
+            <string>+503</string>
+            <key>name</key>
+            <string>萨尔瓦多</string>
+            <key>content</key>
+            <string>萨尔瓦多+503</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+381</string>
+            <key>name</key>
+            <string>塞尔维亚</string>
+            <key>content</key>
+            <string>塞尔维亚+381</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+232</string>
+            <key>name</key>
+            <string>塞拉利昂</string>
+            <key>content</key>
+            <string>塞拉利昂+232</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+221</string>
+            <key>name</key>
+            <string>塞内加尔</string>
+            <key>content</key>
+            <string>塞内加尔+221</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+357</string>
@@ -1575,14 +1607,62 @@
 			<key>content</key>
 			<string>塞浦路斯+357</string>
 		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+503</string>
-			<key>name</key>
-			<string>萨尔瓦多</string>
-			<key>content</key>
-			<string>萨尔瓦多+503</string>
-		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+248</string>
+            <key>name</key>
+            <string>塞舌尔</string>
+            <key>content</key>
+            <string>塞舌尔+248</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+685</string>
+            <key>name</key>
+            <string>西萨摩亚</string>
+            <key>content</key>
+            <string>西萨摩亚+685</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+966</string>
+            <key>name</key>
+            <string>沙特阿拉伯</string>
+            <key>content</key>
+            <string>沙特阿拉伯+966</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+61</string>
+            <key>name</key>
+            <string>圣诞岛</string>
+            <key>content</key>
+            <string>圣诞岛+61</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+239</string>
+            <key>name</key>
+            <string>圣多美和普林西比</string>
+            <key>content</key>
+            <string>圣多美和普林西比+239</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+290</string>
+            <key>name</key>
+            <string>圣赫勒拿</string>
+            <key>content</key>
+            <string>圣赫勒拿+290</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+1869</string>
+            <key>name</key>
+            <string>圣基茨和尼维斯</string>
+            <key>content</key>
+            <string>圣基茨和尼维斯+1869</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+1758</string>
@@ -1591,62 +1671,46 @@
 			<key>content</key>
 			<string>圣卢西亚+1758</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+590</string>
+            <key>name</key>
+            <string>圣巴泰勒米</string>
+            <key>content</key>
+            <string>圣巴泰勒米+590</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+378</string>
+            <key>name</key>
+            <string>圣马力诺</string>
+            <key>content</key>
+            <string>圣马力诺+378</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+508</string>
+            <key>name</key>
+            <string>圣皮埃尔和密克隆群岛</string>
+            <key>content</key>
+            <string>圣皮埃尔和密克隆群岛+508</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+1784</string>
 			<key>name</key>
-			<string>圣文森特岛</string>
+			<string>圣文森特和格林纳丁斯</string>
 			<key>content</key>
-			<string>圣文森特岛+1784</string>
+			<string>圣文森特岛格林纳丁斯+1784</string>
 		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+378</string>
-			<key>name</key>
-			<string>圣马力诺</string>
-			<key>content</key>
-			<string>圣马力诺+378</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+239</string>
-			<key>name</key>
-			<string>圣多美和普林西比</string>
-			<key>content</key>
-			<string>圣多美和普林西比+239</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+966</string>
-			<key>name</key>
-			<string>沙特阿拉伯</string>
-			<key>content</key>
-			<string>沙特阿拉伯+966</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+221</string>
-			<key>name</key>
-			<string>塞内加尔</string>
-			<key>content</key>
-			<string>塞内加尔+221</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+248</string>
-			<key>name</key>
-			<string>塞舌尔</string>
-			<key>content</key>
-			<string>塞舌尔+248</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+232</string>
-			<key>name</key>
-			<string>塞拉利昂</string>
-			<key>content</key>
-			<string>塞拉利昂+232</string>
-		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+94</string>
+            <key>name</key>
+            <string>斯里兰卡</string>
+            <key>content</key>
+            <string>斯里兰卡+94</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+421</string>
@@ -1663,6 +1727,38 @@
 			<key>content</key>
 			<string>斯洛文尼亚+386</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+47</string>
+            <key>name</key>
+            <string>斯瓦尔巴和扬马延</string>
+            <key>content</key>
+            <string>斯瓦尔巴和扬马延+47</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+268</string>
+            <key>name</key>
+            <string>斯威士兰</string>
+            <key>content</key>
+            <string>斯威士兰+268</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+249</string>
+            <key>name</key>
+            <string>苏丹</string>
+            <key>content</key>
+            <string>苏丹+249</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+597</string>
+            <key>name</key>
+            <string>苏里南</string>
+            <key>content</key>
+            <string>苏里南+597</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+677</string>
@@ -1678,54 +1774,6 @@
 			<string>索马里</string>
 			<key>content</key>
 			<string>索马里+252</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+94</string>
-			<key>name</key>
-			<string>斯里兰卡</string>
-			<key>content</key>
-			<string>斯里兰卡+94</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+1758</string>
-			<key>name</key>
-			<string>圣卢西亚</string>
-			<key>content</key>
-			<string>圣卢西亚+1758</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+1784</string>
-			<key>name</key>
-			<string>圣文森特</string>
-			<key>content</key>
-			<string>圣文森特+1784</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+249</string>
-			<key>name</key>
-			<string>苏丹</string>
-			<key>content</key>
-			<string>苏丹+249</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+597</string>
-			<key>name</key>
-			<string>苏里南</string>
-			<key>content</key>
-			<string>苏里南+597</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+268</string>
-			<key>name</key>
-			<string>斯威士兰</string>
-			<key>content</key>
-			<string>斯威士兰+268</string>
 		</dict>
 	</array>
     </dict>
