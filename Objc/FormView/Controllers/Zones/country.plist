@@ -301,6 +301,22 @@
 		<string>B</string>
 		<key>group_items</key>
 		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+1246</string>
+                <key>name</key>
+                <string>巴巴多斯</string>
+                <key>content</key>
+                <string>巴巴多斯+1246</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+675</string>
+                <key>name</key>
+                <string>巴布亚新几内亚</string>
+                <key>content</key>
+                <string>巴布亚新几内亚+675</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+1242</string>
@@ -309,6 +325,46 @@
 				<key>content</key>
 				<string>巴哈马+1242</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+375</string>
+                <key>name</key>
+                <string>白俄罗斯</string>
+                <key>content</key>
+                <string>白俄罗斯+375</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1441</string>
+                <key>name</key>
+                <string>百慕大</string>
+                <key>content</key>
+                <string>百慕大+1441</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+92</string>
+                <key>name</key>
+                <string>巴基斯坦</string>
+                <key>content</key>
+                <string>巴基斯坦+92</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+595</string>
+                <key>name</key>
+                <string>巴拉圭</string>
+                <key>content</key>
+                <string>巴拉圭+595</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+970</string>
+                <key>name</key>
+                <string>巴勒斯坦领土</string>
+                <key>content</key>
+                <string>巴勒斯坦领土+970</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+973</string>
@@ -317,22 +373,38 @@
 				<key>content</key>
 				<string>巴林+973</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1246</string>
-				<key>name</key>
-				<string>巴巴多斯</string>
-				<key>content</key>
-				<string>巴巴多斯+1246</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+375</string>
-				<key>name</key>
-				<string>白俄罗斯</string>
-				<key>content</key>
-				<string>白俄罗斯+375</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+507</string>
+                <key>name</key>
+                <string>巴拿马</string>
+                <key>content</key>
+                <string>巴拿马+507</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+359</string>
+                <key>name</key>
+                <string>保加利亚</string>
+                <key>content</key>
+                <string>保加利亚+359</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+55</string>
+                <key>name</key>
+                <string>巴西</string>
+                <key>content</key>
+                <string>巴西+55</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1670</string>
+                <key>name</key>
+                <string>北马里亚那群岛</string>
+                <key>content</key>
+                <string>北马里亚那群岛+1670</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+32</string>
@@ -359,14 +431,6 @@
 			</dict>
 			<dict>
 				<key>dial_code</key>
-				<string>+1441</string>
-				<key>name</key>
-				<string>百慕大群岛</string>
-				<key>content</key>
-				<string>百慕大群岛+1441</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
 				<string>+591</string>
 				<key>name</key>
 				<string>玻利维亚</string>
@@ -383,27 +447,11 @@
 			</dict>
 			<dict>
 				<key>dial_code</key>
-				<string>+55</string>
-				<key>name</key>
-				<string>巴西</string>
-				<key>content</key>
-				<string>巴西+55</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
 				<string>+673</string>
 				<key>name</key>
 				<string>文莱</string>
 				<key>content</key>
 				<string>文莱+673</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+359</string>
-				<key>name</key>
-				<string>保加利亚</string>
-				<key>content</key>
-				<string>保加利亚+359</string>
 			</dict>
 			<dict>
 				<key>dial_code</key>
@@ -428,38 +476,6 @@
 				<string>冰岛</string>
 				<key>content</key>
 				<string>冰岛+354</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+92</string>
-				<key>name</key>
-				<string>巴基斯坦</string>
-				<key>content</key>
-				<string>巴基斯坦+92</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+507</string>
-				<key>name</key>
-				<string>巴拿马</string>
-				<key>content</key>
-				<string>巴拿马+507</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+675</string>
-				<key>name</key>
-				<string>巴布亚新几内亚</string>
-				<key>content</key>
-				<string>巴布亚新几内亚+675</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+595</string>
-				<key>name</key>
-				<string>巴拉圭</string>
-				<key>content</key>
-				<string>巴拉圭+595</string>
 			</dict>
 			<dict>
 				<key>dial_code</key>
@@ -1056,14 +1072,6 @@
 				<string>马耳他</string>
 				<key>content</key>
 				<string>马耳他+356</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1670</string>
-				<key>name</key>
-				<string>马里亚那群岛</string>
-				<key>content</key>
-				<string>马里亚那群岛+1670</string>
 			</dict>
 			<dict>
 				<key>dial_code</key>
