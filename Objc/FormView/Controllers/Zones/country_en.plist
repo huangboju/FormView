@@ -1735,51 +1735,154 @@
 		<string>P</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+351</string>
-				<key>name</key>
-				<string>葡萄牙</string>
-				<key>content</key>
-				<string>葡萄牙+351</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+92</string>
+                <key>name</key>
+                <string>Pakistan</string>
+                <key>content</key>
+                <string>Pakistan+92</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+680</string>
+                <key>name</key>
+                <string>Palau</string>
+                <key>content</key>
+                <string>Palau+680</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+970</string>
+                <key>name</key>
+                <string>Palestine, State of</string>
+                <key>content</key>
+                <string>Palestine, State of+970</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+507</string>
+                <key>name</key>
+                <string>Panama</string>
+                <key>content</key>
+                <string>Panama+507</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+675</string>
+                <key>name</key>
+                <string>Papua New Guinea</string>
+                <key>content</key>
+                <string>Papua New Guinea+675</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+595</string>
+                <key>name</key>
+                <string>Paraguay</string>
+                <key>content</key>
+                <string>Paraguay+595</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+51</string>
+                <key>name</key>
+                <string>Peru</string>
+                <key>content</key>
+                <string>Peru+51</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+63</string>
+                <key>name</key>
+                <string>Philippines</string>
+                <key>content</key>
+                <string>Philippines+63</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+64</string>
+                <key>name</key>
+                <string>Pitcairn Islands</string>
+                <key>content</key>
+                <string>Pitcairn Islands+64</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+48</string>
+                <key>name</key>
+                <string>Poland</string>
+                <key>content</key>
+                <string>Poland+48</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+351</string>
+                <key>name</key>
+                <string>Portugal</string>
+                <key>content</key>
+                <string>Portugal+351</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1787</string>
+                <key>name</key>
+                <string>Puerto Rico</string>
+                <key>content</key>
+                <string>Puerto Rico+1787</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
 		<key>group_key</key>
 		<string>Q</string>
 		<key>group_items</key>
-		<array/>
+		<array>
+            <key>dial_code</key>
+            <string>+974</string>
+            <key>name</key>
+            <string>Qatar</string>
+            <key>content</key>
+            <string>Qatar+974</string>
+            </array>
 	</dict>
 	<dict>
 		<key>group_key</key>
 		<string>R</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+81</string>
-				<key>name</key>
-				<string>日本</string>
-				<key>content</key>
-				<string>日本+81</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+46</string>
-				<key>name</key>
-				<string>瑞典</string>
-				<key>content</key>
-				<string>瑞典+46</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+41</string>
-				<key>name</key>
-				<string>瑞士</string>
-				<key>content</key>
-				<string>瑞士+41</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+262</string>
+                <key>name</key>
+                <string>Réunion</string>
+                <key>content</key>
+                <string>Réunion+262</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+40</string>
+                <key>name</key>
+                <string>Romania</string>
+                <key>content</key>
+                <string>Romania+40</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+7</string>
+                <key>name</key>
+                <string>Russia</string>
+                <key>content</key>
+                <string>Russia+7</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+250</string>
+                <key>name</key>
+                <string>Rwanda</string>
+                <key>content</key>
+                <string>Rwanda+250</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
@@ -1787,166 +1890,294 @@
 		<string>S</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+357</string>
-				<key>name</key>
-				<string>塞浦路斯</string>
-				<key>content</key>
-				<string>塞浦路斯+357</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+503</string>
-				<key>name</key>
-				<string>萨尔瓦多</string>
-				<key>content</key>
-				<string>萨尔瓦多+503</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1758</string>
-				<key>name</key>
-				<string>圣卢西亚</string>
-				<key>content</key>
-				<string>圣卢西亚+1758</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1784</string>
-				<key>name</key>
-				<string>圣文森特岛</string>
-				<key>content</key>
-				<string>圣文森特岛+1784</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+378</string>
-				<key>name</key>
-				<string>圣马力诺</string>
-				<key>content</key>
-				<string>圣马力诺+378</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+239</string>
-				<key>name</key>
-				<string>圣多美和普林西比</string>
-				<key>content</key>
-				<string>圣多美和普林西比+239</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+966</string>
-				<key>name</key>
-				<string>沙特阿拉伯</string>
-				<key>content</key>
-				<string>沙特阿拉伯+966</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+221</string>
-				<key>name</key>
-				<string>塞内加尔</string>
-				<key>content</key>
-				<string>塞内加尔+221</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+248</string>
-				<key>name</key>
-				<string>塞舌尔</string>
-				<key>content</key>
-				<string>塞舌尔+248</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+232</string>
-				<key>name</key>
-				<string>塞拉利昂</string>
-				<key>content</key>
-				<string>塞拉利昂+232</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+421</string>
-				<key>name</key>
-				<string>斯洛伐克</string>
-				<key>content</key>
-				<string>斯洛伐克+421</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+386</string>
-				<key>name</key>
-				<string>斯洛文尼亚</string>
-				<key>content</key>
-				<string>斯洛文尼亚+386</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+677</string>
-				<key>name</key>
-				<string>所罗门群岛</string>
-				<key>content</key>
-				<string>所罗门群岛+677</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+252</string>
-				<key>name</key>
-				<string>索马里</string>
-				<key>content</key>
-				<string>索马里+252</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+94</string>
-				<key>name</key>
-				<string>斯里兰卡</string>
-				<key>content</key>
-				<string>斯里兰卡+94</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1758</string>
-				<key>name</key>
-				<string>圣卢西亚</string>
-				<key>content</key>
-				<string>圣卢西亚+1758</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1784</string>
-				<key>name</key>
-				<string>圣文森特</string>
-				<key>content</key>
-				<string>圣文森特+1784</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+249</string>
-				<key>name</key>
-				<string>苏丹</string>
-				<key>content</key>
-				<string>苏丹+249</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+597</string>
-				<key>name</key>
-				<string>苏里南</string>
-				<key>content</key>
-				<string>苏里南+597</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+268</string>
-				<key>name</key>
-				<string>斯威士兰</string>
-				<key>content</key>
-				<string>斯威士兰+268</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+5994</string>
+                <key>name</key>
+                <string>Saba</string>
+                <key>content</key>
+                <string>Saba+5994</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+590</string>
+                <key>name</key>
+                <string>Saint Barthélemy</string>
+                <key>content</key>
+                <string>Saint Barthélemy+590</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+290</string>
+                <key>name</key>
+                <string>Saint Helena</string>
+                <key>content</key>
+                <string>Saint Helena+290</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1869</string>
+                <key>name</key>
+                <string>Saint Kitts and Nevis</string>
+                <key>content</key>
+                <string>Saint Kitts and Nevis+1869</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1758</string>
+                <key>name</key>
+                <string>Saint Lucia</string>
+                <key>content</key>
+                <string>Saint Lucia+1758</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+590</string>
+                <key>name</key>
+                <string>Saint Martin (France)</string>
+                <key>content</key>
+                <string>Saint Martin (France)+590</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+508</string>
+                <key>name</key>
+                <string>Saint Pierre and Miquelon</string>
+                <key>content</key>
+                <string>Saint Pierre and Miquelon+508</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1784</string>
+                <key>name</key>
+                <string>Saint Vincent and the Grenadines</string>
+                <key>content</key>
+                <string>Saint Vincent and the Grenadines+1784</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+685</string>
+                <key>name</key>
+                <string>Samoa</string>
+                <key>content</key>
+                <string>Samoa+685</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+378</string>
+                <key>name</key>
+                <string>San Marino</string>
+                <key>content</key>
+                <string>San Marino+378</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+239</string>
+                <key>name</key>
+                <string>São Tomé and Príncipe</string>
+                <key>content</key>
+                <string>São Tomé and Príncipe+239</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+966</string>
+                <key>name</key>
+                <string>Saudi Arabia</string>
+                <key>content</key>
+                <string>Saudi Arabia+966</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+221</string>
+                <key>name</key>
+                <string>Senegal</string>
+                <key>content</key>
+                <string>Senegal+221</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+381</string>
+                <key>name</key>
+                <string>Serbia</string>
+                <key>content</key>
+                <string>Serbia+381</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+248</string>
+                <key>name</key>
+                <string>Seychelles</string>
+                <key>content</key>
+                <string>Seychelles+248</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+232</string>
+                <key>name</key>
+                <string>Sierra Leone</string>
+                <key>content</key>
+                <string>Sierra Leone+232</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+65</string>
+                <key>name</key>
+                <string>Singapore</string>
+                <key>content</key>
+                <string>Singapore+65</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+5993</string>
+                <key>name</key>
+                <string>Sint Eustatius</string>
+                <key>content</key>
+                <string>Sint Eustatius+5993</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1721</string>
+                <key>name</key>
+                <string>Sint Maarten (Netherlands)</string>
+                <key>content</key>
+                <string>Sint Maarten (Netherlands)+1721</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+421</string>
+                <key>name</key>
+                <string>Slovakia</string>
+                <key>content</key>
+                <string>Slovakia+421</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+386</string>
+                <key>name</key>
+                <string>Slovenia</string>
+                <key>content</key>
+                <string>Slovenia+386</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+677</string>
+                <key>name</key>
+                <string>Solomon Islands</string>
+                <key>content</key>
+                <string>Solomon Islands+677</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+252</string>
+                <key>name</key>
+                <string>Somalia</string>
+                <key>content</key>
+                <string>Somalia+252</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+27</string>
+                <key>name</key>
+                <string>South Africa</string>
+                <key>content</key>
+                <string>South Africa+27</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+500</string>
+                <key>name</key>
+                <string>South Georgia and the South Sandwich Islands</string>
+                <key>content</key>
+                <string>South Georgia and the South Sandwich Islands+500</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+99534</string>
+                <key>name</key>
+                <string>South Ossetia</string>
+                <key>content</key>
+                <string>South Ossetia+99534</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+211</string>
+                <key>name</key>
+                <string>South Sudan</string>
+                <key>content</key>
+                <string>South Sudan+211</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+34</string>
+                <key>name</key>
+                <string>Spain</string>
+                <key>content</key>
+                <string>Spain+34</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+94</string>
+                <key>name</key>
+                <string>Sri Lanka</string>
+                <key>content</key>
+                <string>Sri Lanka+94</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+249</string>
+                <key>name</key>
+                <string>Sudan</string>
+                <key>content</key>
+                <string>Sudan+249</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+597</string>
+                <key>name</key>
+                <string>Suriname</string>
+                <key>content</key>
+                <string>Suriname+597</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+4779</string>
+                <key>name</key>
+                <string>Svalbard</string>
+                <key>content</key>
+                <string>Svalbard+4779</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+268</string>
+                <key>name</key>
+                <string>Swaziland</string>
+                <key>content</key>
+                <string>Swaziland+268</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+46</string>
+                <key>name</key>
+                <string>Sweden</string>
+                <key>content</key>
+                <string>Sweden+46</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+41</string>
+                <key>name</key>
+                <string>Switzerland</string>
+                <key>content</key>
+                <string>Switzerland+41</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+963</string>
+                <key>name</key>
+                <string>Syria</string>
+                <key>content</key>
+                <string>Syria+963</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
@@ -1954,91 +2185,245 @@
 		<string>T</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+886</string>
-				<key>name</key>
-				<string>台湾</string>
-				<key>content</key>
-				<string>台湾+886</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+992</string>
-				<key>name</key>
-				<string>塔吉克斯坦</string>
-				<key>content</key>
-				<string>塔吉克斯坦+992</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+255</string>
-				<key>name</key>
-				<string>坦桑尼亚</string>
-				<key>content</key>
-				<string>坦桑尼亚+255</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+66</string>
-				<key>name</key>
-				<string>泰国</string>
-				<key>content</key>
-				<string>泰国+66</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+676</string>
-				<key>name</key>
-				<string>汤加</string>
-				<key>content</key>
-				<string>汤加+676</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1809</string>
-				<key>name</key>
-				<string>特立尼达和多巴哥</string>
-				<key>content</key>
-				<string>特立尼达和多巴哥+1809</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+216</string>
-				<key>name</key>
-				<string>突尼斯</string>
-				<key>content</key>
-				<string>突尼斯+216</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+90</string>
-				<key>name</key>
-				<string>土耳其</string>
-				<key>content</key>
-				<string>土耳其+90</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+993</string>
-				<key>name</key>
-				<string>土库曼斯坦</string>
-				<key>content</key>
-				<string>土库曼斯坦+993</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+886</string>
+                <key>name</key>
+                <string>Taiwan</string>
+                <key>content</key>
+                <string>Taiwan+886</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+992</string>
+                <key>name</key>
+                <string>Tajikistan</string>
+                <key>content</key>
+                <string>Tajikistan+992</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+255</string>
+                <key>name</key>
+                <string>Tanzania</string>
+                <key>content</key>
+                <string>Tanzania+255</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+66</string>
+                <key>name</key>
+                <string>Thailand</string>
+                <key>content</key>
+                <string>Thailand+66</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+88216</string>
+                <key>name</key>
+                <string>Thuraya (Mobile Satellite service)</string>
+                <key>content</key>
+                <string>Thuraya (Mobile Satellite service)+88216</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+228</string>
+                <key>name</key>
+                <string>Togo</string>
+                <key>content</key>
+                <string>Togo+228</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+690</string>
+                <key>name</key>
+                <string>Tokelau</string>
+                <key>content</key>
+                <string>Tokelau+690</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+676</string>
+                <key>name</key>
+                <string>Tonga</string>
+                <key>content</key>
+                <string>Tonga+676</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1868</string>
+                <key>name</key>
+                <string>Trinidad and Tobago</string>
+                <key>content</key>
+                <string>Trinidad and Tobago+1868</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+2908</string>
+                <key>name</key>
+                <string>Tristanda Cunha</string>
+                <key>content</key>
+                <string>Tristanda Cunha+2908</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+216</string>
+                <key>name</key>
+                <string>Tunisia</string>
+                <key>content</key>
+                <string>Tunisia+216</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+90</string>
+                <key>name</key>
+                <string>Turkey</string>
+                <key>content</key>
+                <string>Turkey+90</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+993</string>
+                <key>name</key>
+                <string>Turkmenistan</string>
+                <key>content</key>
+                <string>Turkmenistan+993</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1649</string>
+                <key>name</key>
+                <string>Turks and Caicos Islands</string>
+                <key>content</key>
+                <string>Turks and Caicos Islands+1649</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+688</string>
+                <key>name</key>
+                <string>Tuvalu</string>
+                <key>content</key>
+                <string>Tuvalu+688</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
 		<key>group_key</key>
 		<string>U</string>
 		<key>group_items</key>
-		<array/>
+		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+256</string>
+                <key>name</key>
+                <string>Uganda</string>
+                <key>content</key>
+                <string>Uganda+256</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+380</string>
+                <key>name</key>
+                <string>Ukraine</string>
+                <key>content</key>
+                <string>Ukraine+380</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+971</string>
+                <key>name</key>
+                <string>United Arab Emirates</string>
+                <key>content</key>
+                <string>United Arab Emirates+971</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+44</string>
+                <key>name</key>
+                <string>United Kingdom</string>
+                <key>content</key>
+                <string>United Kingdom+44</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1</string>
+                <key>name</key>
+                <string>United States</string>
+                <key>content</key>
+                <string>United States+1</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+878</string>
+                <key>name</key>
+                <string>Universal Personal Telecommunications (UPT)</string>
+                <key>content</key>
+                <string>Universal Personal Telecommunications (UPT)+878</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+598</string>
+                <key>name</key>
+                <string>Uruguay</string>
+                <key>content</key>
+                <string>Uruguay+598</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1340</string>
+                <key>name</key>
+                <string>US Virgin Islands</string>
+                <key>content</key>
+                <string>US Virgin Islands+1340</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+998</string>
+                <key>name</key>
+                <string>Uzbekistan</string>
+                <key>content</key>
+                <string>Uzbekistan+998</string>
+            </dict>
+            </array>
 	</dict>
 	<dict>
 		<key>group_key</key>
 		<string>V</string>
 		<key>group_items</key>
-		<array/>
+		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+678</string>
+                <key>name</key>
+                <string>Vanuatu</string>
+                <key>content</key>
+                <string>Vanuatu+678</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+58</string>
+                <key>name</key>
+                <string>Venezuela</string>
+                <key>content</key>
+                <string>Venezuela+58</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+379</string>
+                <key>name</key>
+                <string>Vatican City State (Holy See)</string>
+                <key>content</key>
+                <string>Vatican City State (Holy See)+379</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+84</string>
+                <key>name</key>
+                <string>Vietnam</string>
+                <key>content</key>
+                <string>Vietnam+84</string>
+            </dict>
+            </array>
 	</dict>
 	<dict>
 		<key>group_key</key>
