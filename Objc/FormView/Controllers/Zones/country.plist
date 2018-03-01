@@ -1005,14 +1005,54 @@
 				<key>content</key>
 				<string>开曼群岛+1345</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+682</string>
-				<key>name</key>
-				<string>库克群岛</string>
-				<key>content</key>
-				<string>库克群岛+682</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+237</string>
+                <key>name</key>
+                <string>喀麦隆</string>
+                <key>content</key>
+                <string>喀麦隆+237</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+974</string>
+                <key>name</key>
+                <string>卡塔尔</string>
+                <key>content</key>
+                <string>卡塔尔+974</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+61</string>
+                <key>name</key>
+                <string>科科斯（基林）群岛</string>
+                <key>content</key>
+                <string>科科斯（基林）群岛+61</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+385</string>
+                <key>name</key>
+                <string>克罗地亚</string>
+                <key>content</key>
+                <string>克罗地亚+385</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+269</string>
+                <key>name</key>
+                <string>科摩罗</string>
+                <key>content</key>
+                <string>科摩罗+269</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+254</string>
+                <key>name</key>
+                <string>肯尼亚</string>
+                <key>content</key>
+                <string>肯尼亚+254</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+225</string>
@@ -1023,36 +1063,28 @@
 			</dict>
 			<dict>
 				<key>dial_code</key>
-				<string>+254</string>
-				<key>name</key>
-				<string>肯尼亚</string>
-				<key>content</key>
-				<string>肯尼亚+254</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
 				<string>+965</string>
 				<key>name</key>
 				<string>科威特</string>
 				<key>content</key>
 				<string>科威特+965</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+237</string>
-				<key>name</key>
-				<string>喀麦隆</string>
-				<key>content</key>
-				<string>喀麦隆+237</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+974</string>
-				<key>name</key>
-				<string>卡塔尔</string>
-				<key>content</key>
-				<string>卡塔尔+974</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+682</string>
+                <key>name</key>
+                <string>库克群岛</string>
+                <key>content</key>
+                <string>库克群岛+682</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+599</string>
+                <key>name</key>
+                <string>库拉索</string>
+                <key>content</key>
+                <string>库拉索+599</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
