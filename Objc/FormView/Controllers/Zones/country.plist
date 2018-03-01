@@ -610,6 +610,14 @@
 				<key>content</key>
 				<string>厄瓜多尔+593</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+291</string>
+                <key>name</key>
+                <string>厄立特里亚</string>
+                <key>content</key>
+                <string>厄立特里亚+291</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+7</string>
