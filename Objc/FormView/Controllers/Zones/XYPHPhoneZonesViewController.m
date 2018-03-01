@@ -101,6 +101,7 @@ UISearchBarDelegate
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSString *targetText = [searchText lowercaseString];
     NSMutableArray *result = [NSMutableArray array];
 
     for (XYPHPhoneZonesItem *zone in self.items) {
@@ -110,7 +111,7 @@ UISearchBarDelegate
         for (XYPHCountryItem *country in zone.countries) {
             NSString *countryName = country.name;
             NSString *pinyin = [self transformToPinyin:countryName];
-            if ([countryName containsString:searchText] || [pinyin containsString:searchText]) {
+            if ([countryName containsString:targetText] || [pinyin containsString:targetText]) {
                 [result addObject:country];
             }
         }
