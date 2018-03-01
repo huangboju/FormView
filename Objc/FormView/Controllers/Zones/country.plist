@@ -1890,18 +1890,6 @@
     </dict>
     <dict>
         <key>group_key</key>
-        <string>U</string>
-        <key>group_items</key>
-	<array/>
-    </dict>
-    <dict>
-        <key>group_key</key>
-        <string>V</string>
-        <key>group_items</key>
-	<array/>
-    </dict>
-    <dict>
-        <key>group_key</key>
         <string>W</string>
         <key>group_items</key>
 	<array>
