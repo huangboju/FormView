@@ -52,7 +52,7 @@ UISearchBarDelegate
 - (void)readData {
     NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
     
-    NSString *name = @"country_en";
+    NSString *name = @"country";
     if ([pfLanguageCode containsString:@"en"]) {
         
     }
