@@ -405,6 +405,14 @@
                 <key>content</key>
                 <string>北马里亚那群岛+1670</string>
             </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+229</string>
+                <key>name</key>
+                <string>贝宁</string>
+                <key>content</key>
+                <string>贝宁+229</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+32</string>
@@ -413,6 +421,54 @@
 				<key>content</key>
 				<string>比利时+32</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+354</string>
+                <key>name</key>
+                <string>冰岛</string>
+                <key>content</key>
+                <string>冰岛+354</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+267</string>
+                <key>name</key>
+                <string>博茨瓦纳</string>
+                <key>content</key>
+                <string>博茨瓦纳+267</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1787</string>
+                <key>name</key>
+                <string>波多黎各</string>
+                <key>content</key>
+                <string>波多黎各+1787</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1939</string>
+                <key>name</key>
+                <string>波多黎各</string>
+                <key>content</key>
+                <string>波多黎各+1939</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+48</string>
+                <key>name</key>
+                <string>波兰</string>
+                <key>content</key>
+                <string>波兰+48</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+591</string>
+                <key>name</key>
+                <string>玻利维亚</string>
+                <key>content</key>
+                <string>玻利维亚+591</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+501</string>
@@ -421,38 +477,22 @@
 				<key>content</key>
 				<string>伯利兹+501</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+229</string>
-				<key>name</key>
-				<string>贝宁</string>
-				<key>content</key>
-				<string>贝宁+229</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+591</string>
-				<key>name</key>
-				<string>玻利维亚</string>
-				<key>content</key>
-				<string>玻利维亚+591</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+267</string>
-				<key>name</key>
-				<string>博茨瓦纳</string>
-				<key>content</key>
-				<string>博茨瓦纳+267</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+673</string>
-				<key>name</key>
-				<string>文莱</string>
-				<key>content</key>
-				<string>文莱+673</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+387</string>
+                <key>name</key>
+                <string>波斯尼亚和黑塞哥维那</string>
+                <key>content</key>
+                <string>波斯尼亚和黑塞哥维那+387</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+975</string>
+                <key>name</key>
+                <string>不丹</string>
+                <key>content</key>
+                <string>不丹+975</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+226</string>
@@ -468,30 +508,6 @@
 				<string>布隆迪</string>
 				<key>content</key>
 				<string>布隆迪+257</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+354</string>
-				<key>name</key>
-				<string>冰岛</string>
-				<key>content</key>
-				<string>冰岛+354</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+48</string>
-				<key>name</key>
-				<string>波兰</string>
-				<key>content</key>
-				<string>波兰+48</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1787</string>
-				<key>name</key>
-				<string>波多黎各</string>
-				<key>content</key>
-				<string>波多黎各+1787</string>
 			</dict>
 		</array>
 	</dict>
