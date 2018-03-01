@@ -722,22 +722,94 @@
 		<string>E</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+593</string>
-				<key>name</key>
-				<string>厄瓜多尔</string>
-				<key>content</key>
-				<string>厄瓜多尔+593</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+7</string>
-				<key>name</key>
-				<string>俄罗斯</string>
-				<key>content</key>
-				<string>俄罗斯+7</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+670</string>
+                <key>name</key>
+                <string>East Timor</string>
+                <key>content</key>
+                <string>East Timor+670</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+56</string>
+                <key>name</key>
+                <string>Easter Island</string>
+                <key>content</key>
+                <string>Easter Island+56</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+593</string>
+                <key>name</key>
+                <string>Ecuador</string>
+                <key>content</key>
+                <string>Ecuador+593</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+20</string>
+                <key>name</key>
+                <string>Egypt</string>
+                <key>content</key>
+                <string>Egypt+20</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+503</string>
+                <key>name</key>
+                <string>El Salvador</string>
+                <key>content</key>
+                <string>El Salvador+503</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+8813</string>
+                <key>name</key>
+                <string>Ellipso (Mobile Satellite service)</string>
+                <key>content</key>
+                <string>Ellipso (Mobile Satellite service)+8813</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+88213</string>
+                <key>name</key>
+                <string>EMSAT (Mobile Satellite service)</string>
+                <key>content</key>
+                <string>EMSAT (Mobile Satellite service)+88213</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+240</string>
+                <key>name</key>
+                <string>Equatorial Guinea</string>
+                <key>content</key>
+                <string>Equatorial Guinea+240</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+291</string>
+                <key>name</key>
+                <string>Eritrea</string>
+                <key>content</key>
+                <string>Eritrea+291</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+372</string>
+                <key>name</key>
+                <string>Estonia</string>
+                <key>content</key>
+                <string>Estonia+372</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+251</string>
+                <key>name</key>
+                <string>Ethiopia</string>
+                <key>content</key>
+                <string>Ethiopia+251</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
@@ -745,54 +817,70 @@
 		<string>F</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+679</string>
-				<key>name</key>
-				<string>斐济</string>
-				<key>content</key>
-				<string>斐济+679</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+358</string>
-				<key>name</key>
-				<string>芬兰</string>
-				<key>content</key>
-				<string>芬兰+358</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+33</string>
-				<key>name</key>
-				<string>法国</string>
-				<key>content</key>
-				<string>法国+33</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+594</string>
-				<key>name</key>
-				<string>法属圭亚那</string>
-				<key>content</key>
-				<string>法属圭亚那+594</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+63</string>
-				<key>name</key>
-				<string>菲律宾</string>
-				<key>content</key>
-				<string>菲律宾+63</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+689</string>
-				<key>name</key>
-				<string>法属玻利尼西亚</string>
-				<key>content</key>
-				<string>法属玻利尼西亚+689</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+500</string>
+                <key>name</key>
+                <string>Falkland Islands</string>
+                <key>content</key>
+                <string>Falkland Islands+500</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+298</string>
+                <key>name</key>
+                <string>Faroe Islands</string>
+                <key>content</key>
+                <string>Faroe Islands+298</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+679</string>
+                <key>name</key>
+                <string>Fiji</string>
+                <key>content</key>
+                <string>Fiji+679</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+358</string>
+                <key>name</key>
+                <string>Finland</string>
+                <key>content</key>
+                <string>Finland+358</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+33</string>
+                <key>name</key>
+                <string>France</string>
+                <key>content</key>
+                <string>France+33</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+596</string>
+                <key>name</key>
+                <string>French Antilles</string>
+                <key>content</key>
+                <string>French Antilles+596</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+594</string>
+                <key>name</key>
+                <string>French Guiana</string>
+                <key>content</key>
+                <string>French Guiana+594</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+689</string>
+                <key>name</key>
+                <string>French Polynesia</string>
+                <key>content</key>
+                <string>French Polynesia+689</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
@@ -800,78 +888,150 @@
 		<string>G</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+57</string>
-				<key>name</key>
-				<string>哥伦比亚</string>
-				<key>content</key>
-				<string>哥伦比亚+57</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+242</string>
-				<key>name</key>
-				<string>刚果</string>
-				<key>content</key>
-				<string>刚果+242</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+506</string>
-				<key>name</key>
-				<string>哥斯达黎加</string>
-				<key>content</key>
-				<string>哥斯达黎加+506</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+53</string>
-				<key>name</key>
-				<string>古巴</string>
-				<key>content</key>
-				<string>古巴+53</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+220</string>
-				<key>name</key>
-				<string>冈比亚</string>
-				<key>content</key>
-				<string>冈比亚+220</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+995</string>
-				<key>name</key>
-				<string>格鲁吉亚</string>
-				<key>content</key>
-				<string>格鲁吉亚+995</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1809</string>
-				<key>name</key>
-				<string>格林纳达</string>
-				<key>content</key>
-				<string>格林纳达+1809</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1671</string>
-				<key>name</key>
-				<string>关岛</string>
-				<key>content</key>
-				<string>关岛+1671</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+592</string>
-				<key>name</key>
-				<string>圭亚那</string>
-				<key>content</key>
-				<string>圭亚那+592</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+241</string>
+                <key>name</key>
+                <string>Gabon</string>
+                <key>content</key>
+                <string>Gabon+241</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+220</string>
+                <key>name</key>
+                <string>Gambia</string>
+                <key>content</key>
+                <string>Gambia+220</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+995</string>
+                <key>name</key>
+                <string>Georgia</string>
+                <key>content</key>
+                <string>Georgia+995</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+49</string>
+                <key>name</key>
+                <string>Germany</string>
+                <key>content</key>
+                <string>Germany+49</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+233</string>
+                <key>name</key>
+                <string>Ghana</string>
+                <key>content</key>
+                <string>Ghana+233</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+350</string>
+                <key>name</key>
+                <string>Gibraltar</string>
+                <key>content</key>
+                <string>Gibraltar+350</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+881</string>
+                <key>name</key>
+                <string>Global Mobile Satellite System (GMSS)</string>
+                <key>content</key>
+                <string>Global Mobile Satellite System (GMSS)+881</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+8818</string>
+                <key>name</key>
+                <string>Globalstar (Mobile Satellite Service)</string>
+                <key>content</key>
+                <string>Globalstar (Mobile Satellite Service)+8818</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+30</string>
+                <key>name</key>
+                <string>Greece</string>
+                <key>content</key>
+                <string>Greece+30</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+299</string>
+                <key>name</key>
+                <string>Greenland</string>
+                <key>content</key>
+                <string>Greenland+299</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1473</string>
+                <key>name</key>
+                <string>Grenada</string>
+                <key>content</key>
+                <string>Grenada+1473</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+590</string>
+                <key>name</key>
+                <string>Guadeloupe</string>
+                <key>content</key>
+                <string>Guadeloupe+590</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1671</string>
+                <key>name</key>
+                <string>Guam</string>
+                <key>content</key>
+                <string>Guam+1671</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+502</string>
+                <key>name</key>
+                <string>Guatemala</string>
+                <key>content</key>
+                <string>Guatemala+502</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+44</string>
+                <key>name</key>
+                <string>Guernsey</string>
+                <key>content</key>
+                <string>Guernsey+44</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+224</string>
+                <key>name</key>
+                <string>Guinea</string>
+                <key>content</key>
+                <string>Guinea+224</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+245</string>
+                <key>name</key>
+                <string>Guinea-Bissau</string>
+                <key>content</key>
+                <string>Guinea-Bissau+245</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+592</string>
+                <key>name</key>
+                <string>Guyana</string>
+                <key>content</key>
+                <string>Guyana+592</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
