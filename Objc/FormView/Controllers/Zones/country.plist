@@ -720,6 +720,62 @@
 		<string>G</string>
 		<key>group_items</key>
 		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+220</string>
+                <key>name</key>
+                <string>冈比亚</string>
+                <key>content</key>
+                <string>冈比亚+220</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+242</string>
+                <key>name</key>
+                <string>刚果（布）</string>
+                <key>content</key>
+                <string>刚果（布）+242</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+243</string>
+                <key>name</key>
+                <string>刚果（金）</string>
+                <key>content</key>
+                <string>刚果（金）+243</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+44</string>
+                <key>name</key>
+                <string>格恩西岛</string>
+                <key>content</key>
+                <string>格恩西岛+44</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+299</string>
+                <key>name</key>
+                <string>格陵兰</string>
+                <key>content</key>
+                <string>格陵兰+299</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1473</string>
+                <key>name</key>
+                <string>格林纳达</string>
+                <key>content</key>
+                <string>格林纳达+1473</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+995</string>
+                <key>name</key>
+                <string>格鲁吉亚</string>
+                <key>content</key>
+                <string>格鲁吉亚+995</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+57</string>
@@ -730,20 +786,20 @@
 			</dict>
 			<dict>
 				<key>dial_code</key>
-				<string>+242</string>
-				<key>name</key>
-				<string>刚果</string>
-				<key>content</key>
-				<string>刚果+242</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
 				<string>+506</string>
 				<key>name</key>
 				<string>哥斯达黎加</string>
 				<key>content</key>
 				<string>哥斯达黎加+506</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1671</string>
+                <key>name</key>
+                <string>关岛</string>
+                <key>content</key>
+                <string>关岛+1671</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+53</string>
@@ -754,35 +810,11 @@
 			</dict>
 			<dict>
 				<key>dial_code</key>
-				<string>+220</string>
-				<key>name</key>
-				<string>冈比亚</string>
-				<key>content</key>
-				<string>冈比亚+220</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+995</string>
-				<key>name</key>
-				<string>格鲁吉亚</string>
-				<key>content</key>
-				<string>格鲁吉亚+995</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
 				<string>+1809</string>
 				<key>name</key>
 				<string>格林纳达</string>
 				<key>content</key>
 				<string>格林纳达+1809</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1671</string>
-				<key>name</key>
-				<string>关岛</string>
-				<key>content</key>
-				<string>关岛+1671</string>
 			</dict>
 			<dict>
 				<key>dial_code</key>
