@@ -1039,61 +1039,158 @@
 		<string>H</string>
 		<key>group_items</key>
 		<array>
-			<dict>
-				<key>dial_code</key>
-				<string>+509</string>
-				<key>name</key>
-				<string>海地</string>
-				<key>content</key>
-				<string>海地+509</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+504</string>
-				<key>name</key>
-				<string>洪都拉斯</string>
-				<key>content</key>
-				<string>洪都拉斯+504</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+327</string>
-				<key>name</key>
-				<string>哈萨克斯坦</string>
-				<key>content</key>
-				<string>哈萨克斯坦+327</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+82</string>
-				<key>name</key>
-				<string>韩国</string>
-				<key>content</key>
-				<string>韩国+82</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+599</string>
-				<key>name</key>
-				<string>荷属安的列斯</string>
-				<key>content</key>
-				<string>荷属安的列斯+599</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+31</string>
-				<key>name</key>
-				<string>荷兰</string>
-				<key>content</key>
-				<string>荷兰+31</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+509</string>
+                <key>name</key>
+                <string>Haiti</string>
+                <key>content</key>
+                <string>Haiti+509</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+504</string>
+                <key>name</key>
+                <string>Honduras</string>
+                <key>content</key>
+                <string>Honduras+504</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+852</string>
+                <key>name</key>
+                <string>Hong Kong</string>
+                <key>content</key>
+                <string>Hong Kong+852</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+36</string>
+                <key>name</key>
+                <string>Hungary</string>
+                <key>content</key>
+                <string>Hungary+36</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
 		<key>group_key</key>
 		<string>I</string>
 		<key>group_items</key>
-		<array/>
+        <array>
+        <dict>
+            <key>dial_code</key>
+            <string>+354</string>
+            <key>name</key>
+            <string>Iceland</string>
+            <key>content</key>
+            <string>Iceland+354</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+8810</string>
+            <key>name</key>
+            <string>ICO Global (Mobile Satellite Service)</string>
+            <key>content</key>
+            <string>ICO Global (Mobile Satellite Service)+8810</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+91</string>
+            <key>name</key>
+            <string>India</string>
+            <key>content</key>
+            <string>India+91</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+62</string>
+            <key>name</key>
+            <string>Indonesia</string>
+            <key>content</key>
+            <string>Indonesia+62</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+870</string>
+            <key>name</key>
+            <string>Inmarsat SNAC</string>
+            <key>content</key>
+            <string>Inmarsat SNAC+870</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+800</string>
+            <key>name</key>
+            <string>International Freephone Service</string>
+            <key>content</key>
+            <string>International Freephone Service+800</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+808</string>
+            <key>name</key>
+            <string>International Shared Cost Service (ISCS)</string>
+            <key>content</key>
+            <string>International Shared Cost Service (ISCS)+808</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+98</string>
+            <key>name</key>
+            <string>Iran</string>
+            <key>content</key>
+            <string>Iran+98</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+964</string>
+            <key>name</key>
+            <string>Iraq</string>
+            <key>content</key>
+            <string>Iraq+964</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+353</string>
+            <key>name</key>
+            <string>Ireland</string>
+            <key>content</key>
+            <string>Ireland+353</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+8817</string>
+            <key>name</key>
+            <string>Iridium (Mobile Satellite service)</string>
+            <key>content</key>
+            <string>Iridium (Mobile Satellite service)+8817</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+44</string>
+            <key>name</key>
+            <string>IsleofMan</string>
+            <key>content</key>
+            <string>IsleofMan+44</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+972</string>
+            <key>name</key>
+            <string>Israel</string>
+            <key>content</key>
+            <string>Israel+972</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+39</string>
+            <key>name</key>
+            <string>Italy</string>
+            <key>content</key>
+            <string>Italy+39</string>
+        </dict>
+        </array>
 	</dict>
 	<dict>
 		<key>group_key</key>
