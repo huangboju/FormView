@@ -1782,6 +1782,14 @@
         <string>T</string>
         <key>group_items</key>
 	<array>
+        <dict>
+            <key>dial_code</key>
+            <string>+66</string>
+            <key>name</key>
+            <string>泰国</string>
+            <key>content</key>
+            <string>泰国+66</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+886</string>
@@ -1798,6 +1806,14 @@
 			<key>content</key>
 			<string>塔吉克斯坦+992</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+676</string>
+            <key>name</key>
+            <string>汤加</string>
+            <key>content</key>
+            <string>汤加+676</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+255</string>
@@ -1806,30 +1822,46 @@
 			<key>content</key>
 			<string>坦桑尼亚+255</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+1649</string>
+            <key>name</key>
+            <string>特克斯和凯科斯群岛</string>
+            <key>content</key>
+            <string>特克斯和凯科斯群岛+1649</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
-			<string>+66</string>
-			<key>name</key>
-			<string>泰国</string>
-			<key>content</key>
-			<string>泰国+66</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+676</string>
-			<key>name</key>
-			<string>汤加</string>
-			<key>content</key>
-			<string>汤加+676</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+1809</string>
+			<string>+1868</string>
 			<key>name</key>
 			<string>特立尼达和多巴哥</string>
 			<key>content</key>
-			<string>特立尼达和多巴哥+1809</string>
+			<string>特立尼达和多巴哥+1868</string>
 		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+290</string>
+            <key>name</key>
+            <string>特立斯坦-达库尼亚群岛</string>
+            <key>content</key>
+            <string>特立斯坦-达库尼亚群岛+290</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+90</string>
+            <key>name</key>
+            <string>土耳其</string>
+            <key>content</key>
+            <string>土耳其+90</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+993</string>
+            <key>name</key>
+            <string>土库曼斯坦</string>
+            <key>content</key>
+            <string>土库曼斯坦+993</string>
+        </dict>
 		<dict>
 			<key>dial_code</key>
 			<string>+216</string>
@@ -1838,22 +1870,22 @@
 			<key>content</key>
 			<string>突尼斯+216</string>
 		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+90</string>
-			<key>name</key>
-			<string>土耳其</string>
-			<key>content</key>
-			<string>土耳其+90</string>
-		</dict>
-		<dict>
-			<key>dial_code</key>
-			<string>+993</string>
-			<key>name</key>
-			<string>土库曼斯坦</string>
-			<key>content</key>
-			<string>土库曼斯坦+993</string>
-		</dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+690</string>
+            <key>name</key>
+            <string>托克劳</string>
+            <key>content</key>
+            <string>托克劳+690</string>
+        </dict>
+        <dict>
+            <key>dial_code</key>
+            <string>+688</string>
+            <key>name</key>
+            <string>图瓦卢</string>
+            <key>content</key>
+            <string>图瓦卢+688</string>
+        </dict>
 	</array>
     </dict>
     <dict>
