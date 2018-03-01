@@ -1880,9 +1880,9 @@
                     <key>dial_code</key>
                     <string>+1869</string>
                     <key>name</key>
-                    <string>St.Kitts&amp;Nevi</string>
+                    <string>St.Kitts &amp; Nevi</string>
                     <key>content</key>
-                    <string>St.Kitts&amp;Nevi+1869</string>
+                    <string>St.Kitts &amp; Nevi+1869</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1904,17 +1904,17 @@
                     <key>dial_code</key>
                     <string>+508</string>
                     <key>name</key>
-                    <string>St.Pierre&tmp;Miquelon</string>
+                    <string>St.Pierre &amp; Miquelon</string>
                     <key>content</key>
-                    <string>St.Pierre&tmp;Miquelon+508</string>
+                    <string>St.Pierre &amp; Miquelon+508</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+1784</string>
                     <key>name</key>
-                    <string>St.Vicent&tmp;Grenadines</string>
+                    <string>St.Vicent &amp; Grenadines</string>
                     <key>content</key>
-                    <string>St.Vicent&tmp;Grenadines+1784</string>
+                    <string>St.Vicent &amp; Grenadines+1784</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1936,9 +1936,9 @@
                     <key>dial_code</key>
                     <string>+47</string>
                     <key>name</key>
-                    <string>Svalbard&tmp;Jan Mayen</string>
+                    <string>Svalbard &amp; Jan Mayen</string>
                     <key>content</key>
-                    <string>Svalbard&tmp;Jan Mayen+47</string>
+                    <string>Svalbard &amp; Jan Mayen+47</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -2220,9 +2220,9 @@
                     <key>dial_code</key>
                     <string>+681</string>
                     <key>name</key>
-                    <string>Wallis&tmp;Futuna</string>
+                    <string>Wallis &amp; Futuna</string>
                     <key>content</key>
-                    <string>Wallis&tmp;Futuna+681</string>
+                    <string>Wallis &amp; Futuna+681</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -2233,12 +2233,6 @@
                     <string>Western Sahara+212</string>
                 </dict>
             </array>
-        </dict>
-        <dict>
-            <key>group_key</key>
-            <string>X</string>
-            <key>group_items</key>
-            <array/>
         </dict>
         <dict>
             <key>group_key</key>
