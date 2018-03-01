@@ -2013,11 +2013,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+88216</string>
+                    <string>+670</string>
                     <key>name</key>
-                    <string>Thuraya (Mobile Satellite service)</string>
+                    <string>Timor-Leste</string>
                     <key>content</key>
-                    <string>Thuraya (Mobile Satellite service)+88216</string>
+                    <string>Timor-Leste+670</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -2053,11 +2053,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+2908</string>
+                    <string>+290</string>
                     <key>name</key>
-                    <string>Tristanda Cunha</string>
+                    <string>Tristan da Cunha</string>
                     <key>content</key>
-                    <string>Tristanda Cunha+2908</string>
+                    <string>Tristan da Cunha+290</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
