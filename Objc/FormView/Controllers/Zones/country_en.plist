@@ -1443,14 +1443,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+1869</string>
-                    <key>name</key>
-                    <string>Nevis</string>
-                    <key>content</key>
-                    <string>Nevis+1869</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+687</string>
                     <key>name</key>
                     <string>New Caledonia</string>
@@ -1507,11 +1499,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+90392</string>
+                    <string>+850</string>
                     <key>name</key>
-                    <string>Northern Cyprus</string>
+                    <string>North Korea</string>
                     <key>content</key>
-                    <string>Northern Cyprus+90392</string>
+                    <string>North Korea+850</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1617,14 +1609,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+64</string>
-                    <key>name</key>
-                    <string>Pitcairn Islands</string>
-                    <key>content</key>
-                    <string>Pitcairn Islands+64</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+48</string>
                     <key>name</key>
                     <string>Poland</string>
@@ -1646,6 +1630,14 @@
                     <string>Puerto Rico</string>
                     <key>content</key>
                     <string>Puerto Rico+1787</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+1939</string>
+                    <key>name</key>
+                    <string>Puerto Rico</string>
+                    <key>content</key>
+                    <string>Puerto Rico+1939</string>
                 </dict>
             </array>
         </dict>
@@ -1710,70 +1702,6 @@
             <array>
                 <dict>
                     <key>dial_code</key>
-                    <string>+5994</string>
-                    <key>name</key>
-                    <string>Saba</string>
-                    <key>content</key>
-                    <string>Saba+5994</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+590</string>
-                    <key>name</key>
-                    <string>Saint Barthélemy</string>
-                    <key>content</key>
-                    <string>Saint Barthélemy+590</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+290</string>
-                    <key>name</key>
-                    <string>Saint Helena</string>
-                    <key>content</key>
-                    <string>Saint Helena+290</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1869</string>
-                    <key>name</key>
-                    <string>Saint Kitts and Nevis</string>
-                    <key>content</key>
-                    <string>Saint Kitts and Nevis+1869</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1758</string>
-                    <key>name</key>
-                    <string>Saint Lucia</string>
-                    <key>content</key>
-                    <string>Saint Lucia+1758</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+590</string>
-                    <key>name</key>
-                    <string>Saint Martin (France)</string>
-                    <key>content</key>
-                    <string>Saint Martin (France)+590</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+508</string>
-                    <key>name</key>
-                    <string>Saint Pierre and Miquelon</string>
-                    <key>content</key>
-                    <string>Saint Pierre and Miquelon+508</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1784</string>
-                    <key>name</key>
-                    <string>Saint Vincent and the Grenadines</string>
-                    <key>content</key>
-                    <string>Saint Vincent and the Grenadines+1784</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+685</string>
                     <key>name</key>
                     <string>Samoa</string>
@@ -1790,19 +1718,19 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+239</string>
-                    <key>name</key>
-                    <string>São Tomé and Príncipe</string>
-                    <key>content</key>
-                    <string>São Tomé and Príncipe+239</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+966</string>
                     <key>name</key>
                     <string>Saudi Arabia</string>
                     <key>content</key>
                     <string>Saudi Arabia+966</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+239</string>
+                    <key>name</key>
+                    <string>São Tomé and Príncipe</string>
+                    <key>content</key>
+                    <string>São Tomé and Príncipe+239</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1843,14 +1771,6 @@
                     <string>Singapore</string>
                     <key>content</key>
                     <string>Singapore+65</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+5993</string>
-                    <key>name</key>
-                    <string>Sint Eustatius</string>
-                    <key>content</key>
-                    <string>Sint Eustatius+5993</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1902,19 +1822,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+500</string>
+                    <string>+82</string>
                     <key>name</key>
-                    <string>South Georgia and the South Sandwich Islands</string>
+                    <string>South Korea</string>
                     <key>content</key>
-                    <string>South Georgia and the South Sandwich Islands+500</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+99534</string>
-                    <key>name</key>
-                    <string>South Ossetia</string>
-                    <key>content</key>
-                    <string>South Ossetia+99534</string>
+                    <string>South Korea+82</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1950,6 +1862,70 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
+                    <string>+590</string>
+                    <key>name</key>
+                    <string>St.Barthélemy</string>
+                    <key>content</key>
+                    <string>St.Barthélemy+590</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+290</string>
+                    <key>name</key>
+                    <string>St.Helena</string>
+                    <key>content</key>
+                    <string>St.Helena+290</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+1869</string>
+                    <key>name</key>
+                    <string>St.Kitts&amp;Nevi</string>
+                    <key>content</key>
+                    <string>St.Kitts&amp;Nevi+1869</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+1758</string>
+                    <key>name</key>
+                    <string>St.Lucia</string>
+                    <key>content</key>
+                    <string>St.Lucia+1758</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+590</string>
+                    <key>name</key>
+                    <string>St.Martin</string>
+                    <key>content</key>
+                    <string>St.Martin+590</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+508</string>
+                    <key>name</key>
+                    <string>St.Pierre&tmp;Miquelon</string>
+                    <key>content</key>
+                    <string>St.Pierre&tmp;Miquelon+508</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+1784</string>
+                    <key>name</key>
+                    <string>St.Vicent&tmp;Grenadines</string>
+                    <key>content</key>
+                    <string>St.Vicent&tmp;Grenadines+1784</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+249</string>
+                    <key>name</key>
+                    <string>Sudan</string>
+                    <key>content</key>
+                    <string>Sudan+249</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
                     <string>+597</string>
                     <key>name</key>
                     <string>Suriname</string>
@@ -1958,11 +1934,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+4779</string>
+                    <string>+47</string>
                     <key>name</key>
-                    <string>Svalbard</string>
+                    <string>Svalbard&tmp;Jan Mayen</string>
                     <key>content</key>
-                    <string>Svalbard+4779</string>
+                    <string>Svalbard&tmp;Jan Mayen+47</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
