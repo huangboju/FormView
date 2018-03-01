@@ -1092,6 +1092,14 @@
 		<string>L</string>
 		<key>group_items</key>
 		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+266</string>
+                <key>name</key>
+                <string>莱索托</string>
+                <key>content</key>
+                <string>莱索托+266</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+856</string>
@@ -1115,14 +1123,6 @@
 				<string>黎巴嫩</string>
 				<key>content</key>
 				<string>黎巴嫩+961</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+266</string>
-				<key>name</key>
-				<string>莱索托</string>
-				<key>content</key>
-				<string>莱索托+266</string>
 			</dict>
 			<dict>
 				<key>dial_code</key>
@@ -1156,6 +1156,22 @@
 				<key>content</key>
 				<string>立陶宛+370</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+262</string>
+                <key>name</key>
+                <string>留尼旺</string>
+                <key>content</key>
+                <string>留尼旺+262</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+40</string>
+                <key>name</key>
+                <string>罗马尼亚</string>
+                <key>content</key>
+                <string>罗马尼亚+40</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+352</string>
@@ -1164,22 +1180,14 @@
 				<key>content</key>
 				<string>卢森堡+352</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+262</string>
-				<key>name</key>
-				<string>留尼旺</string>
-				<key>content</key>
-				<string>留尼旺+262</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+40</string>
-				<key>name</key>
-				<string>罗马尼亚</string>
-				<key>content</key>
-				<string>罗马尼亚+40</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+250</string>
+                <key>name</key>
+                <string>卢旺达</string>
+                <key>content</key>
+                <string>卢旺达+250</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
