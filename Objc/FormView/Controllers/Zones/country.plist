@@ -633,6 +633,46 @@
 		<string>F</string>
 		<key>group_items</key>
 		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+33</string>
+                <key>name</key>
+                <string>法国</string>
+                <key>content</key>
+                <string>法国+33</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+298</string>
+                <key>name</key>
+                <string>法罗群岛</string>
+                <key>content</key>
+                <string>法罗群岛+298</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+379</string>
+                <key>name</key>
+                <string>梵蒂冈</string>
+                <key>content</key>
+                <string>梵蒂冈+379</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+689</string>
+                <key>name</key>
+                <string>法属玻利尼西亚</string>
+                <key>content</key>
+                <string>法属玻利尼西亚+689</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+594</string>
+                <key>name</key>
+                <string>法属圭亚那</string>
+                <key>content</key>
+                <string>法属圭亚那+594</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+679</string>
@@ -641,6 +681,14 @@
 				<key>content</key>
 				<string>斐济+679</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+63</string>
+                <key>name</key>
+                <string>菲律宾</string>
+                <key>content</key>
+                <string>菲律宾+63</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+358</string>
@@ -649,38 +697,22 @@
 				<key>content</key>
 				<string>芬兰+358</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+33</string>
-				<key>name</key>
-				<string>法国</string>
-				<key>content</key>
-				<string>法国+33</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+594</string>
-				<key>name</key>
-				<string>法属圭亚那</string>
-				<key>content</key>
-				<string>法属圭亚那+594</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+63</string>
-				<key>name</key>
-				<string>菲律宾</string>
-				<key>content</key>
-				<string>菲律宾+63</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+689</string>
-				<key>name</key>
-				<string>法属玻利尼西亚</string>
-				<key>content</key>
-				<string>法属玻利尼西亚+689</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+238</string>
+                <key>name</key>
+                <string>佛得角</string>
+                <key>content</key>
+                <string>佛得角+238</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+500</string>
+                <key>name</key>
+                <string>福克兰群岛</string>
+                <key>content</key>
+                <string>福克兰群岛+500</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
