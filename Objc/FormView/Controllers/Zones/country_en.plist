@@ -128,27 +128,11 @@
             <array>
                 <dict>
                     <key>dial_code</key>
-                    <string>+99544</string>
-                    <key>name</key>
-                    <string>Abkhazia</string>
-                    <key>content</key>
-                    <string>Abkhazia+99544</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+93</string>
                     <key>name</key>
                     <string>Afghanistan</string>
                     <key>content</key>
                     <string>Afghanistan+93</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+35818</string>
-                    <key>name</key>
-                    <string>Åland Islands</string>
-                    <key>content</key>
-                    <string>Åland Islands+35818</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -248,14 +232,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+672</string>
-                    <key>name</key>
-                    <string>Australian External Territories</string>
-                    <key>content</key>
-                    <string>Australian External Territories+672</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+43</string>
                     <key>name</key>
                     <string>Austria</string>
@@ -308,14 +284,6 @@
                     <string>Barbados</string>
                     <key>content</key>
                     <string>Barbados+1246</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1268</string>
-                    <key>name</key>
-                    <string>Barbuda</string>
-                    <key>content</key>
-                    <string>Barbuda+1268</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -372,14 +340,6 @@
                     <string>Bolivia</string>
                     <key>content</key>
                     <string>Bolivia+591</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+5997</string>
-                    <key>name</key>
-                    <string>Bonaire</string>
-                    <key>content</key>
-                    <string>Bonaire+5997</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -494,11 +454,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+5997</string>
+                    <string>+599</string>
                     <key>name</key>
                     <string>Caribbean Netherlands</string>
                     <key>content</key>
-                    <string>Caribbean Netherlands+5997</string>
+                    <string>Caribbean Netherlands+599</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
