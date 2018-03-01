@@ -839,6 +839,54 @@
 				<key>content</key>
 				<string>海地+509</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+82</string>
+                <key>name</key>
+                <string>韩国</string>
+                <key>content</key>
+                <string>韩国+82</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+327</string>
+                <key>name</key>
+                <string>哈萨克斯坦</string>
+                <key>content</key>
+                <string>哈萨克斯坦+327</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+382</string>
+                <key>name</key>
+                <string>黑山</string>
+                <key>content</key>
+                <string>黑山+382</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+31</string>
+                <key>name</key>
+                <string>荷兰</string>
+                <key>content</key>
+                <string>荷兰+31</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+599</string>
+                <key>name</key>
+                <string>荷属加勒比区</string>
+                <key>content</key>
+                <string>荷属加勒比区+599</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1721</string>
+                <key>name</key>
+                <string>荷属圣马丁</string>
+                <key>content</key>
+                <string>荷属圣马丁+1721</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+504</string>
@@ -846,38 +894,6 @@
 				<string>洪都拉斯</string>
 				<key>content</key>
 				<string>洪都拉斯+504</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+327</string>
-				<key>name</key>
-				<string>哈萨克斯坦</string>
-				<key>content</key>
-				<string>哈萨克斯坦+327</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+82</string>
-				<key>name</key>
-				<string>韩国</string>
-				<key>content</key>
-				<string>韩国+82</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+599</string>
-				<key>name</key>
-				<string>荷属安的列斯</string>
-				<key>content</key>
-				<string>荷属安的列斯+599</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+31</string>
-				<key>name</key>
-				<string>荷兰</string>
-				<key>content</key>
-				<string>荷兰+31</string>
 			</dict>
 		</array>
 	</dict>
