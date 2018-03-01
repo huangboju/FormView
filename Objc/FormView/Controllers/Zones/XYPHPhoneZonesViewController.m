@@ -50,6 +50,9 @@ UISearchBarDelegate
 }
 
 - (void)readData {
+    NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
+    NSLog(@"%@", pfLanguageCode);
+
     NSString *path = [[NSBundle mainBundle] pathForResource:@"country"
                                                      ofType:@"plist"];
 

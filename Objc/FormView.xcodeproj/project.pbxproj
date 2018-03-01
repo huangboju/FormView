@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */; };
+		BE211A622047D0DB00FCFE67 /* country_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE211A612047D0DB00FCFE67 /* country_en.plist */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */; };
@@ -31,6 +32,7 @@
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
+		BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC43FAF20468F4400D46770 /* StateMachineController.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
 		BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */; };
 		BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */; };
@@ -83,6 +85,7 @@
 		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
 		BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnptyViewController.h; sourceTree = "<group>"; };
 		BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnptyViewController.m; sourceTree = "<group>"; };
+		BE211A612047D0DB00FCFE67 /* country_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country_en.plist; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		BEB2222620206941009DD3B9 /* InputBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputBarController.m; sourceTree = "<group>"; };
 		BEB22228202069F3009DD3B9 /* XYInputBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBarView.h; sourceTree = "<group>"; };
 		BEB22229202069F3009DD3B9 /* XYInputBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBarView.m; sourceTree = "<group>"; };
+		BEC43FAE20468F4400D46770 /* StateMachineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineController.h; sourceTree = "<group>"; };
+		BEC43FAF20468F4400D46770 /* StateMachineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachineController.m; sourceTree = "<group>"; };
 		BECCE9ED1FD4F2D400CBCC1F /* FormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -260,6 +265,8 @@
 		BE37437E204038F4000D6F41 /* Zones */ = {
 			isa = PBXGroup;
 			children = (
+				BE211A612047D0DB00FCFE67 /* country_en.plist */,
+				BE37437C20401180000D6F41 /* country.plist */,
 				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
 				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
 				BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */,
@@ -302,6 +309,8 @@
 				BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */,
 				BEB2222520206941009DD3B9 /* InputBarController.h */,
 				BEB2222620206941009DD3B9 /* InputBarController.m */,
+				BEC43FAE20468F4400D46770 /* StateMachineController.h */,
+				BEC43FAF20468F4400D46770 /* StateMachineController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -331,7 +340,6 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
-				BE37437C20401180000D6F41 /* country.plist */,
 				BEB2222420206924009DD3B9 /* Controllers */,
 				BE29FB321FFDD58000A27373 /* Views */,
 				BE29FB2E1FFDD48700A27373 /* Account */,
@@ -557,6 +565,7 @@
 				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
 				BE37438E20414A91000D6F41 /* PhoneZones.strings in Resources */,
 				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
+				BE211A622047D0DB00FCFE67 /* country_en.plist in Resources */,
 				BE37437D20401180000D6F41 /* country.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -658,6 +667,7 @@
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */,
+				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,

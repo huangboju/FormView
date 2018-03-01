@@ -14,13 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let strs = [
-            "扎伊尔+243",
-            "赞比亚+260",
-            "中非共和国+236",
-            "乍得+235",
-            "中国+86",
-            "直布罗陀+350",
+        let strs: [(String, String)] = [
+            ("Abkhazia",  "+99544"),
+            ("Afghanistan",  "+93"),
+            ("Åland Islands",  "+35818"),
+            ("Albania",  "+355"),
+            ("Algeria",  "+213"),
+            ("American Samoa",  "+1684"),
+            ("Andorra",  "+376"),
+            ("Angola",  "+244"),
+            ("Anguilla",  "+1264"),
+            ("Antigua and Barbuda",  "+1268"),
+            ("Argentina",  "+54"),
+            ("Armenia",  "+374"),
+            ("Aruba",  "+297"),
+            ("Ascension",  "+247"),
+            ("Australia",  "+61"),
+            ("Australian External Territories", "+672"),
+            ("Austria",  "+43"),
+            ("Azerbaijan",  "+994"),
         ]
         
         strs.forEach(convert)
@@ -28,15 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func convert(str: String) {
-        let results = str.components(separatedBy: "+")
+    func convert(str: (String, String)) {
         print("<dict>")
         print("    <key>dial_code</key>")
-        print("    <string>+\(results[1])</string>")
+        print("    <string>\(str.1)</string>")
         print("    <key>name</key>")
-        print("    <string>\(results[0])</string>")
+        print("    <string>\(str.0)</string>")
         print("    <key>content</key>")
-        print("    <string>\(str)</string>")
+        print("    <string>\(str.0)\(str.1)</string>")
         print("</dict>")
     }
 

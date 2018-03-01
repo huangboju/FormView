@@ -18,6 +18,7 @@
 #import "EffectButtonController.h"
 #import "ScrollAnimationController.h"
 #import "InputBarController.h"
+#import "StateMachineController.h"
 
 #import "IntroController.h"
 #import "XYPHPhoneZonesViewController.h"
@@ -60,6 +61,9 @@
                              ],
                          @[
                              [XYPHPhoneZonesViewController class]
+                             ],
+                         @[
+                             [StateMachineController class]
                              ]
                          ];
 
@@ -83,7 +87,6 @@
     NSString *clsName = row.model;
     UIViewController *vc = [[NSClassFromString(clsName) alloc] init];
     vc.title = clsName;
-    vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
