@@ -2108,6 +2108,14 @@
             <array>
                 <dict>
                     <key>dial_code</key>
+                    <string>+1340</string>
+                    <key>name</key>
+                    <string>U.S.Virgin Islands</string>
+                    <key>content</key>
+                    <string>U.S.Virgin Islands+1340</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
                     <string>+256</string>
                     <key>name</key>
                     <string>Uganda</string>
@@ -2148,27 +2156,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+878</string>
-                    <key>name</key>
-                    <string>Universal Personal Telecommunications (UPT)</string>
-                    <key>content</key>
-                    <string>Universal Personal Telecommunications (UPT)+878</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+598</string>
                     <key>name</key>
                     <string>Uruguay</string>
                     <key>content</key>
                     <string>Uruguay+598</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1340</string>
-                    <key>name</key>
-                    <string>US Virgin Islands</string>
-                    <key>content</key>
-                    <string>US Virgin Islands+1340</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -2195,19 +2187,19 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
+                    <string>+379</string>
+                    <key>name</key>
+                    <string>Vatican City</string>
+                    <key>content</key>
+                    <string>Vatican City+379</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
                     <string>+58</string>
                     <key>name</key>
                     <string>Venezuela</string>
                     <key>content</key>
                     <string>Venezuela+58</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+379</string>
-                    <key>name</key>
-                    <string>Vatican City State (Holy See)</string>
-                    <key>content</key>
-                    <string>Vatican City State (Holy See)+379</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -2226,19 +2218,19 @@
             <array>
                 <dict>
                     <key>dial_code</key>
-                    <string>+1808</string>
+                    <string>+681</string>
                     <key>name</key>
-                    <string>Wake Island,USA</string>
+                    <string>Wallis&tmp;Futuna</string>
                     <key>content</key>
-                    <string>Wake Island,USA+1808</string>
+                    <string>Wallis&tmp;Futuna+681</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+681</string>
+                    <string>+212</string>
                     <key>name</key>
-                    <string>Wallis and Futuna</string>
+                    <string>Western Sahara</string>
                     <key>content</key>
-                    <string>Wallis and Futuna+681</string>
+                    <string>Western Sahara+212</string>
                 </dict>
             </array>
         </dict>
@@ -2291,6 +2283,21 @@
                     <string>Zimbabwe</string>
                     <key>content</key>
                     <string>Zimbabwe+263</string>
+                </dict>
+            </array>
+        </dict>
+        <dict>
+            <key>group_key</key>
+            <string>#</string>
+            <key>group_items</key>
+            <array>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+358</string>
+                    <key>name</key>
+                    <string>Åland Islands</string>
+                    <key>content</key>
+                    <string>Åland Islands+358</string>
                 </dict>
             </array>
         </dict>
