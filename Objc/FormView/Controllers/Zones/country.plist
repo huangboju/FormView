@@ -899,15 +899,17 @@
 	</dict>
 	<dict>
 		<key>group_key</key>
-		<string>I</string>
-		<key>group_items</key>
-		<array/>
-	</dict>
-	<dict>
-		<key>group_key</key>
 		<string>J</string>
 		<key>group_items</key>
 		<array>
+            <dict>
+                <key>dial_code</key>
+                <string>+233</string>
+                <key>name</key>
+                <string>加纳</string>
+                <key>content</key>
+                <string>加纳+233</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+1</string>
@@ -916,6 +918,30 @@
 				<key>content</key>
 				<string>加拿大+1</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+855</string>
+                <key>name</key>
+                <string>柬埔寨</string>
+                <key>content</key>
+                <string>柬埔寨+855</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+241</string>
+                <key>name</key>
+                <string>加蓬</string>
+                <key>content</key>
+                <string>加蓬+241</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+253</string>
+                <key>name</key>
+                <string>吉布提</string>
+                <key>content</key>
+                <string>吉布提+253</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+420</string>
@@ -924,30 +950,30 @@
 				<key>content</key>
 				<string>捷克+420</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+253</string>
-				<key>name</key>
-				<string>吉布提</string>
-				<key>content</key>
-				<string>吉布提+253</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+241</string>
-				<key>name</key>
-				<string>加蓬</string>
-				<key>content</key>
-				<string>加蓬+241</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+233</string>
-				<key>name</key>
-				<string>加纳</string>
-				<key>content</key>
-				<string>加纳+233</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+331</string>
+                <key>name</key>
+                <string>吉尔吉斯坦</string>
+                <key>content</key>
+                <string>吉尔吉斯坦+331</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+686</string>
+                <key>name</key>
+                <string>基里巴斯</string>
+                <key>content</key>
+                <string>基里巴斯+686</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+263</string>
+                <key>name</key>
+                <string>津巴布韦</string>
+                <key>content</key>
+                <string>津巴布韦+263</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+224</string>
@@ -956,30 +982,14 @@
 				<key>content</key>
 				<string>几内亚+224</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+855</string>
-				<key>name</key>
-				<string>柬埔寨</string>
-				<key>content</key>
-				<string>柬埔寨+855</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+331</string>
-				<key>name</key>
-				<string>吉尔吉斯坦</string>
-				<key>content</key>
-				<string>吉尔吉斯坦+331</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+263</string>
-				<key>name</key>
-				<string>津巴布韦</string>
-				<key>content</key>
-				<string>津巴布韦+263</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+245</string>
+                <key>name</key>
+                <string>几内亚比绍</string>
+                <key>content</key>
+                <string>几内亚比绍+245</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
