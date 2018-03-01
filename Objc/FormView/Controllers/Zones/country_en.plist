@@ -850,22 +850,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+881</string>
-                    <key>name</key>
-                    <string>Global Mobile Satellite System (GMSS)</string>
-                    <key>content</key>
-                    <string>Global Mobile Satellite System (GMSS)+881</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+8818</string>
-                    <key>name</key>
-                    <string>Globalstar (Mobile Satellite Service)</string>
-                    <key>content</key>
-                    <string>Globalstar (Mobile Satellite Service)+8818</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+30</string>
                     <key>name</key>
                     <string>Greece</string>
@@ -1000,14 +984,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+8810</string>
-                    <key>name</key>
-                    <string>ICO Global (Mobile Satellite Service)</string>
-                    <key>content</key>
-                    <string>ICO Global (Mobile Satellite Service)+8810</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+91</string>
                     <key>name</key>
                     <string>India</string>
@@ -1021,30 +997,6 @@
                     <string>Indonesia</string>
                     <key>content</key>
                     <string>Indonesia+62</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+870</string>
-                    <key>name</key>
-                    <string>Inmarsat SNAC</string>
-                    <key>content</key>
-                    <string>Inmarsat SNAC+870</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+800</string>
-                    <key>name</key>
-                    <string>International Freephone Service</string>
-                    <key>content</key>
-                    <string>International Freephone Service+800</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+808</string>
-                    <key>name</key>
-                    <string>International Shared Cost Service (ISCS)</string>
-                    <key>content</key>
-                    <string>International Shared Cost Service (ISCS)+808</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1069,14 +1021,6 @@
                     <string>Ireland</string>
                     <key>content</key>
                     <string>Ireland+353</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+8817</string>
-                    <key>name</key>
-                    <string>Iridium (Mobile Satellite service)</string>
-                    <key>content</key>
-                    <string>Iridium (Mobile Satellite service)+8817</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1119,14 +1063,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+4779</string>
-                    <key>name</key>
-                    <string>Jan Mayen</string>
-                    <key>content</key>
-                    <string>Jan Mayen+4779</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+81</string>
                     <key>name</key>
                     <string>Japan</string>
@@ -1158,11 +1094,11 @@
             <array>
                 <dict>
                     <key>dial_code</key>
-                    <string>+77[notes1]</string>
+                    <string>+7</string>
                     <key>name</key>
                     <string>Kazakhstan</string>
                     <key>content</key>
-                    <string>Kazakhstan+77[notes1]</string>
+                    <string>Kazakhstan+7</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1179,30 +1115,6 @@
                     <string>Kiribati</string>
                     <key>content</key>
                     <string>Kiribati+686</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+850</string>
-                    <key>name</key>
-                    <string>Korea, North</string>
-                    <key>content</key>
-                    <string>Korea, North+850</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+82</string>
-                    <key>name</key>
-                    <string>Korea, South</string>
-                    <key>content</key>
-                    <string>Korea, South+82</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+383</string>
-                    <key>name</key>
-                    <string>Kosovo</string>
-                    <key>content</key>
-                    <string>Kosovo+383</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -1425,14 +1337,6 @@
                     <string>Micronesia, Federated States of</string>
                     <key>content</key>
                     <string>Micronesia, Federated States of+691</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+1808</string>
-                    <key>name</key>
-                    <string>Midway Island, USA</string>
-                    <key>content</key>
-                    <string>Midway Island, USA+1808</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
