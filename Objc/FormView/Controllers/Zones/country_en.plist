@@ -494,14 +494,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+64</string>
-                    <key>name</key>
-                    <string>Chatham Island, NewZealand</string>
-                    <key>content</key>
-                    <string>Chatham Island, NewZealand+64</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+56</string>
                     <key>name</key>
                     <string>Chile</string>
@@ -582,14 +574,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+225</string>
-                    <key>name</key>
-                    <string>Ivory Coast</string>
-                    <key>content</key>
-                    <string>Ivory Coast+225</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+385</string>
                     <key>name</key>
                     <string>Croatia</string>
@@ -606,19 +590,11 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+5399</string>
-                    <key>name</key>
-                    <string>Guantanamo Bay, Cuba</string>
-                    <key>content</key>
-                    <string>Guantanamo Bay, Cuba+5399</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+5999</string>
+                    <string>+599</string>
                     <key>name</key>
                     <string>Curaçao</string>
                     <key>content</key>
-                    <string>Curaçao+5999</string>
+                    <string>Curaçao+599</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -653,14 +629,6 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
-                    <string>+246</string>
-                    <key>name</key>
-                    <string>Diego Garcia</string>
-                    <key>content</key>
-                    <string>Diego Garcia+246</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
                     <string>+253</string>
                     <key>name</key>
                     <string>Djibouti</string>
@@ -677,6 +645,22 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
+                    <string>+1809</string>
+                    <key>name</key>
+                    <string>Dominican Republic</string>
+                    <key>content</key>
+                    <string>Dominican Republic+1809</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
+                    <string>+1829</string>
+                    <key>name</key>
+                    <string>Dominican Republic</string>
+                    <key>content</key>
+                    <string>Dominican Republic+1829</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
                     <string>+1849</string>
                     <key>name</key>
                     <string>Dominican Republic</string>
@@ -690,22 +674,6 @@
             <string>E</string>
             <key>group_items</key>
             <array>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+670</string>
-                    <key>name</key>
-                    <string>East Timor</string>
-                    <key>content</key>
-                    <string>East Timor+670</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+56</string>
-                    <key>name</key>
-                    <string>Easter Island</string>
-                    <key>content</key>
-                    <string>Easter Island+56</string>
-                </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+593</string>
@@ -729,22 +697,6 @@
                     <string>El Salvador</string>
                     <key>content</key>
                     <string>El Salvador+503</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+8813</string>
-                    <key>name</key>
-                    <string>Ellipso (Mobile Satellite service)</string>
-                    <key>content</key>
-                    <string>Ellipso (Mobile Satellite service)+8813</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+88213</string>
-                    <key>name</key>
-                    <string>EMSAT (Mobile Satellite service)</string>
-                    <key>content</key>
-                    <string>EMSAT (Mobile Satellite service)+88213</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
@@ -824,14 +776,6 @@
                     <string>France</string>
                     <key>content</key>
                     <string>France+33</string>
-                </dict>
-                <dict>
-                    <key>dial_code</key>
-                    <string>+596</string>
-                    <key>name</key>
-                    <string>French Antilles</string>
-                    <key>content</key>
-                    <string>French Antilles+596</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
