@@ -524,6 +524,14 @@
 				<key>content</key>
 				<string>朝鲜+850</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+240</string>
+                <key>name</key>
+                <string>赤道几内亚</string>
+                <key>content</key>
+                <string>赤道几内亚+240</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
@@ -539,30 +547,22 @@
 				<key>content</key>
 				<string>丹麦+45</string>
 			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+1890</string>
-				<key>name</key>
-				<string>多米尼加共和国</string>
-				<key>content</key>
-				<string>多米尼加共和国+1890</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+49</string>
-				<key>name</key>
-				<string>德国</string>
-				<key>content</key>
-				<string>德国+49</string>
-			</dict>
-			<dict>
-				<key>dial_code</key>
-				<string>+684</string>
-				<key>name</key>
-				<string>东萨摩亚(美)</string>
-				<key>content</key>
-				<string>东萨摩亚(美)+684</string>
-			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+49</string>
+                <key>name</key>
+                <string>德国</string>
+                <key>content</key>
+                <string>德国+49</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+670</string>
+                <key>name</key>
+                <string>东帝汶</string>
+                <key>content</key>
+                <string>东帝汶+670</string>
+            </dict>
 			<dict>
 				<key>dial_code</key>
 				<string>+228</string>
@@ -571,6 +571,30 @@
 				<key>content</key>
 				<string>多哥+228</string>
 			</dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1809</string>
+                <key>name</key>
+                <string>多米尼加共和国</string>
+                <key>content</key>
+                <string>多米尼加共和国+1809</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1829</string>
+                <key>name</key>
+                <string>多米尼加共和国</string>
+                <key>content</key>
+                <string>多米尼加共和国+1829</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
+                <string>+1849</string>
+                <key>name</key>
+                <string>多米尼加共和国</string>
+                <key>content</key>
+                <string>多米尼加共和国+1849</string>
+            </dict>
 		</array>
 	</dict>
 	<dict>
