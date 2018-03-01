@@ -478,6 +478,14 @@
                 </dict>
                 <dict>
                     <key>dial_code</key>
+                    <string>+225</string>
+                    <key>name</key>
+                    <string>Côte d'Ivoire</string>
+                    <key>content</key>
+                    <string>Côte d'Ivoire+225</string>
+                </dict>
+                <dict>
+                    <key>dial_code</key>
                     <string>+235</string>
                     <key>name</key>
                     <string>Chad</string>
