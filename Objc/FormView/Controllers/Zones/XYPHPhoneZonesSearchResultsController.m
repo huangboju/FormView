@@ -10,6 +10,8 @@
 
 #import "XYPHPhoneZonesCell.h"
 
+#import "XYPHPhoneZonesHelper.h"
+
 @interface XYPHPhoneZonesSearchResultsController ()
 
 @property (nonatomic, strong) UILabel *emptyView;
@@ -44,7 +46,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.result.count > 0 ? NSLocalizedStringFromTable(@"bestMatch", @"PhoneZones", @"最佳匹配") : @"";
+    return self.result.count > 0 ? [XYPHPhoneZonesHelper localizedWithString:@"bestMatch"] : @"";
 }
 
 - (void)setResult:(NSArray<XYPHCountryItem *> *)result {
@@ -57,7 +59,7 @@
     if (!_emptyView) {
         _emptyView = [UILabel new];
         _emptyView.backgroundColor = [UIColor whiteColor];
-        _emptyView.text = NSLocalizedStringFromTable(@"noResult", @"PhoneZones", @"无结果");
+        _emptyView.text = [XYPHPhoneZonesHelper localizedWithString:@"noResult"];
         _emptyView.font = [UIFont systemFontOfSize:30];
         _emptyView.textColor = [UIColor colorWithWhite:0.7 alpha:1];
         _emptyView.textAlignment = NSTextAlignmentCenter;

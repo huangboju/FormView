@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */; };
-		BE211A622047D0DB00FCFE67 /* country_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE211A612047D0DB00FCFE67 /* country_en.plist */; };
+		BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */; };
+		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */; };
-		BE37437D20401180000D6F41 /* country.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE37437C20401180000D6F41 /* country.plist */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
 		BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHCountryItem.m */; };
 		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */; };
 		BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */; };
-		BE37438E20414A91000D6F41 /* PhoneZones.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE37439020414A91000D6F41 /* PhoneZones.strings */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
@@ -85,14 +84,15 @@
 		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
 		BE021BAE1FF36BC400DCF9FE /* EmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyViewController.h; sourceTree = "<group>"; };
 		BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyViewController.m; sourceTree = "<group>"; };
-		BE211A612047D0DB00FCFE67 /* country_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country_en.plist; sourceTree = "<group>"; };
+		BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XYPHPhoneZonesViewController.bundle; sourceTree = "<group>"; };
+		BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesHelper.h; sourceTree = "<group>"; };
+		BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesHelper.m; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
 		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
 		BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesViewController.h; sourceTree = "<group>"; };
 		BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesViewController.m; sourceTree = "<group>"; };
-		BE37437C20401180000D6F41 /* country.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country.plist; sourceTree = "<group>"; };
 		BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesItem.h; sourceTree = "<group>"; };
 		BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesItem.m; sourceTree = "<group>"; };
 		BE37438220403941000D6F41 /* XYPHCountryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHCountryItem.h; sourceTree = "<group>"; };
@@ -101,8 +101,6 @@
 		BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesSearchResultsController.m; sourceTree = "<group>"; };
 		BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesCell.h; sourceTree = "<group>"; };
 		BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesCell.m; sourceTree = "<group>"; };
-		BE37438F20414A91000D6F41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PhoneZones.strings; sourceTree = "<group>"; };
-		BE37439120414ADC000D6F41 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PhoneZones.strings"; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
@@ -265,9 +263,7 @@
 		BE37437E204038F4000D6F41 /* Zones */ = {
 			isa = PBXGroup;
 			children = (
-				BE211A612047D0DB00FCFE67 /* country_en.plist */,
-				BE37437C20401180000D6F41 /* country.plist */,
-				BE37439020414A91000D6F41 /* PhoneZones.strings */,
+				BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */,
 				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
 				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
 				BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */,
@@ -278,6 +274,8 @@
 				BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */,
 				BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */,
 				BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */,
+				BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */,
+				BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */,
 			);
 			path = Zones;
 			sourceTree = "<group>";
@@ -543,6 +541,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = BECCE9E41FD4F2D400CBCC1F;
 			productRefGroup = BECCE9EE1FD4F2D400CBCC1F /* Products */;
@@ -561,12 +560,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */,
 				BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */,
 				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
-				BE37438E20414A91000D6F41 /* PhoneZones.strings in Resources */,
 				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
-				BE211A622047D0DB00FCFE67 /* country_en.plist in Resources */,
-				BE37437D20401180000D6F41 /* country.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +673,7 @@
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
+				BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
 				BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
@@ -721,15 +719,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE37439020414A91000D6F41 /* PhoneZones.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE37438F20414A91000D6F41 /* en */,
-				BE37439120414ADC000D6F41 /* zh-Hans */,
-			);
-			name = PhoneZones.strings;
-			sourceTree = "<group>";
-		};
 		BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

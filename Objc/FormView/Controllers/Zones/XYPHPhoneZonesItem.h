@@ -18,4 +18,5 @@
 
 + (instancetype)itemWithDict:(NSDictionary *)dict;
 
+
 @end

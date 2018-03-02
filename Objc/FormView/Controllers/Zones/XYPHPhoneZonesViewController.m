@@ -8,7 +8,7 @@
 
 #import "XYPHPhoneZonesViewController.h"
 #import "XYPHPhoneZonesSearchResultsController.h"
-#import <Masonry.h>
+#import "XYPHPhoneZonesHelper.h"
 
 #import "XYPHPhoneZonesItem.h"
 #import "XYPHCountryItem.h"
@@ -41,26 +41,17 @@ UISearchBarDelegate
     self.items = [NSMutableArray array];
     self.sectionIndexTitles = [NSMutableArray array];
     [self readData];
-
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
-    }];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.tableView.frame = self.view.bounds;
 }
 
 - (void)readData {
-    NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
-    
-    NSString *name = @"country";
-    if ([pfLanguageCode containsString:@"en"]) {
-        name = @"country_en";
-    }
-    NSString *path = [[NSBundle mainBundle] pathForResource:name
-                                                     ofType:@"plist"];
-
-    NSArray *dicts = [[NSArray array] initWithContentsOfFile:path];
-
+    NSArray *dicts = [XYPHPhoneZonesHelper plistData];
     for (NSDictionary *dict in dicts) {
         XYPHPhoneZonesItem *item = [XYPHPhoneZonesItem itemWithDict: dict];
         [self.items addObject:item];

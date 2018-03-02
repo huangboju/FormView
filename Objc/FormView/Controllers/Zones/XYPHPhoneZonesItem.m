@@ -9,6 +9,8 @@
 #import "XYPHPhoneZonesItem.h"
 #import "XYPHCountryItem.h"
 
+@class XYPHPhoneZonesViewController;
+
 @interface XYPHPhoneZonesItem()
 
 @property (nonatomic, strong, readwrite) NSString *groupKey;
