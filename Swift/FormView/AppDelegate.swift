@@ -14,18 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let dicts = XYPHPhoneZonesHelper.plistData()
-        var key = ""
-        for dict in dicts! {
-            let item = XYPHPhoneZonesItem(dict: dict)!
-            if key != item.groupKey {
-                print("\n\n")
-            }
-            key = item.groupKey
-            for c in item.countries {
-                print("\"\(c.content!)\",")
-            }
-        }
+    
         return true
     }
 
