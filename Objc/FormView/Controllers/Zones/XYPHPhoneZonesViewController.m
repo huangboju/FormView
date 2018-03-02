@@ -92,17 +92,22 @@ UISearchBarDelegate
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSString *targetText = [searchText lowercaseString];
+    NSString *lowercaseString = [searchText lowercaseString];
+    NSString *uppercaseString = [searchText uppercaseString];
     NSMutableArray *result = [NSMutableArray array];
 
+    NSArray *groupKeys = @[@"热门", @"Hot"];
+
     for (XYPHPhoneZonesItem *zone in self.items) {
-        if ([zone.groupKey isEqualToString:@"热门"]) {
+        if ([groupKeys containsObject:zone.groupKey]) {
             continue;
         }
         for (XYPHCountryItem *country in zone.countries) {
             NSString *countryName = country.name;
             NSString *pinyin = [XYPHPhoneZonesHelper transformToPinyin:countryName];
-            if ([countryName containsString:targetText] || [pinyin containsString:targetText]) {
+            if ([countryName containsString:lowercaseString] ||
+                [pinyin containsString:lowercaseString] ||
+                [countryName containsString:uppercaseString]) {
                 [result addObject:country];
             }
         }
