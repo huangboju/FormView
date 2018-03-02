@@ -54,7 +54,7 @@ UISearchBarDelegate
     
     NSString *name = @"country";
     if ([pfLanguageCode containsString:@"en"]) {
-        
+        name = @"country_en";
     }
     NSString *path = [[NSBundle mainBundle] pathForResource:name
                                                      ofType:@"plist"];

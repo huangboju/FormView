@@ -11,113 +11,113 @@
                     <key>dial_code</key>
                     <string>+86</string>
                     <key>name</key>
-                    <string>中国</string>
+                    <string>China</string>
                     <key>content</key>
-                    <string>中国+86</string>
+                    <string>China+86</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+1</string>
                     <key>name</key>
-                    <string>美国</string>
+                    <string>America</string>
                     <key>content</key>
-                    <string>美国+1</string>
+                    <string>America+1</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+852</string>
                     <key>name</key>
-                    <string>香港</string>
+                    <string>Hong Kong</string>
                     <key>content</key>
-                    <string>香港+852</string>
+                    <string>Hong Kong+852</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+853</string>
                     <key>name</key>
-                    <string>澳门</string>
+                    <string>Macao</string>
                     <key>content</key>
-                    <string>澳门+853</string>
+                    <string>Macao+853</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+81</string>
                     <key>name</key>
-                    <string>日本</string>
+                    <string>Japan</string>
                     <key>content</key>
-                    <string>日本+81</string>
+                    <string>Japan+81</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+886</string>
                     <key>name</key>
-                    <string>台湾</string>
+                    <string>Taiwan</string>
                     <key>content</key>
-                    <string>台湾+886</string>
+                    <string>Taiwan+886</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+82</string>
                     <key>name</key>
-                    <string>韩国</string>
+                    <string>Korea</string>
                     <key>content</key>
-                    <string>韩国+82</string>
+                    <string>Korea+82</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+65</string>
                     <key>name</key>
-                    <string>新加坡</string>
+                    <string>Singapore</string>
                     <key>content</key>
-                    <string>新加坡+65</string>
+                    <string>Singapore+65</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+61</string>
                     <key>name</key>
-                    <string>澳大利亚</string>
+                    <string>Australia</string>
                     <key>content</key>
-                    <string>澳大利亚+61</string>
+                    <string>Australia+61</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+1</string>
                     <key>name</key>
-                    <string>加拿大</string>
+                    <string>Canada</string>
                     <key>content</key>
-                    <string>加拿大+1</string>
+                    <string>Canada+1</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+44</string>
                     <key>name</key>
-                    <string>英国</string>
+                    <string>United Kingdom</string>
                     <key>content</key>
-                    <string>英国+44</string>
+                    <string>United Kingdom+44</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+33</string>
                     <key>name</key>
-                    <string>法国</string>
+                    <string>France</string>
                     <key>content</key>
-                    <string>法国+33</string>
+                    <string>France+33</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+49</string>
                     <key>name</key>
-                    <string>德国</string>
+                    <string>Germany</string>
                     <key>content</key>
-                    <string>德国+49</string>
+                    <string>Germany+49</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>
                     <string>+39</string>
                     <key>name</key>
-                    <string>意大利</string>
+                    <string>Italy</string>
                     <key>content</key>
-                    <string>意大利+39</string>
+                    <string>Italy+39</string>
                 </dict>
             </array>
         </dict>
@@ -2150,9 +2150,9 @@
                     <key>dial_code</key>
                     <string>+1</string>
                     <key>name</key>
-                    <string>United States</string>
+                    <string>America</string>
                     <key>content</key>
-                    <string>United States+1</string>
+                    <string>America+1</string>
                 </dict>
                 <dict>
                     <key>dial_code</key>

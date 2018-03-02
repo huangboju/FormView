@@ -267,6 +267,7 @@
 			children = (
 				BE211A612047D0DB00FCFE67 /* country_en.plist */,
 				BE37437C20401180000D6F41 /* country.plist */,
+				BE37439020414A91000D6F41 /* PhoneZones.strings */,
 				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
 				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
 				BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */,
@@ -277,7 +278,6 @@
 				BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */,
 				BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */,
 				BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */,
-				BE37439020414A91000D6F41 /* PhoneZones.strings */,
 			);
 			path = Zones;
 			sourceTree = "<group>";
