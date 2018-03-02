@@ -9,7 +9,7 @@
 #import "XYPHPhoneZonesItem.h"
 #import "XYPHCountryItem.h"
 
-@class XYPHPhoneZonesViewController;
+@class XYPHPhoneZonesVC;
 
 @interface XYPHPhoneZonesItem()
 

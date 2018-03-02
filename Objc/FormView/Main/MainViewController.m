@@ -21,7 +21,7 @@
 #import "StateMachineController.h"
 
 #import "IntroController.h"
-#import "XYPHPhoneZonesViewController.h"
+#import "XYPHPhoneZonesVC.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -60,7 +60,7 @@
                              [InputBarController class]
                              ],
                          @[
-                             [XYPHPhoneZonesViewController class]
+                             [XYPHPhoneZonesVC class]
                              ],
                          @[
                              [StateMachineController class]

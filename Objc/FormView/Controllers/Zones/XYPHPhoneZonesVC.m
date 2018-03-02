@@ -6,7 +6,7 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "XYPHPhoneZonesViewController.h"
+#import "XYPHPhoneZonesVC.h"
 #import "XYPHPhoneZonesSearchResultsController.h"
 #import "XYPHPhoneZonesHelper.h"
 
@@ -15,7 +15,7 @@
 
 #import "XYPHPhoneZonesCell.h"
 
-@interface XYPHPhoneZonesViewController ()
+@interface XYPHPhoneZonesVC ()
 <
 UITableViewDataSource,
 UITableViewDelegate,
@@ -34,7 +34,7 @@ UISearchBarDelegate
 
 @end
 
-@implementation XYPHPhoneZonesViewController
+@implementation XYPHPhoneZonesVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

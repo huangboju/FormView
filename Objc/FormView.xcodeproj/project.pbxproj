@@ -12,7 +12,7 @@
 		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
-		BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */; };
+		BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
 		BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHCountryItem.m */; };
 		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */; };
@@ -91,8 +91,8 @@
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
 		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
-		BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesViewController.h; sourceTree = "<group>"; };
-		BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesViewController.m; sourceTree = "<group>"; };
+		BE37437920401130000D6F41 /* XYPHPhoneZonesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesVC.h; sourceTree = "<group>"; };
+		BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesVC.m; sourceTree = "<group>"; };
 		BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesItem.h; sourceTree = "<group>"; };
 		BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesItem.m; sourceTree = "<group>"; };
 		BE37438220403941000D6F41 /* XYPHCountryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHCountryItem.h; sourceTree = "<group>"; };
@@ -264,8 +264,8 @@
 			isa = PBXGroup;
 			children = (
 				BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */,
-				BE37437920401130000D6F41 /* XYPHPhoneZonesViewController.h */,
-				BE37437A20401130000D6F41 /* XYPHPhoneZonesViewController.m */,
+				BE37437920401130000D6F41 /* XYPHPhoneZonesVC.h */,
+				BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */,
 				BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */,
 				BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */,
 				BE37438220403941000D6F41 /* XYPHCountryItem.h */,
@@ -663,7 +663,7 @@
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
-				BE37437B20401130000D6F41 /* XYPHPhoneZonesViewController.m in Sources */,
+				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
 				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
