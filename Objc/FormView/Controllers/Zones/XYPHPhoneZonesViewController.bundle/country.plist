@@ -399,6 +399,14 @@
             </dict>
             <dict>
                 <key>dial_code</key>
+                <string>+51</string>
+                <key>name</key>
+                <string>秘鲁</string>
+                <key>content</key>
+                <string>秘鲁+51</string>
+            </dict>
+            <dict>
+                <key>dial_code</key>
                 <string>+1670</string>
                 <key>name</key>
                 <string>北马里亚那群岛</string>
@@ -1362,14 +1370,6 @@
                 <string>密克罗尼西亚</string>
                 <key>content</key>
                 <string>密克罗尼西亚+691</string>
-            </dict>
-            <dict>
-                <key>dial_code</key>
-                <string>+51</string>
-                <key>name</key>
-                <string>秘鲁</string>
-                <key>content</key>
-                <string>秘鲁+51</string>
             </dict>
 			<dict>
 				<key>dial_code</key>
