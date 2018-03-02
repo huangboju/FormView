@@ -6,19 +6,19 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "XYPHPhoneZonesSearchResultsController.h"
+#import "XYPHPhoneZonesSearchResultsVC.h"
 
 #import "XYPHPhoneZonesCell.h"
 
 #import "XYPHPhoneZonesHelper.h"
 
-@interface XYPHPhoneZonesSearchResultsController ()
+@interface XYPHPhoneZonesSearchResultsVC ()
 
 @property (nonatomic, strong) UILabel *emptyView;
 
 @end
 
-@implementation XYPHPhoneZonesSearchResultsController
+@implementation XYPHPhoneZonesSearchResultsVC
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {

@@ -15,7 +15,7 @@
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
 		BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHCountryItem.m */; };
-		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */; };
+		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m */; };
 		BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
@@ -97,8 +97,8 @@
 		BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesItem.m; sourceTree = "<group>"; };
 		BE37438220403941000D6F41 /* XYPHCountryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHCountryItem.h; sourceTree = "<group>"; };
 		BE37438320403941000D6F41 /* XYPHCountryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHCountryItem.m; sourceTree = "<group>"; };
-		BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesSearchResultsController.h; sourceTree = "<group>"; };
-		BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesSearchResultsController.m; sourceTree = "<group>"; };
+		BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesSearchResultsVC.h; sourceTree = "<group>"; };
+		BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesSearchResultsVC.m; sourceTree = "<group>"; };
 		BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesCell.h; sourceTree = "<group>"; };
 		BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesCell.m; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 				BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */,
 				BE37438220403941000D6F41 /* XYPHCountryItem.h */,
 				BE37438320403941000D6F41 /* XYPHCountryItem.m */,
-				BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.h */,
-				BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m */,
+				BE374386204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.h */,
+				BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m */,
 				BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */,
 				BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */,
 				BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */,
@@ -654,7 +654,7 @@
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
-				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */,
+				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,

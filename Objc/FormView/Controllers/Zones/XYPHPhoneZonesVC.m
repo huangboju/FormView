@@ -7,7 +7,7 @@
 //
 
 #import "XYPHPhoneZonesVC.h"
-#import "XYPHPhoneZonesSearchResultsController.h"
+#import "XYPHPhoneZonesSearchResultsVC.h"
 #import "XYPHPhoneZonesHelper.h"
 
 #import "XYPHPhoneZonesItem.h"
@@ -30,7 +30,7 @@ UISearchBarDelegate
 
 @property (nonatomic, strong) NSMutableArray <NSString *>*sectionIndexTitles;
 
-@property (nonatomic, strong) XYPHPhoneZonesSearchResultsController *searchResultsController;
+@property (nonatomic, strong) XYPHPhoneZonesSearchResultsVC *searchResultsController;
 
 @end
 
@@ -123,9 +123,9 @@ UISearchBarDelegate
     return _searchController;
 }
 
-- (XYPHPhoneZonesSearchResultsController *)searchResultsController {
+- (XYPHPhoneZonesSearchResultsVC *)searchResultsController {
     if (!_searchResultsController) {
-        _searchResultsController = [XYPHPhoneZonesSearchResultsController new];
+        _searchResultsController = [XYPHPhoneZonesSearchResultsVC new];
     }
     return _searchResultsController;
 }

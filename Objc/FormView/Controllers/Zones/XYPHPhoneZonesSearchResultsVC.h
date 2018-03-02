@@ -10,7 +10,7 @@
 
 @class XYPHCountryItem;
 
-@interface XYPHPhoneZonesSearchResultsController : UITableViewController
+@interface XYPHPhoneZonesSearchResultsVC : UITableViewController
 
 @property (nonatomic, strong) NSArray <XYPHCountryItem *>*result;
 
