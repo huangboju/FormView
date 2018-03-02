@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */; };
+		BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */; };
 		BE211A622047D0DB00FCFE67 /* country_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE211A612047D0DB00FCFE67 /* country_en.plist */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
@@ -83,8 +83,8 @@
 		18C0FCAE1525CD5B7BE7B060 /* Pods-FormView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.debug.xcconfig"; sourceTree = "<group>"; };
 		1E506532FC8F130A03F1887D /* libPods-FormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
-		BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnptyViewController.h; sourceTree = "<group>"; };
-		BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnptyViewController.m; sourceTree = "<group>"; };
+		BE021BAE1FF36BC400DCF9FE /* EmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyViewController.h; sourceTree = "<group>"; };
+		BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyViewController.m; sourceTree = "<group>"; };
 		BE211A612047D0DB00FCFE67 /* country_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = country_en.plist; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
@@ -299,8 +299,8 @@
 				BE37437E204038F4000D6F41 /* Zones */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
 				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
-				BE021BAE1FF36BC400DCF9FE /* EnptyViewController.h */,
-				BE021BAF1FF36BC400DCF9FE /* EnptyViewController.m */,
+				BE021BAE1FF36BC400DCF9FE /* EmptyViewController.h */,
+				BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */,
 				BE29FB2F1FFDD4E300A27373 /* SegmentController.h */,
 				BE29FB301FFDD4E300A27373 /* SegmentController.m */,
 				BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */,
@@ -655,7 +655,7 @@
 				BEB2222720206941009DD3B9 /* InputBarController.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
-				BE021BB01FF36BC400DCF9FE /* EnptyViewController.m in Sources */,
+				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsController.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,

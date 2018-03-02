@@ -6,17 +6,17 @@
 //  Copyright © 2017 黄伯驹. All rights reserved.
 //
 
-#import "EnptyViewController.h"
+#import "EmptyViewController.h"
 //#import "EmptyView.h"
 #import <Masonry.h>
 #import "UIScrollView+XYEmptyView.h"
 
-@interface EnptyViewController ()<XYEmptyDataSetSource, XYEmptyDataSetDelegate>
+@interface EmptyViewController ()<XYEmptyDataSetSource, XYEmptyDataSetDelegate>
 
 @property (nonatomic, strong) NSArray <NSString *>*data;
 @end
 
-@implementation EnptyViewController
+@implementation EmptyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +38,10 @@
 }
 
 # pragma mark DZNEmptyDataSetSource
+- (BOOL)didFinishNetworkForEmptyDataSet:(UIScrollView *)scrollView {
+    return YES;
+}
+
 - (NSString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
     return @"Reveal是iOS开发工具中的神器之一，它能够在";
 }

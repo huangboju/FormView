@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EnptyViewController : UITableViewController
+@interface EmptyViewController : UITableViewController
 
 @end

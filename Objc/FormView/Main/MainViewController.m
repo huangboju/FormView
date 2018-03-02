@@ -13,7 +13,7 @@
 #import "PasswordSignInController.h"
 #import "SignUpController.h"
 #import "MessageCenterController.h"
-#import "EnptyViewController.h"
+#import "EmptyViewController.h"
 #import "SegmentController.h"
 #import "EffectButtonController.h"
 #import "ScrollAnimationController.h"
@@ -42,7 +42,7 @@
                              [MessageCenterController class]
                              ],
                          @[
-                             [EnptyViewController class]
+                             [EmptyViewController class]
                              ],
                          @[
                              [SegmentController class]
