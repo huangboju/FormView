@@ -29,11 +29,11 @@
 + (NSArray *)plistData {
     NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
     NSString *name = @"country";
-//    if ([pfLanguageCode containsString:@"en"]) {
-//        name = @"country_en";
-//    } else if ([pfLanguageCode containsString:@"Hant"]) {
-//        name = @"country_hant";
-//    }
+    if ([pfLanguageCode containsString:@"en"]) {
+        name = @"country_en";
+    } else if ([pfLanguageCode containsString:@"Hant"]) {
+        name = @"country_hant";
+    }
     NSString *path = [[self bundle] pathForResource:name
                                                                     ofType:@"plist"];
     
