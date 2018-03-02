@@ -101,20 +101,13 @@ UISearchBarDelegate
         }
         for (XYPHCountryItem *country in zone.countries) {
             NSString *countryName = country.name;
-            NSString *pinyin = [self transformToPinyin:countryName];
+            NSString *pinyin = [XYPHPhoneZonesHelper transformToPinyin:countryName];
             if ([countryName containsString:targetText] || [pinyin containsString:targetText]) {
                 [result addObject:country];
             }
         }
     }
     self.searchResultsController.result = result;
-}
-
-- (NSString *)transformToPinyin:(NSString *)str {
-    NSMutableString *mutableString = [NSMutableString stringWithString:str];
-    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformToLatin, false);
-    mutableString = (NSMutableString *)[mutableString stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:[NSLocale currentLocale]];
-    return [mutableString stringByReplacingOccurrencesOfString:@"'" withString:@""];
 }
 
 - (UISearchController *)searchController {

@@ -19,6 +19,13 @@
     return NSLocalizedStringFromTableInBundle(str, @"PhoneZones", [self bundle], @"");
 }
 
++ (NSString *)transformToPinyin:(NSString *)str {
+    NSMutableString *mutableString = [NSMutableString stringWithString:str];
+    CFStringTransform((CFMutableStringRef)mutableString, NULL, kCFStringTransformToLatin, false);
+    mutableString = (NSMutableString *)[mutableString stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:[NSLocale currentLocale]];
+    return [mutableString stringByReplacingOccurrencesOfString:@"'" withString:@""];
+}
+
 + (NSArray *)plistData {
     NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
     NSString *name = @"country";

@@ -14,4 +14,6 @@
 
 + (NSString *)localizedWithString:(NSString *)str;
 
++ (NSString *)transformToPinyin:(NSString *)str;
+
 @end
