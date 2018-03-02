@@ -14,41 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let strs: [(String, String)] = [
-            ("Abkhazia",  "+99544"),
-            ("Afghanistan",  "+93"),
-            ("Åland Islands",  "+35818"),
-            ("Albania",  "+355"),
-            ("Algeria",  "+213"),
-            ("American Samoa",  "+1684"),
-            ("Andorra",  "+376"),
-            ("Angola",  "+244"),
-            ("Anguilla",  "+1264"),
-            ("Antigua and Barbuda",  "+1268"),
-            ("Argentina",  "+54"),
-            ("Armenia",  "+374"),
-            ("Aruba",  "+297"),
-            ("Ascension",  "+247"),
-            ("Australia",  "+61"),
-            ("Australian External Territories", "+672"),
-            ("Austria",  "+43"),
-            ("Azerbaijan",  "+994"),
-        ]
-        
-        strs.forEach(convert)
-
+        let dicts = XYPHPhoneZonesHelper.plistData()
+        var key = ""
+        for dict in dicts! {
+            let item = XYPHPhoneZonesItem(dict: dict)!
+            if key != item.groupKey {
+                print("\n\n")
+            }
+            key = item.groupKey
+            for c in item.countries {
+                print("\"\(c.content!)\",")
+            }
+        }
         return true
-    }
-    
-    func convert(str: (String, String)) {
-        print("<dict>")
-        print("    <key>dial_code</key>")
-        print("    <string>\(str.1)</string>")
-        print("    <key>name</key>")
-        print("    <string>\(str.0)</string>")
-        print("    <key>content</key>")
-        print("    <string>\(str.0)\(str.1)</string>")
-        print("</dict>")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

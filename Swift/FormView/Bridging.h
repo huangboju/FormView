@@ -7,3 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "XYPHPhoneZonesHelper.h"
+#import "XYPHPhoneZonesItem.h"
+#import "XYPHCountryItem.h"

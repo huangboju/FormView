@@ -1,0 +1,11 @@
+/* 
+  PhoneZones.strings
+  FormView
+
+  Created by 黄伯驹 on 24/02/2018.
+  Copyright © 2018 黄伯驹. All rights reserved.
+*/
+
+"bestMatch" = "最佳匹配";
+
+"noResult" = "无结果";

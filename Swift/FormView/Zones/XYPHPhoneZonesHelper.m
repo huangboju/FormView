@@ -26,7 +26,7 @@
     return [mutableString stringByReplacingOccurrencesOfString:@"'" withString:@""];
 }
 
-+ (NSArray *)plistData {
++ (NSArray <NSDictionary *>*)plistData {
     NSString *pfLanguageCode = [NSLocale preferredLanguages][0];
     NSString *name = @"country";
 //    if ([pfLanguageCode containsString:@"en"]) {
