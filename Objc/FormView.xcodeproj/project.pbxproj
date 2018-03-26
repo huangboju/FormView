@@ -28,6 +28,8 @@
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
 		BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */; };
+		BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */; };
+		BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEE320561AE000FAC2E8 /* TimerClass.m */; };
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
@@ -123,6 +125,10 @@
 		BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
 		BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterCell.h; sourceTree = "<group>"; };
 		BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterCell.m; sourceTree = "<group>"; };
+		BE8ECEDE20561AAF00FAC2E8 /* TimerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerController.h; sourceTree = "<group>"; };
+		BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerController.m; sourceTree = "<group>"; };
+		BE8ECEE220561AE000FAC2E8 /* TimerClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
+		BE8ECEE320561AE000FAC2E8 /* TimerClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerClass.m; sourceTree = "<group>"; };
 		BEB2222120206180009DD3B9 /* XYInputBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBar.h; sourceTree = "<group>"; };
 		BEB2222220206180009DD3B9 /* XYInputBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBar.m; sourceTree = "<group>"; };
 		BEB2222520206941009DD3B9 /* InputBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputBarController.h; sourceTree = "<group>"; };
@@ -280,6 +286,17 @@
 			path = Zones;
 			sourceTree = "<group>";
 		};
+		BE8ECEE120561AC600FAC2E8 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ECEDE20561AAF00FAC2E8 /* TimerController.h */,
+				BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */,
+				BE8ECEE220561AE000FAC2E8 /* TimerClass.h */,
+				BE8ECEE320561AE000FAC2E8 /* TimerClass.m */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		BEB2222020206161009DD3B9 /* InputBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +311,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE8ECEE120561AC600FAC2E8 /* Timer */,
 				BE37437E204038F4000D6F41 /* Zones */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
 				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
@@ -642,10 +660,12 @@
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
 				BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */,
+				BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */,
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
+				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
 				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,

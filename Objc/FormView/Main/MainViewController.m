@@ -19,6 +19,7 @@
 #import "ScrollAnimationController.h"
 #import "InputBarController.h"
 #import "StateMachineController.h"
+#import "TimerController.h"
 
 #import "IntroController.h"
 #import "XYPHPhoneZonesVC.h"
@@ -64,6 +65,9 @@
                              ],
                          @[
                              [StateMachineController class]
+                             ],
+                         @[
+                             [TimerController class]
                              ]
                          ];
 

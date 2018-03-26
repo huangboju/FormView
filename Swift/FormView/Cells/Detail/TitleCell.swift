@@ -6,6 +6,40 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
+struct Queue<T> {
+    private var arr: [T?] = []
+    private var head = 0
+    
+    var isEmpty: Bool {
+        return arr.isEmpty
+    }
+    
+    var count: Int {
+        return arr.count - head
+    }
+    
+    mutating func enqueue(_ elemet: T) {
+        arr.append(elemet)
+    }
+    
+    mutating func dequeue() -> T? {
+        guard arr.count > head, let element = arr[head] else {
+            return nil
+        }
+        arr[head] = nil
+        head += 1
+        
+        let percentage = Double(head) / Double(arr.count)
+        if arr.count > 50 && percentage > 0.25 {
+            arr.removeFirst(head)
+            head = 0
+        }
+        return element
+    }
+}
+
+
+
 struct TitleCellItem {
     let title: String
 }
