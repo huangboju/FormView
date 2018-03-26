@@ -19,9 +19,13 @@
 #import "ScrollAnimationController.h"
 #import "InputBarController.h"
 #import "StateMachineController.h"
+#import "TimerController.h"
+#import "XYPHBindAccountController.h"
 
 #import "IntroController.h"
 #import "XYPHPhoneZonesVC.h"
+
+#import "CustomSearchBarController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -64,6 +68,15 @@
                              ],
                          @[
                              [StateMachineController class]
+                             ],
+                         @[
+                             [TimerController class]
+                             ],
+                         @[
+                             [CustomSearchBarController class]
+                             ],
+                         @[
+                             [XYPHBindAccountController class]
                              ]
                          ];
 

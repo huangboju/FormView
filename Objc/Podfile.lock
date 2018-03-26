@@ -1,15 +1,18 @@
 PODS:
+  - FDStackView (1.0)
   - Masonry (1.1.0)
   - TransitionKit (2.2.1)
 
 DEPENDENCIES:
+  - FDStackView (= 1.0)
   - Masonry
   - TransitionKit
 
 SPEC CHECKSUMS:
+  FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
 
-PODFILE CHECKSUM: 57aa08aa7a795d000bb9af477ccbee06165e8254
+PODFILE CHECKSUM: aa5234a6911cd12862b15ca6cdfd148593144e44
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

@@ -28,6 +28,8 @@
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
 		BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */; };
+		BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */; };
+		BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEE320561AE000FAC2E8 /* TimerClass.m */; };
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
@@ -59,6 +61,11 @@
 		BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB4200DE2A3001158A9 /* WechatButtonCell.m */; };
 		BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB7200DE490001158A9 /* IntroController.m */; };
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
+		F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */; };
+		F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF72060EB7E00BCDE8E /* MySearchBar.m */; };
+		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */; };
+		F7BC371F2064DC21009D3B22 /* UserCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371E2064DC21009D3B22 /* UserCardCell.m */; };
+		F7BC37222064DF8A009D3B22 /* BindAccountTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +130,10 @@
 		BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
 		BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterCell.h; sourceTree = "<group>"; };
 		BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterCell.m; sourceTree = "<group>"; };
+		BE8ECEDE20561AAF00FAC2E8 /* TimerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerController.h; sourceTree = "<group>"; };
+		BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerController.m; sourceTree = "<group>"; };
+		BE8ECEE220561AE000FAC2E8 /* TimerClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
+		BE8ECEE320561AE000FAC2E8 /* TimerClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerClass.m; sourceTree = "<group>"; };
 		BEB2222120206180009DD3B9 /* XYInputBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBar.h; sourceTree = "<group>"; };
 		BEB2222220206180009DD3B9 /* XYInputBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBar.m; sourceTree = "<group>"; };
 		BEB2222520206941009DD3B9 /* InputBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputBarController.h; sourceTree = "<group>"; };
@@ -183,6 +194,16 @@
 		BEEF6CB4200DE2A3001158A9 /* WechatButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WechatButtonCell.m; sourceTree = "<group>"; };
 		BEEF6CB6200DE490001158A9 /* IntroController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroController.h; sourceTree = "<group>"; };
 		BEEF6CB7200DE490001158A9 /* IntroController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroController.m; sourceTree = "<group>"; };
+		F7142EF02060B25000BCDE8E /* CustomSearchBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSearchBarController.h; sourceTree = "<group>"; };
+		F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBarController.m; sourceTree = "<group>"; };
+		F7142EF62060EB7E00BCDE8E /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
+		F7142EF72060EB7E00BCDE8E /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
+		F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountController.h; sourceTree = "<group>"; };
+		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountController.m; sourceTree = "<group>"; };
+		F7BC371D2064DC21009D3B22 /* UserCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCardCell.h; sourceTree = "<group>"; };
+		F7BC371E2064DC21009D3B22 /* UserCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCardCell.m; sourceTree = "<group>"; };
+		F7BC37202064DF8A009D3B22 /* BindAccountTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindAccountTitleCell.h; sourceTree = "<group>"; };
+		F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindAccountTitleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +277,8 @@
 				BE697AC0200F3821009C6762 /* XYPHResumeAnimationImageView.m */,
 				BE697AC5200F624F009C6762 /* XYPHRepeatAnimationView.h */,
 				BE697AC6200F624F009C6762 /* XYPHRepeatAnimationView.m */,
+				F7142EF62060EB7E00BCDE8E /* MySearchBar.h */,
+				F7142EF72060EB7E00BCDE8E /* MySearchBar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +303,17 @@
 			path = Zones;
 			sourceTree = "<group>";
 		};
+		BE8ECEE120561AC600FAC2E8 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				BE8ECEDE20561AAF00FAC2E8 /* TimerController.h */,
+				BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */,
+				BE8ECEE220561AE000FAC2E8 /* TimerClass.h */,
+				BE8ECEE320561AE000FAC2E8 /* TimerClass.m */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		BEB2222020206161009DD3B9 /* InputBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +328,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE8ECEE120561AC600FAC2E8 /* Timer */,
 				BE37437E204038F4000D6F41 /* Zones */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
 				BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */,
@@ -309,6 +344,10 @@
 				BEB2222620206941009DD3B9 /* InputBarController.m */,
 				BEC43FAE20468F4400D46770 /* StateMachineController.h */,
 				BEC43FAF20468F4400D46770 /* StateMachineController.m */,
+				F7142EF02060B25000BCDE8E /* CustomSearchBarController.h */,
+				F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */,
+				F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */,
+				F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -394,6 +433,7 @@
 		BECCEA3E1FD5281A00CBCC1F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F7BC371C2064DBFD009D3B22 /* BindAccount */,
 				BECCEA2E1FD4FED300CBCC1F /* AccountFieldCell.h */,
 				BECCEA2F1FD4FED300CBCC1F /* AccountFieldCell.m */,
 				BECCEA3B1FD51FC600CBCC1F /* AccountTitleCell.h */,
@@ -447,6 +487,17 @@
 				BEEF6CA5200CA669001158A9 /* AYVibrantButton.h */,
 			);
 			path = AYVibrantButton;
+			sourceTree = "<group>";
+		};
+		F7BC371C2064DBFD009D3B22 /* BindAccount */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC371D2064DC21009D3B22 /* UserCardCell.h */,
+				F7BC371E2064DC21009D3B22 /* UserCardCell.m */,
+				F7BC37202064DF8A009D3B22 /* BindAccountTitleCell.h */,
+				F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */,
+			);
+			path = BindAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,13 +690,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */,
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
 				BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */,
+				BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */,
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
+				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
 				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
@@ -657,6 +711,7 @@
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
+				F7BC37222064DF8A009D3B22 /* BindAccountTitleCell.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
@@ -665,12 +720,14 @@
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
 				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
+				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
+				F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */,
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */,
@@ -682,6 +739,7 @@
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
+				F7BC371F2064DC21009D3B22 /* UserCardCell.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 			);
@@ -850,11 +908,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F5YZXGNJ3;
+				DEVELOPMENT_TEAM = D2CVGDWDEG;
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormVi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -866,11 +924,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F5YZXGNJ3;
+				DEVELOPMENT_TEAM = D2CVGDWDEG;
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormVi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

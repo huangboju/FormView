@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     self.inputBarView = [XYInputBarView new];
     UIButton *button1 = [self generateButtonWithImageName:@""];
     UIButton *button2 = [self generateButtonWithImageName:@""];

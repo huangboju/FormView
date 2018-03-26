@@ -64,7 +64,14 @@ static const CGFloat padding = 15;
                          attribute:NSLayoutAttributeLeading];
         [self p_constraintWithItem:self.separatorLine
                          attribute:NSLayoutAttributeCenterX];
-        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.separatorLine attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:0 constant:0.5];
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint
+                                                constraintWithItem:self.separatorLine
+                                                         attribute:NSLayoutAttributeHeight
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:nil
+                                                         attribute:NSLayoutAttributeHeight
+                                                        multiplier:0
+                                                          constant:0.5];
         [self addConstraint:heightConstraint];
         
 
@@ -112,7 +119,14 @@ static const CGFloat padding = 15;
                     constant:(CGFloat)c {
     view1.translatesAutoresizingMaskIntoConstraints = NO;
     view2.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:NSLayoutRelationEqual toItem:view2 attribute:attr2 multiplier:1 constant:c];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint
+                                      constraintWithItem:view1
+                                      attribute:attr1
+                                      relatedBy:NSLayoutRelationEqual
+                                      toItem:view2
+                                      attribute:attr2
+                                      multiplier:1
+                                      constant:c];
     [self addConstraint:constraint];
     return constraint;
 }
