@@ -20,10 +20,7 @@
 #import "InputBarController.h"
 #import "StateMachineController.h"
 #import "TimerController.h"
-<<<<<<< HEAD
 #import "XYPHBindAccountController.h"
-=======
->>>>>>> 801c46d47e0f490675fc950e57c4b26eccc462e4
 
 #import "IntroController.h"
 #import "XYPHPhoneZonesVC.h"
