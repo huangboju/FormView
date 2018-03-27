@@ -33,6 +33,7 @@
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
+		BEC25B44206A40F300D0CEDA /* BindStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC25B43206A40F300D0CEDA /* BindStatusView.m */; };
 		BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC43FAF20468F4400D46770 /* StateMachineController.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
 		BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */; };
@@ -143,6 +144,8 @@
 		BEB2222620206941009DD3B9 /* InputBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputBarController.m; sourceTree = "<group>"; };
 		BEB22228202069F3009DD3B9 /* XYInputBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBarView.h; sourceTree = "<group>"; };
 		BEB22229202069F3009DD3B9 /* XYInputBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBarView.m; sourceTree = "<group>"; };
+		BEC25B42206A40F300D0CEDA /* BindStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindStatusView.h; sourceTree = "<group>"; };
+		BEC25B43206A40F300D0CEDA /* BindStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindStatusView.m; sourceTree = "<group>"; };
 		BEC43FAE20468F4400D46770 /* StateMachineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineController.h; sourceTree = "<group>"; };
 		BEC43FAF20468F4400D46770 /* StateMachineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachineController.m; sourceTree = "<group>"; };
 		BECCE9ED1FD4F2D400CBCC1F /* FormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -519,6 +522,8 @@
 				F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */,
 				F7144805206A32AF00405838 /* UserCardView.h */,
 				F7144806206A32AF00405838 /* UserCardView.m */,
+				BEC25B42206A40F300D0CEDA /* BindStatusView.h */,
+				BEC25B43206A40F300D0CEDA /* BindStatusView.m */,
 			);
 			path = BindAccount;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 				F7BC371F2064DC21009D3B22 /* UserCardCell.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
+				BEC25B44206A40F300D0CEDA /* BindStatusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
