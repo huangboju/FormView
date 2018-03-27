@@ -10,15 +10,6 @@
 
 #import "Row.h"
 
-
-@interface BindAccountTitleCellItem : NSObject
-
-@property(nonatomic, copy)  NSString *title;
-
-@end
-
-
-
 @interface BindAccountTitleCell : UITableViewCell
 
 @end

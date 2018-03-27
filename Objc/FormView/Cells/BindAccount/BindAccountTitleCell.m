@@ -9,9 +9,7 @@
 #import "BindAccountTitleCell.h"
 #import <Masonry.h>
 
-@implementation BindAccountTitleCellItem
-
-@end
+#import "TitleCellItem.h"
 
 @interface BindAccountTitleCell()<Updatable>
 
@@ -33,12 +31,12 @@
             make.top.mas_equalTo(40);
             make.bottom.mas_equalTo(-20);
         }];
-        
+
     }
     return self;
 }
 
-- (void)updateViewData:(BindAccountTitleCellItem *)viewData {
+- (void)updateViewData:(TitleCellItem *)viewData {
     self.titleLabel.text = viewData.title;
 }
 

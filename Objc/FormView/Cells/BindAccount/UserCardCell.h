@@ -10,14 +10,6 @@
 
 #import "Row.h"
 
-@interface UserCardCellItem : NSObject
-
-@property(nonatomic, copy)  NSString *nickName;
-
-@property (nonatomic, assign) BOOL isBinding;
-
-@end
-
 @interface UserCardCell : UITableViewCell<Updatable>
 
 @end

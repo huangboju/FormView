@@ -63,6 +63,9 @@
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 		F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */; };
 		F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF72060EB7E00BCDE8E /* MySearchBar.m */; };
+		F7144804206A300100405838 /* TitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144803206A300100405838 /* TitleCellItem.m */; };
+		F7144807206A32AF00405838 /* UserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* UserCardView.m */; };
+		F714480A206A33A500405838 /* UserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* UserCardCellItem.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */; };
 		F7BC371F2064DC21009D3B22 /* UserCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371E2064DC21009D3B22 /* UserCardCell.m */; };
 		F7BC37222064DF8A009D3B22 /* BindAccountTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */; };
@@ -198,6 +201,12 @@
 		F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBarController.m; sourceTree = "<group>"; };
 		F7142EF62060EB7E00BCDE8E /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
 		F7142EF72060EB7E00BCDE8E /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
+		F7144802206A300100405838 /* TitleCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCellItem.h; sourceTree = "<group>"; };
+		F7144803206A300100405838 /* TitleCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCellItem.m; sourceTree = "<group>"; };
+		F7144805206A32AF00405838 /* UserCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCardView.h; sourceTree = "<group>"; };
+		F7144806206A32AF00405838 /* UserCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCardView.m; sourceTree = "<group>"; };
+		F7144808206A33A500405838 /* UserCardCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCardCellItem.h; sourceTree = "<group>"; };
+		F7144809206A33A500405838 /* UserCardCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCardCellItem.m; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountController.m; sourceTree = "<group>"; };
 		F7BC371D2064DC21009D3B22 /* UserCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCardCell.h; sourceTree = "<group>"; };
@@ -489,13 +498,27 @@
 			path = AYVibrantButton;
 			sourceTree = "<group>";
 		};
+		F7144801206A2FEC00405838 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7144802206A300100405838 /* TitleCellItem.h */,
+				F7144803206A300100405838 /* TitleCellItem.m */,
+				F7144808206A33A500405838 /* UserCardCellItem.h */,
+				F7144809206A33A500405838 /* UserCardCellItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F7BC371C2064DBFD009D3B22 /* BindAccount */ = {
 			isa = PBXGroup;
 			children = (
+				F7144801206A2FEC00405838 /* Model */,
 				F7BC371D2064DC21009D3B22 /* UserCardCell.h */,
 				F7BC371E2064DC21009D3B22 /* UserCardCell.m */,
 				F7BC37202064DF8A009D3B22 /* BindAccountTitleCell.h */,
 				F7BC37212064DF8A009D3B22 /* BindAccountTitleCell.m */,
+				F7144805206A32AF00405838 /* UserCardView.h */,
+				F7144806206A32AF00405838 /* UserCardView.m */,
 			);
 			path = BindAccount;
 			sourceTree = "<group>";
@@ -698,6 +721,7 @@
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
+				F7144807206A32AF00405838 /* UserCardView.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
@@ -710,6 +734,7 @@
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
+				F7144804206A300100405838 /* TitleCellItem.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
 				F7BC37222064DF8A009D3B22 /* BindAccountTitleCell.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
@@ -724,6 +749,7 @@
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
+				F714480A206A33A500405838 /* UserCardCellItem.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
