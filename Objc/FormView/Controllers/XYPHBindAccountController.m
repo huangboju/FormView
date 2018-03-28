@@ -19,10 +19,6 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
-@property (nonatomic, strong) BindStatusView *bindStatusView1;
-
-@property (nonatomic, strong) BindStatusView *bindStatusView2;
-
 @property (nonatomic, strong) UserCardView *userCardView1;
 
 @property (nonatomic, strong) UserCardView *userCardView2;
@@ -61,17 +57,8 @@
         make.leading.trailing.mas_equalTo(titleLabel1);
     }];
 
-    self.bindStatusView1 = [BindAccountUIGenerator bindStatusViewWithItem:nil];
-    [self.scrollView insertSubview:self.bindStatusView1 belowSubview:self.userCardView1];
-    [self.bindStatusView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.userCardView1);
-        make.leading.mas_equalTo(self.userCardView1).offset(8);
-        make.centerX.mas_equalTo(0);
-        make.height.mas_equalTo(self.userCardView1);
-    }];
-
     self.titleLabel2 = [BindAccountUIGenerator titleLabelWithTitle:@"是否换绑至当前登录的账号"];
-    [self.scrollView insertSubview:self.titleLabel2 belowSubview:self.bindStatusView1];
+    [self.scrollView addSubview:self.titleLabel2];
     [self.titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(40);
         make.leading.mas_equalTo(38);
@@ -87,79 +74,11 @@
         make.height.mas_equalTo(100);
         make.leading.trailing.mas_equalTo(titleLabel1);
     }];
-    
-    self.bindStatusView2 = [BindAccountUIGenerator bindStatusViewWithItem:nil];
-    [self.scrollView insertSubview:self.bindStatusView2 belowSubview:self.userCardView2];
-    [self.bindStatusView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.userCardView2);
-        make.leading.mas_equalTo(self.userCardView2).offset(8);
-        make.centerX.mas_equalTo(0);
-        make.height.mas_equalTo(self.userCardView2);
-    }];
 }
 
-- (void)userCardView:(UserCardView *)userCardView didSelect:(BOOL)isSelect {
-    if (userCardView == self.userCardView1) {
-        [UIView animateWithDuration:0.25 animations:^{
-            if (isSelect) {
-                [self.bindStatusView1 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(userCardView.mas_bottom).offset(-10);
-                    make.leading.mas_equalTo(userCardView).offset(8);
-                    make.centerX.mas_equalTo(0);
-                }];
-                
-                [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.bindStatusView1.mas_bottom).offset(20);
-                    make.height.mas_equalTo(100);
-                    make.leading.trailing.mas_equalTo(userCardView);
-                }];
-            } else {
-                [self.bindStatusView1 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(userCardView);
-                    make.leading.mas_equalTo(userCardView).offset(8);
-                    make.centerX.mas_equalTo(0);
-                    make.height.mas_equalTo(userCardView);
-                }];
-                
-                [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-                    make.height.mas_equalTo(100);
-                    make.leading.trailing.mas_equalTo(userCardView);
-                }];
-            }
-            [self.scrollView layoutIfNeeded];
-        }];
-    } else {
-        [UIView animateWithDuration:0.25 animations:^{
-            if (isSelect) {
-                [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(20);
-                    make.height.mas_equalTo(100);
-                    make.leading.trailing.mas_equalTo(self.userCardView1);
-                }];
-                
-                [self.bindStatusView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(userCardView.mas_bottom).offset(-10);
-                    make.leading.mas_equalTo(userCardView).offset(8);
-                    make.centerX.mas_equalTo(0);
-                }];
-            } else {
-                [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-                    make.height.mas_equalTo(100);
-                    make.leading.trailing.mas_equalTo(self.userCardView1);
-                }];
 
-                [self.bindStatusView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(self.userCardView2);
-                    make.leading.mas_equalTo(self.userCardView2).offset(8);
-                    make.centerX.mas_equalTo(0);
-                    make.height.mas_equalTo(self.userCardView1);
-                }];
-            }
-            [self.scrollView layoutIfNeeded];
-        }];
-    }
+- (void)userCardView:(UserCardView *)userCardView didSelect:(BOOL)isSelect {
+    
 }
 
 

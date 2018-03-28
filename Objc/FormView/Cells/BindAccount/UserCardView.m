@@ -15,7 +15,11 @@
 
 #import "UserCardCellItem.h"
 
+#import "BindStatusView.h"
+
 @interface UserCardView()
+
+@property (nonatomic, strong) UIView *wrapperView;
 
 @property (nonatomic, strong) UIImageView *avatarView;
 
@@ -27,6 +31,8 @@
 
 @property (nonatomic, strong) UIButton *bindStatusButton;
 
+@property (nonatomic, strong) BindStatusView *bindStatusView;
+
 @end
 
 @implementation UserCardView
@@ -34,6 +40,11 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
 
+        [self addSubview:self.wrapperView];
+        [self.wrapperView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(0);
+        }];
+        
         [self addSubview:self.avatarView];
         [self.avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.mas_equalTo(64);
@@ -66,8 +77,19 @@
             make.centerY.mas_equalTo(0);
             make.leading.mas_equalTo(self.avatarView.mas_trailing).offset(20);
         }];
+        
+        [self insertSubview:self.bindStatusView atIndex:0];
+        [self.bindStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.centerX.mas_equalTo(0);
+            make.leading.mas_equalTo(8);
+            make.height.mas_equalTo(self);
+        }];
     }
     return self;
+}
+
+- (BOOL)isExpanding {
+    return self.bindStatusButton.isSelected;
 }
 
 - (void)updateViewData:(UserCardCellItem *)viewData {
@@ -87,12 +109,73 @@
     
     self.nickNameTextView.text = @"小姐姐";
     self.joinTimeLabel.text = @"2017.12.31 加入小红书";
+    
+    NSArray *icontypes = @[
+                           @"qq",
+                           @"weixin",
+                           @"weibo",
+                           @"facebook",
+                           @"mobile"
+                           ];
+    
+    NSMutableArray *items = [NSMutableArray array];
+    for (NSString *icontype in icontypes) {
+        BindStatusViewItem *item = [BindStatusViewItem new];
+        item.text = icontype;
+        item.socialType = icontype;
+        [items addObject:item];
+    }
+    [self.bindStatusView updateViewData:items];
+}
+
+- (void)bindStatusViewUpdateLayout:(BOOL)isSelect {
+    [UIView animateWithDuration:0.25 animations:^{
+        if (isSelect) {
+            [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(self.mas_bottom).offset(-10);
+                make.centerX.mas_equalTo(0);
+                make.leading.mas_equalTo(8);
+            }];
+        } else {
+            [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.centerX.mas_equalTo(0);
+                make.leading.mas_equalTo(8);
+                make.height.mas_equalTo(self);
+            }];
+        }
+        [self layoutIfNeeded];
+    }];
 }
 
 #pragma mark - Action
 - (void)showAccountBindStatus:(UIButton *)sender {
     sender.selected = !sender.isSelected;
-    [self.delegate userCardView:self didSelect:sender.selected];
+    [self bindStatusViewUpdateLayout:sender.isSelected];
+//    [self.delegate userCardView:self didSelect:sender.isSelected];
+}
+
+- (UIView *)wrapperView {
+    if (!_wrapperView) {
+        _wrapperView = [UIView new];
+        _wrapperView.backgroundColor = [UIColor whiteColor];
+        _wrapperView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+        _wrapperView.layer.cornerRadius = 4;
+        _wrapperView.layer.shadowOpacity = 0.8f;
+        _wrapperView.layer.shadowOffset = CGSizeMake(0, 2);
+    }
+    return _wrapperView;
+}
+
+- (BindStatusView *)bindStatusView {
+    if (!_bindStatusView) {
+        _bindStatusView = [BindStatusView new];
+        _bindStatusView.backgroundColor = [UIColor whiteColor];
+        _bindStatusView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+        _bindStatusView.layer.cornerRadius = 4;
+        _bindStatusView.layer.shadowOpacity = 0.8f;
+        _bindStatusView.layer.shadowOffset = CGSizeMake(0, 2);
+    }
+    return _bindStatusView;
 }
 
 - (UIImageView *)avatarView {

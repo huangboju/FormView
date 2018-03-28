@@ -21,10 +21,7 @@
 + (UserCardView *)userCardViewWithItem:(UserCardCellItem *)item {
     UserCardView *userCardView = [UserCardView new];
     userCardView.backgroundColor = [UIColor whiteColor];
-    userCardView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
     userCardView.layer.cornerRadius = 4;
-    userCardView.layer.shadowOpacity = 0.8f;
-    userCardView.layer.shadowOffset = CGSizeMake(0, 2);
     [userCardView updateViewData:item];
     return userCardView;
 }

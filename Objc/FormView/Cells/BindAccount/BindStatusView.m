@@ -33,7 +33,7 @@
             make.leading.mas_equalTo(20);
             make.top.mas_equalTo(25);
             make.bottom.mas_equalTo(-15);
-            make.centerY.mas_equalTo(0);
+            make.centerY.mas_equalTo(0).priorityLow();
         }];
     }
     return self;

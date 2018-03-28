@@ -22,6 +22,8 @@
 
 @property (nonatomic, weak) id <UserCardViewActionable> delegate;
 
+@property (nonatomic, assign, readonly) BOOL isExpanding;
+
 - (void)updateViewData:(UserCardCellItem *)viewData;
 
 
