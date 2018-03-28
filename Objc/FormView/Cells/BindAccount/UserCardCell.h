@@ -10,6 +10,14 @@
 
 #import "Row.h"
 
+@class UserCardCell;
+
+@protocol UserCardCellActionable
+
+- (void)userCardCell:(UserCardCell *)userCardCell didShowBindStatusView:(UIView *)bindStatusView;
+
+@end
+
 @interface UserCardCell : UITableViewCell<Updatable>
 
 @end

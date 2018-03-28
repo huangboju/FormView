@@ -14,6 +14,10 @@
 
 #import "ImageTextView.h"
 
+@implementation BindStatusViewItem
+
+@end
+
 @interface BindStatusView()
 
 @property (nonatomic, strong) FDStackView *stackView;
@@ -27,8 +31,9 @@
         [self addSubview:self.stackView];
         [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(20);
-            make.top.mas_equalTo(15);
-            make.centerX.centerY.mas_equalTo(0);
+            make.top.mas_equalTo(25);
+            make.bottom.mas_equalTo(-15);
+            make.centerY.mas_equalTo(0);
         }];
     }
     return self;
@@ -45,12 +50,15 @@
     return _stackView;
 }
 
-- (void)updateViewData:(NSArray <NSString *>*)viewData {
-    for (NSString *text in viewData) {
+- (void)updateViewData:(NSArray <BindStatusViewItem *>*)viewData {
+    for (BindStatusViewItem *item in viewData) {
         ImageTextView *imageTextView = [ImageTextView new];
         imageTextView.textFont = [UIFont systemFontOfSize:11];
-        imageTextView.text = text;
-        
+        imageTextView.text = item.text;
+        imageTextView.imagePosition = ImageTextViewPositionLeft;
+        imageTextView.image = [UIImage imageNamed:item.socialType];
+        imageTextView.interval = 12;
+        [self.stackView addArrangedSubview:imageTextView];
     }
 }
 

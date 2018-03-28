@@ -23,21 +23,36 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        [self.contentView addSubview:self.titleLabel];
+        [self addSubview:self.titleLabel];
         
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(38);
             make.centerX.mas_equalTo(0);
             make.top.mas_equalTo(40);
-            make.bottom.mas_equalTo(-20);
+            make.bottom.mas_equalTo(-10);
         }];
-
     }
     return self;
 }
 
 - (void)updateViewData:(TitleCellItem *)viewData {
     self.titleLabel.text = viewData.title;
+    
+    if (viewData.isShow) {
+        [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.leading.mas_equalTo(38);
+            make.centerX.mas_equalTo(0);
+            make.height.mas_equalTo(20);
+            make.top.bottom.mas_equalTo(0);
+        }];
+    } else {
+        [self.titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.leading.mas_equalTo(38);
+            make.centerX.mas_equalTo(0);
+            make.top.mas_equalTo(40);
+            make.bottom.mas_equalTo(-10);
+        }];
+    }
 }
 
 - (UILabel *)titleLabel {

@@ -10,6 +10,8 @@
 
 @interface TitleCellItem : NSObject
 
-@property(nonatomic, copy)  NSString *title;
+@property (nonatomic, copy)  NSString *title;
+
+@property (nonatomic, assign) BOOL isShow;
 
 @end

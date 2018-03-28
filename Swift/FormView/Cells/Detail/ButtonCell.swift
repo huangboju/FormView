@@ -53,7 +53,7 @@ class ButtonCell: UITableViewCell {
     }
     
     @objc func buttonAction(_ sender: UIButton) {
-        (self.viewController as? ButtonCellActionable)?.buttonAction(sender, cell: self)
+        (self.viewController() as? ButtonCellActionable)?.buttonAction(sender, cell: self)
     }
 }
 

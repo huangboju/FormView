@@ -10,6 +10,8 @@
 #import "UIView+Extension.h"
 #import "UIColor+Hex.h"
 
+#import <Masonry.h>
+
 @implementation ButtonCellItem
 
 @end
@@ -28,7 +30,7 @@
         _button.backgroundColor = [UIColor colorWithHex:0xFF2238];
         _button.translatesAutoresizingMaskIntoConstraints = NO;
         _button.layer.cornerRadius = 5.f;
-        [_button addTarget:self.viewController action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _button;
 }
@@ -39,13 +41,22 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         [self.contentView addSubview:self.button];
-        [self.button.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:50].active = YES;
-        [self.button.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
-        [self.button.heightAnchor constraintEqualToConstant:45].active = YES;
-        [self.button.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
-        [self.button.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
+        [self layoutButton];
     }
     return self;
+}
+
+- (void)buttonAction:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
+}
+
+- (void)layoutButton {
+
+    [self.button.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:50].active = YES;
+    [self.button.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;
+    [self.button.heightAnchor constraintEqualToConstant:45].active = YES;
+    [self.button.topAnchor constraintEqualToAnchor:self.contentView.topAnchor].active = YES;
+    [self.button.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
 }
 
 - (void)updateViewData:(ButtonCellItem *)viewData {

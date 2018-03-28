@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@interface BindStatusViewItem : NSObject
+
+@property (nonatomic, copy) NSString *text;
+
+@property (nonatomic, copy) NSString *socialType;
+
+@end
+
 @interface BindStatusView : UIView
 
-- (void)updateViewData:(NSArray <NSString *>*)viewData;
+- (void)updateViewData:(NSArray <BindStatusViewItem *>*)viewData;
 
 @end

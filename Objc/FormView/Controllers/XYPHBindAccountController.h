@@ -8,6 +8,6 @@
 
 #import "XYPHGroupTableController.h"
 
-@interface XYPHBindAccountController : XYPHGroupTableController
+@interface XYPHBindAccountController : UIViewController
 
 @end
