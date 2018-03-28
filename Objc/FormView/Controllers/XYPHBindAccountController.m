@@ -58,7 +58,7 @@
     }];
 
     self.titleLabel2 = [BindAccountUIGenerator titleLabelWithTitle:@"是否换绑至当前登录的账号"];
-    [self.scrollView addSubview:self.titleLabel2];
+    [self.scrollView insertSubview:self.titleLabel2 belowSubview:self.userCardView1];
     [self.titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(40);
         make.leading.mas_equalTo(38);
