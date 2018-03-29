@@ -122,10 +122,10 @@
     
     NSArray *icontypes = @[
                            @"qq",
-//                           @"weixin",
-//                           @"weibo",
-//                           @"facebook",
-//                           @"mobile"
+                           @"weixin",
+                           @"weibo",
+                           @"facebook",
+                           @"mobile"
                            ];
     
     NSMutableArray *items = [NSMutableArray array];

@@ -62,8 +62,7 @@
     [self.scrollView insertSubview:self.titleLabel2 belowSubview:self.userCardView1];
     [self.titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(40);
-        make.leading.mas_equalTo(38);
-        make.centerX.mas_equalTo(0);
+        make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 
     UserCardCellItem *card2Item = [UserCardCellItem new];
@@ -79,15 +78,15 @@
 
 - (void)userCardView1UpdateLayout:(BOOL)isExpanding {
     if (self.userCardView2.isExpanding) {
+        [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+            make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+            make.leading.trailing.mas_equalTo(self.titleLabel1);
+        }];
         [self.userCardView2 setIsExpanding:NO animated:YES];
     }
     [UIView animateWithDuration:0.25 animations:^{
-        if (isExpanding) {
-            self.titleLabel2.alpha = 0;
-        } else {
-            self.titleLabel2.alpha = 1;
-        }
-        
+        self.titleLabel2.alpha = isExpanding ? 0 : 1;
         [self.scrollView layoutIfNeeded];
     }];
 }
@@ -98,14 +97,16 @@
     }
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
+            self.titleLabel2.alpha = 0;
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
                 make.leading.trailing.mas_equalTo(self.titleLabel1);
             }];
         } else {
+            self.titleLabel2.alpha = 1;
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-                make.top.mas_greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
                 make.leading.trailing.mas_equalTo(self.titleLabel1);
             }];
         }
