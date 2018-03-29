@@ -78,11 +78,7 @@
 
 - (void)userCardView1UpdateLayout:(BOOL)isExpanding {
     if (self.userCardView2.isExpanding) {
-        [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-            make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-            make.leading.trailing.mas_equalTo(self.titleLabel1);
-        }];
+        [self updateUserCardView2Layout];
         [self.userCardView2 setIsExpanding:NO animated:YES];
     }
     [UIView animateWithDuration:0.25 animations:^{
@@ -104,13 +100,17 @@
             }];
         } else {
             self.titleLabel2.alpha = 1;
-            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-                make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-                make.leading.trailing.mas_equalTo(self.titleLabel1);
-            }];
+            [self updateUserCardView2Layout];
         }
         [self.scrollView layoutIfNeeded];
+    }];
+}
+
+- (void)updateUserCardView2Layout {
+    [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+        make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 }
 
