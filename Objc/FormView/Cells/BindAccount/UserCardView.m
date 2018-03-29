@@ -33,26 +33,32 @@
 
 @property (nonatomic, strong) BindStatusView *bindStatusView;
 
+@property (nonatomic, strong) MASConstraint *bottomConstraint;
+
 @end
 
 @implementation UserCardView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        
+        self.backgroundColor = [UIColor greenColor];
 
         [self addSubview:self.wrapperView];
         [self.wrapperView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(0);
+            make.top.leading.trailing.mas_equalTo(0);
+            self.bottomConstraint = make.bottom.mas_equalTo(0);
+            make.height.mas_equalTo(100);
         }];
-        
-        [self addSubview:self.avatarView];
+
+        [self.wrapperView addSubview:self.avatarView];
         [self.avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.mas_equalTo(64);
             make.centerY.mas_equalTo(0);
             make.leading.mas_equalTo(25);
         }];
         
-        [self addSubview:self.bindStatusLabel];
+        [self.wrapperView addSubview:self.bindStatusLabel];
         [self.bindStatusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.trailing.mas_equalTo(-10);
             make.top.mas_equalTo(18);
@@ -71,18 +77,17 @@
         stackView.distribution = UIStackViewDistributionFillEqually;
         stackView.axis = UILayoutConstraintAxisVertical;
         stackView.alignment = UIStackViewAlignmentLeading;
-        [self addSubview:stackView];
+        [self.wrapperView addSubview:stackView];
         [stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.avatarView);
             make.centerY.mas_equalTo(0);
             make.leading.mas_equalTo(self.avatarView.mas_trailing).offset(20);
         }];
-        
+
         [self insertSubview:self.bindStatusView atIndex:0];
         [self.bindStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.centerX.mas_equalTo(0);
+            make.top.bottom.centerX.mas_equalTo(self.wrapperView);
             make.leading.mas_equalTo(8);
-            make.height.mas_equalTo(self);
         }];
     }
     return self;
@@ -130,28 +135,33 @@
 
 - (void)bindStatusViewUpdateLayout:(BOOL)isSelect {
     [UIView animateWithDuration:0.25 animations:^{
-        if (isSelect) {
-            [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.mas_bottom).offset(-10);
-                make.centerX.mas_equalTo(0);
-                make.leading.mas_equalTo(8);
-            }];
-        } else {
-            [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.centerX.mas_equalTo(0);
-                make.leading.mas_equalTo(8);
-                make.height.mas_equalTo(self);
-            }];
-        }
+        [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.mas_equalTo(0);
+            make.leading.mas_equalTo(8);
+            if (isSelect) {
+                make.bottom.mas_equalTo(0);
+                make.top.mas_equalTo(self.wrapperView.mas_bottom).offset(-10);
+                [self.bottomConstraint deactivate];
+            } else {
+                [self.bottomConstraint activate];
+                make.top.bottom.mas_equalTo(self.wrapperView);
+            }
+        }];
         [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        if ([self.delegate respondsToSelector:@selector(userCardView:didTransform:)]) {
+            [self.delegate userCardView:self didTransform:self.isExpanding];
+        }
     }];
 }
 
 #pragma mark - Action
 - (void)showAccountBindStatus:(UIButton *)sender {
     sender.selected = !sender.isSelected;
+    if ([self.delegate respondsToSelector:@selector(userCardView:willTransform:)]) {
+        [self.delegate userCardView:self willTransform:sender.isSelected];
+    }
     [self bindStatusViewUpdateLayout:sender.isSelected];
-//    [self.delegate userCardView:self didSelect:sender.isSelected];
 }
 
 - (UIView *)wrapperView {

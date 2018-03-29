@@ -53,7 +53,6 @@
     [self.scrollView addSubview:self.userCardView1];
     [self.userCardView1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(titleLabel1.mas_bottom).offset(20);
-        make.height.mas_equalTo(100);
         make.leading.trailing.mas_equalTo(titleLabel1);
     }];
 
@@ -71,13 +70,36 @@
     [self.scrollView addSubview:self.userCardView2];
     [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-        make.height.mas_equalTo(100);
         make.leading.trailing.mas_equalTo(titleLabel1);
     }];
 }
 
+- (void)userCardView2UpdateLayout:(BOOL)isExpanding {
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+            if (isExpanding) {
+                make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(20);
+            } else {
+                make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+            }
+//            make.height.mas_equalTo(100);
+            make.leading.trailing.mas_equalTo(self.userCardView1);
+        }];
+        [self.scrollView layoutIfNeeded];
+    }];
+}
 
-- (void)userCardView:(UserCardView *)userCardView didSelect:(BOOL)isSelect {
+- (void)userCardView1UpdateLayout:(BOOL)isExpanding {
+    
+}
+
+- (void)userCardView:(UserCardView *)userCardView willTransform:(BOOL)isExpanding {
+    if (userCardView == self.userCardView1) {
+        [self userCardView1UpdateLayout:isExpanding];
+    } else {
+        [self userCardView2UpdateLayout:isExpanding];
+    }
+    
     
 }
 

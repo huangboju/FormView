@@ -12,7 +12,11 @@
 
 @protocol UserCardViewActionable <NSObject>
 
-- (void)userCardView:(UserCardView *)userCardView didSelect:(BOOL)isSelect;
+@optional
+
+- (void)userCardView:(UserCardView *)userCardView willTransform:(BOOL)isExpanding;
+
+- (void)userCardView:(UserCardView *)userCardView didTransform:(BOOL)isExpanding;
 
 @end
 

@@ -32,7 +32,7 @@
         [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.mas_equalTo(20);
             make.top.mas_equalTo(25);
-            make.bottom.mas_equalTo(-15);
+            make.bottom.mas_equalTo(-15).priorityHigh();
             make.centerY.mas_equalTo(0).priorityLow();
         }];
     }
