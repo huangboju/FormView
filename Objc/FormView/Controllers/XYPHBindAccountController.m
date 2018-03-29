@@ -23,6 +23,8 @@
 
 @property (nonatomic, strong) UserCardView *userCardView2;
 
+@property (nonatomic, strong) UILabel *titleLabel1;
+
 @property (nonatomic, strong) UILabel *titleLabel2;
 
 @end
@@ -38,9 +40,9 @@
         make.bottom.mas_equalTo(-100);
     }];
     
-    UILabel *titleLabel1 = [BindAccountUIGenerator titleLabelWithTitle:@"你的手机号+86 18369956251 已被下方账号绑定"];
-    [self.scrollView addSubview:titleLabel1];
-    [titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.titleLabel1 = [BindAccountUIGenerator titleLabelWithTitle:@"你的手机号+86 18369956251 已被下方账号绑定"];
+    [self.scrollView addSubview:self.titleLabel1];
+    [self.titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(40);
         make.leading.mas_equalTo(38);
         make.centerX.mas_equalTo(0);
@@ -52,8 +54,8 @@
     self.userCardView1.delegate = self;
     [self.scrollView addSubview:self.userCardView1];
     [self.userCardView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(titleLabel1.mas_bottom).offset(20);
-        make.leading.trailing.mas_equalTo(titleLabel1);
+        make.top.mas_equalTo(self.titleLabel1.mas_bottom).offset(20);
+        make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 
     self.titleLabel2 = [BindAccountUIGenerator titleLabelWithTitle:@"是否换绑至当前登录的账号"];
@@ -70,37 +72,52 @@
     [self.scrollView addSubview:self.userCardView2];
     [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-        make.leading.trailing.mas_equalTo(titleLabel1);
+        make.leading.trailing.mas_equalTo(self.titleLabel1);
+    }];
+}
+
+- (void)userCardView1UpdateLayout:(BOOL)isExpanding {
+    [UIView animateWithDuration:0.25 animations:^{
+        if (isExpanding) {
+            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.leading.trailing.mas_equalTo(self.titleLabel1);
+            }];
+        } else {
+            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+                make.leading.trailing.mas_equalTo(self.titleLabel1);
+            }];
+        }
+        
+        [self.scrollView layoutIfNeeded];
     }];
 }
 
 - (void)userCardView2UpdateLayout:(BOOL)isExpanding {
     [UIView animateWithDuration:0.25 animations:^{
-        [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-            if (isExpanding) {
-                make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(20);
-            } else {
+        if (isExpanding) {
+            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.leading.trailing.mas_equalTo(self.titleLabel1);
+            }];
+        } else {
+            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-            }
-//            make.height.mas_equalTo(100);
-            make.leading.trailing.mas_equalTo(self.userCardView1);
-        }];
+                make.top.mas_greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.leading.trailing.mas_equalTo(self.titleLabel1);
+            }];
+        }
         [self.scrollView layoutIfNeeded];
     }];
 }
 
-- (void)userCardView1UpdateLayout:(BOOL)isExpanding {
-    
-}
-
-- (void)userCardView:(UserCardView *)userCardView willTransform:(BOOL)isExpanding {
+- (void)userCardView:(UserCardView *)userCardView didTransform:(BOOL)isExpanding {
     if (userCardView == self.userCardView1) {
         [self userCardView1UpdateLayout:isExpanding];
     } else {
         [self userCardView2UpdateLayout:isExpanding];
     }
-    
-    
 }
 
 

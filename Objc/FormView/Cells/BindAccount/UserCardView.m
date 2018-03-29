@@ -31,9 +31,7 @@
 
 @property (nonatomic, strong) UIButton *bindStatusButton;
 
-@property (nonatomic, strong) BindStatusView *bindStatusView;
-
-@property (nonatomic, strong) MASConstraint *bottomConstraint;
+@property (nonatomic, strong, readwrite) BindStatusView *bindStatusView;
 
 @end
 
@@ -46,8 +44,7 @@
 
         [self addSubview:self.wrapperView];
         [self.wrapperView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.leading.trailing.mas_equalTo(0);
-            self.bottomConstraint = make.bottom.mas_equalTo(0);
+            make.edges.mas_equalTo(0);
             make.height.mas_equalTo(100);
         }];
 
@@ -133,22 +130,18 @@
     [self.bindStatusView updateViewData:items];
 }
 
-- (void)bindStatusViewUpdateLayout:(BOOL)isSelect {
+- (void)bindStatusViewUpdateLayout:(BOOL)isExpanding {
     [UIView animateWithDuration:0.25 animations:^{
         [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(0);
             make.leading.mas_equalTo(8);
-            if (isSelect) {
-                make.bottom.mas_equalTo(0);
+            if (isExpanding) {
                 make.top.mas_equalTo(self.wrapperView.mas_bottom).offset(-10);
-                [self.bottomConstraint deactivate];
             } else {
-                [self.bottomConstraint activate];
                 make.top.bottom.mas_equalTo(self.wrapperView);
             }
         }];
         [self layoutIfNeeded];
-    } completion:^(BOOL finished) {
         if ([self.delegate respondsToSelector:@selector(userCardView:didTransform:)]) {
             [self.delegate userCardView:self didTransform:self.isExpanding];
         }

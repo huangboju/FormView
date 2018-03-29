@@ -22,7 +22,11 @@
 
 @class UserCardCellItem;
 
+@class BindStatusView;
+
 @interface UserCardView : UIView
+
+@property (nonatomic, strong, readonly) BindStatusView *bindStatusView;
 
 @property (nonatomic, weak) id <UserCardViewActionable> delegate;
 
