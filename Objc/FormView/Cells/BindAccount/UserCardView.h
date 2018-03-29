@@ -34,5 +34,6 @@
 
 - (void)updateViewData:(UserCardCellItem *)viewData;
 
+- (void)setIsExpanding:(BOOL)isExpanding animated:(BOOL)animated;
 
 @end

@@ -77,6 +77,9 @@
 }
 
 - (void)userCardView1UpdateLayout:(BOOL)isExpanding {
+    if (self.userCardView2.isExpanding) {
+        [self.userCardView2 setIsExpanding:NO animated:YES];
+    }
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -95,6 +98,9 @@
 }
 
 - (void)userCardView2UpdateLayout:(BOOL)isExpanding {
+    if (self.userCardView1.isExpanding) {
+        [self.userCardView1 setIsExpanding:NO animated:YES];
+    }
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {

@@ -94,6 +94,14 @@
     return self.bindStatusButton.isSelected;
 }
 
+- (void)setIsExpanding:(BOOL)isExpanding animated:(BOOL)animated {
+    if (isExpanding == self.isExpanding) {
+        return;
+    }
+    self.bindStatusButton.selected = isExpanding;
+    [self bindStatusViewUpdateLayout:isExpanding animated:animated];
+}
+
 - (void)updateViewData:(UserCardCellItem *)viewData {
     
     UIColor *bindStatusLabelColor;
@@ -130,8 +138,8 @@
     [self.bindStatusView updateViewData:items];
 }
 
-- (void)bindStatusViewUpdateLayout:(BOOL)isExpanding {
-    [UIView animateWithDuration:0.25 animations:^{
+- (void)bindStatusViewUpdateLayout:(BOOL)isExpanding animated:(BOOL)animated {
+    void (^animations)(void) = ^{
         [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(0);
             make.leading.mas_equalTo(8);
@@ -142,10 +150,12 @@
             }
         }];
         [self layoutIfNeeded];
-        if ([self.delegate respondsToSelector:@selector(userCardView:didTransform:)]) {
-            [self.delegate userCardView:self didTransform:self.isExpanding];
-        }
-    }];
+    };
+    if (animated) {
+        [UIView animateWithDuration:0.25 animations:animations];
+    } else {
+        animations();
+    }
 }
 
 #pragma mark - Action
@@ -154,7 +164,10 @@
     if ([self.delegate respondsToSelector:@selector(userCardView:willTransform:)]) {
         [self.delegate userCardView:self willTransform:sender.isSelected];
     }
-    [self bindStatusViewUpdateLayout:sender.isSelected];
+    [self bindStatusViewUpdateLayout:sender.isSelected animated:YES];
+    if ([self.delegate respondsToSelector:@selector(userCardView:didTransform:)]) {
+        [self.delegate userCardView:self didTransform:self.isExpanding];
+    }
 }
 
 - (UIView *)wrapperView {
