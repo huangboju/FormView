@@ -83,15 +83,9 @@
     }
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
-            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-                make.leading.trailing.mas_equalTo(self.titleLabel1);
-            }];
+            self.titleLabel2.alpha = 0;
         } else {
-            [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-                make.leading.trailing.mas_equalTo(self.titleLabel1);
-            }];
+            self.titleLabel2.alpha = 1;
         }
         
         [self.scrollView layoutIfNeeded];
