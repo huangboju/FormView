@@ -72,6 +72,7 @@
     [self.scrollView addSubview:self.userCardView2];
     [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
         make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 }
