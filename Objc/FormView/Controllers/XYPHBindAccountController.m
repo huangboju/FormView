@@ -25,9 +25,9 @@
 
 @property (nonatomic, strong) UserCardView *userCardView2;
 
-@property (nonatomic, strong) TitleView *titleLabel1;
+@property (nonatomic, strong) TitleView *titleView1;
 
-@property (nonatomic, strong) TitleView *titleLabel2;
+@property (nonatomic, strong) TitleView *titleView2;
 
 @end
 
@@ -43,10 +43,10 @@
     }];
     
     
-    self.titleLabel1 = [TitleView new];
-    self.titleLabel1.text = @"你的手机号+86 18369956251 已被下方账号绑定";
-    [self.scrollView addSubview:self.titleLabel1];
-    [self.titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.titleView1 = [TitleView new];
+    self.titleView1.text = @"你的手机号+86 18369956251 已被下方账号绑定";
+    [self.scrollView addSubview:self.titleView1];
+    [self.titleView1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(0);
         make.leading.mas_equalTo(38);
         make.centerX.mas_equalTo(0);
@@ -58,16 +58,16 @@
     self.userCardView1.delegate = self;
     [self.scrollView addSubview:self.userCardView1];
     [self.userCardView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel1.mas_bottom);
-        make.leading.trailing.mas_equalTo(self.titleLabel1);
+        make.top.mas_equalTo(self.titleView1.mas_bottom);
+        make.leading.trailing.mas_equalTo(self.titleView1);
     }];
 
-    self.titleLabel2 = [TitleView new];
-    self.titleLabel2.text = @"是否换绑至当前登录的账号";
-    [self.scrollView insertSubview:self.titleLabel2 belowSubview:self.userCardView1];
-    [self.titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.titleView2 = [TitleView new];
+    self.titleView2.text = @"是否换绑至当前登录的账号";
+    [self.scrollView insertSubview:self.titleView2 belowSubview:self.userCardView1];
+    [self.titleView2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.userCardView1.mas_bottom);
-        make.leading.trailing.mas_equalTo(self.titleLabel1);
+        make.leading.trailing.mas_equalTo(self.titleView1);
     }];
 
     UserCardCellItem *card2Item = [UserCardCellItem new];
@@ -75,9 +75,9 @@
     self.userCardView2.delegate = self;
     [self.scrollView addSubview:self.userCardView2];
     [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel2.mas_bottom);
-        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom);
-        make.leading.trailing.mas_equalTo(self.titleLabel1);
+        make.top.mas_equalTo(self.titleView2.titleLabel.mas_bottom);
+        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+        make.leading.trailing.mas_equalTo(self.titleView1);
     }];
 }
 
@@ -87,7 +87,7 @@
         [self.userCardView2 setIsExpanding:NO animated:YES];
     }
     [UIView animateWithDuration:0.25 animations:^{
-        self.titleLabel2.alpha = isExpanding ? 0 : 1;
+        self.titleView2.alpha = isExpanding ? 0 : 1;
         [self.scrollView layoutIfNeeded];
     }];
 }
@@ -98,13 +98,13 @@
     }
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
-            self.titleLabel2.alpha = 0;
+            self.titleView2.alpha = 0;
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
                 make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-                make.leading.trailing.mas_equalTo(self.titleLabel1);
+                make.leading.trailing.mas_equalTo(self.titleView1);
             }];
         } else {
-            self.titleLabel2.alpha = 1;
+            self.titleView2.alpha = 1;
             [self updateUserCardView2Layout];
         }
         [self.scrollView layoutIfNeeded];
@@ -113,9 +113,9 @@
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel2.mas_bottom);
+        make.top.mas_equalTo(self.titleView2.mas_bottom);
         make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-        make.leading.trailing.mas_equalTo(self.titleLabel1);
+        make.leading.trailing.mas_equalTo(self.titleView1);
     }];
 }
 
