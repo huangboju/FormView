@@ -74,11 +74,7 @@
     self.userCardView2 = [BindAccountUIGenerator userCardViewWithItem:card2Item];
     self.userCardView2.delegate = self;
     [self.scrollView addSubview:self.userCardView2];
-    [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleView2.titleLabel.mas_bottom);
-        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-        make.leading.trailing.mas_equalTo(self.titleView1);
-    }];
+    [self updateUserCardView2Layout];
 }
 
 - (void)userCardView1UpdateLayout:(BOOL)isExpanding {
@@ -113,7 +109,7 @@
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleView2.mas_bottom);
+        make.top.mas_equalTo(self.titleView2.mas_bottom).priorityLow();
         make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
         make.leading.trailing.mas_equalTo(self.titleView1);
     }];
