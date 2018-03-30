@@ -14,6 +14,8 @@
 
 #import "UserCardCellItem.h"
 
+#import "TitleView.h"
+
 
 @interface XYPHBindAccountController () <UserCardViewActionable>
 
@@ -23,9 +25,9 @@
 
 @property (nonatomic, strong) UserCardView *userCardView2;
 
-@property (nonatomic, strong) UILabel *titleLabel1;
+@property (nonatomic, strong) TitleView *titleLabel1;
 
-@property (nonatomic, strong) UILabel *titleLabel2;
+@property (nonatomic, strong) TitleView *titleLabel2;
 
 @end
 
@@ -40,10 +42,12 @@
         make.bottom.mas_equalTo(-100);
     }];
     
-    self.titleLabel1 = [BindAccountUIGenerator titleLabelWithTitle:@"你的手机号+86 18369956251 已被下方账号绑定"];
+    
+    self.titleLabel1 = [TitleView new];
+    self.titleLabel1.text = @"你的手机号+86 18369956251 已被下方账号绑定";
     [self.scrollView addSubview:self.titleLabel1];
     [self.titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(40);
+        make.top.mas_equalTo(0);
         make.leading.mas_equalTo(38);
         make.centerX.mas_equalTo(0);
     }];
@@ -54,14 +58,15 @@
     self.userCardView1.delegate = self;
     [self.scrollView addSubview:self.userCardView1];
     [self.userCardView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel1.mas_bottom).offset(20);
+        make.top.mas_equalTo(self.titleLabel1.mas_bottom);
         make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 
-    self.titleLabel2 = [BindAccountUIGenerator titleLabelWithTitle:@"是否换绑至当前登录的账号"];
+    self.titleLabel2 = [TitleView new];
+    self.titleLabel2.text = @"是否换绑至当前登录的账号";
     [self.scrollView insertSubview:self.titleLabel2 belowSubview:self.userCardView1];
     [self.titleLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(40);
+        make.top.mas_equalTo(self.userCardView1.mas_bottom);
         make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 
@@ -70,8 +75,8 @@
     self.userCardView2.delegate = self;
     [self.scrollView addSubview:self.userCardView2];
     [self.userCardView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
-        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+        make.top.mas_equalTo(self.titleLabel2.mas_bottom);
+        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom);
         make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];
 }
@@ -108,7 +113,7 @@
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLabel2.mas_bottom).offset(20);
+        make.top.mas_equalTo(self.titleLabel2.mas_bottom);
         make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
         make.leading.trailing.mas_equalTo(self.titleLabel1);
     }];

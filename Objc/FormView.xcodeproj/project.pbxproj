@@ -68,6 +68,7 @@
 		F7144804206A300100405838 /* TitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144803206A300100405838 /* TitleCellItem.m */; };
 		F7144807206A32AF00405838 /* UserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* UserCardView.m */; };
 		F714480A206A33A500405838 /* UserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* UserCardCellItem.m */; };
+		F714480D206E047300405838 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* TitleView.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +212,8 @@
 		F7144806206A32AF00405838 /* UserCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCardView.m; sourceTree = "<group>"; };
 		F7144808206A33A500405838 /* UserCardCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserCardCellItem.h; sourceTree = "<group>"; };
 		F7144809206A33A500405838 /* UserCardCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserCardCellItem.m; sourceTree = "<group>"; };
+		F714480B206E047300405838 /* TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		F714480C206E047300405838 /* TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -519,6 +522,8 @@
 				BEC25B43206A40F300D0CEDA /* BindStatusView.m */,
 				BE5F0DD1206B34430061ED31 /* BindAccountUIGenerator.h */,
 				BE5F0DD2206B34430061ED31 /* BindAccountUIGenerator.m */,
+				F714480B206E047300405838 /* TitleView.h */,
+				F714480C206E047300405838 /* TitleView.m */,
 			);
 			path = BindAccount;
 			sourceTree = "<group>";
@@ -724,6 +729,7 @@
 				F7144807206A32AF00405838 /* UserCardView.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
+				F714480D206E047300405838 /* TitleView.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
 				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
