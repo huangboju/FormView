@@ -45,6 +45,7 @@ UIScrollViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.trailing.mas_equalTo(0);
@@ -124,7 +125,9 @@ UIScrollViewDelegate
         }
         [self.scrollView layoutIfNeeded];
         CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
-        self.scrollView.contentOffset = bottomOffset;
+        if (bottomOffset.y > 0) {
+            self.scrollView.contentOffset = bottomOffset;
+        }
     }];
 }
 

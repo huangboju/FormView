@@ -37,8 +37,13 @@
         [stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(25);
             make.width.mas_equalTo(280);
-            make.centerX.centerY.mas_equalTo(0);
+            make.centerX.mas_equalTo(0);
             make.height.mas_equalTo(103);
+            if ([UIScreen mainScreen].bounds.size.height == 812) {
+                make.bottom.mas_equalTo(-140);
+            } else {
+                make.bottom.mas_equalTo(-25);
+            }
         }];
     }
     return self;
