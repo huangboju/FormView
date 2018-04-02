@@ -107,8 +107,11 @@
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
             self.titleView2.alpha = 0;
+            [self.userCardView2.bindStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.mas_equalTo(self.scrollView).offset(-10);
+            }];
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-               make.bottom.mas_equalTo(self.scrollView).offset(-10); make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
                 make.centerX.mas_equalTo(0);
             }];
         } else {
