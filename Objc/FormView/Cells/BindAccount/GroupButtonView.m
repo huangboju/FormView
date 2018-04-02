@@ -36,7 +36,7 @@
         [self addSubview:stackView];
         [stackView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(25);
-            make.leading.mas_equalTo(48);
+            make.width.mas_equalTo(280);
             make.centerX.centerY.mas_equalTo(0);
             make.height.mas_equalTo(103);
         }];
