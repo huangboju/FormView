@@ -38,8 +38,6 @@ UIScrollViewDelegate
 
 @property (nonatomic, strong) GroupButtonView *groupButtonView;
 
-@property (nonatomic, assign) BOOL isClick;
-
 @end
 
 @implementation XYPHBindAccountController
@@ -104,6 +102,7 @@ UIScrollViewDelegate
     [UIView animateWithDuration:0.25 animations:^{
         self.titleView2.alpha = isExpanding ? 0 : 1;
         [self.scrollView layoutIfNeeded];
+        [self.scrollView.delegate scrollViewDidScroll:self.scrollView];
     }];
 }
 
@@ -124,7 +123,6 @@ UIScrollViewDelegate
             [self updateUserCardView2Layout];
         }
         [self.scrollView layoutIfNeeded];
-        self.isClick = YES;
         CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
         self.scrollView.contentOffset = bottomOffset;
     }];
@@ -142,10 +140,6 @@ UIScrollViewDelegate
 #pragma mark - UIScrollViewdelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.isClick) {
-        self.isClick = NO;
-        return;
-    }
     CGFloat offsetH = scrollView.contentSize.height - scrollView.frame.size.height;
     [self.groupButtonView setShowsShadow:scrollView.contentOffset.y < offsetH animated:YES];
 }
