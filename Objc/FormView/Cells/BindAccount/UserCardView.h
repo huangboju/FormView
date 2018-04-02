@@ -26,7 +26,7 @@
 
 @interface UserCardView : UIView
 
-@property (nonatomic, strong, readonly) BindStatusView *bindStatusView;
+@property (nonatomic, strong, readonly) UIView *wrapperView;
 
 @property (nonatomic, weak) id <UserCardViewActionable> delegate;
 

@@ -19,7 +19,7 @@
 
 @interface UserCardView()
 
-@property (nonatomic, strong) UIView *wrapperView;
+@property (nonatomic, strong, readwrite) UIView *wrapperView;
 
 @property (nonatomic, strong) UIImageView *avatarView;
 
@@ -31,7 +31,9 @@
 
 @property (nonatomic, strong) UIButton *bindStatusButton;
 
-@property (nonatomic, strong, readwrite) BindStatusView *bindStatusView;
+@property (nonatomic, strong) BindStatusView *bindStatusView;
+
+@property (nonatomic, strong) MASConstraint *bottomConstraint;
 
 @end
 
@@ -44,7 +46,8 @@
 
         [self addSubview:self.wrapperView];
         [self.wrapperView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(0);
+            make.leading.trailing.top.mas_equalTo(0);
+            self.bottomConstraint = make.bottom.mas_equalTo(0);
             make.width.mas_equalTo(300);
             make.height.mas_equalTo(100);
         }];
@@ -144,10 +147,13 @@
         [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(self.wrapperView);
             make.leading.mas_equalTo(self.wrapperView).offset(8);
+            make.bottom.mas_equalTo(0);
             if (isExpanding) {
+                [self.bottomConstraint deactivate];
                 make.top.mas_equalTo(self.wrapperView.mas_bottom).offset(-10);
             } else {
-                make.top.bottom.mas_equalTo(self.wrapperView);
+                make.top.mas_equalTo(self.wrapperView);
+                [self.bottomConstraint activate];
             }
         }];
         [self layoutIfNeeded];

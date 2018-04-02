@@ -78,7 +78,7 @@
     self.titleView2.text = @"是否换绑至当前登录的账号";
     [self.scrollView insertSubview:self.titleView2 belowSubview:self.userCardView1];
     [self.titleView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.userCardView1.mas_bottom);
+        make.top.mas_equalTo(self.userCardView1.wrapperView.mas_bottom);
         make.leading.trailing.mas_equalTo(self.titleView1);
     }];
 
@@ -107,11 +107,9 @@
     [UIView animateWithDuration:0.25 animations:^{
         if (isExpanding) {
             self.titleView2.alpha = 0;
-            [self.userCardView2.bindStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.mas_equalTo(self.scrollView).offset(-10);
-            }];
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+               make.bottom.mas_equalTo(self.scrollView).offset(-10);
+                make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(20);
                 make.centerX.mas_equalTo(0);
             }];
         } else {
@@ -124,9 +122,9 @@
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.titleView2.mas_bottom);
+        make.top.greaterThanOrEqualTo(self.userCardView1.mas_bottom).offset(20);
         make.bottom.mas_equalTo(self.scrollView).offset(-10);
-        make.top.mas_equalTo(self.titleView2.mas_bottom).priorityLow();
-        make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
         make.centerX.mas_equalTo(0);
     }];
 }
