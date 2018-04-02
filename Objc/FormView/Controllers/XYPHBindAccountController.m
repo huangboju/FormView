@@ -147,11 +147,7 @@ UIScrollViewDelegate
         return;
     }
     CGFloat offsetH = scrollView.contentSize.height - scrollView.frame.size.height;
-    if (scrollView.contentOffset.y < offsetH) {
-        [self.groupButtonView setShowsShadow:YES animated:YES];
-    } else {
-        [self.groupButtonView setShowsShadow:NO animated:YES];
-    }
+    [self.groupButtonView setShowsShadow:scrollView.contentOffset.y < offsetH animated:YES];
 }
 
 #pragma mark - UserCardViewActionable
