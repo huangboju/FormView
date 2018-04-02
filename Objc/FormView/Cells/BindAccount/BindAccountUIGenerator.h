@@ -16,10 +16,9 @@
 
 @interface BindAccountUIGenerator : NSObject
 
-+ (UILabel *)titleLabelWithTitle:(NSString *)title;
++ (UIButton *)darkButtonWithTitle:(NSString *)title;
 
 + (UserCardView *)userCardViewWithItem:(UserCardCellItem *)item;
 
-+ (BindStatusView *)bindStatusViewWithItem:(NSArray <BindStatusViewItem *>*)item;
 
 @end

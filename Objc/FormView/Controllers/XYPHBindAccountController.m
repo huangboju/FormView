@@ -16,8 +16,10 @@
 
 #import "TitleView.h"
 
+#import "GroupButtonView.h"
 
-@interface XYPHBindAccountController () <UserCardViewActionable>
+
+@interface XYPHBindAccountController () <UserCardViewActionable, GroupButtonViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
@@ -29,6 +31,8 @@
 
 @property (nonatomic, strong) TitleView *titleView2;
 
+@property (nonatomic, strong) GroupButtonView *groupButtonView;
+
 @end
 
 @implementation XYPHBindAccountController
@@ -39,27 +43,35 @@
     [self.view addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.leading.trailing.mas_equalTo(0);
-        make.bottom.mas_equalTo(-100);
+    }];
+    
+    [self.view addSubview:self.groupButtonView];
+    [self.groupButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.scrollView.mas_bottom);
+        make.bottom.leading.trailing.mas_equalTo(0);
     }];
     
     
     self.titleView1 = [TitleView new];
     self.titleView1.text = @"你的手机号+86 18369956251 已被下方账号绑定";
     [self.scrollView addSubview:self.titleView1];
-    [self.titleView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(0);
-        make.leading.mas_equalTo(38);
-        make.centerX.mas_equalTo(0);
-    }];
 
     UserCardCellItem *card1Item = [UserCardCellItem new];
     card1Item.isBinding = YES;
     self.userCardView1 = [BindAccountUIGenerator userCardViewWithItem:card1Item];
     self.userCardView1.delegate = self;
     [self.scrollView addSubview:self.userCardView1];
+    
+    [self.titleView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(0);
+        make.centerX.mas_equalTo(0);
+        make.leading.trailing.mas_equalTo(self.userCardView1);
+    }];
+
+    
     [self.userCardView1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleView1.mas_bottom);
-        make.leading.trailing.mas_equalTo(self.titleView1);
+        make.centerX.mas_equalTo(0);
     }];
 
     self.titleView2 = [TitleView new];
@@ -96,8 +108,8 @@
         if (isExpanding) {
             self.titleView2.alpha = 0;
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-                make.leading.trailing.mas_equalTo(self.titleView1);
+               make.bottom.mas_equalTo(self.scrollView).offset(-10); make.top.mas_equalTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
+                make.centerX.mas_equalTo(0);
             }];
         } else {
             self.titleView2.alpha = 1;
@@ -109,12 +121,14 @@
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.scrollView).offset(-10);
         make.top.mas_equalTo(self.titleView2.mas_bottom).priorityLow();
         make.top.greaterThanOrEqualTo(self.userCardView1.bindStatusView.mas_bottom).offset(20);
-        make.leading.trailing.mas_equalTo(self.titleView1);
+        make.centerX.mas_equalTo(0);
     }];
 }
 
+#pragma mark - UserCardViewActionable
 - (void)userCardView:(UserCardView *)userCardView didTransform:(BOOL)isExpanding {
     if (userCardView == self.userCardView1) {
         [self userCardView1UpdateLayout:isExpanding];
@@ -124,12 +138,30 @@
 }
 
 
+#pragma mark - GroupButtonViewDelegate
+
+- (void)groupButtonViewChangeBindingButtonClicked:(GroupButtonView *)searchBar {
+    
+}
+
+- (void)groupButtonViewUnchangeBindingBtnButtonClicked:(GroupButtonView *)searchBar {
+    
+}
+
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
         _scrollView = [UIScrollView new];
         _scrollView.backgroundColor = [UIColor whiteColor];
     }
     return _scrollView;
+}
+
+- (GroupButtonView *)groupButtonView {
+    if (!_groupButtonView) {
+        _groupButtonView = [GroupButtonView new];
+        _groupButtonView.delegate = self;
+    }
+    return _groupButtonView;
 }
 
 @end

@@ -45,6 +45,7 @@
         [self addSubview:self.wrapperView];
         [self.wrapperView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
+            make.width.mas_equalTo(300);
             make.height.mas_equalTo(100);
         }];
 
@@ -54,7 +55,7 @@
             make.centerY.mas_equalTo(0);
             make.leading.mas_equalTo(25);
         }];
-        
+
         [self.wrapperView addSubview:self.bindStatusLabel];
         [self.bindStatusLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.trailing.mas_equalTo(-10);
@@ -84,7 +85,7 @@
         [self insertSubview:self.bindStatusView atIndex:0];
         [self.bindStatusView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.bottom.centerX.mas_equalTo(self.wrapperView);
-            make.leading.mas_equalTo(8);
+            make.leading.mas_equalTo(self.wrapperView).offset(8);
         }];
     }
     return self;
@@ -141,8 +142,8 @@
 - (void)bindStatusViewUpdateLayout:(BOOL)isExpanding animated:(BOOL)animated {
     void (^animations)(void) = ^{
         [self.bindStatusView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.mas_equalTo(0);
-            make.leading.mas_equalTo(8);
+            make.centerX.mas_equalTo(self.wrapperView);
+            make.leading.mas_equalTo(self.wrapperView).offset(8);
             if (isExpanding) {
                 make.top.mas_equalTo(self.wrapperView.mas_bottom).offset(-10);
             } else {

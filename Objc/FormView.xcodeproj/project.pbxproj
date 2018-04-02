@@ -21,6 +21,7 @@
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
 		BE5F0DD3206B34430061ED31 /* BindAccountUIGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5F0DD2206B34430061ED31 /* BindAccountUIGenerator.m */; };
+		BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5F0DD8206E0DDF0061ED31 /* GroupButtonView.m */; };
 		BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */; };
 		BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697AB9200F1BDE009C6762 /* ScrollAnimationController.m */; };
 		BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE697AC0200F3821009C6762 /* XYPHResumeAnimationImageView.m */; };
@@ -120,6 +121,8 @@
 		BE4E0A7220037C97005FFD77 /* UIScrollView+XYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XYEmptyView.h"; sourceTree = "<group>"; };
 		BE5F0DD1206B34430061ED31 /* BindAccountUIGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindAccountUIGenerator.h; sourceTree = "<group>"; };
 		BE5F0DD2206B34430061ED31 /* BindAccountUIGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindAccountUIGenerator.m; sourceTree = "<group>"; };
+		BE5F0DD7206E0DDF0061ED31 /* GroupButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupButtonView.h; sourceTree = "<group>"; };
+		BE5F0DD8206E0DDF0061ED31 /* GroupButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupButtonView.m; sourceTree = "<group>"; };
 		BE697A93200DEDFB009C6762 /* ThirdPartButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartButtonCell.h; sourceTree = "<group>"; };
 		BE697A94200DEDFB009C6762 /* ThirdPartButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdPartButtonCell.m; sourceTree = "<group>"; };
 		BE697AB8200F1BDE009C6762 /* ScrollAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollAnimationController.h; sourceTree = "<group>"; };
@@ -524,6 +527,8 @@
 				BE5F0DD2206B34430061ED31 /* BindAccountUIGenerator.m */,
 				F714480B206E047300405838 /* TitleView.h */,
 				F714480C206E047300405838 /* TitleView.m */,
+				BE5F0DD7206E0DDF0061ED31 /* GroupButtonView.h */,
+				BE5F0DD8206E0DDF0061ED31 /* GroupButtonView.m */,
 			);
 			path = BindAccount;
 			sourceTree = "<group>";
@@ -756,6 +761,7 @@
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BE5F0DD3206B34430061ED31 /* BindAccountUIGenerator.m in Sources */,
 				F714480A206A33A500405838 /* UserCardCellItem.m in Sources */,
+				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
