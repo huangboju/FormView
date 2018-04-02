@@ -22,4 +22,6 @@
 
 @property (nonatomic, strong) id <GroupButtonViewDelegate> delegate;
 
+- (void)setShowsShadow:(BOOL)showsShadow animated:(BOOL)animated;
+
 @end

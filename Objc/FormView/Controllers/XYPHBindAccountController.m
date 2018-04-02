@@ -19,7 +19,12 @@
 #import "GroupButtonView.h"
 
 
-@interface XYPHBindAccountController () <UserCardViewActionable, GroupButtonViewDelegate>
+@interface XYPHBindAccountController ()
+<
+UserCardViewActionable,
+GroupButtonViewDelegate,
+UIScrollViewDelegate
+>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 
@@ -32,6 +37,8 @@
 @property (nonatomic, strong) TitleView *titleView2;
 
 @property (nonatomic, strong) GroupButtonView *groupButtonView;
+
+@property (nonatomic, assign) BOOL isClick;
 
 @end
 
@@ -117,8 +124,9 @@
             [self updateUserCardView2Layout];
         }
         [self.scrollView layoutIfNeeded];
+        self.isClick = YES;
         CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
-        [self.scrollView setContentOffset:bottomOffset animated:YES];
+        self.scrollView.contentOffset = bottomOffset;
     }];
 }
 
@@ -129,6 +137,21 @@
         make.bottom.mas_equalTo(self.scrollView).offset(-10);
         make.centerX.mas_equalTo(0);
     }];
+}
+
+#pragma mark - UIScrollViewdelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.isClick) {
+        self.isClick = NO;
+        return;
+    }
+    CGFloat offsetH = scrollView.contentSize.height - scrollView.frame.size.height;
+    if (scrollView.contentOffset.y < offsetH) {
+        [self.groupButtonView setShowsShadow:YES animated:YES];
+    } else {
+        [self.groupButtonView setShowsShadow:NO animated:YES];
+    }
 }
 
 #pragma mark - UserCardViewActionable
@@ -155,6 +178,7 @@
     if (!_scrollView) {
         _scrollView = [UIScrollView new];
         _scrollView.backgroundColor = [UIColor whiteColor];
+        _scrollView.delegate = self;
     }
     return _scrollView;
 }

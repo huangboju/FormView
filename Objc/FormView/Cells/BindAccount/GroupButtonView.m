@@ -27,6 +27,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
+        self.layer.backgroundColor = [UIColor whiteColor].CGColor;
+        
         FDStackView *stackView = [[FDStackView alloc] initWithArrangedSubviews:@[self.changeBindingBtn, self.unchangeBindingBtn]];
         stackView.spacing = 15;
         stackView.distribution = UIStackViewDistributionFillEqually;
@@ -53,6 +55,20 @@
 - (void)unchangeBindingBtnAction:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(groupButtonViewUnchangeBindingBtnButtonClicked:)]) {
         [self.delegate groupButtonViewUnchangeBindingBtnButtonClicked:self];
+    }
+}
+
+- (void)setShowsShadow:(BOOL)showsShadow animated:(BOOL)animated {
+    void (^animations)(void) = ^{
+        self.layer.backgroundColor = [UIColor whiteColor].CGColor;
+        self.layer.shadowColor = showsShadow ? [UIColor lightGrayColor].CGColor : [UIColor clearColor].CGColor;
+        self.layer.shadowOpacity = 0.8f;
+        self.layer.shadowOffset = CGSizeMake(0, -2);
+    };
+    if (animated) {
+        [UIView animateWithDuration:0.25 animations:animations];
+    } else {
+        animations();
     }
 }
 
