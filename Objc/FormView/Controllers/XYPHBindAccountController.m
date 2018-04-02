@@ -108,7 +108,7 @@
         if (isExpanding) {
             self.titleView2.alpha = 0;
             [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-               make.bottom.mas_equalTo(self.scrollView).offset(-10);
+                make.bottom.mas_equalTo(self.scrollView).offset(-10);
                 make.top.mas_equalTo(self.userCardView1.mas_bottom).offset(20);
                 make.centerX.mas_equalTo(0);
             }];
@@ -117,12 +117,14 @@
             [self updateUserCardView2Layout];
         }
         [self.scrollView layoutIfNeeded];
+        CGPoint bottomOffset = CGPointMake(0, self.scrollView.contentSize.height - self.scrollView.bounds.size.height);
+        [self.scrollView setContentOffset:bottomOffset animated:YES];
     }];
 }
 
 - (void)updateUserCardView2Layout {
     [self.userCardView2 mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleView2.mas_bottom);
+        make.top.mas_equalTo(self.titleView2.mas_bottom).priorityLow();
         make.top.greaterThanOrEqualTo(self.userCardView1.mas_bottom).offset(20);
         make.bottom.mas_equalTo(self.scrollView).offset(-10);
         make.centerX.mas_equalTo(0);
