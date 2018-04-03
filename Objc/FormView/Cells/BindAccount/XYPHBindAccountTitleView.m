@@ -6,17 +6,17 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "TitleView.h"
+#import "XYPHBindAccountTitleView.h"
 
 #import <Masonry.h>
 
-@interface TitleView()
+@interface XYPHBindAccountTitleView()
 
 @property (nonatomic, strong, readwrite) UILabel *titleLabel;
 
 @end
 
-@implementation TitleView
+@implementation XYPHBindAccountTitleView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

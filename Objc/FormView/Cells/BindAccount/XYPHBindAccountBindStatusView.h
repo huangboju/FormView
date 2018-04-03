@@ -1,5 +1,5 @@
 //
-//  BindStatusView.h
+//  XYPHBindAccountBindStatusView.h
 //  FormView
 //
 //  Created by 黄伯驹 on 27/03/2018.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BindStatusViewItem : NSObject
+@interface XYPHBindAccountBindStatusViewItem : NSObject
 
 @property (nonatomic, copy) NSString *text;
 
@@ -16,8 +16,8 @@
 
 @end
 
-@interface BindStatusView : UIView
+@interface XYPHBindAccountBindStatusView : UIView
 
-- (void)updateViewData:(NSArray <BindStatusViewItem *>*)viewData;
+- (void)updateViewData:(NSArray <XYPHBindAccountBindStatusViewItem *>*)viewData;
 
 @end

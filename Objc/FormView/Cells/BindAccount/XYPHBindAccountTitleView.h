@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TitleView : UIView
+@interface XYPHBindAccountTitleView : UIView
 
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 

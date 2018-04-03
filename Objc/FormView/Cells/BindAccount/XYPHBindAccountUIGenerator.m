@@ -6,9 +6,9 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "BindAccountUIGenerator.h"
+#import "XYPHBindAccountUIGenerator.h"
 
-@implementation BindAccountUIGenerator
+@implementation XYPHBindAccountUIGenerator
 
 + (UIButton *)darkButtonWithTitle:(NSString *)title {
     UIButton *button = [UIButton new];
@@ -17,8 +17,8 @@
     return button;
 }
 
-+ (UserCardView *)userCardViewWithItem:(UserCardCellItem *)item {
-    UserCardView *userCardView = [UserCardView new];
++ (XYPHBindAccountUserCardView *)userCardViewWithItem:(XYPHBindAccountUserCardCellItem *)item {
+    XYPHBindAccountUserCardView *userCardView = [XYPHBindAccountUserCardView new];
     userCardView.backgroundColor = [UIColor whiteColor];
     userCardView.layer.cornerRadius = 4;
     [userCardView updateViewData:item];
