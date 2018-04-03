@@ -66,7 +66,7 @@
 		E6DF6E4E82C4BC9576528C70 /* libPods-FormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E506532FC8F130A03F1887D /* libPods-FormView.a */; };
 		F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */; };
 		F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F7142EF72060EB7E00BCDE8E /* MySearchBar.m */; };
-		F7144804206A300100405838 /* TitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144803206A300100405838 /* TitleCellItem.m */; };
+		F7144804206A300100405838 /* XYPHBindAccountTitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144803206A300100405838 /* XYPHBindAccountTitleCellItem.m */; };
 		F7144807206A32AF00405838 /* XYPHBindAccountUserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* XYPHBindAccountUserCardView.m */; };
 		F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */; };
 		F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* XYPHBindAccountTitleView.m */; };
@@ -209,8 +209,8 @@
 		F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBarController.m; sourceTree = "<group>"; };
 		F7142EF62060EB7E00BCDE8E /* MySearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySearchBar.h; sourceTree = "<group>"; };
 		F7142EF72060EB7E00BCDE8E /* MySearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySearchBar.m; sourceTree = "<group>"; };
-		F7144802206A300100405838 /* TitleCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCellItem.h; sourceTree = "<group>"; };
-		F7144803206A300100405838 /* TitleCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCellItem.m; sourceTree = "<group>"; };
+		F7144802206A300100405838 /* XYPHBindAccountTitleCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountTitleCellItem.h; sourceTree = "<group>"; };
+		F7144803206A300100405838 /* XYPHBindAccountTitleCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountTitleCellItem.m; sourceTree = "<group>"; };
 		F7144805206A32AF00405838 /* XYPHBindAccountUserCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountUserCardView.h; sourceTree = "<group>"; };
 		F7144806206A32AF00405838 /* XYPHBindAccountUserCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountUserCardView.m; sourceTree = "<group>"; };
 		F7144808206A33A500405838 /* XYPHBindAccountUserCardCellItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountUserCardCellItem.h; sourceTree = "<group>"; };
@@ -507,8 +507,8 @@
 		F7144801206A2FEC00405838 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F7144802206A300100405838 /* TitleCellItem.h */,
-				F7144803206A300100405838 /* TitleCellItem.m */,
+				F7144802206A300100405838 /* XYPHBindAccountTitleCellItem.h */,
+				F7144803206A300100405838 /* XYPHBindAccountTitleCellItem.m */,
 				F7144808206A33A500405838 /* XYPHBindAccountUserCardCellItem.h */,
 				F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */,
 			);
@@ -745,7 +745,7 @@
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
-				F7144804206A300100405838 /* TitleCellItem.m in Sources */,
+				F7144804206A300100405838 /* XYPHBindAccountTitleCellItem.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,

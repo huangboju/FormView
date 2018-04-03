@@ -8,7 +8,7 @@
 
 #import "AccountTitleCell.h"
 
-@implementation AccountTitleCellItem
+@implementation AccountXYPHBindAccountTitleCellItem
 
 @end
 
@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void)updateViewData:(AccountTitleCellItem *)viewData {
+- (void)updateViewData:(AccountXYPHBindAccountTitleCellItem *)viewData {
     self.textLabel.text = viewData.text;
 }
 

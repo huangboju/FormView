@@ -1,5 +1,5 @@
 //
-//  TitleCellItem.h
+//  XYPHBindAccountTitleCellItem.h
 //  FormView
 //
 //  Created by xiAo_Ju on 27/03/2018.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TitleCellItem : NSObject
+@interface XYPHBindAccountTitleCellItem : NSObject
 
 @property (nonatomic, copy)  NSString *title;
 

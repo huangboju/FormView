@@ -24,8 +24,8 @@
     AccountCellItem *accountItem = [[AccountCellItem alloc] init];
     accountItem.placeholder = @"请输入登录账号";
 
-    AccountTitleCellItem *accountTitleCellItem = [[AccountTitleCellItem alloc] init];
-    accountTitleCellItem.text = @"Password SignIn";
+    AccountXYPHBindAccountTitleCellItem *accountXYPHBindAccountTitleCellItem = [[AccountXYPHBindAccountTitleCellItem alloc] init];
+    accountXYPHBindAccountTitleCellItem.text = @"Password SignIn";
 
     ButtonCellItem *buttonCellItem = [[ButtonCellItem alloc] init];
     buttonCellItem.title = @"登录";
@@ -35,7 +35,7 @@
 
     self.form = @[
                   @[
-                      [[Row alloc] initWithClass:[AccountTitleCell class] model:accountTitleCellItem],
+                      [[Row alloc] initWithClass:[AccountTitleCell class] model:accountXYPHBindAccountTitleCellItem],
                       [[Row alloc] initWithClass:[AccountFieldCell class] model:accountItem],
                       [[Row alloc] initWithClass:[PasswordFieldCell class] model:passwordCellItem],
                       [[Row alloc] initWithClass:[ButtonCell class] model:buttonCellItem],
