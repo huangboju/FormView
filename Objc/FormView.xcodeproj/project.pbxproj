@@ -70,7 +70,7 @@
 		F7144807206A32AF00405838 /* XYPHBindAccountUserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* XYPHBindAccountUserCardView.m */; };
 		F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */; };
 		F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* XYPHBindAccountTitleView.m */; };
-		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */; };
+		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,8 +217,8 @@
 		F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountUserCardCellItem.m; sourceTree = "<group>"; };
 		F714480B206E047300405838 /* XYPHBindAccountTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountTitleView.h; sourceTree = "<group>"; };
 		F714480C206E047300405838 /* XYPHBindAccountTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountTitleView.m; sourceTree = "<group>"; };
-		F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountController.h; sourceTree = "<group>"; };
-		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountController.m; sourceTree = "<group>"; };
+		F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountFailureController.h; sourceTree = "<group>"; };
+		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountFailureController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,8 +361,8 @@
 				BEC43FAF20468F4400D46770 /* StateMachineController.m */,
 				F7142EF02060B25000BCDE8E /* CustomSearchBarController.h */,
 				F7142EF12060B25000BCDE8E /* CustomSearchBarController.m */,
-				F7BC37192064DB7A009D3B22 /* XYPHBindAccountController.h */,
-				F7BC371A2064DB7A009D3B22 /* XYPHBindAccountController.m */,
+				F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */,
+				F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -755,7 +755,7 @@
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
 				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
-				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountController.m in Sources */,
+				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,

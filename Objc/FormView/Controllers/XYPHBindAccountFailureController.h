@@ -6,8 +6,8 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "XYPHGroupTableController.h"
+#import <UIKit/UIKit.h>
 
-@interface XYPHBindAccountController : UIViewController
+@interface XYPHBindAccountFailureController : UIViewController
 
 @end

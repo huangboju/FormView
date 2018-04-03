@@ -20,7 +20,7 @@
 #import "InputBarController.h"
 #import "StateMachineController.h"
 #import "TimerController.h"
-#import "XYPHBindAccountController.h"
+#import "XYPHBindAccountFailureController.h"
 
 #import "IntroController.h"
 #import "XYPHPhoneZonesVC.h"
@@ -76,7 +76,7 @@
                              [CustomSearchBarController class]
                              ],
                          @[
-                             [XYPHBindAccountController class]
+                             [XYPHBindAccountFailureController class]
                              ]
                          ];
 

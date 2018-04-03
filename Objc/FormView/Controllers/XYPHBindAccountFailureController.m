@@ -6,7 +6,7 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "XYPHBindAccountController.h"
+#import "XYPHBindAccountFailureController.h"
 
 #import <Masonry.h>
 
@@ -19,7 +19,7 @@
 #import "GroupButtonView.h"
 
 
-@interface XYPHBindAccountController ()
+@interface XYPHBindAccountFailureController ()
 <
 XYPHBindAccountUserCardViewActionable,
 GroupButtonViewDelegate,
@@ -40,7 +40,7 @@ UIScrollViewDelegate
 
 @end
 
-@implementation XYPHBindAccountController
+@implementation XYPHBindAccountFailureController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
