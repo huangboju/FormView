@@ -12,6 +12,8 @@
 
 #import <Masonry.h>
 
+#import <FDStackView.h>
+
 @interface ThirdPartButtonCell()
 
 @property (nonatomic, strong) UIButton *weiboButton;
@@ -35,49 +37,49 @@
                              self.facebookButton
                              ];
         
-            UIView *tmpView;
-            UIButton *tmpButton;
-            NSInteger index = 0;
-            for (UIButton *button in buttons) {
-                UIView *dummyView = [UIView new];
-                [self addSubview:dummyView];
-                [self addSubview:button];
-                if (index == 0) { // 第一个
-                    [dummyView mas_makeConstraints:^(MASConstraintMaker *make) {
-                        make.leading.mas_equalTo(0);
-                        make.trailing.mas_equalTo(button.mas_leading);
-                    }];
-                } else {
-                    [dummyView mas_makeConstraints:^(MASConstraintMaker *make) {
-                        make.leading.mas_equalTo(tmpButton.mas_trailing);
-                        make.trailing.mas_equalTo(button.mas_leading);
-                        make.width.mas_equalTo(tmpView.mas_width);
-                    }];
-                    // 最后一个
-                    if (index == buttons.count - 1) {
-                        UIView *lastDummyView = [UIView new];
-                        [self addSubview:lastDummyView];
-        
-                        [lastDummyView mas_makeConstraints:^(MASConstraintMaker *make) {
-                            make.width.mas_equalTo(tmpView.mas_width);
-                            make.trailing.mas_equalTo(0);
-                            make.leading.mas_equalTo(button.mas_trailing);
-                        }];
-                    }
-                }
-                BOOL isIPHONEX = [UIScreen mainScreen].bounds.size.height == 812;
-                [button mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.top.mas_equalTo(20);
-                    if (isIPHONEX) {
-                        make.bottom.mas_equalTo(-54);
-                    } else {
-                        make.bottom.mas_equalTo(-20);
-                    }
+        UIView *tmpView;
+        UIButton *tmpButton;
+        NSInteger index = 0;
+        for (UIButton *button in buttons) {
+            UIView *dummyView = [UIView new];
+            [self addSubview:dummyView];
+            [self addSubview:button];
+            if (index == 0) { // 第一个
+                [dummyView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.leading.mas_equalTo(0);
+                    make.trailing.mas_equalTo(button.mas_leading);
                 }];
-                tmpButton = button;
-                tmpView = dummyView;
-                index += 1;
+            } else {
+                [dummyView mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.leading.mas_equalTo(tmpButton.mas_trailing);
+                    make.trailing.mas_equalTo(button.mas_leading);
+                    make.width.mas_equalTo(tmpView.mas_width);
+                }];
+                // 最后一个
+                if (index == buttons.count - 1) {
+                    UIView *lastDummyView = [UIView new];
+                    [self addSubview:lastDummyView];
+                    
+                    [lastDummyView mas_makeConstraints:^(MASConstraintMaker *make) {
+                        make.width.mas_equalTo(tmpView.mas_width);
+                        make.trailing.mas_equalTo(0);
+                        make.leading.mas_equalTo(button.mas_trailing);
+                    }];
+                }
             }
+            BOOL isIPHONEX = [UIScreen mainScreen].bounds.size.height == 812;
+            [button mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.mas_equalTo(20);
+                if (isIPHONEX) {
+                    make.bottom.mas_equalTo(-54);
+                } else {
+                    make.bottom.mas_equalTo(-20);
+                }
+            }];
+            tmpButton = button;
+            tmpView = dummyView;
+            index += 1;
+        }
     }
     return self;
 }
