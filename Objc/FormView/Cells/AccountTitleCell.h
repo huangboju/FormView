@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Row.h"
 
-@interface AccountTitleCellItem : NSObject
+@interface AccountXYPHBindAccountTitleCellItem : NSObject
 
 @property(nonatomic, copy)  NSString *text;
 

@@ -1,12 +1,12 @@
 //
-//  BindStatusView.m
+//  XYPHBindAccountBindStatusView.m
 //  FormView
 //
 //  Created by 黄伯驹 on 27/03/2018.
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "BindStatusView.h"
+#import "XYPHBindAccountBindStatusView.h"
 
 #import <FDStackView.h>
 
@@ -14,17 +14,17 @@
 
 #import "ImageTextView.h"
 
-@implementation BindStatusViewItem
+@implementation XYPHBindAccountBindStatusViewItem
 
 @end
 
-@interface BindStatusView()
+@interface XYPHBindAccountBindStatusView()
 
 @property (nonatomic, strong) FDStackView *stackView;
 
 @end
 
-@implementation BindStatusView
+@implementation XYPHBindAccountBindStatusView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -50,8 +50,8 @@
     return _stackView;
 }
 
-- (void)updateViewData:(NSArray <BindStatusViewItem *>*)viewData {
-    for (BindStatusViewItem *item in viewData) {
+- (void)updateViewData:(NSArray <XYPHBindAccountBindStatusViewItem *>*)viewData {
+    for (XYPHBindAccountBindStatusViewItem *item in viewData) {
         ImageTextView *imageTextView = [ImageTextView new];
         imageTextView.textFont = [UIFont systemFontOfSize:11];
         imageTextView.text = item.text;

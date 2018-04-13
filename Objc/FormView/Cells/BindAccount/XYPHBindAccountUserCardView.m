@@ -1,23 +1,23 @@
 //
-//  UserCardView.m
+//  XYPHBindAccountUserCardView.m
 //  FormView
 //
 //  Created by xiAo_Ju on 27/03/2018.
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "UserCardView.h"
+#import "XYPHBindAccountUserCardView.h"
 
 #import "ImageTextView.h"
 
 #import <FDStackView.h>
 #import <Masonry.h>
 
-#import "UserCardCellItem.h"
+#import "XYPHBindAccountUserCardCellItem.h"
 
-#import "BindStatusView.h"
+#import "XYPHBindAccountBindStatusView.h"
 
-@interface UserCardView()
+@interface XYPHBindAccountUserCardView()
 
 @property (nonatomic, strong, readwrite) UIView *wrapperView;
 
@@ -31,13 +31,13 @@
 
 @property (nonatomic, strong) UIButton *bindStatusButton;
 
-@property (nonatomic, strong) BindStatusView *bindStatusView;
+@property (nonatomic, strong) XYPHBindAccountBindStatusView *bindStatusView;
 
 @property (nonatomic, strong) MASConstraint *bottomConstraint;
 
 @end
 
-@implementation UserCardView
+@implementation XYPHBindAccountUserCardView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -106,7 +106,7 @@
     [self bindStatusViewUpdateLayout:isExpanding animated:animated];
 }
 
-- (void)updateViewData:(UserCardCellItem *)viewData {
+- (void)updateViewData:(XYPHBindAccountUserCardCellItem *)viewData {
     
     UIColor *bindStatusLabelColor;
     
@@ -134,7 +134,7 @@
     
     NSMutableArray *items = [NSMutableArray array];
     for (NSString *icontype in icontypes) {
-        BindStatusViewItem *item = [BindStatusViewItem new];
+        XYPHBindAccountBindStatusViewItem *item = [XYPHBindAccountBindStatusViewItem new];
         item.text = icontype;
         item.socialType = icontype;
         [items addObject:item];
@@ -189,9 +189,9 @@
     return _wrapperView;
 }
 
-- (BindStatusView *)bindStatusView {
+- (XYPHBindAccountBindStatusView *)bindStatusView {
     if (!_bindStatusView) {
-        _bindStatusView = [BindStatusView new];
+        _bindStatusView = [XYPHBindAccountBindStatusView new];
         _bindStatusView.backgroundColor = [UIColor whiteColor];
         _bindStatusView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
         _bindStatusView.layer.cornerRadius = 4;

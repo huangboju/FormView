@@ -8,7 +8,7 @@
 
 #import "GroupButtonView.h"
 
-#import "BindAccountUIGenerator.h"
+#import "XYPHBindAccountUIGenerator.h"
 
 #import <FDStackView.h>
 
@@ -79,7 +79,7 @@
 
 - (UIButton *)changeBindingBtn {
     if (!_changeBindingBtn) {
-        _changeBindingBtn = [BindAccountUIGenerator darkButtonWithTitle:@"换绑"];
+        _changeBindingBtn = [XYPHBindAccountUIGenerator darkButtonWithTitle:@"换绑"];
         _changeBindingBtn.backgroundColor = [UIColor redColor];
         [_changeBindingBtn addTarget:self action:@selector(changeBindingBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -88,7 +88,7 @@
 
 - (UIButton *)unchangeBindingBtn {
     if (!_unchangeBindingBtn) {
-        _unchangeBindingBtn = [BindAccountUIGenerator darkButtonWithTitle:@"暂不换绑"];
+        _unchangeBindingBtn = [XYPHBindAccountUIGenerator darkButtonWithTitle:@"暂不换绑"];
         _unchangeBindingBtn.backgroundColor = [UIColor lightGrayColor];
         [_unchangeBindingBtn addTarget:self action:@selector(unchangeBindingBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     }

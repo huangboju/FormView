@@ -1,5 +1,5 @@
 //
-//  UserCardCellItem.h
+//  XYPHBindAccountUserCardCellItem.h
 //  FormView
 //
 //  Created by xiAo_Ju on 27/03/2018.
@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-
-@interface UserCardCellItem : NSObject
+@interface XYPHBindAccountUserCardCellItem : NSObject
 
 @property (nonatomic, copy)  NSString *nickName;
 
