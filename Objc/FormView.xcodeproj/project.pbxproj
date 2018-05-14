@@ -30,6 +30,7 @@
 		BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458A91FD544C4005D4D3A /* LicenseCell.m */; };
 		BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */; };
 		BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */; };
+		BE80D3EB20A99239001377F1 /* UIImage+Rounded.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80D3EA20A99239001377F1 /* UIImage+Rounded.m */; };
 		BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */; };
 		BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEE320561AE000FAC2E8 /* TimerClass.m */; };
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
@@ -142,6 +143,8 @@
 		BE7458AC1FD54BE8005D4D3A /* MessageCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterController.m; sourceTree = "<group>"; };
 		BE7458AE1FD54D1F005D4D3A /* MessageCenterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageCenterCell.h; sourceTree = "<group>"; };
 		BE7458AF1FD54D1F005D4D3A /* MessageCenterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageCenterCell.m; sourceTree = "<group>"; };
+		BE80D3E920A99239001377F1 /* UIImage+Rounded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rounded.h"; sourceTree = "<group>"; };
+		BE80D3EA20A99239001377F1 /* UIImage+Rounded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rounded.m"; sourceTree = "<group>"; };
 		BE8ECEDE20561AAF00FAC2E8 /* TimerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerController.h; sourceTree = "<group>"; };
 		BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerController.m; sourceTree = "<group>"; };
 		BE8ECEE220561AE000FAC2E8 /* TimerClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerClass.h; sourceTree = "<group>"; };
@@ -549,6 +552,8 @@
 				F7F2EEE220A95FD300CDFD7B /* Views */,
 				F7F2EEDF20A95F4400CDFD7B /* NewCardController.h */,
 				F7F2EEE020A95F4400CDFD7B /* NewCardController.m */,
+				BE80D3E920A99239001377F1 /* UIImage+Rounded.h */,
+				BE80D3EA20A99239001377F1 /* UIImage+Rounded.m */,
 			);
 			path = NewCard;
 			sourceTree = "<group>";
@@ -803,6 +808,7 @@
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
+				BE80D3EB20A99239001377F1 /* UIImage+Rounded.m in Sources */,
 				BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
