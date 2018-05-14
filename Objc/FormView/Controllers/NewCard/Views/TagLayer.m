@@ -71,17 +71,21 @@
     self.imageLayer.frame = rect;
 }
 
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+    self.textLayer.font = fontRef;
+    self.textLayer.fontSize = font.pointSize;
+    CGFontRelease(fontRef);
+}
+
 - (CATextLayer *)textLayer {
     if (!_textLayer) {
         _textLayer = [CATextLayer layer];
         _textLayer.truncationMode = kCATruncationEnd;
         _textLayer.contentsScale = [UIScreen mainScreen].scale;
         _textLayer.alignmentMode = kCAAlignmentCenter;
-        CFStringRef fontName = (__bridge CFStringRef)self.font.fontName;
-        CGFontRef fontRef = CGFontCreateWithFontName(fontName);
-        _textLayer.font = fontRef;
-        _textLayer.fontSize = self.font.pointSize;
-        CGFontRelease(fontRef);
     }
     return _textLayer;
 }
