@@ -43,11 +43,14 @@
 - (void)layoutSublayers {
     [super layoutSublayers];
 
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
     CGSize size = [self.text sizeWithAttributes:@{NSFontAttributeName: self.font}];
     CGFloat y = (self.bounds.size.height - size.height) / 2 - 1;
     size.width = MIN(size.width, self.maxWidth);
     CGRect rect = CGRectMake(CGRectGetMaxX(self.imageLayer.frame) + 6, y, size.width, size.height);
     self.textLayer.frame = rect;
+    [CATransaction commit];
 
     CGRect oldFrame = self.frame;
     oldFrame.size.width = CGRectGetMaxX(rect) + 10;
@@ -93,6 +96,7 @@
 - (CALayer *)imageLayer {
     if (!_imageLayer) {
         _imageLayer = [CALayer layer];
+        _imageLayer.contentsScale = [UIScreen mainScreen].scale;
         _imageLayer.frame = CGRectMake(4, 5, 14, 14);
     }
     return _imageLayer;

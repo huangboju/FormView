@@ -73,6 +73,7 @@
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
 		F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE020A95F4400CDFD7B /* NewCardController.m */; };
 		F7F2EEE520A95FE700CDFD7B /* TagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* TagLayer.m */; };
+		F7F2EEEB20A9759C00CDFD7B /* UserInfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,8 @@
 		F7F2EEE020A95F4400CDFD7B /* NewCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCardController.m; sourceTree = "<group>"; };
 		F7F2EEE320A95FE700CDFD7B /* TagLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagLayer.h; sourceTree = "<group>"; };
 		F7F2EEE420A95FE700CDFD7B /* TagLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagLayer.m; sourceTree = "<group>"; };
+		F7F2EEE920A9759C00CDFD7B /* UserInfoLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoLayer.h; sourceTree = "<group>"; };
+		F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,6 +558,8 @@
 			children = (
 				F7F2EEE320A95FE700CDFD7B /* TagLayer.h */,
 				F7F2EEE420A95FE700CDFD7B /* TagLayer.m */,
+				F7F2EEE920A9759C00CDFD7B /* UserInfoLayer.h */,
+				F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -803,6 +808,7 @@
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
+				F7F2EEEB20A9759C00CDFD7B /* UserInfoLayer.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
