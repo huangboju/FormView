@@ -25,6 +25,8 @@
 #import "IntroController.h"
 #import "XYPHPhoneZonesVC.h"
 
+#import "NewCardController.h"
+
 #import "CustomSearchBarController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
@@ -77,6 +79,9 @@
                              ],
                          @[
                              [XYPHBindAccountFailureController class]
+                             ],
+                         @[
+                             [NewCardController class]
                              ]
                          ];
 

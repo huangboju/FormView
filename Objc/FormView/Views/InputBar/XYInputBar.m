@@ -194,14 +194,16 @@ static const CGFloat padding = 15;
 
 // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
 - (NSUInteger)numberOflines {
+    
     NSLayoutManager *layoutManager = [self.textView layoutManager];
-    NSUInteger numberOfLines, index;
     NSUInteger numberOfGlyphs = [layoutManager numberOfGlyphs];
+    NSUInteger numberOfLines = 0, index = 0;
     NSRange lineRange;
-    for (numberOfLines = 0, index = 0; index < numberOfGlyphs; numberOfLines++) {
+    while (index < numberOfGlyphs) {
         (void) [layoutManager lineFragmentRectForGlyphAtIndex:index
                                                effectiveRange:&lineRange];
         index = NSMaxRange(lineRange);
+        numberOfLines += 1;
     }
     return numberOfLines;
 }

@@ -71,6 +71,8 @@
 		F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */; };
 		F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* XYPHBindAccountTitleView.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
+		F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE020A95F4400CDFD7B /* NewCardController.m */; };
+		F7F2EEE520A95FE700CDFD7B /* TagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* TagLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +221,10 @@
 		F714480C206E047300405838 /* XYPHBindAccountTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountTitleView.m; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountFailureController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountFailureController.m; sourceTree = "<group>"; };
+		F7F2EEDF20A95F4400CDFD7B /* NewCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCardController.h; sourceTree = "<group>"; };
+		F7F2EEE020A95F4400CDFD7B /* NewCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCardController.m; sourceTree = "<group>"; };
+		F7F2EEE320A95FE700CDFD7B /* TagLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagLayer.h; sourceTree = "<group>"; };
+		F7F2EEE420A95FE700CDFD7B /* TagLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +349,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2EEDE20A95F2200CDFD7B /* NewCard */,
 				BE8ECEE120561AC600FAC2E8 /* Timer */,
 				BE37437E204038F4000D6F41 /* Zones */,
 				BE7458AB1FD54BE8005D4D3A /* MessageCenterController.h */,
@@ -531,6 +538,25 @@
 				BE5F0DD8206E0DDF0061ED31 /* GroupButtonView.m */,
 			);
 			path = BindAccount;
+			sourceTree = "<group>";
+		};
+		F7F2EEDE20A95F2200CDFD7B /* NewCard */ = {
+			isa = PBXGroup;
+			children = (
+				F7F2EEE220A95FD300CDFD7B /* Views */,
+				F7F2EEDF20A95F4400CDFD7B /* NewCardController.h */,
+				F7F2EEE020A95F4400CDFD7B /* NewCardController.m */,
+			);
+			path = NewCard;
+			sourceTree = "<group>";
+		};
+		F7F2EEE220A95FD300CDFD7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7F2EEE320A95FE700CDFD7B /* TagLayer.h */,
+				F7F2EEE420A95FE700CDFD7B /* TagLayer.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -739,6 +765,7 @@
 				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BEB2222720206941009DD3B9 /* InputBarController.m in Sources */,
+				F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
@@ -763,6 +790,7 @@
 				F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */,
 				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
+				F7F2EEE520A95FE700CDFD7B /* TagLayer.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
 				F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */,
