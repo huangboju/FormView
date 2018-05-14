@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) CATextLayer *nicknameLayer;
 
+@property (nonatomic, strong) CALayer *certifiedLayer;
+
 @end
 
 @implementation UserInfoLayer
@@ -34,21 +36,32 @@
 
 - (void)layoutSublayers {
     [super layoutSublayers];
+
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     CGSize textSize = [self.nickname sizeWithAttributes:[self attributes]];
     CGFloat maxHeight = MAX(self.avatarSize.height, textSize.height);
-    CGFloat y = (maxHeight - textSize.height) / 2 - 1;
+    CGFloat y = (maxHeight - textSize.height) / 2;
     CGRect rect = CGRectMake(CGRectGetMaxX(self.avatarLayer.frame) + 2, y, textSize.width, textSize.height);
     self.nicknameLayer.frame = rect;
 
     CGRect avatarRect = self.avatarLayer.frame;
     avatarRect.origin.y = (maxHeight - avatarRect.size.height) / 2;
     self.avatarLayer.frame = avatarRect;
+
+    CGFloat avatarMaxX = CGRectGetMaxX(rect);
+
+    if (self.isCertified) {
+        CGRect certifiedRect = self.certifiedLayer.frame;
+        certifiedRect.origin = CGPointMake(avatarMaxX + 2, (maxHeight - certifiedRect.size.height) / 2);
+        self.certifiedLayer.frame = certifiedRect;
+    }
+    
     [CATransaction commit];
 
     CGRect oldFrame = self.frame;
-    oldFrame.size = CGSizeMake(CGRectGetMaxX(rect), maxHeight);
+    CGFloat x = self.isCertified ? CGRectGetMaxX(self.certifiedLayer.frame) : avatarMaxX;
+    oldFrame.size = CGSizeMake(x, maxHeight);
     self.frame = oldFrame;
 }
 
@@ -64,6 +77,15 @@
     NSAttributedString *attr = [[NSAttributedString alloc] initWithString:nickname
                                                                attributes:[self attributes]];
     self.nicknameLayer.string = attr;
+}
+
+- (void)setIsCertified:(BOOL)isCertified {
+    _isCertified = isCertified;
+    if (isCertified) {
+        [self addSublayer:self.certifiedLayer];
+    } else {
+        [self.certifiedLayer removeFromSuperlayer];
+    }
 }
 
 - (NSDictionary <NSAttributedStringKey, id> *)attributes {
@@ -107,6 +129,16 @@
         _nicknameLayer.contentsScale = [UIScreen mainScreen].scale;
     }
     return _nicknameLayer;
+}
+
+- (CALayer *)certifiedLayer {
+    if (!_certifiedLayer) {
+        _certifiedLayer = [CALayer layer];
+        _certifiedLayer.contentsScale = [UIScreen mainScreen].scale;
+        _certifiedLayer.frame = CGRectMake(0, 0, 10, 10);
+        _certifiedLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"certified"].CGImage);
+    }
+    return _certifiedLayer;
 }
 
 @end

@@ -35,8 +35,8 @@
     [super viewDidAppear:animated];
     self.tagLayer.image = [UIImage imageNamed:@"icon_tag_product_white_14"];
     self.tagLayer.text = @"雅诗兰黛红石榴洗面奶";
-    
-    
+
+    self.userInfoLayer.isCertified = YES;
     self.userInfoLayer.nickname = @"哈哈😆";
     self.userInfoLayer.avatar = [UIImage imageNamed:@"avatar"];
 }

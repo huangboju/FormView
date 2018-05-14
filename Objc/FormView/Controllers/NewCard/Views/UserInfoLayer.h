@@ -26,6 +26,8 @@
  */
 @property (nonatomic, strong, nonnull) UIColor *textColor;
 
+@property (nonatomic, assign) BOOL isCertified;
+
 @property (nonatomic, strong, nonnull) UIImage *avatar;
 
 @property (nonatomic, copy, nonnull) NSString *nickname;
