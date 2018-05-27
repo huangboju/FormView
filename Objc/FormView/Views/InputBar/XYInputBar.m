@@ -160,9 +160,9 @@ static const CGFloat padding = 15;
     }
 
     if (numLines > self.maxShowLines - 1) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.textView invalidateIntrinsicContentSize];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textView.scrollEnabled = YES;
-            [self.textView invalidateIntrinsicContentSize];
             CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
             self.textView.contentOffset = bottomOffset;
         });
