@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
-@interface UserInfoLayer : CALayer
+@interface XYPHSearchResultNoteUserInfoLayer : CALayer
 
 /**
  Default 13 * 13;

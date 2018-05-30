@@ -8,14 +8,14 @@
 
 #import "NewCardController.h"
 
-#import "TagLayer.h"
-#import "UserInfoLayer.h"
+#import "XYPHSearchResultNoteTagLayer.h"
+#import "XYPHSearchResultNoteUserInfoLayer.h"
 
 @interface NewCardController ()
 
-@property (nonatomic, strong) TagLayer *tagLayer;
+@property (nonatomic, strong) XYPHSearchResultNoteTagLayer *tagLayer;
 
-@property (nonatomic, strong) UserInfoLayer *userInfoLayer;
+@property (nonatomic, strong) XYPHSearchResultNoteUserInfoLayer *userInfoLayer;
 
 @end
 
@@ -41,17 +41,17 @@
     self.userInfoLayer.avatar = [UIImage imageNamed:@"avatar"];
 }
 
-- (TagLayer *)tagLayer {
+- (XYPHSearchResultNoteTagLayer *)tagLayer {
     if (!_tagLayer) {
-        _tagLayer = [TagLayer layer];
+        _tagLayer = [XYPHSearchResultNoteTagLayer layer];
         _tagLayer.frame = CGRectMake(100, 100, 100, 24);
     }
     return _tagLayer;
 }
 
-- (UserInfoLayer *)userInfoLayer {
+- (XYPHSearchResultNoteUserInfoLayer *)userInfoLayer {
     if (!_userInfoLayer) {
-        _userInfoLayer = [UserInfoLayer layer];
+        _userInfoLayer = [XYPHSearchResultNoteUserInfoLayer layer];
         _userInfoLayer.frame = CGRectMake(100, 150, 100, 24);
     }
     return _userInfoLayer;

@@ -6,10 +6,10 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "TagLayer.h"
+#import "XYPHSearchResultNoteTagLayer.h"
 #import "UIColor+Hex.h"
 
-@interface TagLayer()
+@interface XYPHSearchResultNoteTagLayer()
 
 @property (nonatomic, strong) CALayer *imageLayer;
 
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation TagLayer
+@implementation XYPHSearchResultNoteTagLayer
 
 - (instancetype)init {
     if (self = [super init]) {
