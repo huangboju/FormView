@@ -44,7 +44,6 @@ static const CGFloat padding = 15;
 
         self.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         self.backgroundColor = [UIColor whiteColor];
-        
         self.maxShowLines = 5;
 
         [self addSubview:self.visualView];
@@ -162,7 +161,6 @@ static const CGFloat padding = 15;
     if (numLines > self.maxShowLines - 1) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textView.scrollEnabled = YES;
-            [self.textView layoutIfNeeded];
             CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
             self.textView.contentOffset = bottomOffset;
         });
@@ -175,27 +173,22 @@ static const CGFloat padding = 15;
 }
 
 - (CGFloat)textHeight {
-    static NSCache <NSNumber *, NSNumber *>*cache;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        cache = [[NSCache alloc] init];
-    });
-    NSInteger lines = [self numberOflines];
-    CGFloat flattedValue = [cache objectForKey:@(lines)].floatValue;
-    if (flattedValue) {
-        return flattedValue;
-    }
-    CGFloat height = [self.textView sizeThatFits:CGSizeMake(self.textView.frame.size.width, self.frame.size.height)].height;
-    CGFloat scale = [UIScreen mainScreen].scale;
-    flattedValue = ceil(height * scale) / scale - 6;
-    [cache setObject:@(flattedValue) forKey:@(lines)];
-    return flattedValue;
+    NSTextContainer *textContainer = self.textView.textContainer;
+    textContainer.size = CGSizeMake(self.textView.frame.size.width, CGFLOAT_MAX);
+    NSLayoutManager *layoutManager = self.textView.layoutManager;
+    NSRange range = [layoutManager glyphRangeForTextContainer:textContainer];
+    CGSize intrinsicContentSize = [layoutManager boundingRectForGlyphRange:range inTextContainer:textContainer].size;
+    intrinsicContentSize.width = UIViewNoIntrinsicMetric;
+    UIEdgeInsets textContainerInset = self.textView.textContainerInset;
+    intrinsicContentSize.height += (textContainerInset.top + textContainerInset.bottom);
+    intrinsicContentSize.height = ceil(intrinsicContentSize.height);
+    return intrinsicContentSize.height;
 }
 
 // https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/TextLayout/Tasks/CountLines.html
 - (NSUInteger)numberOflines {
     
-    NSLayoutManager *layoutManager = [self.textView layoutManager];
+    NSLayoutManager *layoutManager = self.textView.layoutManager;
     NSUInteger numberOfGlyphs = [layoutManager numberOfGlyphs];
     NSUInteger numberOfLines = 0, index = 0;
     NSRange lineRange;
