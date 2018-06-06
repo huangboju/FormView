@@ -24,6 +24,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func calStr(str: String) -> Int {
+        let target = [
+            76,
+            16,
+            56,
+            96,
+            36
+        ]
+
+        var result = 0
+        for (i, char) in str.reversed().enumerated() {
+            let number = Int("\(char)", radix: 16)!
+            if i == 0 {
+                result = number
+                continue
+            }
+            let idx = i % 5
+            let n = target[idx]
+            result += (number * n)
+        }
+        result %= 100
+        return result
+    }
+    
     func insertionSort(_ array: [Int]) -> [Int] {
         var a = array             // 1
         for x in 1..<a.count {         // 2
