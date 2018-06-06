@@ -19,33 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    NSMutableArray *results1 = [NSMutableArray array];
-//    NSMutableArray *results2 = [NSMutableArray array];
-//    NSMutableArray *results3 = [NSMutableArray array];
-//    NSMutableArray *results4 = [NSMutableArray array];
-//
-//    NSRange range1 = NSMakeRange(1, 10);
-//    NSRange range2 = NSMakeRange(21, 10);
-//    NSRange range3 = NSMakeRange(41, 10);
-//    NSRange range4 = NSMakeRange(61, 10);
-//
-//    for (int i = 0; i < 100000; i++) {
-//        NSString *md5Str = [self strToMD5WithStr:[NSString stringWithFormat:@"%d", i]];
-//        int result = [self calculateHexMod:md5Str] + 1;
-//        if (NSLocationInRange(result, range1)) {
-//            [results1 addObject:[NSNumber numberWithInt:result]];
-//        } else if (NSLocationInRange(result, range2)) {
-//            [results2 addObject:[NSNumber numberWithInt:result]];
-//        } else if (NSLocationInRange(result, range3)) {
-//            [results3 addObject:[NSNumber numberWithInt:result]];
-//        } else if (NSLocationInRange(result, range4)) {
-//            [results4 addObject:[NSNumber numberWithInt:result]];
-//        }
-//    }
-//    NSLog(@"%zd", results1.count);
-//    NSLog(@"%zd", results2.count);
-//    NSLog(@"%zd", results3.count);
-//    NSLog(@"%zd", results4.count);
+    int n = [self calculateHexMod:@"1aabac6d068eef6a7bad3fdf50a05cc8"];
     return YES;
 }
 
