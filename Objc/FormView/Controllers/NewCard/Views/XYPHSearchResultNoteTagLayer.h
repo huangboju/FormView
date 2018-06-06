@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface TagLayer : CALayer
+@interface XYPHSearchResultNoteTagLayer : CALayer
 
 /**
  Default 14 * 14

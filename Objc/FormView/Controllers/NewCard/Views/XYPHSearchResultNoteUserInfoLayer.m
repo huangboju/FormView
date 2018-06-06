@@ -6,10 +6,10 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "UserInfoLayer.h"
+#import "XYPHSearchResultNoteUserInfoLayer.h"
 #import "UIColor+Hex.h"
 
-@interface UserInfoLayer()
+@interface XYPHSearchResultNoteUserInfoLayer()
 
 @property (nonatomic, strong) CALayer *avatarLayer;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation UserInfoLayer
+@implementation XYPHSearchResultNoteUserInfoLayer
 
 - (instancetype)init {
     if (self = [super init]) {

@@ -71,10 +71,11 @@
 		F7144807206A32AF00405838 /* XYPHBindAccountUserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* XYPHBindAccountUserCardView.m */; };
 		F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */; };
 		F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* XYPHBindAccountTitleView.m */; };
+		F76C277020BE96A9005CC67D /* NSURL+URLParametersAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F76C276F20BE96A9005CC67D /* NSURL+URLParametersAdd.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
 		F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE020A95F4400CDFD7B /* NewCardController.m */; };
-		F7F2EEE520A95FE700CDFD7B /* TagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* TagLayer.m */; };
-		F7F2EEEB20A9759C00CDFD7B /* UserInfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */; };
+		F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */; };
+		F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,14 +224,16 @@
 		F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountUserCardCellItem.m; sourceTree = "<group>"; };
 		F714480B206E047300405838 /* XYPHBindAccountTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountTitleView.h; sourceTree = "<group>"; };
 		F714480C206E047300405838 /* XYPHBindAccountTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountTitleView.m; sourceTree = "<group>"; };
+		F76C276E20BE96A8005CC67D /* NSURL+URLParametersAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+URLParametersAdd.h"; sourceTree = "<group>"; };
+		F76C276F20BE96A9005CC67D /* NSURL+URLParametersAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+URLParametersAdd.m"; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountFailureController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountFailureController.m; sourceTree = "<group>"; };
 		F7F2EEDF20A95F4400CDFD7B /* NewCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCardController.h; sourceTree = "<group>"; };
 		F7F2EEE020A95F4400CDFD7B /* NewCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCardController.m; sourceTree = "<group>"; };
-		F7F2EEE320A95FE700CDFD7B /* TagLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagLayer.h; sourceTree = "<group>"; };
-		F7F2EEE420A95FE700CDFD7B /* TagLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagLayer.m; sourceTree = "<group>"; };
-		F7F2EEE920A9759C00CDFD7B /* UserInfoLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoLayer.h; sourceTree = "<group>"; };
-		F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoLayer.m; sourceTree = "<group>"; };
+		F7F2EEE320A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultNoteTagLayer.h; sourceTree = "<group>"; };
+		F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultNoteTagLayer.m; sourceTree = "<group>"; };
+		F7F2EEE920A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultNoteUserInfoLayer.h; sourceTree = "<group>"; };
+		F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultNoteUserInfoLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,6 +408,8 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				F76C276E20BE96A8005CC67D /* NSURL+URLParametersAdd.h */,
+				F76C276F20BE96A9005CC67D /* NSURL+URLParametersAdd.m */,
 				BEB2222420206924009DD3B9 /* Controllers */,
 				BE29FB321FFDD58000A27373 /* Views */,
 				BE29FB2E1FFDD48700A27373 /* Account */,
@@ -561,10 +566,10 @@
 		F7F2EEE220A95FD300CDFD7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F7F2EEE320A95FE700CDFD7B /* TagLayer.h */,
-				F7F2EEE420A95FE700CDFD7B /* TagLayer.m */,
-				F7F2EEE920A9759C00CDFD7B /* UserInfoLayer.h */,
-				F7F2EEEA20A9759C00CDFD7B /* UserInfoLayer.m */,
+				F7F2EEE320A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.h */,
+				F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */,
+				F7F2EEE920A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.h */,
+				F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -781,6 +786,7 @@
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
+				F76C277020BE96A9005CC67D /* NSURL+URLParametersAdd.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				F7144804206A300100405838 /* XYPHBindAccountTitleCellItem.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
@@ -800,7 +806,7 @@
 				F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */,
 				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
-				F7F2EEE520A95FE700CDFD7B /* TagLayer.m in Sources */,
+				F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
 				F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */,
@@ -814,7 +820,7 @@
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
-				F7F2EEEB20A9759C00CDFD7B /* UserInfoLayer.m in Sources */,
+				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
