@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "XYEncyptionUtil.h"
-
 @interface AppDelegate ()
 
 @end

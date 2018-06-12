@@ -71,8 +71,8 @@
 		F7144807206A32AF00405838 /* XYPHBindAccountUserCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144806206A32AF00405838 /* XYPHBindAccountUserCardView.m */; };
 		F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */; };
 		F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F714480C206E047300405838 /* XYPHBindAccountTitleView.m */; };
-		F787AB2D20C683BF001A0A07 /* XYEncyptionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F787AB2C20C683BF001A0A07 /* XYEncyptionUtil.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
+		F7E5739020CFB438002519FC /* CenterTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E5738F20CFB438002519FC /* CenterTextLayer.m */; };
 		F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE020A95F4400CDFD7B /* NewCardController.m */; };
 		F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */; };
 		F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */; };
@@ -224,10 +224,10 @@
 		F7144809206A33A500405838 /* XYPHBindAccountUserCardCellItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountUserCardCellItem.m; sourceTree = "<group>"; };
 		F714480B206E047300405838 /* XYPHBindAccountTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountTitleView.h; sourceTree = "<group>"; };
 		F714480C206E047300405838 /* XYPHBindAccountTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountTitleView.m; sourceTree = "<group>"; };
-		F787AB2B20C683BF001A0A07 /* XYEncyptionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYEncyptionUtil.h; sourceTree = "<group>"; };
-		F787AB2C20C683BF001A0A07 /* XYEncyptionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYEncyptionUtil.m; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountFailureController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountFailureController.m; sourceTree = "<group>"; };
+		F7E5738E20CFB438002519FC /* CenterTextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterTextLayer.h; sourceTree = "<group>"; };
+		F7E5738F20CFB438002519FC /* CenterTextLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterTextLayer.m; sourceTree = "<group>"; };
 		F7F2EEDF20A95F4400CDFD7B /* NewCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewCardController.h; sourceTree = "<group>"; };
 		F7F2EEE020A95F4400CDFD7B /* NewCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewCardController.m; sourceTree = "<group>"; };
 		F7F2EEE320A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultNoteTagLayer.h; sourceTree = "<group>"; };
@@ -535,8 +535,6 @@
 		F787AB2A20C683A2001A0A07 /* MD5 */ = {
 			isa = PBXGroup;
 			children = (
-				F787AB2B20C683BF001A0A07 /* XYEncyptionUtil.h */,
-				F787AB2C20C683BF001A0A07 /* XYEncyptionUtil.m */,
 			);
 			path = MD5;
 			sourceTree = "<group>";
@@ -578,6 +576,8 @@
 				F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */,
 				F7F2EEE920A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.h */,
 				F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */,
+				F7E5738E20CFB438002519FC /* CenterTextLayer.h */,
+				F7E5738F20CFB438002519FC /* CenterTextLayer.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -828,12 +828,12 @@
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
 				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
-				F787AB2D20C683BF001A0A07 /* XYEncyptionUtil.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 				BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */,
+				F7E5739020CFB438002519FC /* CenterTextLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

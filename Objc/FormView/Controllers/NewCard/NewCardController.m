@@ -34,7 +34,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.tagLayer.image = [UIImage imageNamed:@"icon_tag_product_white_14"];
-    self.tagLayer.text = @"雅诗兰黛红石榴洗面奶";
+    self.tagLayer.text = @"gg你好吗你好吗你好吗你好吗你好吗你好吗你好吗";
 
     self.userInfoLayer.isCertified = YES;
     self.userInfoLayer.nickname = @"哈哈😆";
