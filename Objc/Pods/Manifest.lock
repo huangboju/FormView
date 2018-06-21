@@ -8,6 +8,12 @@ DEPENDENCIES:
   - Masonry
   - TransitionKit
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FDStackView
+    - Masonry
+    - TransitionKit
+
 SPEC CHECKSUMS:
   FDStackView: 3a4bbe0ce9c35e974246a585168b9da8c32213f1
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -15,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: aa5234a6911cd12862b15ca6cdfd148593144e44
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
