@@ -29,6 +29,8 @@
 
 #import "CustomSearchBarController.h"
 
+#import "CustomDismissTransitionVC.h"
+
 @interface MainViewController ()<UITableViewDelegate>
 
 @end
@@ -82,6 +84,9 @@
                              ],
                          @[
                              [NewCardController class]
+                             ],
+                         @[
+                             [CustomDismissTransitionVC class]
                              ]
                          ];
 

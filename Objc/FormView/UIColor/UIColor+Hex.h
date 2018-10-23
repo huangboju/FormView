@@ -16,4 +16,6 @@
 - (NSString*)hexString;
 - (NSString*)cssString;
 
++ (UIColor *)randomColor;
+
 @end
