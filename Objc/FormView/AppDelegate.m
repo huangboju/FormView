@@ -16,9 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    NSURL *url = [NSURL URLWithString:@"https://www.xiaohongshu.com/goods/5b7f65ef4628397c92093bdb?xhs_g_s=1012"];
-    NSLog(@"%@", url);
 
     return YES;
 }
