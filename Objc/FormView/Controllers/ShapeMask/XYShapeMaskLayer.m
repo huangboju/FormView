@@ -12,7 +12,7 @@
 
 @property (nonatomic) UIBezierPath *overlayPath;
 
-@property (nonatomic) NSMutableArray <UIBezierPath *> *subPathes;
+@property (nonatomic) NSMutableOrderedSet <UIBezierPath *> *subPathes;
 
 @end
 
@@ -100,9 +100,9 @@
     return overlayPath;
 }
 
-- (NSMutableArray<UIBezierPath *> *)subPathes {
+- (NSMutableOrderedSet<UIBezierPath *> *)subPathes {
     if (!_subPathes) {
-        _subPathes = [NSMutableArray array];
+        _subPathes = [NSMutableOrderedSet new];
     }
     return _subPathes;
 }
