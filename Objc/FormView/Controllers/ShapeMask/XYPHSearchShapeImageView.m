@@ -25,14 +25,23 @@
     return self;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    NSLog(@"vvvv");
+- (void)setBounds:(CGRect)bounds {
+    [super setBounds:bounds];
+    [self addRoundedPathIfNeeded];
+}
 
-    self.shapeMaskLayer.frame = self.bounds;
-    
-    if (self.cornerRadius > 0) {
-        [self.shapeMaskLayer addTransparentRoundedRect:self.bounds cornerRadius:self.cornerRadius];
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    _cornerRadius = cornerRadius;
+    [self addRoundedPathIfNeeded];
+}
+
+- (void)addRoundedPathIfNeeded {
+    CGRect rect = self.bounds;
+    if (!CGRectEqualToRect(CGRectZero, rect)) {
+        if (self.cornerRadius > 0) {
+            [self.shapeMaskLayer addTransparentRoundedRect:rect cornerRadius:self.cornerRadius];
+        }
+        self.shapeMaskLayer.frame = rect;
     }
 }
 

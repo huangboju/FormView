@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) XYPHSearchShapeImageView *maskView1;
 
+@property (nonatomic, strong) XYPHSearchShapeImageView *maskView2;
+
 @end
 
 @implementation ShapeMaskController
@@ -31,8 +33,14 @@
         make.width.height.mas_equalTo(100);
         make.center.mas_equalTo(self.view);
     }];
+    
+    [self.view addSubview:self.maskView2];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.maskLayer.maskColor = [UIColor blueColor];
+}
 
 - (XYPHSearchShapeImageView *)maskLayer {
     if (!_maskLayer) {
@@ -49,6 +57,15 @@
         _maskView1.cornerRadius = 8;
     }
     return _maskView1;
+}
+
+- (XYPHSearchShapeImageView *)maskView2 {
+    if (!_maskView2) {
+        _maskView2 = [[XYPHSearchShapeImageView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
+        _maskView2.maskColor = [UIColor greenColor];
+        _maskView2.cornerRadius = 5;
+    }
+    return _maskView2;
 }
 
 

@@ -12,6 +12,8 @@
 
 @property (nonatomic) UIBezierPath *overlayPath;
 
+@property (nonatomic) NSMutableArray <UIBezierPath *> *subPathes;
+
 @end
 
 
@@ -20,9 +22,20 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [self init]) {
         self.frame = frame;
-        [self setUp];
+        self.backgroundColor = [UIColor clearColor].CGColor;
+        self.maskColor = [UIColor whiteColor];
+
+        self.fillRule = kCAFillRuleEvenOdd;
     }
     return self;
+}
+
+- (void)setFrame:(CGRect)frame {
+    CGRect oldValue = self.frame;
+    [super setFrame:frame];
+    if (!CGRectIsEmpty(frame) && !CGRectEqualToRect(oldValue, frame)) {
+        [self refreshPath];
+    }
 }
 
 #pragma mark - Public Methods
@@ -58,43 +71,27 @@
     [self addTransparentPath:path];
 }
 
-- (void)addTransparentPath:(UIBezierPath *)transparentPath {
-    [self.overlayPath appendPath:transparentPath];
-    
-    self.path = self.overlayPath.CGPath;
-}
 
 - (void)addTransparentOvalRect:(CGRect)rect {
     UIBezierPath *transparentPath = [UIBezierPath bezierPathWithOvalInRect:rect];
-    
     [self addTransparentPath:transparentPath];
 }
 
-- (void)layoutSublayers {
-    [super layoutSublayers];
-    [self refreshMask];
+- (void)addTransparentPath:(UIBezierPath *)transparentPath {
+    [self.overlayPath appendPath:transparentPath];
+    [self.subPathes addObject:transparentPath];
+    self.path = self.overlayPath.CGPath;
 }
 
 #pragma mark - Private Methods
 
-- (void)setUp {
-    self.backgroundColor = [UIColor clearColor].CGColor;
-    self.maskColor = [UIColor whiteColor];
-    
-    self.path = self.overlayPath.CGPath;
-    self.fillRule = kCAFillRuleEvenOdd;
-}
-
-- (void)refreshMask {
-    self.path = self.overlayPath.CGPath;
-    self.fillColor = self.maskColor.CGColor;
-}
-
-- (UIBezierPath *)overlayPath {
-    if (!_overlayPath) {
-        _overlayPath = [self generateBezierPath];
+- (void)refreshPath {
+    _overlayPath = [self generateBezierPath];
+    for (UIBezierPath *subPath in self.subPathes) {
+        [_overlayPath appendPath:subPath];
     }
-    return _overlayPath;
+    [self.subPathes removeAllObjects];
+    self.path = self.overlayPath.CGPath;
 }
 
 - (UIBezierPath *)generateBezierPath {
@@ -103,5 +100,11 @@
     return overlayPath;
 }
 
+- (NSMutableArray<UIBezierPath *> *)subPathes {
+    if (!_subPathes) {
+        _subPathes = [NSMutableArray array];
+    }
+    return _subPathes;
+}
 
 @end
