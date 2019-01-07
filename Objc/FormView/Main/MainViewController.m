@@ -30,6 +30,7 @@
 #import "CustomSearchBarController.h"
 
 #import "CustomDismissTransitionVC.h"
+#import "ShapeMaskController.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -87,6 +88,9 @@
                              ],
                          @[
                              [CustomDismissTransitionVC class]
+                             ],
+                         @[
+                             [ShapeMaskController class]
                              ]
                          ];
 

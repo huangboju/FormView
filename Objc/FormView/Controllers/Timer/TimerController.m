@@ -8,21 +8,34 @@
 
 #import "TimerController.h"
 #import "TimerClass.h"
+#import "NSTimer+Weak.h"
 
 @interface TimerController ()
 
-@property (nonatomic, strong) TimerClass *timer;
+//@property (nonatomic, strong) TimerClass *timer;
+
+@property (nonatomic, strong) NSTimer *pollTimer;
 
 @end
 
 @implementation TimerController
 
+- (void)dealloc {
+    NSLog(@"🍀🍀🍀🍀");
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.timer = [TimerClass new];
-    [self.timer startPolling];
+    __weak typeof(self) weakself = self;
+    self.pollTimer = [NSTimer eoc_scheduledTimerWithTimeInterval:1 block:^{
+        [weakself p_doPoll];
+    } repeats:YES];
+}
+
+- (void)p_doPoll {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)didReceiveMemoryWarning {

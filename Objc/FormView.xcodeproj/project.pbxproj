@@ -76,11 +76,16 @@
 		F729CDAA213E5FE500A9B873 /* XYPHSearchInteractionDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F729CDA5213E5FE500A9B873 /* XYPHSearchInteractionDismissAnimator.m */; };
 		F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F729CDA8213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m */; };
 		F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F729CDA9213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m */; };
+		F73BBD9721E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */; };
+		F73BBD9821E2FDE100BC2E2D /* XYPHSearchShapeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */; };
+		F73BBD9B21E2FDF800BC2E2D /* ShapeMaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9A21E2FDF800BC2E2D /* ShapeMaskController.m */; };
+		F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9D21E2FFAB00BC2E2D /* XYShapeMaskLayer.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
 		F7E5739020CFB438002519FC /* CenterTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E5738F20CFB438002519FC /* CenterTextLayer.m */; };
 		F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE020A95F4400CDFD7B /* NewCardController.m */; };
 		F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */; };
 		F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */; };
+		F7F98E3221D3A20E00E813B0 /* NSTimer+Weak.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F98E3121D3A20E00E813B0 /* NSTimer+Weak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +244,14 @@
 		F729CDA7213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchInteractionDismissTransition.h; sourceTree = "<group>"; };
 		F729CDA8213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchDismissPanGestureRecognizer.m; sourceTree = "<group>"; };
 		F729CDA9213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchInteractionDismissTransition.m; sourceTree = "<group>"; };
+		F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchShapeMaskView.m; sourceTree = "<group>"; };
+		F73BBD9421E2FDE100BC2E2D /* XYPHSearchShapeMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchShapeMaskView.h; sourceTree = "<group>"; };
+		F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchShapeImageView.m; sourceTree = "<group>"; };
+		F73BBD9621E2FDE100BC2E2D /* XYPHSearchShapeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchShapeImageView.h; sourceTree = "<group>"; };
+		F73BBD9921E2FDF800BC2E2D /* ShapeMaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeMaskController.h; sourceTree = "<group>"; };
+		F73BBD9A21E2FDF800BC2E2D /* ShapeMaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeMaskController.m; sourceTree = "<group>"; };
+		F73BBD9C21E2FFAB00BC2E2D /* XYShapeMaskLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYShapeMaskLayer.h; sourceTree = "<group>"; };
+		F73BBD9D21E2FFAB00BC2E2D /* XYShapeMaskLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYShapeMaskLayer.m; sourceTree = "<group>"; };
 		F7BC37192064DB7A009D3B22 /* XYPHBindAccountFailureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountFailureController.h; sourceTree = "<group>"; };
 		F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountFailureController.m; sourceTree = "<group>"; };
 		F7E5738E20CFB438002519FC /* CenterTextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterTextLayer.h; sourceTree = "<group>"; };
@@ -249,6 +262,8 @@
 		F7F2EEE420A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultNoteTagLayer.m; sourceTree = "<group>"; };
 		F7F2EEE920A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultNoteUserInfoLayer.h; sourceTree = "<group>"; };
 		F7F2EEEA20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultNoteUserInfoLayer.m; sourceTree = "<group>"; };
+		F7F98E3021D3A20E00E813B0 /* NSTimer+Weak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Weak.h"; sourceTree = "<group>"; };
+		F7F98E3121D3A20E00E813B0 /* NSTimer+Weak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Weak.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +370,8 @@
 				BE8ECEDF20561AAF00FAC2E8 /* TimerController.m */,
 				BE8ECEE220561AE000FAC2E8 /* TimerClass.h */,
 				BE8ECEE320561AE000FAC2E8 /* TimerClass.m */,
+				F7F98E3021D3A20E00E813B0 /* NSTimer+Weak.h */,
+				F7F98E3121D3A20E00E813B0 /* NSTimer+Weak.m */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -373,6 +390,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F73BBD9221E2FDB600BC2E2D /* ShapeMask */,
 				F729CD9D213E5C7900A9B873 /* DismissTransition */,
 				F7F2EEDE20A95F2200CDFD7B /* NewCard */,
 				BE8ECEE120561AC600FAC2E8 /* Timer */,
@@ -563,6 +581,21 @@
 				F729CDA2213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m */,
 			);
 			path = DismissTransition;
+			sourceTree = "<group>";
+		};
+		F73BBD9221E2FDB600BC2E2D /* ShapeMask */ = {
+			isa = PBXGroup;
+			children = (
+				F73BBD9621E2FDE100BC2E2D /* XYPHSearchShapeImageView.h */,
+				F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */,
+				F73BBD9421E2FDE100BC2E2D /* XYPHSearchShapeMaskView.h */,
+				F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */,
+				F73BBD9921E2FDF800BC2E2D /* ShapeMaskController.h */,
+				F73BBD9A21E2FDF800BC2E2D /* ShapeMaskController.m */,
+				F73BBD9C21E2FFAB00BC2E2D /* XYShapeMaskLayer.h */,
+				F73BBD9D21E2FFAB00BC2E2D /* XYShapeMaskLayer.m */,
+			);
+			path = ShapeMask;
 			sourceTree = "<group>";
 		};
 		F787AB2A20C683A2001A0A07 /* MD5 */ = {
@@ -773,6 +806,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73BBD9721E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m in Sources */,
 				F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */,
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
@@ -793,6 +827,7 @@
 				F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
+				F73BBD9B21E2FDF800BC2E2D /* ShapeMaskController.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
@@ -803,6 +838,7 @@
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
+				F73BBD9821E2FDE100BC2E2D /* XYPHSearchShapeImageView.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
@@ -818,6 +854,7 @@
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
+				F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
 				F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */,
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
@@ -835,6 +872,7 @@
 				F729CDA3213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
+				F7F98E3221D3A20E00E813B0 /* NSTimer+Weak.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 				BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */,
