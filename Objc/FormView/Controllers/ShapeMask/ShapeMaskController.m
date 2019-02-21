@@ -7,16 +7,16 @@
 //
 
 #import "ShapeMaskController.h"
-#import "XYPHSearchShapeImageView.h"
+#import "XYShapeImageView.h"
 #import <Masonry/Masonry.h>
 
 @interface ShapeMaskController ()
 
-@property (nonatomic, strong) XYPHSearchShapeImageView *maskLayer;
+@property (nonatomic, strong) XYShapeImageView *maskLayer;
 
-@property (nonatomic, strong) XYPHSearchShapeImageView *maskView1;
+@property (nonatomic, strong) XYShapeImageView *maskView1;
 
-@property (nonatomic, strong) XYPHSearchShapeImageView *maskView2;
+@property (nonatomic, strong) XYShapeImageView *maskView2;
 
 @end
 
@@ -42,26 +42,26 @@
     self.maskLayer.maskColor = [UIColor blueColor];
 }
 
-- (XYPHSearchShapeImageView *)maskLayer {
+- (XYShapeImageView *)maskLayer {
     if (!_maskLayer) {
-        _maskLayer = [[XYPHSearchShapeImageView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 202)];
+        _maskLayer = [[XYShapeImageView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 202)];
         _maskLayer.maskColor = [UIColor redColor];
     }
     return _maskLayer;
 }
 
-- (XYPHSearchShapeImageView *)maskView1 {
+- (XYShapeImageView *)maskView1 {
     if (!_maskView1) {
-        _maskView1 = [XYPHSearchShapeImageView new];
+        _maskView1 = [XYShapeImageView new];
         _maskView1.maskColor = [UIColor cyanColor];
         _maskView1.cornerRadius = 8;
     }
     return _maskView1;
 }
 
-- (XYPHSearchShapeImageView *)maskView2 {
+- (XYShapeImageView *)maskView2 {
     if (!_maskView2) {
-        _maskView2 = [[XYPHSearchShapeImageView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
+        _maskView2 = [[XYShapeImageView alloc] initWithFrame:CGRectMake(10, 400, 100, 100)];
         _maskView2.maskColor = [UIColor greenColor];
         _maskView2.cornerRadius = 5;
     }

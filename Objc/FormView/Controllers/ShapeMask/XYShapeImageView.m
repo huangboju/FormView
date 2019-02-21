@@ -5,18 +5,18 @@
 //  Created by xiAo_Ju on 2018/12/3.
 //
 
-#import "XYPHSearchShapeImageView.h"
+#import "XYShapeImageView.h"
 
 #import "XYShapeMaskLayer.h"
 
-@interface XYPHSearchShapeImageView ()
+@interface XYShapeImageView ()
 
 @property (nonatomic, strong) XYShapeMaskLayer *shapeMaskLayer;
 
 @end
 
 
-@implementation XYPHSearchShapeImageView
+@implementation XYShapeImageView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

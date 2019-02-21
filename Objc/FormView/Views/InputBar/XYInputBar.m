@@ -161,8 +161,13 @@ static const CGFloat padding = 15;
     if (numLines > self.maxShowLines - 1) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textView.scrollEnabled = YES;
-            CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
-            self.textView.contentOffset = bottomOffset;
+//            CGPoint bottomOffset = CGPointMake(0, self.textView.contentSize.height - self.textView.bounds.size.height);
+//            self.textView.contentOffset = bottomOffset;
+            _textView.scrollEnabled = YES;
+            [_textView layoutIfNeeded];
+            CGRect caretRect = [_textView caretRectForPosition:_textView.selectedTextRange.end];
+            caretRect.size.height += _textView.textContainerInset.bottom;
+            [_textView scrollRectToVisible:caretRect animated:NO];
         });
     } else {
         if (numLines == self.maxShowLines - 1 || self.textView.text.length < 1) {

@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XYPHSearchShapeImageView : UIImageView
+@interface XYShapeImageView : UIImageView
 
 @property (nonatomic, copy) UIColor *maskColor;
 

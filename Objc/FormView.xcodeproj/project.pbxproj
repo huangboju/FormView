@@ -77,7 +77,7 @@
 		F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F729CDA8213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m */; };
 		F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F729CDA9213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m */; };
 		F73BBD9721E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */; };
-		F73BBD9821E2FDE100BC2E2D /* XYPHSearchShapeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */; };
+		F73BBD9821E2FDE100BC2E2D /* XYShapeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9521E2FDE100BC2E2D /* XYShapeImageView.m */; };
 		F73BBD9B21E2FDF800BC2E2D /* ShapeMaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9A21E2FDF800BC2E2D /* ShapeMaskController.m */; };
 		F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F73BBD9D21E2FFAB00BC2E2D /* XYShapeMaskLayer.m */; };
 		F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */; };
@@ -246,8 +246,8 @@
 		F729CDA9213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchInteractionDismissTransition.m; sourceTree = "<group>"; };
 		F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchShapeMaskView.m; sourceTree = "<group>"; };
 		F73BBD9421E2FDE100BC2E2D /* XYPHSearchShapeMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchShapeMaskView.h; sourceTree = "<group>"; };
-		F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchShapeImageView.m; sourceTree = "<group>"; };
-		F73BBD9621E2FDE100BC2E2D /* XYPHSearchShapeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchShapeImageView.h; sourceTree = "<group>"; };
+		F73BBD9521E2FDE100BC2E2D /* XYShapeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYShapeImageView.m; sourceTree = "<group>"; };
+		F73BBD9621E2FDE100BC2E2D /* XYShapeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYShapeImageView.h; sourceTree = "<group>"; };
 		F73BBD9921E2FDF800BC2E2D /* ShapeMaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeMaskController.h; sourceTree = "<group>"; };
 		F73BBD9A21E2FDF800BC2E2D /* ShapeMaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeMaskController.m; sourceTree = "<group>"; };
 		F73BBD9C21E2FFAB00BC2E2D /* XYShapeMaskLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYShapeMaskLayer.h; sourceTree = "<group>"; };
@@ -586,8 +586,8 @@
 		F73BBD9221E2FDB600BC2E2D /* ShapeMask */ = {
 			isa = PBXGroup;
 			children = (
-				F73BBD9621E2FDE100BC2E2D /* XYPHSearchShapeImageView.h */,
-				F73BBD9521E2FDE100BC2E2D /* XYPHSearchShapeImageView.m */,
+				F73BBD9621E2FDE100BC2E2D /* XYShapeImageView.h */,
+				F73BBD9521E2FDE100BC2E2D /* XYShapeImageView.m */,
 				F73BBD9421E2FDE100BC2E2D /* XYPHSearchShapeMaskView.h */,
 				F73BBD9321E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m */,
 				F73BBD9921E2FDF800BC2E2D /* ShapeMaskController.h */,
@@ -838,7 +838,7 @@
 				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
-				F73BBD9821E2FDE100BC2E2D /* XYPHSearchShapeImageView.m in Sources */,
+				F73BBD9821E2FDE100BC2E2D /* XYShapeImageView.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,

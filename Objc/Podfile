@@ -5,6 +5,5 @@ target 'FormView' do
 
   pod 'Masonry'
   pod 'TransitionKit'
-  pod 'FDStackView', "1.0"
 
 end
