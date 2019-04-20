@@ -16,7 +16,7 @@ class ListController: UIViewController {
     private lazy var tableView: UITableView = {
        let tableView = UITableView()
         tableView.dataSource = viewModel
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
         return tableView
     }()

@@ -8,8 +8,8 @@
 
 struct ButtonCellItem {
     let title: String
-    let normalState: (UIColor, UIControlState)
-    let highlightState: (UIColor, UIControlState)
+    let normalState: (UIColor, UIControl.State)
+    let highlightState: (UIColor, UIControl.State)
 }
 
 @objc
@@ -31,7 +31,7 @@ class ButtonCell: UITableViewCell {
         return button
     }()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
 

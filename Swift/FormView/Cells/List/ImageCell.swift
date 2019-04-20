@@ -11,7 +11,7 @@ class ImageCell: UITableViewCell, Updatable {
     
     private let max = 3
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         setupUIWithDummyView()

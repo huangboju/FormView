@@ -88,9 +88,9 @@ extension RowTag: Hashable {
     public static func ==(lhs: RowTag, rhs: RowTag) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
-
-    public var hashValue: Int {
-        return _key.hashValue
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(_key)
     }
 }
 
