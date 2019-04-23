@@ -12,9 +12,9 @@
 
 @interface TimerController ()
 
-//@property (nonatomic, strong) TimerClass *timer;
-
 @property (nonatomic, strong) NSTimer *pollTimer;
+
+@property (nonatomic, weak) NSTimer *timer;
 
 @end
 
@@ -32,6 +32,8 @@
     self.pollTimer = [NSTimer eoc_scheduledTimerWithTimeInterval:1 block:^{
         [weakself p_doPoll];
     } repeats:YES];
+    
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(p_doPoll) userInfo:nil repeats:YES];
 }
 
 - (void)p_doPoll {

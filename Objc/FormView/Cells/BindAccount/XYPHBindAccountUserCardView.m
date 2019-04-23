@@ -10,7 +10,6 @@
 
 #import "ImageTextView.h"
 
-#import <FDStackView.h>
 #import <Masonry.h>
 
 #import "XYPHBindAccountUserCardCellItem.h"
@@ -73,7 +72,7 @@
                               self.bindStatusButton
                               ];
         
-        FDStackView *stackView = [[FDStackView alloc] initWithArrangedSubviews:subviews];
+        UIStackView *stackView = [[UIStackView alloc] initWithArrangedSubviews:subviews];
         stackView.spacing = 10;
         stackView.distribution = UIStackViewDistributionFillEqually;
         stackView.axis = UILayoutConstraintAxisVertical;

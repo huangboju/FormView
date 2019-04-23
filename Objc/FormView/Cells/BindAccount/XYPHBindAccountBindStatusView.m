@@ -8,8 +8,6 @@
 
 #import "XYPHBindAccountBindStatusView.h"
 
-#import <FDStackView.h>
-
 #import <Masonry.h>
 
 #import "ImageTextView.h"
@@ -20,7 +18,7 @@
 
 @interface XYPHBindAccountBindStatusView()
 
-@property (nonatomic, strong) FDStackView *stackView;
+@property (nonatomic, strong) UIStackView *stackView;
 
 @end
 
@@ -39,9 +37,9 @@
     return self;
 }
 
-- (FDStackView *)stackView {
+- (UIStackView *)stackView {
     if (!_stackView) {
-        _stackView = [FDStackView new];
+        _stackView = [UIStackView new];
         _stackView.axis = UILayoutConstraintAxisVertical;
         _stackView.spacing = 5;
         _stackView.distribution = UIStackViewDistributionFillEqually;

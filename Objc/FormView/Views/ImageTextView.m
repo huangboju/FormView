@@ -40,7 +40,7 @@
             }];
             
             [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.imageView.mas_bottom).offset(_interval);
+                make.top.mas_equalTo(self.imageView.mas_bottom).offset(self.interval);
                 make.bottom.leading.trailing.mas_equalTo(0);
             }];
         }
@@ -52,7 +52,7 @@
             }];
             
             [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.leading.mas_equalTo(self.imageView.mas_trailing).offset(_interval);
+                make.leading.mas_equalTo(self.imageView.mas_trailing).offset(self.interval);
                 make.top.bottom.trailing.mas_equalTo(0);
             }];
         }
@@ -64,7 +64,7 @@
             }];
             
             [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.mas_equalTo(self.textLabel.mas_bottom).offset(_interval);
+                make.top.mas_equalTo(self.textLabel.mas_bottom).offset(self.interval);
                 make.centerX.bottom.mas_equalTo(0);
                 make.trailing.mas_lessThanOrEqualTo(0);
             }];
@@ -77,7 +77,7 @@
             }];
             
             [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.leading.mas_equalTo(self.textLabel.mas_trailing).offset(_interval);
+                make.leading.mas_equalTo(self.textLabel.mas_trailing).offset(self.interval);
                 make.bottom.mas_lessThanOrEqualTo(0);
                 make.trailing.mas_equalTo(0);
             }];

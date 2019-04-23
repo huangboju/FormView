@@ -12,7 +12,6 @@
 
 #import <Masonry.h>
 
-#import <FDStackView.h>
 
 @interface ThirdPartButtonCell()
 

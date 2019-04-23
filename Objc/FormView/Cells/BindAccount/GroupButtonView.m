@@ -10,7 +10,6 @@
 
 #import "XYPHBindAccountUIGenerator.h"
 
-#import <FDStackView.h>
 
 #import <Masonry.h>
 
@@ -29,7 +28,7 @@
         
         self.layer.backgroundColor = [UIColor whiteColor].CGColor;
         
-        FDStackView *stackView = [[FDStackView alloc] initWithArrangedSubviews:@[self.changeBindingBtn, self.unchangeBindingBtn]];
+        UIStackView *stackView = [[UIStackView alloc] initWithArrangedSubviews:@[self.changeBindingBtn, self.unchangeBindingBtn]];
         stackView.spacing = 15;
         stackView.distribution = UIStackViewDistributionFillEqually;
         stackView.axis = UILayoutConstraintAxisVertical;

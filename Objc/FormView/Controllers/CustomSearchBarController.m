@@ -42,8 +42,12 @@
 //    [self.searchBar resignFirstResponder];
 //    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
-    UIImpactFeedbackGenerator *feedBackGenertor = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
-    [feedBackGenertor impactOccurred];
+    if (@available(iOS 10.0, *)) {
+        UIImpactFeedbackGenerator *feedBackGenertor = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleMedium];
+        [feedBackGenertor impactOccurred];
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
