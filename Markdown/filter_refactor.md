@@ -8,15 +8,18 @@
 ## 正文
 在我司的产品中，有如下一个筛选模块
 
-![](https://github.com/huangboju/FormView/blob/master/Resource/Screen%20Shot%202019-05-01%20at%203.30.39%20PM.png?raw=true) 
+![](https://github.com/huangboju/FormView/blob/master/Resource/screen_shot.png?raw=true) 
 
 主要的产品逻辑：
 * 主面板支持价格输入
-* 主面板支持价格区间选择
 * 主面板支持单选
 * 主面板支持多选
-* 
+* 主面板支持多选反选
+* 外露筛选可直接单选
+* 外露筛选可展开单选模块
+* 外露筛选可展开多选模块
 * 有筛选时，外露的筛选按钮需要高亮
+* 筛选项最多不超过15个
 
 
 ## 总结
