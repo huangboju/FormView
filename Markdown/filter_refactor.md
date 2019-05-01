@@ -10,5 +10,13 @@
 
 ![](https://github.com/huangboju/FormView/blob/master/Resource/Screen%20Shot%202019-05-01%20at%203.30.39%20PM.png?raw=true) 
 
+主要的产品逻辑：
+* 主面板支持价格输入
+* 主面板支持价格区间选择
+* 主面板支持单选
+* 主面板支持多选
+* 
+* 有筛选时，外露的筛选按钮需要高亮
+
 
 ## 总结
