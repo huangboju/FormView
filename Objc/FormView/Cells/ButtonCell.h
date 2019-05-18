@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Row.h"
+#import "XYRow.h"
 
 @protocol ButtonCellActionable <NSObject>
 
@@ -22,7 +22,7 @@
 
 @end
 
-@interface ButtonCell : UITableViewCell<Updatable>
+@interface ButtonCell : UITableViewCell<XYUpdatable>
 
 @property (nonatomic, strong) void (^buttonAction)(void);
 

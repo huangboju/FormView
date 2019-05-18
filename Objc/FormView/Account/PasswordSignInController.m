@@ -35,11 +35,11 @@
 
     self.form = @[
                   @[
-                      [[Row alloc] initWithClass:[AccountTitleCell class] model:accountXYPHBindAccountTitleCellItem],
-                      [[Row alloc] initWithClass:[AccountFieldCell class] model:accountItem],
-                      [[Row alloc] initWithClass:[PasswordFieldCell class] model:passwordCellItem],
-                      [[Row alloc] initWithClass:[ButtonCell class] model:buttonCellItem],
-                      [[Row alloc] initWithClass:[PasswordLoginCell class]]
+                      [XYRow rowWithClass:AccountTitleCell.class model:accountXYPHBindAccountTitleCellItem],
+                      [XYRow rowWithClass:AccountFieldCell.class model:accountItem],
+                      [XYRow rowWithClass:PasswordFieldCell.class model:passwordCellItem],
+                      [XYRow rowWithClass:ButtonCell.class model:buttonCellItem],
+                      [XYRow rowWithClass:[PasswordLoginCell class]]
                       ]
                   ];
 }

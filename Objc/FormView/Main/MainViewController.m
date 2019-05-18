@@ -31,6 +31,7 @@
 
 #import "CustomDismissTransitionVC.h"
 #import "ShapeMaskController.h"
+#import "FilterRefactorVC.h"
 
 @interface MainViewController ()<UITableViewDelegate>
 
@@ -91,6 +92,9 @@
                              ],
                          @[
                              [ShapeMaskController class]
+                             ],
+                         @[
+                             FilterRefactorVC.class
                              ]
                          ];
 
@@ -99,7 +103,7 @@
     for (NSArray <Class>*section in classes) {
         NSMutableArray *rows = [NSMutableArray array];
         for (Class cls in section) {
-            [rows addObject:[[Row alloc] initWithClass:[MainCell class] model:[NSString stringWithFormat:@"%@", cls]]];
+            [rows addObject:[XYRow rowWithClass:MainCell.class model:[NSString stringWithFormat:@"%@", cls]]];
         }
         [sections addObject:rows];
     }
@@ -110,7 +114,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Row *row = [self rowAtIndexPath:indexPath];
+    XYRow *row = [self rowAtIndexPath:indexPath];
     NSString *clsName = row.model;
     UIViewController *vc = [[NSClassFromString(clsName) alloc] init];
     vc.title = clsName;

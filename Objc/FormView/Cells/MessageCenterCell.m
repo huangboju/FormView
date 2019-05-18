@@ -12,7 +12,7 @@
 
 @end
 
-@interface MessageCenterCell()<Updatable>
+@interface MessageCenterCell()<XYUpdatable>
 
 @end
 

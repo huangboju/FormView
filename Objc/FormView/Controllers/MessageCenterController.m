@@ -39,7 +39,7 @@
             item.desc = imageName;
             item.controllerClass = [MessageCenterController class];
 
-            [rows addObject:[[Row alloc] initWithClass:[MessageCenterCell class] model:item]];
+            [rows addObject:[XYRow rowWithClass:MessageCenterCell.class model:item]];
         }
         [sections addObject:rows];
     }

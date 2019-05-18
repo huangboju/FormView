@@ -13,7 +13,7 @@
 @end
 
 
-@interface AccountFieldCell()<Updatable>
+@interface AccountFieldCell()<XYUpdatable>
 
 
 @end

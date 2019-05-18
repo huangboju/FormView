@@ -31,10 +31,10 @@
 
     self.form = @[
                   @[
-                      [[Row alloc] initWithClass:[AccountTitleCell class] model:accountXYPHBindAccountTitleCellItem],
-                      [[Row alloc] initWithClass:[AccountFieldCell class] model:accountItem],
-                      [[Row alloc] initWithClass:[ButtonCell class] model:buttonCellItem],
-                      [[Row alloc] initWithClass:[LicenseCell class]]
+                      [XYRow rowWithClass:AccountTitleCell.class model:accountXYPHBindAccountTitleCellItem],
+                      [XYRow rowWithClass:AccountFieldCell.class model:accountItem],
+                      [XYRow rowWithClass:ButtonCell.class model:buttonCellItem],
+                      [XYRow rowWithClass:LicenseCell.class]
                       ]
                   ];
 }

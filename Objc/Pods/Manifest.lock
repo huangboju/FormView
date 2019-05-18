@@ -1,20 +1,24 @@
 PODS:
   - Masonry (1.1.0)
   - TransitionKit (2.2.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Masonry
   - TransitionKit
+  - YYModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
     - TransitionKit
+    - YYModel
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 57aa08aa7a795d000bb9af477ccbee06165e8254
+PODFILE CHECKSUM: 2a395474b3d94b7c8f9492ca855486466116cf86
 
 COCOAPODS: 1.6.1

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Row.h"
+#import "XYRow.h"
 
 @interface AccountXYPHBindAccountTitleCellItem : NSObject
 
@@ -15,6 +15,6 @@
 
 @end
 
-@interface AccountTitleCell : UITableViewCell <Updatable>
+@interface AccountTitleCell : UITableViewCell <XYUpdatable>
 
 @end

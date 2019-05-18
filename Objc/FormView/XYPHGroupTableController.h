@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Row.h"
+#import "XYRow.h"
 
 @interface XYPHGroupTableController : UIViewController
 
 @property(nonatomic, strong) UITableView *tableView;
 
-@property(nonatomic, strong) NSArray <NSArray <Row *>*>*form;
+@property(nonatomic, strong) NSArray <NSArray <XYRow *>*>*form;
 
-- (Row *)rowAtIndexPath:(NSIndexPath *)indexPath;
+- (XYRow *)rowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

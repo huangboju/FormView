@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Row.h"
+#import "XYRow.h"
 
-@interface MainCell : UITableViewCell <Updatable>
+@interface MainCell : UITableViewCell <XYUpdatable>
 
 @end

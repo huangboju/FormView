@@ -47,11 +47,12 @@ ThirdPartButtonCellActionable
     self.tableView.backgroundView = backgroundView;
 
     // 注意这里反转了UITableView
+    
     self.form = @[
                   @[
-                      [[Row alloc] initWithClass:[ThirdPartButtonCell class]],
-                      [[Row alloc] initWithClass:[WechatButtonCell class]],
-                      [[Row alloc] initWithClass:[AccountButtonCell class]]
+                      [XYRow rowWithClass:ThirdPartButtonCell.class],
+                      [XYRow rowWithClass:WechatButtonCell.class],
+                      [XYRow rowWithClass:AccountButtonCell.class]
                       ]
                   ];
 }

@@ -29,18 +29,18 @@
     [self tableViewDidMoveToSuperView];
 }
 
-- (Row *)rowAtIndexPath:(NSIndexPath *)indexPath {
+- (XYRow *)rowAtIndexPath:(NSIndexPath *)indexPath {
     return self.form[indexPath.section][indexPath.row];
 }
 
-- (void)setForm:(NSArray<NSArray<Row *> *> *)form {
+- (void)setForm:(NSArray<NSArray<XYRow *> *> *)form {
     _form = form;
     [self registerCells];
 }
 
 - (void)registerCells {
-    for (NSArray <Row *>*rows in self.form) {
-        for (Row *row in rows) {
+    for (NSArray <XYRow *>*rows in self.form) {
+        for (XYRow *row in rows) {
             [self.tableView registerClass:row.cellClass forCellReuseIdentifier:row.reuseIdentifier];
         }
     }
@@ -57,7 +57,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Row *row = [self rowAtIndexPath:indexPath];
+    XYRow *row = [self rowAtIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:row.reuseIdentifier forIndexPath:indexPath];
     [row updateCell:cell];
     return cell;

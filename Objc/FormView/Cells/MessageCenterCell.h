@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Row.h"
+#import "XYRow.h"
 
 @interface MessageCenterCellItem : NSObject
 

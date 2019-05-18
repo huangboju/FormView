@@ -7,13 +7,13 @@
 //
 
 #import "PasswordFieldCell.h"
-#import "Row.h"
+#import "XYRow.h"
 
 @implementation PasswordCellItem
 
 @end
 
-@interface PasswordFieldCell()<Updatable>
+@interface PasswordFieldCell()<XYUpdatable>
 
 @end
 

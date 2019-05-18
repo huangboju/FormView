@@ -10,13 +10,73 @@
 		BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */; };
 		BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */; };
 		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
+		BE23ACD4227AFB35000DB8D8 /* filter.json in Resources */ = {isa = PBXBuildFile; fileRef = BE23ACD3227AFB35000DB8D8 /* filter.json */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
+		BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */; };
+		BE2FB056227ACC300060A510 /* XYPHSFGoodsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB050227ACC300060A510 /* XYPHSFGoodsDataSource.m */; };
+		BE2FB057227ACC300060A510 /* XYPHSFGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB053227ACC300060A510 /* XYPHSFGoodsViewController.m */; };
+		BE2FB058227ACC300060A510 /* XYPHSFGoodsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB054227ACC300060A510 /* XYPHSFGoodsViewModel.m */; };
+		BE2FB05E227AD4DB0060A510 /* XYPHSearchGoodsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB05D227AD4DB0060A510 /* XYPHSearchGoodsFilter.m */; };
+		BE2FB061227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB060227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m */; };
+		BE2FB064227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB063227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m */; };
+		BE2FB067227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB065227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m */; };
+		BE2FB06C227AD7DB0060A510 /* XYPHSearchFilterNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB068227AD7DA0060A510 /* XYPHSearchFilterNotesCell.m */; };
+		BE2FB06D227AD7DB0060A510 /* XYPHSFNotesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB069227AD7DA0060A510 /* XYPHSFNotesCellModel.m */; };
+		BE2FB071227AD8760060A510 /* XYPHSearchFilterTagCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB06F227AD8760060A510 /* XYPHSearchFilterTagCellModel.m */; };
+		BE2FB077227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB076227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m */; };
+		BE2FB07B227ADAA70060A510 /* NSString+LineSpacingFix.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB07A227ADAA70060A510 /* NSString+LineSpacingFix.m */; };
+		BE2FB07F227ADC980060A510 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB07E227ADC980060A510 /* Theme.m */; };
+		BE2FB082227ADDE80060A510 /* XYPHSFPriceFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB081227ADDE80060A510 /* XYPHSFPriceFieldCell.m */; };
+		BE2FB085227ADE170060A510 /* XYPHSFPriceFieldCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB083227ADE160060A510 /* XYPHSFPriceFieldCellModel.m */; };
+		BE2FB089227ADF3F0060A510 /* XYPHSFRecommendPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB087227ADF3F0060A510 /* XYPHSFRecommendPriceView.m */; };
+		BE2FB08C227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB08B227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m */; };
+		BE2FB08F227ADF970060A510 /* XYPHSFRecommendPriceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB08E227ADF970060A510 /* XYPHSFRecommendPriceControl.m */; };
+		BE2FB092227AE0230060A510 /* XYPHSearchFilterButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB091227AE0220060A510 /* XYPHSearchFilterButtonsView.m */; };
+		BE2FB095227AE0520060A510 /* XYPHSFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB093227AE0510060A510 /* XYPHSFButton.m */; };
+		BE2FB098227AE1610060A510 /* View+SafeArea.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB097227AE1610060A510 /* View+SafeArea.m */; };
+		BE2FB0A8227AE4970060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB09C227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m */; };
+		BE2FB0A9227AE4970060A510 /* XYPHSearchFilterDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A1227AE4960060A510 /* XYPHSearchFilterDismissTransition.m */; };
+		BE2FB0AA227AE4970060A510 /* XYPHSearchFilterPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A2227AE4960060A510 /* XYPHSearchFilterPresentTransition.m */; };
+		BE2FB0AB227AE4970060A510 /* XYPHSearchFilterPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A4227AE4960060A510 /* XYPHSearchFilterPresentationController.m */; };
+		BE2FB0AC227AE4970060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A5227AE4960060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m */; };
+		BE2FB0AD227AE4970060A510 /* XYPHSearchFilterPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A6227AE4960060A510 /* XYPHSearchFilterPresentAnimator.m */; };
+		BE2FB0AE227AE4970060A510 /* XYPHSearchFilterDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0A7227AE4960060A510 /* XYPHSearchFilterDismissAnimator.m */; };
+		BE2FB0B1227AE4F20060A510 /* XYPHSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B0227AE4F20060A510 /* XYPHSearchUtil.m */; };
+		BE2FB0B4227AE8980060A510 /* FilterRefactorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B3227AE8980060A510 /* FilterRefactorVC.m */; };
+		BE2FB0B7227AE96F0060A510 /* FilterRefactorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B6227AE96F0060A510 /* FilterRefactorDataSource.m */; };
+		BE2FB0BD227AEB070060A510 /* XYPHSRGoodsSortTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0BB227AEB070060A510 /* XYPHSRGoodsSortTabView.m */; };
+		BE2FB0C1227AEB320060A510 /* XYPHSRGoodsFilterTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C0227AEB320060A510 /* XYPHSRGoodsFilterTabView.m */; };
+		BE2FB0C4227AEBA20060A510 /* XYPHImageTextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C2227AEBA20060A510 /* XYPHImageTextControl.m */; };
+		BE2FB0C7227AEC590060A510 /* XYPHSRGoodsSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C6227AEC590060A510 /* XYPHSRGoodsSortButton.m */; };
+		BE2FB0CA227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C9227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m */; };
+		BE2FB0F3227AED460060A510 /* XYPHSFRecommendPriceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0CC227AED460060A510 /* XYPHSFRecommendPriceControl.m */; };
+		BE2FB0F4227AED460060A510 /* XYPHSFRecommendPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D0227AED460060A510 /* XYPHSFRecommendPriceView.m */; };
+		BE2FB0F5227AED460060A510 /* XYPHSFPriceFieldCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D2227AED460060A510 /* XYPHSFPriceFieldCellModel.m */; };
+		BE2FB0F6227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D4227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m */; };
+		BE2FB0F7227AED460060A510 /* XYPHSearchFilterNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D6227AED460060A510 /* XYPHSearchFilterNotesCell.m */; };
+		BE2FB0F8227AED460060A510 /* XYPHSearchFilterButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D9227AED460060A510 /* XYPHSearchFilterButtonsView.m */; };
+		BE2FB0F9227AED460060A510 /* XYPHSFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DA227AED460060A510 /* XYPHSFButton.m */; };
+		BE2FB0FA227AED460060A510 /* XYPHSFNotesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DC227AED460060A510 /* XYPHSFNotesCellModel.m */; };
+		BE2FB0FB227AED460060A510 /* XYPHImageTextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DE227AED460060A510 /* XYPHImageTextControl.m */; };
+		BE2FB0FC227AED460060A510 /* XYPHSRGoodsSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DF227AED460060A510 /* XYPHSRGoodsSortButton.m */; };
+		BE2FB0FD227AED460060A510 /* XYPHSRGoodsFilterTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E2227AED460060A510 /* XYPHSRGoodsFilterTabView.m */; };
+		BE2FB0FE227AED470060A510 /* XYPHSRGoodsSortTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E7227AED460060A510 /* XYPHSRGoodsSortTabView.m */; };
+		BE2FB0FF227AED470060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E9227AED460060A510 /* XYPHSearchFilterShowMoreControl.m */; };
+		BE2FB100227AED470060A510 /* XYPHSFPriceFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EA227AED460060A510 /* XYPHSFPriceFieldCell.m */; };
+		BE2FB101227AED470060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EC227AED460060A510 /* XYPHSearchFilterGroupButtonView.m */; };
+		BE2FB102227AED470060A510 /* XYPHSearchFilterTagCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EE227AED460060A510 /* XYPHSearchFilterTagCellModel.m */; };
+		BE2FB105227AEECC0060A510 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB104227AEECC0060A510 /* UIImage+Color.m */; };
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
 		BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438320403941000D6F41 /* XYPHCountryItem.m */; };
 		BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m */; };
 		BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */; };
+		BE4C9FE8228FF16B00E25562 /* XYPHSGFilterPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C9FDF228FF16B00E25562 /* XYPHSGFilterPresentationController.m */; };
+		BE4C9FE9228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C9FE0228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m */; };
+		BE4C9FEA228FF16B00E25562 /* XYPHSGPriorityFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C9FE4228FF16B00E25562 /* XYPHSGPriorityFilterView.m */; };
+		BE4C9FEB228FF16B00E25562 /* XYPHSFPriorityFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C9FE5228FF16B00E25562 /* XYPHSFPriorityFilterCell.m */; };
+		BE4C9FEE228FF30100E25562 /* UIView+XYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4C9FEC228FF30000E25562 /* UIView+XYLayout.m */; };
 		BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */; };
 		BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */; };
 		BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4E0A7020037C97005FFD77 /* XYEmptyView.m */; };
@@ -46,7 +106,7 @@
 		BECCEA001FD4F2D400CBCC1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9FF1FD4F2D400CBCC1F /* main.m */; };
 		BECCEA0A1FD4F2D400CBCC1F /* FormViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA091FD4F2D400CBCC1F /* FormViewTests.m */; };
 		BECCEA151FD4F2D400CBCC1F /* FormViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA141FD4F2D400CBCC1F /* FormViewUITests.m */; };
-		BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA231FD4F4C900CBCC1F /* Row.m */; };
+		BECCEA241FD4F4C900CBCC1F /* XYRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA231FD4F4C900CBCC1F /* XYRow.m */; };
 		BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA291FD4FDF000CBCC1F /* SignInController.m */; };
 		BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA2C1FD4FE4F00CBCC1F /* SignUpController.m */; };
 		BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA2F1FD4FED300CBCC1F /* AccountFieldCell.m */; };
@@ -114,10 +174,131 @@
 		BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XYPHPhoneZonesViewController.bundle; sourceTree = "<group>"; };
 		BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesHelper.h; sourceTree = "<group>"; };
 		BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesHelper.m; sourceTree = "<group>"; };
+		BE23ACD3227AFB35000DB8D8 /* filter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = filter.json; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
 		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
+		BE2FB04B227AC27D0060A510 /* XYSFSelectedFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSFSelectedFilters.h; sourceTree = "<group>"; };
+		BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSFSelectedFilters.m; sourceTree = "<group>"; };
+		BE2FB04E227AC9E20060A510 /* XYPHSFViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFViewControllerDelegate.h; sourceTree = "<group>"; };
+		BE2FB04F227AC9E20060A510 /* XYPHSFViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFViewControllerPresenter.h; sourceTree = "<group>"; };
+		BE2FB050227ACC300060A510 /* XYPHSFGoodsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFGoodsDataSource.m; sourceTree = "<group>"; };
+		BE2FB051227ACC300060A510 /* XYPHSFGoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFGoodsViewController.h; sourceTree = "<group>"; };
+		BE2FB052227ACC300060A510 /* XYPHSFGoodsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFGoodsDataSource.h; sourceTree = "<group>"; };
+		BE2FB053227ACC300060A510 /* XYPHSFGoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFGoodsViewController.m; sourceTree = "<group>"; };
+		BE2FB054227ACC300060A510 /* XYPHSFGoodsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFGoodsViewModel.m; sourceTree = "<group>"; };
+		BE2FB055227ACC300060A510 /* XYPHSFGoodsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFGoodsViewModel.h; sourceTree = "<group>"; };
+		BE2FB059227AD41D0060A510 /* XYUpdatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYUpdatable.h; sourceTree = "<group>"; };
+		BE2FB05C227AD4DB0060A510 /* XYPHSearchGoodsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchGoodsFilter.h; sourceTree = "<group>"; };
+		BE2FB05D227AD4DB0060A510 /* XYPHSearchGoodsFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchGoodsFilter.m; sourceTree = "<group>"; };
+		BE2FB05F227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchGoodsFilterGroup.h; sourceTree = "<group>"; };
+		BE2FB060227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchGoodsFilterGroup.m; sourceTree = "<group>"; };
+		BE2FB062227AD6F40060A510 /* XYPHSearchGoodsFilterTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchGoodsFilterTag.h; sourceTree = "<group>"; };
+		BE2FB063227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchGoodsFilterTag.m; sourceTree = "<group>"; };
+		BE2FB065227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchGoodsRecommendPriceRange.m; sourceTree = "<group>"; };
+		BE2FB066227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchGoodsRecommendPriceRange.h; sourceTree = "<group>"; };
+		BE2FB068227AD7DA0060A510 /* XYPHSearchFilterNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterNotesCell.m; sourceTree = "<group>"; };
+		BE2FB069227AD7DA0060A510 /* XYPHSFNotesCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFNotesCellModel.m; sourceTree = "<group>"; };
+		BE2FB06A227AD7DA0060A510 /* XYPHSearchFilterNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterNotesCell.h; sourceTree = "<group>"; };
+		BE2FB06B227AD7DB0060A510 /* XYPHSFNotesCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFNotesCellModel.h; sourceTree = "<group>"; };
+		BE2FB06F227AD8760060A510 /* XYPHSearchFilterTagCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterTagCellModel.m; sourceTree = "<group>"; };
+		BE2FB070227AD8760060A510 /* XYPHSearchFilterTagCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterTagCellModel.h; sourceTree = "<group>"; };
+		BE2FB072227AD8C30060A510 /* XYPHSearchFilterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterPresenter.h; sourceTree = "<group>"; };
+		BE2FB073227AD90C0060A510 /* XYPHSearchFilterGroupPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterGroupPresenter.h; sourceTree = "<group>"; };
+		BE2FB075227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterGroupButtonView.h; sourceTree = "<group>"; };
+		BE2FB076227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterGroupButtonView.m; sourceTree = "<group>"; };
+		BE2FB079227ADAA70060A510 /* NSString+LineSpacingFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LineSpacingFix.h"; sourceTree = "<group>"; };
+		BE2FB07A227ADAA70060A510 /* NSString+LineSpacingFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LineSpacingFix.m"; sourceTree = "<group>"; };
+		BE2FB07C227ADB7F0060A510 /* XYPHSFNotesFilterCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFNotesFilterCellDelegate.h; sourceTree = "<group>"; };
+		BE2FB07D227ADC980060A510 /* Theme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		BE2FB07E227ADC980060A510 /* Theme.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		BE2FB080227ADDE80060A510 /* XYPHSFPriceFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFPriceFieldCell.h; sourceTree = "<group>"; };
+		BE2FB081227ADDE80060A510 /* XYPHSFPriceFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFPriceFieldCell.m; sourceTree = "<group>"; };
+		BE2FB083227ADE160060A510 /* XYPHSFPriceFieldCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFPriceFieldCellModel.m; sourceTree = "<group>"; };
+		BE2FB084227ADE170060A510 /* XYPHSFPriceFieldCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFPriceFieldCellModel.h; sourceTree = "<group>"; };
+		BE2FB086227ADEC70060A510 /* XYNoteCardSizePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNoteCardSizePresenter.h; sourceTree = "<group>"; };
+		BE2FB087227ADF3F0060A510 /* XYPHSFRecommendPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFRecommendPriceView.m; sourceTree = "<group>"; };
+		BE2FB088227ADF3F0060A510 /* XYPHSFRecommendPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFRecommendPriceView.h; sourceTree = "<group>"; };
+		BE2FB08A227ADF740060A510 /* XYPHSearchFilterShowMoreControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterShowMoreControl.h; sourceTree = "<group>"; };
+		BE2FB08B227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterShowMoreControl.m; sourceTree = "<group>"; };
+		BE2FB08D227ADF960060A510 /* XYPHSFRecommendPriceControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFRecommendPriceControl.h; sourceTree = "<group>"; };
+		BE2FB08E227ADF970060A510 /* XYPHSFRecommendPriceControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFRecommendPriceControl.m; sourceTree = "<group>"; };
+		BE2FB090227AE0220060A510 /* XYPHSearchFilterButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterButtonsView.h; sourceTree = "<group>"; };
+		BE2FB091227AE0220060A510 /* XYPHSearchFilterButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterButtonsView.m; sourceTree = "<group>"; };
+		BE2FB093227AE0510060A510 /* XYPHSFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFButton.m; sourceTree = "<group>"; };
+		BE2FB094227AE0510060A510 /* XYPHSFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFButton.h; sourceTree = "<group>"; };
+		BE2FB096227AE1600060A510 /* View+SafeArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+SafeArea.h"; sourceTree = "<group>"; };
+		BE2FB097227AE1610060A510 /* View+SafeArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+SafeArea.m"; sourceTree = "<group>"; };
+		BE2FB09A227AE4960060A510 /* XYPHSearchFilterDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterDismissTransition.h; sourceTree = "<group>"; };
+		BE2FB09B227AE4960060A510 /* XYPHSearchFilterPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterPresentationController.h; sourceTree = "<group>"; };
+		BE2FB09C227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterScreenEdgePanGestureRecognizer.m; sourceTree = "<group>"; };
+		BE2FB09D227AE4960060A510 /* XYPHSearchFilterPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterPresentTransition.h; sourceTree = "<group>"; };
+		BE2FB09E227AE4960060A510 /* XYPHSearchFilterPresentAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterPresentAnimator.h; sourceTree = "<group>"; };
+		BE2FB09F227AE4960060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterDismissPanGestureRecognizer.h; sourceTree = "<group>"; };
+		BE2FB0A0227AE4960060A510 /* XYPHSearchFilterDismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterDismissAnimator.h; sourceTree = "<group>"; };
+		BE2FB0A1227AE4960060A510 /* XYPHSearchFilterDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterDismissTransition.m; sourceTree = "<group>"; };
+		BE2FB0A2227AE4960060A510 /* XYPHSearchFilterPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterPresentTransition.m; sourceTree = "<group>"; };
+		BE2FB0A3227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterScreenEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
+		BE2FB0A4227AE4960060A510 /* XYPHSearchFilterPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterPresentationController.m; sourceTree = "<group>"; };
+		BE2FB0A5227AE4960060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterDismissPanGestureRecognizer.m; sourceTree = "<group>"; };
+		BE2FB0A6227AE4960060A510 /* XYPHSearchFilterPresentAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterPresentAnimator.m; sourceTree = "<group>"; };
+		BE2FB0A7227AE4960060A510 /* XYPHSearchFilterDismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterDismissAnimator.m; sourceTree = "<group>"; };
+		BE2FB0AF227AE4F20060A510 /* XYPHSearchUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHSearchUtil.h; sourceTree = "<group>"; };
+		BE2FB0B0227AE4F20060A510 /* XYPHSearchUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchUtil.m; sourceTree = "<group>"; };
+		BE2FB0B2227AE8980060A510 /* FilterRefactorVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterRefactorVC.h; sourceTree = "<group>"; };
+		BE2FB0B3227AE8980060A510 /* FilterRefactorVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterRefactorVC.m; sourceTree = "<group>"; };
+		BE2FB0B5227AE96F0060A510 /* FilterRefactorDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterRefactorDataSource.h; sourceTree = "<group>"; };
+		BE2FB0B6227AE96F0060A510 /* FilterRefactorDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterRefactorDataSource.m; sourceTree = "<group>"; };
+		BE2FB0BA227AEB070060A510 /* XYPHSRSortTabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRSortTabViewDelegate.h; sourceTree = "<group>"; };
+		BE2FB0BB227AEB070060A510 /* XYPHSRGoodsSortTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsSortTabView.m; sourceTree = "<group>"; };
+		BE2FB0BC227AEB070060A510 /* XYPHSRGoodsSortTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsSortTabView.h; sourceTree = "<group>"; };
+		BE2FB0BF227AEB320060A510 /* XYPHSRGoodsFilterTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsFilterTabView.h; sourceTree = "<group>"; };
+		BE2FB0C0227AEB320060A510 /* XYPHSRGoodsFilterTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsFilterTabView.m; sourceTree = "<group>"; };
+		BE2FB0C2227AEBA20060A510 /* XYPHImageTextControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHImageTextControl.m; sourceTree = "<group>"; };
+		BE2FB0C3227AEBA20060A510 /* XYPHImageTextControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHImageTextControl.h; sourceTree = "<group>"; };
+		BE2FB0C5227AEC590060A510 /* XYPHSRGoodsSortButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsSortButton.h; sourceTree = "<group>"; };
+		BE2FB0C6227AEC590060A510 /* XYPHSRGoodsSortButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsSortButton.m; sourceTree = "<group>"; };
+		BE2FB0C8227AED370060A510 /* XYPHSearchResultGoodsFilterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultGoodsFilterButton.h; sourceTree = "<group>"; };
+		BE2FB0C9227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultGoodsFilterButton.m; sourceTree = "<group>"; };
+		BE2FB0CC227AED460060A510 /* XYPHSFRecommendPriceControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFRecommendPriceControl.m; sourceTree = "<group>"; };
+		BE2FB0CD227AED460060A510 /* XYPHSFNotesFilterCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFNotesFilterCellDelegate.h; sourceTree = "<group>"; };
+		BE2FB0CE227AED460060A510 /* XYPHSearchFilterGroupPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterGroupPresenter.h; sourceTree = "<group>"; };
+		BE2FB0CF227AED460060A510 /* XYPHSFPriceFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFPriceFieldCell.h; sourceTree = "<group>"; };
+		BE2FB0D0227AED460060A510 /* XYPHSFRecommendPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFRecommendPriceView.m; sourceTree = "<group>"; };
+		BE2FB0D1227AED460060A510 /* XYPHSearchFilterShowMoreControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterShowMoreControl.h; sourceTree = "<group>"; };
+		BE2FB0D2227AED460060A510 /* XYPHSFPriceFieldCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFPriceFieldCellModel.m; sourceTree = "<group>"; };
+		BE2FB0D3227AED460060A510 /* XYPHSearchFilterGroupButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterGroupButtonView.h; sourceTree = "<group>"; };
+		BE2FB0D4227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchResultGoodsFilterButton.m; sourceTree = "<group>"; };
+		BE2FB0D6227AED460060A510 /* XYPHSearchFilterNotesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterNotesCell.m; sourceTree = "<group>"; };
+		BE2FB0D7227AED460060A510 /* XYPHSFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFButton.h; sourceTree = "<group>"; };
+		BE2FB0D8227AED460060A510 /* XYPHSFNotesCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFNotesCellModel.h; sourceTree = "<group>"; };
+		BE2FB0D9227AED460060A510 /* XYPHSearchFilterButtonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterButtonsView.m; sourceTree = "<group>"; };
+		BE2FB0DA227AED460060A510 /* XYPHSFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFButton.m; sourceTree = "<group>"; };
+		BE2FB0DB227AED460060A510 /* XYPHSearchFilterNotesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterNotesCell.h; sourceTree = "<group>"; };
+		BE2FB0DC227AED460060A510 /* XYPHSFNotesCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFNotesCellModel.m; sourceTree = "<group>"; };
+		BE2FB0DD227AED460060A510 /* XYPHSearchFilterButtonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterButtonsView.h; sourceTree = "<group>"; };
+		BE2FB0DE227AED460060A510 /* XYPHImageTextControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHImageTextControl.m; sourceTree = "<group>"; };
+		BE2FB0DF227AED460060A510 /* XYPHSRGoodsSortButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsSortButton.m; sourceTree = "<group>"; };
+		BE2FB0E0227AED460060A510 /* XYPHSearchFilterTagCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchFilterTagCellModel.h; sourceTree = "<group>"; };
+		BE2FB0E2227AED460060A510 /* XYPHSRGoodsFilterTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsFilterTabView.m; sourceTree = "<group>"; };
+		BE2FB0E3227AED460060A510 /* XYPHSRGoodsFilterTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsFilterTabView.h; sourceTree = "<group>"; };
+		BE2FB0E4227AED460060A510 /* XYPHSFRecommendPriceControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFRecommendPriceControl.h; sourceTree = "<group>"; };
+		BE2FB0E6227AED460060A510 /* XYPHSRGoodsSortTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsSortTabView.h; sourceTree = "<group>"; };
+		BE2FB0E7227AED460060A510 /* XYPHSRGoodsSortTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSRGoodsSortTabView.m; sourceTree = "<group>"; };
+		BE2FB0E8227AED460060A510 /* XYPHSRSortTabViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRSortTabViewDelegate.h; sourceTree = "<group>"; };
+		BE2FB0E9227AED460060A510 /* XYPHSearchFilterShowMoreControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterShowMoreControl.m; sourceTree = "<group>"; };
+		BE2FB0EA227AED460060A510 /* XYPHSFPriceFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFPriceFieldCell.m; sourceTree = "<group>"; };
+		BE2FB0EB227AED460060A510 /* XYPHSFRecommendPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFRecommendPriceView.h; sourceTree = "<group>"; };
+		BE2FB0EC227AED460060A510 /* XYPHSearchFilterGroupButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterGroupButtonView.m; sourceTree = "<group>"; };
+		BE2FB0ED227AED460060A510 /* XYPHSFPriceFieldCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFPriceFieldCellModel.h; sourceTree = "<group>"; };
+		BE2FB0EE227AED460060A510 /* XYPHSearchFilterTagCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSearchFilterTagCellModel.m; sourceTree = "<group>"; };
+		BE2FB0EF227AED460060A510 /* XYPHSRGoodsSortButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSRGoodsSortButton.h; sourceTree = "<group>"; };
+		BE2FB0F0227AED460060A510 /* XYPHImageTextControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHImageTextControl.h; sourceTree = "<group>"; };
+		BE2FB0F1227AED460060A510 /* XYNoteCardSizePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNoteCardSizePresenter.h; sourceTree = "<group>"; };
+		BE2FB0F2227AED460060A510 /* XYPHSearchResultGoodsFilterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSearchResultGoodsFilterButton.h; sourceTree = "<group>"; };
+		BE2FB103227AEECC0060A510 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		BE2FB104227AEECC0060A510 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		BE37437920401130000D6F41 /* XYPHPhoneZonesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesVC.h; sourceTree = "<group>"; };
 		BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesVC.m; sourceTree = "<group>"; };
 		BE37437F2040390E000D6F41 /* XYPHPhoneZonesItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesItem.h; sourceTree = "<group>"; };
@@ -128,6 +309,16 @@
 		BE374387204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesSearchResultsVC.m; sourceTree = "<group>"; };
 		BE3743892041454D000D6F41 /* XYPHPhoneZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesCell.h; sourceTree = "<group>"; };
 		BE37438A2041454D000D6F41 /* XYPHPhoneZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesCell.m; sourceTree = "<group>"; };
+		BE4C9FDF228FF16B00E25562 /* XYPHSGFilterPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSGFilterPresentationController.m; sourceTree = "<group>"; };
+		BE4C9FE0228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSGPriorityFilterViewController.m; sourceTree = "<group>"; };
+		BE4C9FE1228FF16B00E25562 /* XYPHSGFilterPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSGFilterPresentationController.h; sourceTree = "<group>"; };
+		BE4C9FE2228FF16B00E25562 /* XYPHSGPriorityFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSGPriorityFilterViewController.h; sourceTree = "<group>"; };
+		BE4C9FE4228FF16B00E25562 /* XYPHSGPriorityFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSGPriorityFilterView.m; sourceTree = "<group>"; };
+		BE4C9FE5228FF16B00E25562 /* XYPHSFPriorityFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPHSFPriorityFilterCell.m; sourceTree = "<group>"; };
+		BE4C9FE6228FF16B00E25562 /* XYPHSGPriorityFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSGPriorityFilterView.h; sourceTree = "<group>"; };
+		BE4C9FE7228FF16B00E25562 /* XYPHSFPriorityFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFPriorityFilterCell.h; sourceTree = "<group>"; };
+		BE4C9FEC228FF30000E25562 /* UIView+XYLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYLayout.m"; sourceTree = "<group>"; };
+		BE4C9FED228FF30100E25562 /* UIView+XYLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYLayout.h"; sourceTree = "<group>"; };
 		BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTextView.h; sourceTree = "<group>"; };
 		BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTextView.m; sourceTree = "<group>"; };
 		BE4E0A6F20037C97005FFD77 /* UIScrollView+XYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XYEmptyView.m"; sourceTree = "<group>"; };
@@ -186,8 +377,8 @@
 		BECCEA101FD4F2D400CBCC1F /* FormViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECCEA141FD4F2D400CBCC1F /* FormViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormViewUITests.m; sourceTree = "<group>"; };
 		BECCEA161FD4F2D400CBCC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BECCEA221FD4F4C900CBCC1F /* Row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
-		BECCEA231FD4F4C900CBCC1F /* Row.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
+		BECCEA221FD4F4C900CBCC1F /* XYRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYRow.h; sourceTree = "<group>"; };
+		BECCEA231FD4F4C900CBCC1F /* XYRow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYRow.m; sourceTree = "<group>"; };
 		BECCEA281FD4FDF000CBCC1F /* SignInController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInController.h; sourceTree = "<group>"; };
 		BECCEA291FD4FDF000CBCC1F /* SignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInController.m; sourceTree = "<group>"; };
 		BECCEA2B1FD4FE4F00CBCC1F /* SignUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpController.h; sourceTree = "<group>"; };
@@ -343,6 +534,242 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BE2FB04A227AC2550060A510 /* FilterRefactor */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C9FDD228FF16B00E25562 /* Priority */,
+				BE23ACD3227AFB35000DB8D8 /* filter.json */,
+				BE2FB099227AE4960060A510 /* FilterTransition */,
+				BE2FB078227ADA960060A510 /* Util */,
+				BE2FB074227AD90E0060A510 /* View */,
+				BE2FB06E227AD7E90060A510 /* Core */,
+				BE2FB05B227AD4B50060A510 /* Model */,
+				BE2FB072227AD8C30060A510 /* XYPHSearchFilterPresenter.h */,
+				BE2FB04E227AC9E20060A510 /* XYPHSFViewControllerDelegate.h */,
+				BE2FB04F227AC9E20060A510 /* XYPHSFViewControllerPresenter.h */,
+				BE2FB04B227AC27D0060A510 /* XYSFSelectedFilters.h */,
+				BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */,
+				BE2FB0B2227AE8980060A510 /* FilterRefactorVC.h */,
+				BE2FB0B3227AE8980060A510 /* FilterRefactorVC.m */,
+				BE2FB0B5227AE96F0060A510 /* FilterRefactorDataSource.h */,
+				BE2FB0B6227AE96F0060A510 /* FilterRefactorDataSource.m */,
+			);
+			path = FilterRefactor;
+			sourceTree = "<group>";
+		};
+		BE2FB05A227AD4530060A510 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB059227AD41D0060A510 /* XYUpdatable.h */,
+				BECCEA221FD4F4C900CBCC1F /* XYRow.h */,
+				BECCEA231FD4F4C900CBCC1F /* XYRow.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BE2FB05B227AD4B50060A510 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB066227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.h */,
+				BE2FB065227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m */,
+				BE2FB062227AD6F40060A510 /* XYPHSearchGoodsFilterTag.h */,
+				BE2FB063227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m */,
+				BE2FB05F227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.h */,
+				BE2FB060227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m */,
+				BE2FB05C227AD4DB0060A510 /* XYPHSearchGoodsFilter.h */,
+				BE2FB05D227AD4DB0060A510 /* XYPHSearchGoodsFilter.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE2FB06E227AD7E90060A510 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB052227ACC300060A510 /* XYPHSFGoodsDataSource.h */,
+				BE2FB050227ACC300060A510 /* XYPHSFGoodsDataSource.m */,
+				BE2FB051227ACC300060A510 /* XYPHSFGoodsViewController.h */,
+				BE2FB053227ACC300060A510 /* XYPHSFGoodsViewController.m */,
+				BE2FB055227ACC300060A510 /* XYPHSFGoodsViewModel.h */,
+				BE2FB054227ACC300060A510 /* XYPHSFGoodsViewModel.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BE2FB074227AD90E0060A510 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0CB227AED460060A510 /* View */,
+				BE2FB086227ADEC70060A510 /* XYNoteCardSizePresenter.h */,
+				BE2FB0C3227AEBA20060A510 /* XYPHImageTextControl.h */,
+				BE2FB0C2227AEBA20060A510 /* XYPHImageTextControl.m */,
+				BE2FB075227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.h */,
+				BE2FB076227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m */,
+				BE2FB073227AD90C0060A510 /* XYPHSearchFilterGroupPresenter.h */,
+				BE2FB0B8227AEA9C0060A510 /* XYPHSearchFilterNotesCell */,
+				BE2FB08A227ADF740060A510 /* XYPHSearchFilterShowMoreControl.h */,
+				BE2FB08B227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m */,
+				BE2FB070227AD8760060A510 /* XYPHSearchFilterTagCellModel.h */,
+				BE2FB06F227AD8760060A510 /* XYPHSearchFilterTagCellModel.m */,
+				BE2FB0C8227AED370060A510 /* XYPHSearchResultGoodsFilterButton.h */,
+				BE2FB0C9227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m */,
+				BE2FB07C227ADB7F0060A510 /* XYPHSFNotesFilterCellDelegate.h */,
+				BE2FB080227ADDE80060A510 /* XYPHSFPriceFieldCell.h */,
+				BE2FB081227ADDE80060A510 /* XYPHSFPriceFieldCell.m */,
+				BE2FB084227ADE170060A510 /* XYPHSFPriceFieldCellModel.h */,
+				BE2FB083227ADE160060A510 /* XYPHSFPriceFieldCellModel.m */,
+				BE2FB08D227ADF960060A510 /* XYPHSFRecommendPriceControl.h */,
+				BE2FB08E227ADF970060A510 /* XYPHSFRecommendPriceControl.m */,
+				BE2FB088227ADF3F0060A510 /* XYPHSFRecommendPriceView.h */,
+				BE2FB087227ADF3F0060A510 /* XYPHSFRecommendPriceView.m */,
+				BE2FB0BE227AEB120060A510 /* XYPHSRGoodsFilterTabView */,
+				BE2FB0C5227AEC590060A510 /* XYPHSRGoodsSortButton.h */,
+				BE2FB0C6227AEC590060A510 /* XYPHSRGoodsSortButton.m */,
+				BE2FB0B9227AEAE60060A510 /* XYPHSRGoodsSortTabView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE2FB078227ADA960060A510 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C9FED228FF30100E25562 /* UIView+XYLayout.h */,
+				BE4C9FEC228FF30000E25562 /* UIView+XYLayout.m */,
+				BE2FB096227AE1600060A510 /* View+SafeArea.h */,
+				BE2FB097227AE1610060A510 /* View+SafeArea.m */,
+				BE2FB079227ADAA70060A510 /* NSString+LineSpacingFix.h */,
+				BE2FB07A227ADAA70060A510 /* NSString+LineSpacingFix.m */,
+				BE2FB07D227ADC980060A510 /* Theme.h */,
+				BE2FB07E227ADC980060A510 /* Theme.m */,
+				BE2FB0AF227AE4F20060A510 /* XYPHSearchUtil.h */,
+				BE2FB0B0227AE4F20060A510 /* XYPHSearchUtil.m */,
+				BE2FB103227AEECC0060A510 /* UIImage+Color.h */,
+				BE2FB104227AEECC0060A510 /* UIImage+Color.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		BE2FB099227AE4960060A510 /* FilterTransition */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0A0227AE4960060A510 /* XYPHSearchFilterDismissAnimator.h */,
+				BE2FB0A7227AE4960060A510 /* XYPHSearchFilterDismissAnimator.m */,
+				BE2FB09F227AE4960060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.h */,
+				BE2FB0A5227AE4960060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m */,
+				BE2FB09A227AE4960060A510 /* XYPHSearchFilterDismissTransition.h */,
+				BE2FB0A1227AE4960060A510 /* XYPHSearchFilterDismissTransition.m */,
+				BE2FB09E227AE4960060A510 /* XYPHSearchFilterPresentAnimator.h */,
+				BE2FB0A6227AE4960060A510 /* XYPHSearchFilterPresentAnimator.m */,
+				BE2FB09B227AE4960060A510 /* XYPHSearchFilterPresentationController.h */,
+				BE2FB0A4227AE4960060A510 /* XYPHSearchFilterPresentationController.m */,
+				BE2FB09D227AE4960060A510 /* XYPHSearchFilterPresentTransition.h */,
+				BE2FB0A2227AE4960060A510 /* XYPHSearchFilterPresentTransition.m */,
+				BE2FB0A3227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.h */,
+				BE2FB09C227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m */,
+			);
+			path = FilterTransition;
+			sourceTree = "<group>";
+		};
+		BE2FB0B8227AEA9C0060A510 /* XYPHSearchFilterNotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB06A227AD7DA0060A510 /* XYPHSearchFilterNotesCell.h */,
+				BE2FB068227AD7DA0060A510 /* XYPHSearchFilterNotesCell.m */,
+				BE2FB094227AE0510060A510 /* XYPHSFButton.h */,
+				BE2FB093227AE0510060A510 /* XYPHSFButton.m */,
+				BE2FB090227AE0220060A510 /* XYPHSearchFilterButtonsView.h */,
+				BE2FB091227AE0220060A510 /* XYPHSearchFilterButtonsView.m */,
+				BE2FB06B227AD7DB0060A510 /* XYPHSFNotesCellModel.h */,
+				BE2FB069227AD7DA0060A510 /* XYPHSFNotesCellModel.m */,
+			);
+			path = XYPHSearchFilterNotesCell;
+			sourceTree = "<group>";
+		};
+		BE2FB0B9227AEAE60060A510 /* XYPHSRGoodsSortTabView */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0BC227AEB070060A510 /* XYPHSRGoodsSortTabView.h */,
+				BE2FB0BB227AEB070060A510 /* XYPHSRGoodsSortTabView.m */,
+				BE2FB0BA227AEB070060A510 /* XYPHSRSortTabViewDelegate.h */,
+			);
+			path = XYPHSRGoodsSortTabView;
+			sourceTree = "<group>";
+		};
+		BE2FB0BE227AEB120060A510 /* XYPHSRGoodsFilterTabView */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0BF227AEB320060A510 /* XYPHSRGoodsFilterTabView.h */,
+				BE2FB0C0227AEB320060A510 /* XYPHSRGoodsFilterTabView.m */,
+			);
+			path = XYPHSRGoodsFilterTabView;
+			sourceTree = "<group>";
+		};
+		BE2FB0CB227AED460060A510 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0CC227AED460060A510 /* XYPHSFRecommendPriceControl.m */,
+				BE2FB0CD227AED460060A510 /* XYPHSFNotesFilterCellDelegate.h */,
+				BE2FB0CE227AED460060A510 /* XYPHSearchFilterGroupPresenter.h */,
+				BE2FB0CF227AED460060A510 /* XYPHSFPriceFieldCell.h */,
+				BE2FB0D0227AED460060A510 /* XYPHSFRecommendPriceView.m */,
+				BE2FB0D1227AED460060A510 /* XYPHSearchFilterShowMoreControl.h */,
+				BE2FB0D2227AED460060A510 /* XYPHSFPriceFieldCellModel.m */,
+				BE2FB0D3227AED460060A510 /* XYPHSearchFilterGroupButtonView.h */,
+				BE2FB0D4227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m */,
+				BE2FB0D5227AED460060A510 /* XYPHSearchFilterNotesCell */,
+				BE2FB0DE227AED460060A510 /* XYPHImageTextControl.m */,
+				BE2FB0DF227AED460060A510 /* XYPHSRGoodsSortButton.m */,
+				BE2FB0E0227AED460060A510 /* XYPHSearchFilterTagCellModel.h */,
+				BE2FB0E1227AED460060A510 /* XYPHSRGoodsFilterTabView */,
+				BE2FB0E4227AED460060A510 /* XYPHSFRecommendPriceControl.h */,
+				BE2FB0E5227AED460060A510 /* XYPHSRGoodsSortTabView */,
+				BE2FB0E9227AED460060A510 /* XYPHSearchFilterShowMoreControl.m */,
+				BE2FB0EA227AED460060A510 /* XYPHSFPriceFieldCell.m */,
+				BE2FB0EB227AED460060A510 /* XYPHSFRecommendPriceView.h */,
+				BE2FB0EC227AED460060A510 /* XYPHSearchFilterGroupButtonView.m */,
+				BE2FB0ED227AED460060A510 /* XYPHSFPriceFieldCellModel.h */,
+				BE2FB0EE227AED460060A510 /* XYPHSearchFilterTagCellModel.m */,
+				BE2FB0EF227AED460060A510 /* XYPHSRGoodsSortButton.h */,
+				BE2FB0F0227AED460060A510 /* XYPHImageTextControl.h */,
+				BE2FB0F1227AED460060A510 /* XYNoteCardSizePresenter.h */,
+				BE2FB0F2227AED460060A510 /* XYPHSearchResultGoodsFilterButton.h */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BE2FB0D5227AED460060A510 /* XYPHSearchFilterNotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0D6227AED460060A510 /* XYPHSearchFilterNotesCell.m */,
+				BE2FB0D7227AED460060A510 /* XYPHSFButton.h */,
+				BE2FB0D8227AED460060A510 /* XYPHSFNotesCellModel.h */,
+				BE2FB0D9227AED460060A510 /* XYPHSearchFilterButtonsView.m */,
+				BE2FB0DA227AED460060A510 /* XYPHSFButton.m */,
+				BE2FB0DB227AED460060A510 /* XYPHSearchFilterNotesCell.h */,
+				BE2FB0DC227AED460060A510 /* XYPHSFNotesCellModel.m */,
+				BE2FB0DD227AED460060A510 /* XYPHSearchFilterButtonsView.h */,
+			);
+			path = XYPHSearchFilterNotesCell;
+			sourceTree = "<group>";
+		};
+		BE2FB0E1227AED460060A510 /* XYPHSRGoodsFilterTabView */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0E2227AED460060A510 /* XYPHSRGoodsFilterTabView.m */,
+				BE2FB0E3227AED460060A510 /* XYPHSRGoodsFilterTabView.h */,
+			);
+			path = XYPHSRGoodsFilterTabView;
+			sourceTree = "<group>";
+		};
+		BE2FB0E5227AED460060A510 /* XYPHSRGoodsSortTabView */ = {
+			isa = PBXGroup;
+			children = (
+				BE2FB0E6227AED460060A510 /* XYPHSRGoodsSortTabView.h */,
+				BE2FB0E7227AED460060A510 /* XYPHSRGoodsSortTabView.m */,
+				BE2FB0E8227AED460060A510 /* XYPHSRSortTabViewDelegate.h */,
+			);
+			path = XYPHSRGoodsSortTabView;
+			sourceTree = "<group>";
+		};
 		BE37437E204038F4000D6F41 /* Zones */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +788,37 @@
 				BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */,
 			);
 			path = Zones;
+			sourceTree = "<group>";
+		};
+		BE4C9FDD228FF16B00E25562 /* Priority */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C9FDE228FF16B00E25562 /* Controller */,
+				BE4C9FE3228FF16B00E25562 /* View */,
+			);
+			path = Priority;
+			sourceTree = "<group>";
+		};
+		BE4C9FDE228FF16B00E25562 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C9FE1228FF16B00E25562 /* XYPHSGFilterPresentationController.h */,
+				BE4C9FDF228FF16B00E25562 /* XYPHSGFilterPresentationController.m */,
+				BE4C9FE2228FF16B00E25562 /* XYPHSGPriorityFilterViewController.h */,
+				BE4C9FE0228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE4C9FE3228FF16B00E25562 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE4C9FE7228FF16B00E25562 /* XYPHSFPriorityFilterCell.h */,
+				BE4C9FE5228FF16B00E25562 /* XYPHSFPriorityFilterCell.m */,
+				BE4C9FE6228FF16B00E25562 /* XYPHSGPriorityFilterView.h */,
+				BE4C9FE4228FF16B00E25562 /* XYPHSGPriorityFilterView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BE8ECEE120561AC600FAC2E8 /* Timer */ = {
@@ -390,6 +848,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE2FB04A227AC2550060A510 /* FilterRefactor */,
 				F73BBD9221E2FDB600BC2E2D /* ShapeMask */,
 				F729CD9D213E5C7900A9B873 /* DismissTransition */,
 				F7F2EEDE20A95F2200CDFD7B /* NewCard */,
@@ -442,7 +901,7 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
-				F787AB2A20C683A2001A0A07 /* MD5 */,
+				BE2FB05A227AD4530060A510 /* Core */,
 				BEB2222420206924009DD3B9 /* Controllers */,
 				BE29FB321FFDD58000A27373 /* Views */,
 				BE29FB2E1FFDD48700A27373 /* Account */,
@@ -459,8 +918,6 @@
 				BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */,
 				BECCE9FE1FD4F2D400CBCC1F /* Info.plist */,
 				BECCE9FF1FD4F2D400CBCC1F /* main.m */,
-				BECCEA221FD4F4C900CBCC1F /* Row.h */,
-				BECCEA231FD4F4C900CBCC1F /* Row.m */,
 				BECCEA431FD52ECC00CBCC1F /* UIView+Extension.h */,
 				BECCEA441FD52ECC00CBCC1F /* UIView+Extension.m */,
 			);
@@ -596,13 +1053,6 @@
 				F73BBD9D21E2FFAB00BC2E2D /* XYShapeMaskLayer.m */,
 			);
 			path = ShapeMask;
-			sourceTree = "<group>";
-		};
-		F787AB2A20C683A2001A0A07 /* MD5 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MD5;
 			sourceTree = "<group>";
 		};
 		F7BC371C2064DBFD009D3B22 /* BindAccount */ = {
@@ -758,6 +1208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */,
+				BE23ACD4227AFB35000DB8D8 /* filter.json in Resources */,
 				BECCE9FD1FD4F2D400CBCC1F /* LaunchScreen.storyboard in Resources */,
 				BECCE9FA1FD4F2D400CBCC1F /* Assets.xcassets in Resources */,
 				BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */,
@@ -807,12 +1258,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73BBD9721E2FDE100BC2E2D /* XYPHSearchShapeMaskView.m in Sources */,
+				BE2FB0CA227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */,
 				F7142EF22060B25000BCDE8E /* CustomSearchBarController.m in Sources */,
 				BE7458A71FD540FA005D4D3A /* FieldCell.m in Sources */,
+				BE2FB082227ADDE80060A510 /* XYPHSFPriceFieldCell.m in Sources */,
 				BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */,
 				BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */,
 				BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */,
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
+				BE2FB0FB227AED460060A510 /* XYPHImageTextControl.m in Sources */,
+				BE2FB089227ADF3F0060A510 /* XYPHSFRecommendPriceView.m in Sources */,
 				F729CDA0213E5CA100A9B873 /* CustomDismissTransitionVC.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
 				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
@@ -820,64 +1275,119 @@
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
 				F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */,
+				BE2FB0C7227AEC590060A510 /* XYPHSRGoodsSortButton.m in Sources */,
+				BE2FB0FE227AED470060A510 /* XYPHSRGoodsSortTabView.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
+				BE2FB0B4227AE8980060A510 /* FilterRefactorVC.m in Sources */,
+				BE2FB077227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */,
+				BE2FB06D227AD7DB0060A510 /* XYPHSFNotesCellModel.m in Sources */,
+				BE2FB07B227ADAA70060A510 /* NSString+LineSpacingFix.m in Sources */,
 				BEEF6CB8200DE490001158A9 /* IntroController.m in Sources */,
 				BE7458AA1FD544C4005D4D3A /* LicenseCell.m in Sources */,
 				BEB2222720206941009DD3B9 /* InputBarController.m in Sources */,
 				F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */,
+				BE2FB056227ACC300060A510 /* XYPHSFGoodsDataSource.m in Sources */,
+				BE2FB0A8227AE4970060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m in Sources */,
+				BE2FB0FC227AED460060A510 /* XYPHSRGoodsSortButton.m in Sources */,
+				BE2FB0A9227AE4970060A510 /* XYPHSearchFilterDismissTransition.m in Sources */,
+				BE2FB0F3227AED460060A510 /* XYPHSFRecommendPriceControl.m in Sources */,
+				BE4C9FEE228FF30100E25562 /* UIView+XYLayout.m in Sources */,
+				BE2FB0AA227AE4970060A510 /* XYPHSearchFilterPresentTransition.m in Sources */,
+				BE2FB0FA227AED460060A510 /* XYPHSFNotesCellModel.m in Sources */,
+				BE2FB067227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
 				F73BBD9B21E2FDF800BC2E2D /* ShapeMaskController.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
+				BE2FB064227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m in Sources */,
+				BE2FB061227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
+				BE2FB098227AE1610060A510 /* View+SafeArea.m in Sources */,
+				BE4C9FE8228FF16B00E25562 /* XYPHSGFilterPresentationController.m in Sources */,
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				F7144804206A300100405838 /* XYPHBindAccountTitleCellItem.m in Sources */,
+				BE4C9FEB228FF16B00E25562 /* XYPHSFPriorityFilterCell.m in Sources */,
+				BE2FB0F6227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
+				BE2FB0F4227AED460060A510 /* XYPHSFRecommendPriceView.m in Sources */,
+				BE4C9FEA228FF16B00E25562 /* XYPHSGPriorityFilterView.m in Sources */,
+				BE2FB105227AEECC0060A510 /* UIImage+Color.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
-				BECCEA241FD4F4C900CBCC1F /* Row.m in Sources */,
+				BECCEA241FD4F4C900CBCC1F /* XYRow.m in Sources */,
+				BE2FB0B7227AE96F0060A510 /* FilterRefactorDataSource.m in Sources */,
 				BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */,
+				BE4C9FE9228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
+				BE2FB0C1227AEB320060A510 /* XYPHSRGoodsFilterTabView.m in Sources */,
+				BE2FB100227AED470060A510 /* XYPHSFPriceFieldCell.m in Sources */,
+				BE2FB057227ACC300060A510 /* XYPHSFGoodsViewController.m in Sources */,
 				F73BBD9821E2FDE100BC2E2D /* XYShapeImageView.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
 				BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */,
+				BE2FB07F227ADC980060A510 /* Theme.m in Sources */,
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
 				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
+				BE2FB058227ACC300060A510 /* XYPHSFGoodsViewModel.m in Sources */,
 				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
+				BE2FB0F5227AED460060A510 /* XYPHSFPriceFieldCellModel.m in Sources */,
+				BE2FB101227AED470060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */,
 				BE5F0DD3206B34430061ED31 /* XYPHBindAccountUIGenerator.m in Sources */,
 				F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */,
+				BE2FB0F8227AED460060A510 /* XYPHSearchFilterButtonsView.m in Sources */,
 				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
+				BE2FB08F227ADF970060A510 /* XYPHSFRecommendPriceControl.m in Sources */,
 				F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */,
+				BE2FB085227ADE170060A510 /* XYPHSFPriceFieldCellModel.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */,
+				BE2FB06C227AD7DB0060A510 /* XYPHSearchFilterNotesCell.m in Sources */,
+				BE2FB0FD227AED460060A510 /* XYPHSRGoodsFilterTabView.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
+				BE2FB0FF227AED470060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */,
 				F7142EF82060EB7E00BCDE8E /* MySearchBar.m in Sources */,
 				BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */,
 				BECCEA301FD4FED300CBCC1F /* AccountFieldCell.m in Sources */,
 				BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
+				BE2FB095227AE0520060A510 /* XYPHSFButton.m in Sources */,
+				BE2FB0BD227AEB070060A510 /* XYPHSRGoodsSortTabView.m in Sources */,
+				BE2FB071227AD8760060A510 /* XYPHSearchFilterTagCellModel.m in Sources */,
 				BE80D3EB20A99239001377F1 /* UIImage+Rounded.m in Sources */,
 				BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
+				BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */,
+				BE2FB08C227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
+				BE2FB102227AED470060A510 /* XYPHSearchFilterTagCellModel.m in Sources */,
+				BE2FB0C4227AEBA20060A510 /* XYPHImageTextControl.m in Sources */,
+				BE2FB0AE227AE4970060A510 /* XYPHSearchFilterDismissAnimator.m in Sources */,
 				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
+				BE2FB0F7227AED460060A510 /* XYPHSearchFilterNotesCell.m in Sources */,
 				F729CDA3213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m in Sources */,
+				BE2FB0AD227AE4970060A510 /* XYPHSearchFilterPresentAnimator.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
+				BE2FB0F9227AED460060A510 /* XYPHSFButton.m in Sources */,
+				BE2FB0AC227AE4970060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
+				BE2FB0B1227AE4F20060A510 /* XYPHSearchUtil.m in Sources */,
 				F7F98E3221D3A20E00E813B0 /* NSTimer+Weak.m in Sources */,
+				BE2FB0AB227AE4970060A510 /* XYPHSearchFilterPresentationController.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
+				BE2FB05E227AD4DB0060A510 /* XYPHSearchGoodsFilter.m in Sources */,
 				BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */,
 				F729CDAA213E5FE500A9B873 /* XYPHSearchInteractionDismissAnimator.m in Sources */,
 				F7E5739020CFB438002519FC /* CenterTextLayer.m in Sources */,
+				BE2FB092227AE0230060A510 /* XYPHSearchFilterButtonsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
