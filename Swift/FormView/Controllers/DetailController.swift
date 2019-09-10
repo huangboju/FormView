@@ -9,16 +9,16 @@
 class DetailController: GroupTableController {
     override func initSubviews() {
         
-        let row1: Row<TitleCell> = Row<TitleCell>(viewData: TitleCellItem(title: "Sign In"))
-        let row2: Row<InputCell> = Row<InputCell>(viewData: InputCellItem(placeholder: "请输入账号"), tag: .phoneNumber)
+        let row1: XYRow<TitleCell> = XYRow<TitleCell>(viewData: TitleCellItem(title: "Sign In"))
+        let row2: XYRow<InputCell> = XYRow<InputCell>(viewData: InputCellItem(placeholder: "请输入账号"), tag: .phoneNumber)
         
         form = [
             [
                 row1,
                 row2,
-                Row<InputCell>(viewData: InputCellItem(placeholder: "请输入密码"), tag: .password),
-                Row<ButtonCell>(viewData: ButtonCellItem(title: "sign in", normalState: (.white, .normal), highlightState: (.lightGray, .highlighted))),
-                Row<LicenseCell>(viewData: NoneItem())
+                XYRow<InputCell>(viewData: InputCellItem(placeholder: "请输入密码"), tag: .password),
+                XYRow<ButtonCell>(viewData: ButtonCellItem(title: "sign in", normalState: (.white, .normal), highlightState: (.lightGray, .highlighted))),
+                XYRow<LicenseCell>(viewData: NoneItem())
             ]
         ]
     }

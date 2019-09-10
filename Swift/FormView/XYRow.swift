@@ -32,7 +32,7 @@ protocol RowType {
     func cellItem<M>() -> M
 }
 
-class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
+class XYRow<Cell> where Cell: Updatable, Cell: UITableViewCell {
 
     let tag: RowTag
 
@@ -69,7 +69,7 @@ class Row<Cell> where Cell: Updatable, Cell: UITableViewCell {
     }
 }
 
-extension Row: RowType {}
+extension XYRow: RowType {}
 
 public class RowTags {
     fileprivate init() {}

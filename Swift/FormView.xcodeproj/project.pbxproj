@@ -15,7 +15,7 @@
 		BEFC2E2E2012DCA300643E6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEFC2E2C2012DCA300643E6E /* LaunchScreen.storyboard */; };
 		BEFC2E392012DCA300643E6E /* FormViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E382012DCA300643E6E /* FormViewTests.swift */; };
 		BEFC2E442012DCA300643E6E /* FormViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E432012DCA300643E6E /* FormViewUITests.swift */; };
-		BEFC2E522012DD5000643E6E /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E512012DD5000643E6E /* Row.swift */; };
+		BEFC2E522012DD5000643E6E /* XYRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E512012DD5000643E6E /* XYRow.swift */; };
 		BEFC2E542012DDB900643E6E /* GroupTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E532012DDB900643E6E /* GroupTableController.swift */; };
 		BEFC2E562012DDEA00643E6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E552012DDEA00643E6E /* Extensions.swift */; };
 		BEFC2E59201411FE00643E6E /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E58201411FE00643E6E /* TitleCell.swift */; };
@@ -62,7 +62,7 @@
 		BEFC2E3F2012DCA300643E6E /* FormViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFC2E432012DCA300643E6E /* FormViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewUITests.swift; sourceTree = "<group>"; };
 		BEFC2E452012DCA300643E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEFC2E512012DD5000643E6E /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		BEFC2E512012DD5000643E6E /* XYRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYRow.swift; sourceTree = "<group>"; };
 		BEFC2E532012DDB900643E6E /* GroupTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableController.swift; sourceTree = "<group>"; };
 		BEFC2E552012DDEA00643E6E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BEFC2E58201411FE00643E6E /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				BEFC2E57201411E700643E6E /* Cells */,
 				BEFC2E552012DDEA00643E6E /* Extensions.swift */,
 				BEFC2E532012DDB900643E6E /* GroupTableController.swift */,
-				BEFC2E512012DD5000643E6E /* Row.swift */,
+				BEFC2E512012DD5000643E6E /* XYRow.swift */,
 				BEFC2E232012DCA300643E6E /* AppDelegate.swift */,
 				BEFC2E252012DCA300643E6E /* ViewController.swift */,
 				BEFC2E272012DCA300643E6E /* Main.storyboard */,
@@ -339,7 +339,7 @@
 			files = (
 				BEFC2E562012DDEA00643E6E /* Extensions.swift in Sources */,
 				BEFC2E262012DCA300643E6E /* ViewController.swift in Sources */,
-				BEFC2E522012DD5000643E6E /* Row.swift in Sources */,
+				BEFC2E522012DD5000643E6E /* XYRow.swift in Sources */,
 				BEFC2E622014166100643E6E /* DetailController.swift in Sources */,
 				BEFC2E542012DDB900643E6E /* GroupTableController.swift in Sources */,
 				BEFC2E64201416C800643E6E /* MainCell.swift in Sources */,

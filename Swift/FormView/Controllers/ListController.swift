@@ -46,19 +46,19 @@ class ListController: UIViewController {
         }
     }
     
-    func generateTwoImageRow() -> Row<TwoImageCell> {
-        let row = Row<TwoImageCell>(viewData: NoneItem())
+    func generateTwoImageRow() -> XYRow<TwoImageCell> {
+        let row = XYRow<TwoImageCell>(viewData: NoneItem())
         return row
     }
     
-    func generateImageTextCellRow() -> Row<ImageTextCell> {
+    func generateImageTextCellRow() -> XYRow<ImageTextCell> {
         let item = ImageTextCellItem(imageName: "flappy", text: "Pablo Ruiz y Picasso (25 October 1881 – 8 April 1973), also known as Pablo Picasso, was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France.")
-        let row = Row<ImageTextCell>(viewData: item)
+        let row = XYRow<ImageTextCell>(viewData: item)
         return row
     }
 
-    func generateImageRow() -> Row<ImageCell> {
-        let row = Row<ImageCell>(viewData: NoneItem())
+    func generateImageRow() -> XYRow<ImageCell> {
+        let row = XYRow<ImageCell>(viewData: NoneItem())
         return row
     }
 
