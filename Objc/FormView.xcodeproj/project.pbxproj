@@ -28,11 +28,7 @@
 		BE2FB07B227ADAA70060A510 /* NSString+LineSpacingFix.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB07A227ADAA70060A510 /* NSString+LineSpacingFix.m */; };
 		BE2FB07F227ADC980060A510 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB07E227ADC980060A510 /* Theme.m */; };
 		BE2FB082227ADDE80060A510 /* XYPHSFPriceFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB081227ADDE80060A510 /* XYPHSFPriceFieldCell.m */; };
-		BE2FB085227ADE170060A510 /* XYPHSFPriceFieldCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB083227ADE160060A510 /* XYPHSFPriceFieldCellModel.m */; };
 		BE2FB089227ADF3F0060A510 /* XYPHSFRecommendPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB087227ADF3F0060A510 /* XYPHSFRecommendPriceView.m */; };
-		BE2FB08C227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB08B227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m */; };
-		BE2FB08F227ADF970060A510 /* XYPHSFRecommendPriceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB08E227ADF970060A510 /* XYPHSFRecommendPriceControl.m */; };
-		BE2FB092227AE0230060A510 /* XYPHSearchFilterButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB091227AE0220060A510 /* XYPHSearchFilterButtonsView.m */; };
 		BE2FB095227AE0520060A510 /* XYPHSFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB093227AE0510060A510 /* XYPHSFButton.m */; };
 		BE2FB098227AE1610060A510 /* View+SafeArea.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB097227AE1610060A510 /* View+SafeArea.m */; };
 		BE2FB0A8227AE4970060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB09C227AE4960060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m */; };
@@ -45,27 +41,15 @@
 		BE2FB0B1227AE4F20060A510 /* XYPHSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B0227AE4F20060A510 /* XYPHSearchUtil.m */; };
 		BE2FB0B4227AE8980060A510 /* FilterRefactorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B3227AE8980060A510 /* FilterRefactorVC.m */; };
 		BE2FB0B7227AE96F0060A510 /* FilterRefactorDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0B6227AE96F0060A510 /* FilterRefactorDataSource.m */; };
-		BE2FB0BD227AEB070060A510 /* XYPHSRGoodsSortTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0BB227AEB070060A510 /* XYPHSRGoodsSortTabView.m */; };
 		BE2FB0C1227AEB320060A510 /* XYPHSRGoodsFilterTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C0227AEB320060A510 /* XYPHSRGoodsFilterTabView.m */; };
-		BE2FB0C4227AEBA20060A510 /* XYPHImageTextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C2227AEBA20060A510 /* XYPHImageTextControl.m */; };
 		BE2FB0C7227AEC590060A510 /* XYPHSRGoodsSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C6227AEC590060A510 /* XYPHSRGoodsSortButton.m */; };
 		BE2FB0CA227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0C9227AED370060A510 /* XYPHSearchResultGoodsFilterButton.m */; };
 		BE2FB0F3227AED460060A510 /* XYPHSFRecommendPriceControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0CC227AED460060A510 /* XYPHSFRecommendPriceControl.m */; };
-		BE2FB0F4227AED460060A510 /* XYPHSFRecommendPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D0227AED460060A510 /* XYPHSFRecommendPriceView.m */; };
 		BE2FB0F5227AED460060A510 /* XYPHSFPriceFieldCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D2227AED460060A510 /* XYPHSFPriceFieldCellModel.m */; };
-		BE2FB0F6227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D4227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m */; };
-		BE2FB0F7227AED460060A510 /* XYPHSearchFilterNotesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D6227AED460060A510 /* XYPHSearchFilterNotesCell.m */; };
 		BE2FB0F8227AED460060A510 /* XYPHSearchFilterButtonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0D9227AED460060A510 /* XYPHSearchFilterButtonsView.m */; };
-		BE2FB0F9227AED460060A510 /* XYPHSFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DA227AED460060A510 /* XYPHSFButton.m */; };
-		BE2FB0FA227AED460060A510 /* XYPHSFNotesCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DC227AED460060A510 /* XYPHSFNotesCellModel.m */; };
 		BE2FB0FB227AED460060A510 /* XYPHImageTextControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DE227AED460060A510 /* XYPHImageTextControl.m */; };
-		BE2FB0FC227AED460060A510 /* XYPHSRGoodsSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0DF227AED460060A510 /* XYPHSRGoodsSortButton.m */; };
-		BE2FB0FD227AED460060A510 /* XYPHSRGoodsFilterTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E2227AED460060A510 /* XYPHSRGoodsFilterTabView.m */; };
 		BE2FB0FE227AED470060A510 /* XYPHSRGoodsSortTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E7227AED460060A510 /* XYPHSRGoodsSortTabView.m */; };
 		BE2FB0FF227AED470060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0E9227AED460060A510 /* XYPHSearchFilterShowMoreControl.m */; };
-		BE2FB100227AED470060A510 /* XYPHSFPriceFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EA227AED460060A510 /* XYPHSFPriceFieldCell.m */; };
-		BE2FB101227AED470060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EC227AED460060A510 /* XYPHSearchFilterGroupButtonView.m */; };
-		BE2FB102227AED470060A510 /* XYPHSearchFilterTagCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB0EE227AED460060A510 /* XYPHSearchFilterTagCellModel.m */; };
 		BE2FB105227AEECC0060A510 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB104227AEECC0060A510 /* UIImage+Color.m */; };
 		BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BE37437A20401130000D6F41 /* XYPHPhoneZonesVC.m */; };
 		BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3743802040390E000D6F41 /* XYPHPhoneZonesItem.m */; };
@@ -1161,7 +1145,7 @@
 		BECCE9E51FD4F2D400CBCC1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "黄伯驹";
 				TargetAttributes = {
 					BECCE9EC1FD4F2D400CBCC1F = {
@@ -1288,12 +1272,10 @@
 				F7F2EEE120A95F4400CDFD7B /* NewCardController.m in Sources */,
 				BE2FB056227ACC300060A510 /* XYPHSFGoodsDataSource.m in Sources */,
 				BE2FB0A8227AE4970060A510 /* XYPHSearchFilterScreenEdgePanGestureRecognizer.m in Sources */,
-				BE2FB0FC227AED460060A510 /* XYPHSRGoodsSortButton.m in Sources */,
 				BE2FB0A9227AE4970060A510 /* XYPHSearchFilterDismissTransition.m in Sources */,
 				BE2FB0F3227AED460060A510 /* XYPHSFRecommendPriceControl.m in Sources */,
 				BE4C9FEE228FF30100E25562 /* UIView+XYLayout.m in Sources */,
 				BE2FB0AA227AE4970060A510 /* XYPHSearchFilterPresentTransition.m in Sources */,
-				BE2FB0FA227AED460060A510 /* XYPHSFNotesCellModel.m in Sources */,
 				BE2FB067227AD7480060A510 /* XYPHSearchGoodsRecommendPriceRange.m in Sources */,
 				BECCEA3D1FD51FC600CBCC1F /* AccountTitleCell.m in Sources */,
 				BECCEA3A1FD514DA00CBCC1F /* MainCell.m in Sources */,
@@ -1308,9 +1290,7 @@
 				BE697AC7200F624F009C6762 /* XYPHRepeatAnimationView.m in Sources */,
 				F7144804206A300100405838 /* XYPHBindAccountTitleCellItem.m in Sources */,
 				BE4C9FEB228FF16B00E25562 /* XYPHSFPriorityFilterCell.m in Sources */,
-				BE2FB0F6227AED460060A510 /* XYPHSearchResultGoodsFilterButton.m in Sources */,
 				BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */,
-				BE2FB0F4227AED460060A510 /* XYPHSFRecommendPriceView.m in Sources */,
 				BE4C9FEA228FF16B00E25562 /* XYPHSGPriorityFilterView.m in Sources */,
 				BE2FB105227AEECC0060A510 /* UIImage+Color.m in Sources */,
 				BE3743812040390E000D6F41 /* XYPHPhoneZonesItem.m in Sources */,
@@ -1320,7 +1300,6 @@
 				BE4C9FE9228FF16B00E25562 /* XYPHSGPriorityFilterViewController.m in Sources */,
 				BECCEA001FD4F2D400CBCC1F /* main.m in Sources */,
 				BE2FB0C1227AEB320060A510 /* XYPHSRGoodsFilterTabView.m in Sources */,
-				BE2FB100227AED470060A510 /* XYPHSFPriceFieldCell.m in Sources */,
 				BE2FB057227ACC300060A510 /* XYPHSFGoodsViewController.m in Sources */,
 				F73BBD9821E2FDE100BC2E2D /* XYShapeImageView.m in Sources */,
 				BE7458B01FD54D1F005D4D3A /* MessageCenterCell.m in Sources */,
@@ -1334,18 +1313,14 @@
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BE2FB0F5227AED460060A510 /* XYPHSFPriceFieldCellModel.m in Sources */,
-				BE2FB101227AED470060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */,
 				BE5F0DD3206B34430061ED31 /* XYPHBindAccountUIGenerator.m in Sources */,
 				F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */,
 				BE2FB0F8227AED460060A510 /* XYPHSearchFilterButtonsView.m in Sources */,
 				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
-				BE2FB08F227ADF970060A510 /* XYPHSFRecommendPriceControl.m in Sources */,
 				F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */,
-				BE2FB085227ADE170060A510 /* XYPHSFPriceFieldCellModel.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */,
 				BE2FB06C227AD7DB0060A510 /* XYPHSearchFilterNotesCell.m in Sources */,
-				BE2FB0FD227AED460060A510 /* XYPHSRGoodsFilterTabView.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */,
 				BE697AC1200F3821009C6762 /* XYPHResumeAnimationImageView.m in Sources */,
@@ -1356,26 +1331,20 @@
 				BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */,
 				BECCEA451FD52ECC00CBCC1F /* UIView+Extension.m in Sources */,
 				BE2FB095227AE0520060A510 /* XYPHSFButton.m in Sources */,
-				BE2FB0BD227AEB070060A510 /* XYPHSRGoodsSortTabView.m in Sources */,
 				BE2FB071227AD8760060A510 /* XYPHSearchFilterTagCellModel.m in Sources */,
 				BE80D3EB20A99239001377F1 /* UIImage+Rounded.m in Sources */,
 				BE37438B2041454D000D6F41 /* XYPHPhoneZonesCell.m in Sources */,
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */,
-				BE2FB08C227ADF740060A510 /* XYPHSearchFilterShowMoreControl.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
-				BE2FB102227AED470060A510 /* XYPHSearchFilterTagCellModel.m in Sources */,
-				BE2FB0C4227AEBA20060A510 /* XYPHImageTextControl.m in Sources */,
 				BE2FB0AE227AE4970060A510 /* XYPHSearchFilterDismissAnimator.m in Sources */,
 				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
-				BE2FB0F7227AED460060A510 /* XYPHSearchFilterNotesCell.m in Sources */,
 				F729CDA3213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m in Sources */,
 				BE2FB0AD227AE4970060A510 /* XYPHSearchFilterPresentAnimator.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
-				BE2FB0F9227AED460060A510 /* XYPHSFButton.m in Sources */,
 				BE2FB0AC227AE4970060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,
 				BE2FB0B1227AE4F20060A510 /* XYPHSearchUtil.m in Sources */,
@@ -1387,7 +1356,6 @@
 				BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */,
 				F729CDAA213E5FE500A9B873 /* XYPHSearchInteractionDismissAnimator.m in Sources */,
 				F7E5739020CFB438002519FC /* CenterTextLayer.m in Sources */,
-				BE2FB092227AE0230060A510 /* XYPHSearchFilterButtonsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
