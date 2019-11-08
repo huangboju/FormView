@@ -16,18 +16,22 @@
 
 #pragma mark - SegmentBarCell
 
-@interface SegmentBarCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
+@interface XYSegmentControlItemCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
 
 @property (nonatomic, strong) UILabel *textLabel;
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
-@implementation SegmentBarCell
+@implementation XYSegmentControlItemCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.contentView.backgroundColor = [UIColor whiteColor];
+
         [self.contentView addSubview:self.textLabel];
+        
+        [self.contentView addSubview:self.imageView];
     }
     return self;
 }
@@ -46,9 +50,17 @@
     return _textLabel;
 }
 
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = UIImageView.new;
+    }
+    return _imageView;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.textLabel.frame = self.bounds;
+    self.imageView.frame = self.bounds;
 }
 
 @end
@@ -84,9 +96,7 @@ UICollectionViewDelegateFlowLayout
 @implementation XYSegmentControl
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles {
-
-    self = [super initWithFrame:frame];
-    if (self) {
+    if ([super initWithFrame:frame]) {
         
         self.titles = titles;
 
@@ -96,7 +106,7 @@ UICollectionViewDelegateFlowLayout
         self.selectedIndex = 0;
         self.indicatorBackgrounColor = [UIColor blackColor];
 
-        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(XYSegmentControlCellItem *item) {
+        [self customCellWithCellClass:[XYSegmentControlItemCell class] configHandle:^id(XYSegmentControlCellItem *item) {
             return item;
         }];
 

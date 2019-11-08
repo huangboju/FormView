@@ -17,6 +17,10 @@
 
 @property (nonatomic, strong) UIFont *textFont;
 
+@property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, copy) NSString *imageLink;
+
 @end
 
 #pragma mark - SegmentBarCellUpdatable
