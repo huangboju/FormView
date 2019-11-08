@@ -21,6 +21,10 @@
 
 @property (nonatomic, strong, readonly) UIFont *textFont;
 
+@property (nonatomic, strong, readonly) UIFont *selectedTitleFont;
+
+@property (nonatomic, strong, readonly) UIColor *selectedTitleColor;
+
 @end
 
 #pragma mark - SegmentBarCellUpdatable
@@ -54,8 +58,15 @@
 /// Default [UIFont systemFontOfSize:17]
 @property (nonatomic, strong) UIFont *titleFont;
 
+/// Default titleFont
+@property (nonatomic, strong) UIFont *selectedTitleFont;
+
 /// Default 0x333333
 @property (nonatomic, strong) UIColor *titleColor;
+
+/// Default titleColor
+@property (nonatomic, strong) UIColor *selectedTitleColor;
+
 
 @property (nonatomic, strong) UIColor *indicatorBackgrounColor;
 
