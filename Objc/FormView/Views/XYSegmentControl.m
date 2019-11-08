@@ -25,8 +25,7 @@
 @implementation SegmentBarCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
+    if (self = [super initWithFrame:frame]) {
         self.contentView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:self.textLabel];
     }
@@ -116,8 +115,11 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)setIndicatorBackgrounColor:(UIColor *)indicatorBackgrounColor {
-    _indicatorBackgrounColor = indicatorBackgrounColor;
     self.indicator.backgroundColor = indicatorBackgrounColor;
+}
+
+- (UIColor *)indicatorBackgrounColor {
+    return self.indicator.backgroundColor;
 }
 
 - (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle {

@@ -35,11 +35,6 @@
 
 @end
 
-typedef NS_ENUM(NSUInteger, XYSegmentBarScrollDirection) {
-    XYSegmentBarScrollDirectionLeft,
-    XYSegmentBarScrollDirectionRight,
-};
-
 
 #pragma mark - XYSegmentBar
 @interface XYSegmentControl : UIView
