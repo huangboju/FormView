@@ -113,10 +113,6 @@ UICollectionViewDelegateFlowLayout
         self.selectedIndex = 0;
         self.indicatorBackgrounColor = [UIColor blackColor];
 
-        [self customCellWithCellClass:[XYSegmentControlItemCell class] configHandle:^id(XYSegmentControlCellItem *item) {
-            return item;
-        }];
-
         self.isFirst = YES;
 
         self.titleFont = [UIFont systemFontOfSize:17];
@@ -149,13 +145,6 @@ UICollectionViewDelegateFlowLayout
 - (void)setItemClass:(Class)itemClass {
     _itemClass = itemClass;
     [self.collectionView registerClass:itemClass forCellWithReuseIdentifier:@"cell"];
-}
-
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle {
-    
-    self.configHandle = handle;
-
-    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)setTitleInterval:(CGFloat)titleInterval {

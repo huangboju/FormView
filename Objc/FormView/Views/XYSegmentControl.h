@@ -17,6 +17,10 @@
 
 @property (nonatomic, copy) NSString *imageLink;
 
+@property (nonatomic, strong, readonly) UIColor *textColor;
+
+@property (nonatomic, strong, readonly) UIFont *textFont;
+
 @end
 
 #pragma mark - SegmentBarCellUpdatable
@@ -42,7 +46,7 @@
 
 @property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;
 
-@property (nonatomic, strong) ItemClass itemClass;
+@property (nonatomic) ItemClass itemClass;
 
 
 @property (nonatomic, strong) NSArray *titles;

@@ -50,7 +50,7 @@
 
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) XYSegmentControl *bar;
+@property (nonatomic, strong) XYSegmentControl <MySegmentBarCell *> *bar;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -110,10 +110,8 @@
                     ];
 
     self.bar = [[XYSegmentControl alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
+    self.bar.itemClass = MySegmentBarCell.class;
     [self.bar setCurrentTabIndex:3 animated:YES];
-    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(XYSegmentControlCellItem *item) {
-        return item;
-    }];
 
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
     
