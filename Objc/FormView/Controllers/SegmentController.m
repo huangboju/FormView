@@ -50,7 +50,7 @@
 
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) XYSegmentControl <MySegmentBarCell *> *bar;
+@property (nonatomic, strong) XYSegmentControl *bar;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
