@@ -13,10 +13,6 @@
 
 @property (nonatomic, copy) NSString *text;
 
-@property (nonatomic, strong) UIColor *textColor;
-
-@property (nonatomic, strong) UIFont *textFont;
-
 @property (nonatomic, strong) UIImage *image;
 
 @property (nonatomic, copy) NSString *imageLink;
@@ -41,18 +37,12 @@
 
 
 #pragma mark - XYSegmentBar
-@interface XYSegmentControl : UIView
-
-/**
- 自定义segmentItem
-
- @param cellClass 必须为collecitonview Cell
- @param handle 会返回SegmentBarCellItem，可以构造自定义model
- */
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle;
+@interface XYSegmentControl<__covariant ItemClass : Class > : UIView
 
 
 @property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;
+
+@property (nonatomic, strong) ItemClass itemClass;
 
 
 @property (nonatomic, strong) NSArray *titles;
@@ -80,6 +70,8 @@
 @property (nonatomic, assign) CGFloat indicatorInterval;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
+
+- (instancetype)initWithFrame:(CGRect)frame items:(NSArray <XYSegmentControlCellItem *>*)items;
 
 /// 设置默认位置
 - (void)setCurrentTabIndex:(NSUInteger)currentTabIndex animated:(BOOL)animated;

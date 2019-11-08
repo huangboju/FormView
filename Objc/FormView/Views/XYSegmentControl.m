@@ -10,6 +10,15 @@
 
 #pragma mark - SegmentBarCellItem
 
+@interface XYSegmentControlCellItem()
+
+@property (nonatomic, strong) UIColor *textColor;
+
+@property (nonatomic, strong) UIFont *textFont;
+
+@end
+
+
 @implementation XYSegmentControlCellItem
 
 @end
@@ -89,8 +98,6 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic) CGFloat indicatorWidth;
 
-@property (nonatomic, weak) id(^configHandle)(XYSegmentControlCellItem *);
-
 @end
 
 @implementation XYSegmentControl
@@ -124,12 +131,24 @@ UICollectionViewDelegateFlowLayout
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame items:(NSArray<XYSegmentControlCellItem *> *)items {
+    if (self = [super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
+
 - (void)setIndicatorBackgrounColor:(UIColor *)indicatorBackgrounColor {
     self.indicator.backgroundColor = indicatorBackgrounColor;
 }
 
 - (UIColor *)indicatorBackgrounColor {
     return self.indicator.backgroundColor;
+}
+
+- (void)setItemClass:(Class)itemClass {
+    _itemClass = itemClass;
+    [self.collectionView registerClass:itemClass forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle {
@@ -183,14 +202,8 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    if ([cell conformsToProtocol:@protocol(XYSegmentBarCellUpdatable)]) {
-        id item = [self generateItemAtIndexPath:indexPath];
-        if (self.configHandle) {
-            item = self.configHandle(item);
-        }
-        [cell performSelector:@selector(updateViewData:) withObject:item];
-    }
+    UICollectionViewCell <XYSegmentBarCellUpdatable> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell updateViewData:[self generateItemAtIndexPath:indexPath]];
     return cell;
 }
 
@@ -250,11 +263,11 @@ UICollectionViewDelegateFlowLayout
         progress = 1 - progress;
     }
 
-    CGFloat selectedIndexMinx = [self getCGRectForSegmentAtIndex:fromIndex].origin.x;
-    CGFloat selectedIndexWidth = [self getCGRectForSegmentAtIndex:fromIndex].size.width;
+    CGFloat selectedIndexMinx = [self rectForSegmentAtIndex:fromIndex].origin.x;
+    CGFloat selectedIndexWidth = [self rectForSegmentAtIndex:fromIndex].size.width;
 
-    CGFloat targetIndexMinx = [self getCGRectForSegmentAtIndex:toIndex].origin.x;
-    CGFloat targetIndexWidth = [self getCGRectForSegmentAtIndex:toIndex].size.width;
+    CGFloat targetIndexMinx = [self rectForSegmentAtIndex:toIndex].origin.x;
+    CGFloat targetIndexWidth = [self rectForSegmentAtIndex:toIndex].size.width;
 
     self.indicatorMinX = (targetIndexMinx - selectedIndexMinx) * progress + selectedIndexMinx;
     self.indicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
@@ -264,7 +277,7 @@ UICollectionViewDelegateFlowLayout
     self.selectedIndex = toIndex;
 }
 
-- (CGRect)getCGRectForSegmentAtIndex:(NSUInteger)index {
+- (CGRect)rectForSegmentAtIndex:(NSUInteger)index {
     index = MIN(MAX(index, 0), self.titles.count - 1);
     return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame;
 }
