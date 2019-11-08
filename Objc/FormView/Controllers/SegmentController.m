@@ -8,7 +8,7 @@
 
 #import "SegmentController.h"
 
-#import "XYSegmentBar.h"
+#import "XYSegmentControl.h"
 
 @interface MySegmentBarCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
 
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (void)updateViewData:(XYSegmentBarCellItem *)viewData {
+- (void)updateViewData:(XYSegmentControlCellItem *)viewData {
     self.textLabel.text = viewData.text;
     self.textLabel.textColor = viewData.textColor;
     self.textLabel.font = viewData.textFont;
@@ -50,7 +50,7 @@
 
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) XYSegmentBar *bar;
+@property (nonatomic, strong) XYSegmentControl *bar;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -109,9 +109,9 @@
                     [UIColor purpleColor]
                     ];
 
-    self.bar = [[XYSegmentBar alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
+    self.bar = [[XYSegmentControl alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
     [self.bar setCurrentTabIndex:3 animated:YES];
-    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(XYSegmentBarCellItem *item) {
+    [self.bar customCellWithCellClass:[MySegmentBarCell class] configHandle:^id(XYSegmentControlCellItem *item) {
         return item;
     }];
 

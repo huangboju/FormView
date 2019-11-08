@@ -12,7 +12,7 @@
 		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
 		BE23ACD4227AFB35000DB8D8 /* filter.json in Resources */ = {isa = PBXBuildFile; fileRef = BE23ACD3227AFB35000DB8D8 /* filter.json */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
-		BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */; };
+		BE29FB351FFDD5AB00A27373 /* XYSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentControl.m */; };
 		BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */; };
 		BE2FB056227ACC300060A510 /* XYPHSFGoodsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB050227ACC300060A510 /* XYPHSFGoodsDataSource.m */; };
 		BE2FB057227ACC300060A510 /* XYPHSFGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB053227ACC300060A510 /* XYPHSFGoodsViewController.m */; };
@@ -161,8 +161,8 @@
 		BE23ACD3227AFB35000DB8D8 /* filter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = filter.json; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
-		BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentBar.h; sourceTree = "<group>"; };
-		BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentBar.m; sourceTree = "<group>"; };
+		BE29FB331FFDD5AB00A27373 /* XYSegmentControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentControl.h; sourceTree = "<group>"; };
+		BE29FB341FFDD5AB00A27373 /* XYSegmentControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSegmentControl.m; sourceTree = "<group>"; };
 		BE2FB04B227AC27D0060A510 /* XYSFSelectedFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSFSelectedFilters.h; sourceTree = "<group>"; };
 		BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSFSelectedFilters.m; sourceTree = "<group>"; };
 		BE2FB04E227AC9E20060A510 /* XYPHSFViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPHSFViewControllerDelegate.h; sourceTree = "<group>"; };
@@ -506,8 +506,8 @@
 				BEEF6CA3200CA669001158A9 /* AYVibrantButton */,
 				BE4D0DBC1FD969FE004A2683 /* ImageTextView.h */,
 				BE4D0DBD1FD969FE004A2683 /* ImageTextView.m */,
-				BE29FB331FFDD5AB00A27373 /* XYSegmentBar.h */,
-				BE29FB341FFDD5AB00A27373 /* XYSegmentBar.m */,
+				BE29FB331FFDD5AB00A27373 /* XYSegmentControl.h */,
+				BE29FB341FFDD5AB00A27373 /* XYSegmentControl.m */,
 				BE697ABF200F3821009C6762 /* XYPHResumeAnimationImageView.h */,
 				BE697AC0200F3821009C6762 /* XYPHResumeAnimationImageView.m */,
 				BE697AC5200F624F009C6762 /* XYPHRepeatAnimationView.h */,
@@ -1254,7 +1254,7 @@
 				BE2FB089227ADF3F0060A510 /* XYPHSFRecommendPriceView.m in Sources */,
 				F729CDA0213E5CA100A9B873 /* CustomDismissTransitionVC.m in Sources */,
 				BE4D0DBE1FD969FE004A2683 /* ImageTextView.m in Sources */,
-				BE29FB351FFDD5AB00A27373 /* XYSegmentBar.m in Sources */,
+				BE29FB351FFDD5AB00A27373 /* XYSegmentControl.m in Sources */,
 				F7144807206A32AF00405838 /* XYPHBindAccountUserCardView.m in Sources */,
 				BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */,
 				BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */,
@@ -1525,13 +1525,15 @@
 			baseConfigurationReference = 18C0FCAE1525CD5B7BE7B060 /* Pods-FormView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7XJTY6W57S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1541,13 +1543,15 @@
 			baseConfigurationReference = 3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7XJTY6W57S;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FormView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.boju.FormV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

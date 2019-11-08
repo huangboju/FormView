@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #pragma mark - SegmentBarCellItem
-@interface XYSegmentBarCellItem : NSObject
+@interface XYSegmentControlCellItem : NSObject
 
 @property (nonatomic, copy) NSString *text;
 
@@ -20,18 +20,18 @@
 @end
 
 #pragma mark - SegmentBarCellUpdatable
-@class XYSegmentBar;
+@class XYSegmentControl;
 
 @protocol XYSegmentBarCellUpdatable <NSObject>
 
-- (void)updateViewData:(XYSegmentBarCellItem *)viewData;
+- (void)updateViewData:(XYSegmentControlCellItem *)viewData;
 
 @end
 
 
 @protocol XYSegmentBarDelegate <NSObject>
 
-- (void)segmentBar:(XYSegmentBar *)segmentBar didSelectItemAtIndex:(NSInteger )index;
+- (void)segmentBar:(XYSegmentControl *)segmentBar didSelectItemAtIndex:(NSInteger )index;
 
 @end
 
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, XYSegmentBarScrollDirection) {
 
 
 #pragma mark - XYSegmentBar
-@interface XYSegmentBar : UIView
+@interface XYSegmentControl : UIView
 
 /**
  自定义segmentItem
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, XYSegmentBarScrollDirection) {
  @param cellClass 必须为collecitonview Cell
  @param handle 会返回SegmentBarCellItem，可以构造自定义model
  */
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentBarCellItem *item))handle;
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle;
 
 
 @property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;

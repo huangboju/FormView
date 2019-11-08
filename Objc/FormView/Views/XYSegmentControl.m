@@ -6,11 +6,11 @@
 //  Copyright © 2018 黄伯驹. All rights reserved.
 //
 
-#import "XYSegmentBar.h"
+#import "XYSegmentControl.h"
 
 #pragma mark - SegmentBarCellItem
 
-@implementation XYSegmentBarCellItem
+@implementation XYSegmentControlCellItem
 
 @end
 
@@ -33,7 +33,7 @@
     return self;
 }
 
-- (void)updateViewData:(XYSegmentBarCellItem *)viewData {
+- (void)updateViewData:(XYSegmentControlCellItem *)viewData {
     self.textLabel.text = viewData.text;
     self.textLabel.textColor = viewData.textColor;
     self.textLabel.font = viewData.textFont;
@@ -57,7 +57,7 @@
 
 #pragma mark - SegmentBar
 
-@interface XYSegmentBar()
+@interface XYSegmentControl()
 <
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout
@@ -67,7 +67,7 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-@property (nonatomic, strong) UIView *bottomIndicator;
+@property (nonatomic, strong) UIView *indicator;
 
 @property (nonatomic, assign) BOOL isFirst;
 
@@ -78,11 +78,11 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic) CGFloat indicatorWidth;
 
-@property (nonatomic, weak) id(^configHandle)(XYSegmentBarCellItem *);
+@property (nonatomic, weak) id(^configHandle)(XYSegmentControlCellItem *);
 
 @end
 
-@implementation XYSegmentBar
+@implementation XYSegmentControl
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles {
 
@@ -97,7 +97,7 @@ UICollectionViewDelegateFlowLayout
         self.selectedIndex = 0;
         self.indicatorBackgrounColor = [UIColor blackColor];
 
-        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(XYSegmentBarCellItem *item) {
+        [self customCellWithCellClass:[SegmentBarCell class] configHandle:^id(XYSegmentControlCellItem *item) {
             return item;
         }];
 
@@ -110,39 +110,17 @@ UICollectionViewDelegateFlowLayout
 
         [self addSubview:self.collectionView];
 
-        [self.collectionView addSubview:self.bottomIndicator];
+        [self.collectionView addSubview:self.indicator];
     }
     return self;
 }
 
-- (UICollectionView *)collectionView {
-    if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        layout.minimumLineSpacing = 0;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 30) collectionViewLayout:layout];
-        _collectionView.dataSource = self;
-        _collectionView.delegate = self;
-        _collectionView.clipsToBounds = NO;
-        _collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
-        _collectionView.showsHorizontalScrollIndicator = NO;
-    }
-    return _collectionView;
-}
-
-- (UIView *)bottomIndicator {
-    if (!_bottomIndicator) {
-        _bottomIndicator = [UIView new];
-    }
-    return _bottomIndicator;
-}
-
 - (void)setIndicatorBackgrounColor:(UIColor *)indicatorBackgrounColor {
     _indicatorBackgrounColor = indicatorBackgrounColor;
-    self.bottomIndicator.backgroundColor = indicatorBackgrounColor;
+    self.indicator.backgroundColor = indicatorBackgrounColor;
 }
 
-- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentBarCellItem *item))handle {
+- (void)customCellWithCellClass:(Class)cellClass configHandle:(id (^)(XYSegmentControlCellItem *item))handle {
     
     self.configHandle = handle;
 
@@ -283,12 +261,12 @@ UICollectionViewDelegateFlowLayout
     CGFloat indicatorY = CGRectGetMaxY(self.collectionView.frame) + self.indicatorInterval;
 
     dispatch_block_t block = ^{
-        CGRect rect = self.bottomIndicator.frame;
+        CGRect rect = self.indicator.frame;
         rect.origin.x = self.indicatorMinX;
         rect.origin.y = indicatorY;
         rect.size.width = self.indicatorWidth;
         rect.size.height = self.indicatorHeight;
-        self.bottomIndicator.frame = rect;
+        self.indicator.frame = rect;
     };
 
     if (animation) {
@@ -298,12 +276,34 @@ UICollectionViewDelegateFlowLayout
     }
 }
 
-- (XYSegmentBarCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
-    XYSegmentBarCellItem *item = [XYSegmentBarCellItem new];
+- (XYSegmentControlCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
+    XYSegmentControlCellItem *item = [XYSegmentControlCellItem new];
     item.textFont = self.titleFont;
     item.textColor = self.titleColor;
     item.text = self.titles[indexPath.row];
     return item;
+}
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.minimumLineSpacing = 0;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 30) collectionViewLayout:layout];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.clipsToBounds = NO;
+        _collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
+        _collectionView.showsHorizontalScrollIndicator = NO;
+    }
+    return _collectionView;
+}
+
+- (UIView *)indicator {
+    if (!_indicator) {
+        _indicator = [UIView new];
+    }
+    return _indicator;
 }
 
 @end
