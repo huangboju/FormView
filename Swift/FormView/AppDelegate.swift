@@ -13,14 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let arr = (0..<10000).map { _ -> Int in
-            let n = Int(arc4random_uniform(10000))
-            return n
-        }
-        let start = CACurrentMediaTime()
-        _ = insertionSort(arr)
-        print(CACurrentMediaTime() - start)
         return true
     }
     
@@ -46,18 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         result %= 100
         return result
-    }
-    
-    func insertionSort(_ array: [Int]) -> [Int] {
-        var a = array             // 1
-        for x in 1..<a.count {         // 2
-            var y = x
-            while y > 0 && a[y] < a[y - 1] { // 3
-                a.swapAt(y - 1, y)
-                y -= 1
-            }
-        }
-        return a
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -22,15 +22,30 @@ class FormViewTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
     }
     
     func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let arr = (0..<10000).map { _ -> Int in
+            let n = Int(arc4random_uniform(10000))
+            return n
         }
+        
+        self.measure {
+            _ = insertionSort(arr)
+        }
+    }
+    
+    func insertionSort(_ array: [Int]) -> [Int] {
+        var a = array             // 1
+        for x in 1..<a.count {         // 2
+            var y = x
+            while y > 0 && a[y] < a[y - 1] { // 3
+                a.swapAt(y - 1, y)
+                y -= 1
+            }
+        }
+        return a
     }
     
 }
