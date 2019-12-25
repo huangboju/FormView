@@ -1,24 +1,131 @@
 PODS:
+  - Alpha (0.3.2):
+    - Alpha/Application (= 0.3.2)
+    - Alpha/Asset (= 0.3.2)
+    - Alpha/Bonjour (= 0.3.2)
+    - Alpha/Bootstrap (= 0.3.2)
+    - Alpha/Console (= 0.3.2)
+    - Alpha/Core (= 0.3.2)
+    - Alpha/Event (= 0.3.2)
+    - Alpha/File (= 0.3.2)
+    - Alpha/Global (= 0.3.2)
+    - Alpha/Heap (= 0.3.2)
+    - Alpha/Integration (= 0.3.2)
+    - Alpha/Interface (= 0.3.2)
+    - Alpha/Keychain (= 0.3.2)
+    - Alpha/Model (= 0.3.2)
+    - Alpha/Network (= 0.3.2)
+    - Alpha/Notification (= 0.3.2)
+    - Alpha/Object (= 0.3.2)
+    - Alpha/Palettes (= 0.3.2)
+    - Alpha/Permission (= 0.3.2)
+    - Alpha/Private (= 0.3.2)
+    - Alpha/Remote (= 0.3.2)
+    - Alpha/Render (= 0.3.2)
+    - Alpha/Screenshot (= 0.3.2)
+    - Alpha/Server (= 0.3.2)
+    - Alpha/State (= 0.3.2)
+    - Alpha/Theme (= 0.3.2)
+    - Alpha/Touch (= 0.3.2)
+    - Alpha/Trigger (= 0.3.2)
+    - Alpha/Utility (= 0.3.2)
+    - Alpha/View (= 0.3.2)
+    - Alpha/ViewHierarchy (= 0.3.2)
+  - Alpha/Application (0.3.2):
+    - Alpha/Core
+  - Alpha/Asset (0.3.2)
+  - Alpha/Bonjour (0.3.2)
+  - Alpha/Bootstrap (0.3.2):
+    - Alpha/Core
+  - Alpha/Console (0.3.2):
+    - Alpha/Core
+  - Alpha/Core (0.3.2):
+    - Alpha/Asset
+    - Alpha/Model
+    - Alpha/Private
+    - Alpha/Theme
+  - Alpha/Event (0.3.2):
+    - Alpha/Core
+  - Alpha/File (0.3.2):
+    - Alpha/Core
+  - Alpha/Global (0.3.2):
+    - Alpha/Core
+    - Alpha/Object
+  - Alpha/Heap (0.3.2):
+    - Alpha/Core
+    - Alpha/Global
+    - Alpha/Object
+  - Alpha/Integration (0.3.2):
+    - Alpha/Core
+  - Alpha/Interface (0.3.2):
+    - Alpha/Core
+    - Alpha/Render
+  - Alpha/Keychain (0.3.2):
+    - Alpha/Core
+  - Alpha/Model (0.3.2):
+    - Alpha/Theme
+    - Alpha/Utility
+  - Alpha/Network (0.3.2):
+    - Alpha/Core
+  - Alpha/Notification (0.3.2):
+    - Alpha/Core
+  - Alpha/Object (0.3.2):
+    - Alpha/Core
+    - Alpha/Render
+  - Alpha/Palettes (0.3.2):
+    - Alpha/Theme
+  - Alpha/Permission (0.3.2):
+    - Alpha/Core
+  - Alpha/Private (0.3.2)
+  - Alpha/Remote (0.3.2):
+    - Alpha/Bonjour
+    - Alpha/Core
+  - Alpha/Render (0.3.2):
+    - Alpha/Core
+    - Alpha/View
+  - Alpha/Screenshot (0.3.2):
+    - Alpha/Core
+  - Alpha/Server (0.3.2):
+    - Alpha/Bonjour
+    - Alpha/Core
+  - Alpha/State (0.3.2):
+    - Alpha/Core
+  - Alpha/Theme (0.3.2):
+    - Alpha/Asset
+    - Alpha/Utility
+  - Alpha/Touch (0.3.2):
+    - Alpha/Core
+  - Alpha/Trigger (0.3.2):
+    - Alpha/Core
+  - Alpha/Utility (0.3.2)
+  - Alpha/View (0.3.2):
+    - Alpha/Core
+  - Alpha/ViewHierarchy (0.3.2):
+    - Alpha/Integration
+    - Alpha/Render
   - Masonry (1.1.0)
   - TransitionKit (2.2.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - Alpha
   - Masonry
   - TransitionKit
   - YYModel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
+    - Alpha
     - Masonry
     - TransitionKit
     - YYModel
 
 SPEC CHECKSUMS:
+  Alpha: ffe13f7d9c5f287b93398a01b67e9d44729c6630
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 2a395474b3d94b7c8f9492ca855486466116cf86
+PODFILE CHECKSUM: a0a6ff6aa6a56d7254179bd02952456875613286
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.3

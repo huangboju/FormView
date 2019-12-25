@@ -33,6 +33,8 @@
 #import "ShapeMaskController.h"
 #import "FilterRefactorVC.h"
 
+#import "ALPHAManager.h"
+
 @interface MainViewController ()<UITableViewDelegate>
 
 @end
@@ -41,6 +43,7 @@
 
 - (void)initSubviews {
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Alpha" style:UIBarButtonItemStylePlain target:self action:@selector(alphaButtonTapped:)];
     
     NSArray <NSArray <Class>*>*classes = @[
                          @[
@@ -111,6 +114,8 @@
     self.form = sections;
 
     self.tableView.delegate = self;
+
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,6 +125,10 @@
     vc.title = clsName;
     [self.navigationController pushViewController:vc animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)alphaButtonTapped:(id)sender {
+    [ALPHAManager defaultManager].interfaceHidden = NO;
 }
 
 @end

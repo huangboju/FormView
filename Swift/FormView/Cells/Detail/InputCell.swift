@@ -20,7 +20,7 @@ class InputCell: UITableViewCell {
 
     public var inputText: String {
         set {
-            textField.text = inputText
+            textField.text = newValue
         }
         get {
             return textField.text ?? ""

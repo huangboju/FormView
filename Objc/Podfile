@@ -6,5 +6,7 @@ target 'FormView' do
   pod 'Masonry'
   pod 'TransitionKit'
   pod 'YYModel'
+  
+  pod 'Alpha'
 
 end

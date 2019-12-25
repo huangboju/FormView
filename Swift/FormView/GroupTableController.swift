@@ -115,7 +115,7 @@ extension GroupTableController {
         let keyBoardInfo = notification.userInfo!
         let endFrame = keyBoardInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         
-        let keyBoardFrame = tableView.window!.convert(endFrame.cgRectValue, to: tableView.superview)
+        let keyBoardFrame = tableView.window?.convert(endFrame.cgRectValue, to: tableView.superview) ?? .zero
         let newBottomInset = tableView.frame.minY + tableView.frame.height - keyBoardFrame.minY
         var tableInsets = tableView.contentInset
         var scrollIndicatorInsets = tableView.scrollIndicatorInsets
