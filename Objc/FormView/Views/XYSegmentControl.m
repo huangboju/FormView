@@ -152,8 +152,6 @@ UICollectionViewDelegateFlowLayout
         self.selectedSegmentIndex = 0;
         self.selectionIndicatorColor = [UIColor blackColor];
 
-        self.selectionIndicatorEdgeInsets = UIEdgeInsetsZero;
-
         self.isFirst = YES;
 
         self.titleSizeCache = [NSMutableDictionary dictionary];
