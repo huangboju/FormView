@@ -53,22 +53,22 @@
 @property (nonatomic) ItemClass itemClass;
 
 
-@property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, strong) NSArray <NSString *> *titles;
 
-/// Default [UIFont systemFontOfSize:17]
-@property (nonatomic, strong) UIFont *titleFont;
+/**
+ Text attributes to apply to item title text.
+ */
+@property (nonatomic, strong) NSDictionary *titleTextAttributes UI_APPEARANCE_SELECTOR;
 
-/// Default titleFont
-@property (nonatomic, strong) UIFont *selectedTitleFont;
-
-/// Default 0x333333
-@property (nonatomic, strong) UIColor *titleColor;
-
-/// Default titleColor
-@property (nonatomic, strong) UIColor *selectedTitleColor;
+/*
+ Text attributes to apply to selected item title text.
+ 
+ Attributes not set in this dictionary are inherited from `titleTextAttributes`.
+ */
+@property (nonatomic, strong) NSDictionary *selectedTitleTextAttributes UI_APPEARANCE_SELECTOR;
 
 
-@property (nonatomic, strong) UIColor *indicatorBackgrounColor;
+@property (nonatomic, strong) UIColor *selectionIndicatorColor;
 
 /// 字体间的间距
 /// Default 8

@@ -70,7 +70,7 @@
         layout.minimumLineSpacing = 0;
         layout.itemSize = CGSizeMake(self.view.frame.size.width, 200);
         CGRect rect = self.view.frame;
-        rect.origin.y = 120;
+        rect.origin.y = 180;
         rect.size.height = 200;
         _collectionView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
         _collectionView.dataSource = self;
@@ -109,7 +109,7 @@
                     [UIColor purpleColor]
                     ];
 
-    self.bar = [[XYSegmentControl alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titles:titles];
+    self.bar = [[XYSegmentControl alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 40) titles:titles];
     self.bar.itemClass = MySegmentBarCell.class;
     [self.bar setCurrentTabIndex:3 animated:YES];
 

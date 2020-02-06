@@ -115,9 +115,6 @@ UICollectionViewDelegateFlowLayout
 
         self.isFirst = YES;
 
-        self.titleFont = [UIFont systemFontOfSize:17];
-        self.titleColor = [UIColor colorWithRed:51.f / 255.f green:51.f / 255.f blue:51.f / 255.f alpha:1];
-
         self.titleSize = [NSMutableDictionary dictionary];
 
         [self addSubview:self.collectionView];
@@ -213,8 +210,8 @@ UICollectionViewDelegateFlowLayout
     CGSize size = self.titleSize[title].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
         size = [title boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX)
-                                   options:NSStringDrawingUsesLineFragmentOrigin
-                                attributes:@{NSFontAttributeName: self.titleFont}
+                                   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                attributes:self.resultingTitleTextAttributes
                                    context:nil].size;
 
         CGRect rect = self.collectionView.frame;
@@ -290,10 +287,35 @@ UICollectionViewDelegateFlowLayout
     }
 }
 
+- (NSDictionary *)resultingTitleTextAttributes {
+    NSDictionary *defaults = @{
+        NSFontAttributeName : [UIFont systemFontOfSize:17.0f],
+        NSForegroundColorAttributeName : [UIColor colorWithRed:51.f / 255.f green:51.f / 255.f blue:51.f / 255.f alpha:1],
+    };
+
+    NSMutableDictionary *resultingAttrs = [NSMutableDictionary dictionaryWithDictionary:defaults];
+    
+    if (self.titleTextAttributes) {
+        [resultingAttrs addEntriesFromDictionary:self.titleTextAttributes];
+    }
+
+    return [resultingAttrs copy];
+}
+
+- (NSDictionary *)resultingSelectedTitleTextAttributes {
+    NSMutableDictionary *resultingAttrs = self.resultingTitleTextAttributes.mutableCopy;
+
+    if (self.selectedTitleTextAttributes) {
+        [resultingAttrs addEntriesFromDictionary:self.selectedTitleTextAttributes];
+    }
+    
+    return [resultingAttrs copy];
+}
+
 - (XYSegmentControlCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
     XYSegmentControlCellItem *item = [XYSegmentControlCellItem new];
-    item.textFont = self.titleFont;
-    item.textColor = self.titleColor;
+//    item.textFont = self.titleFont;
+//    item.textColor = self.titleColor;
     item.text = self.titles[indexPath.row];
     return item;
 }
