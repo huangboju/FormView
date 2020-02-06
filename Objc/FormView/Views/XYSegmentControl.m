@@ -101,11 +101,9 @@ UICollectionViewDelegateFlowLayout
 @implementation XYSegmentControl
 
 - (id)initWithFrame:(CGRect)frame {
-
     if (self = [super initWithFrame:frame]) {
         [self commonInit];
     }
-
     return self;
 }
 
