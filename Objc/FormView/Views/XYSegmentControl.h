@@ -45,12 +45,10 @@
 
 
 #pragma mark - XYSegmentBar
-@interface XYSegmentControl<__covariant ItemClass : Class > : UIView
+@interface XYSegmentControl : UIView
 
 
 @property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;
-
-@property (nonatomic) ItemClass itemClass;
 
 
 @property (nonatomic, strong) NSArray <NSString *> *sectionTitles;

@@ -113,7 +113,6 @@
 
     self.bar = [[XYSegmentControl alloc] initWithSectionTitles:titles];
     self.bar.frame = CGRectMake(0, 100, self.view.frame.size.width, 40);
-    self.bar.itemClass = MySegmentBarCell.class;
     [self.bar setSelectedSegmentIndex:3 animated:YES];
 
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];

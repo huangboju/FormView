@@ -164,6 +164,19 @@ UICollectionViewDelegateFlowLayout
         [self.collectionView addSubview:self.indicator];
 }
 
+- (void)setSectionTitles:(NSArray<NSString *> *)sectionTitles {
+    _sectionTitles = sectionTitles;
+    
+}
+
+- (void)setSectionImages:(NSArray<UIImage *> *)sectionImages {
+    _sectionImages = sectionImages;
+}
+
+- (void)setSectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages {
+    _sectionSelectedImages = sectionSelectedImages;
+}
+
 - (void)setSelectionIndicatorColor:(UIColor *)selectionIndicatorColor {
     self.indicator.backgroundColor = selectionIndicatorColor;
 }
@@ -172,16 +185,15 @@ UICollectionViewDelegateFlowLayout
     return self.indicator.backgroundColor;
 }
 
-- (void)setItemClass:(Class)itemClass {
-    _itemClass = itemClass;
-    [self.collectionView registerClass:itemClass forCellWithReuseIdentifier:@"cell"];
-}
-
 - (void)setTitleInterval:(CGFloat)titleInterval {
     _titleInterval = titleInterval;
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     layout.minimumInteritemSpacing = titleInterval;
     self.collectionView.collectionViewLayout = layout;
+}
+
+- (void)setSelectedSegmentIndex:(NSInteger)index {
+    [self setSelectedSegmentIndex:index animated:NO];
 }
 
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated {
@@ -354,12 +366,13 @@ UICollectionViewDelegateFlowLayout
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         layout.minimumLineSpacing = 0;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 30) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         _collectionView.clipsToBounds = NO;
         _collectionView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
         _collectionView.showsHorizontalScrollIndicator = NO;
+        [_collectionView registerClass:XYSegmentControlItemCell.class forCellWithReuseIdentifier:@"cell"];
     }
     return _collectionView;
 }
