@@ -202,10 +202,10 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return [self calculateTitleSizeAtIndexPath:indexPath];
+    return [self measureTitleAtIndex:indexPath];
 }
 
-- (CGSize)calculateTitleSizeAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (CGSize)measureTitleAtIndex:(nonnull NSIndexPath *)indexPath {
     NSString *title = self.titles[indexPath.row];
     CGSize size = self.titleSize[title].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
@@ -230,7 +230,7 @@ UICollectionViewDelegateFlowLayout
 - (void)updateBottomIndicatorWithScrollView:(UIScrollView *)scrollView isLeft:(BOOL)isLeft {
 
     CGFloat offsetX = scrollView.contentOffset.x;
-    CGFloat scrollViewWidth = scrollView.frame.size.width;
+    CGFloat scrollViewWidth = CGRectGetWidth(scrollView.frame);
 
     CGFloat progress = fmodf(offsetX, scrollViewWidth) / scrollViewWidth;
 
@@ -248,12 +248,12 @@ UICollectionViewDelegateFlowLayout
         fromIndex = toIndex + 1;
         progress = 1 - progress;
     }
+    
+    CGFloat selectedIndexMinx = CGRectGetMinX([self rectForSegmentAtIndex:fromIndex]);
+    CGFloat selectedIndexWidth = CGRectGetWidth([self rectForSegmentAtIndex:fromIndex]);
 
-    CGFloat selectedIndexMinx = [self rectForSegmentAtIndex:fromIndex].origin.x;
-    CGFloat selectedIndexWidth = [self rectForSegmentAtIndex:fromIndex].size.width;
-
-    CGFloat targetIndexMinx = [self rectForSegmentAtIndex:toIndex].origin.x;
-    CGFloat targetIndexWidth = [self rectForSegmentAtIndex:toIndex].size.width;
+    CGFloat targetIndexMinx = CGRectGetMinX([self rectForSegmentAtIndex:toIndex]);
+    CGFloat targetIndexWidth = CGRectGetWidth([self rectForSegmentAtIndex:toIndex]);
 
     self.indicatorMinX = (targetIndexMinx - selectedIndexMinx) * progress + selectedIndexMinx;
     self.indicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
