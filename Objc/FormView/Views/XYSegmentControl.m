@@ -10,11 +10,15 @@
 
 #pragma mark - SegmentBarCellItem
 
-@interface XYSegmentControlCellItem()
+@interface XYSegmentControlCellItem: NSObject
 
-@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIImage *image;
 
-@property (nonatomic, strong) UIFont *textFont;
+@property (nonatomic, copy) NSString *imageLink;
+
+@property (nonatomic, copy) NSAttributedString *attributedText;
+
+@property (nonatomic, copy) NSAttributedString *selectedAttributedText;
 
 @end
 
@@ -25,7 +29,7 @@
 
 #pragma mark - SegmentBarCell
 
-@interface XYSegmentControlItemCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
+@interface XYSegmentControlItemCell : UICollectionViewCell
 
 @property (nonatomic, strong) UILabel *textLabel;
 
@@ -37,6 +41,8 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        
+        self.backgroundColor = UIColor.redColor;
 
         [self.contentView addSubview:self.textLabel];
         
@@ -46,9 +52,7 @@
 }
 
 - (void)updateViewData:(XYSegmentControlCellItem *)viewData {
-    self.textLabel.text = viewData.text;
-    self.textLabel.textColor = viewData.textColor;
-    self.textLabel.font = viewData.textFont;
+    self.textLabel.attributedText = viewData.attributedText;
 }
 
 - (UILabel *)textLabel {
@@ -96,6 +100,8 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic) CGFloat indicatorWidth;
 
+@property (nonatomic, strong) NSArray <XYSegmentControlCellItem *> *items;
+
 @end
 
 @implementation XYSegmentControl
@@ -115,41 +121,11 @@ UICollectionViewDelegateFlowLayout
     return self;
 }
 
-- (id)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
-      sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages {
-    if (self = [super initWithFrame:CGRectZero]) {
-        [self commonInit];
-        self.sectionImages = sectionImages;
-        self.sectionSelectedImages = sectionSelectedImages;
-    }
-
-    return self;
-}
-
-- (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
-                sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages titlesForSections:(NSArray<NSString *> *)sectiontitles {
-    
-    if (self = [super initWithFrame:CGRectZero]) {
-        [self commonInit];
-        
-        if (sectionImages.count != sectiontitles.count) {
-            [NSException raise:NSRangeException format:@"***%s: Images bounds (%ld) Don't match Title bounds (%ld)", sel_getName(_cmd), (unsigned long)sectionImages.count, (unsigned long)sectiontitles.count];
-        }
-
-        self.sectionImages = sectionImages;
-        self.sectionSelectedImages = sectionSelectedImages;
-        self.sectionTitles = sectiontitles;
-    }
-    
-    return self;
-}
-
 - (void)commonInit {
-
-        self.selectionIndicatorHeight = 2;
-        self.indicatorInterval = 8;
-        self.titleInterval = 8;
-        self.selectedSegmentIndex = 0;
+        _selectionIndicatorHeight = 2;
+        _indicatorInterval = 8;
+        _titleInterval = 8;
+        _selectedSegmentIndex = 0;
         self.selectionIndicatorColor = [UIColor blackColor];
 
         self.isFirst = YES;
@@ -164,28 +140,37 @@ UICollectionViewDelegateFlowLayout
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    [self updateIndicatorWithAnimation:NO];
 }
 
 - (void)setSectionTitles:(NSArray<NSString *> *)sectionTitles {
     _sectionTitles = sectionTitles;
-    
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:sectionTitles.count];
+    for (NSString *title in sectionTitles) {
+        XYSegmentControlCellItem *item = XYSegmentControlCellItem.new;
+        item.attributedText = [[NSAttributedString alloc] initWithString:title attributes:self.titleTextAttributes];
+        item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.selectedTitleTextAttributes];
+        item.imageLink = self.titleImageLinks[title];
+        item.image = self.titleImages[title];
+    }
+    self.items = result.copy;
 }
 
-- (void)setSectionImages:(NSArray<UIImage *> *)sectionImages {
-    _sectionImages = sectionImages;
+- (void)setIndicatorWidth:(CGFloat)indicatorWidth {
+    _indicatorWidth = indicatorWidth;
+    [self updateIndicatorWithAnimation:NO];
 }
 
-- (void)setSectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages {
-    _sectionSelectedImages = sectionSelectedImages;
+- (void)setSelectionIndicatorHeight:(CGFloat)selectionIndicatorHeight {
+    _selectionIndicatorHeight = selectionIndicatorHeight;
+    [self updateIndicatorWithAnimation:NO];
 }
 
 - (void)setSelectionIndicatorColor:(UIColor *)selectionIndicatorColor {
+    _selectionIndicatorColor = selectionIndicatorColor;
     self.indicator.backgroundColor = selectionIndicatorColor;
 }
 
-- (UIColor *)selectionIndicatorColor {
-    return self.indicator.backgroundColor;
-}
 
 - (void)setTitleInterval:(CGFloat)titleInterval {
     _titleInterval = titleInterval;
@@ -227,12 +212,12 @@ UICollectionViewDelegateFlowLayout
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.sectionTitles.count;
+    return self.items.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell <XYSegmentBarCellUpdatable> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    [cell updateViewData:[self generateItemAtIndexPath:indexPath]];
+    XYSegmentControlItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell updateViewData:self.items[indexPath.row]];
     return cell;
 }
 
@@ -249,23 +234,12 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGSize)measureTitleAtIndex:(nonnull NSIndexPath *)indexPath {
-    NSString *title = self.sectionTitles[indexPath.row];
-    CGSize size = self.titleSizeCache[title].CGSizeValue;
+    NSAttributedString *attr = self.items[indexPath.row].attributedText;
+    NSString *key = attr.string;
+    CGSize size = self.titleSizeCache[key].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
-        size = [title boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX)
-                                   options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-                                attributes:self.resultingTitleTextAttributes
-                                   context:nil].size;
-
-        CGRect rect = self.collectionView.frame;
-        if (rect.size.height != size.height) {
-            // 主要为了设置collectionview的高度和indicator的y坐标，一次就好
-            rect.size.height = size.height;
-            self.collectionView.frame = rect;
-            self.indicatorWidth = size.width;
-            [self updateIndicatorWithAnimation:YES];
-        }
-        self.titleSizeCache[title] = [NSValue valueWithCGSize:size];
+        size = attr.size;
+        self.titleSizeCache[key] = [NSValue valueWithCGSize:size];
     }
     return size;
 }
@@ -316,10 +290,8 @@ UICollectionViewDelegateFlowLayout
 
     dispatch_block_t block = ^{
         CGRect rect = self.indicator.frame;
-        rect.origin.x = self.indicatorMinX;
-        rect.origin.y = indicatorY;
-        rect.size.width = self.indicatorWidth;
-        rect.size.height = self.selectionIndicatorHeight;
+        rect.origin = CGPointMake(self.indicatorMinX, indicatorY);
+        rect.size = CGSizeMake(self.indicatorWidth, self.selectionIndicatorHeight);
         self.indicator.frame = rect;
     };
 
@@ -353,14 +325,6 @@ UICollectionViewDelegateFlowLayout
     }
     
     return [resultingAttrs copy];
-}
-
-- (XYSegmentControlCellItem *)generateItemAtIndexPath:(NSIndexPath *)indexPath {
-    XYSegmentControlCellItem *item = [XYSegmentControlCellItem new];
-//    item.textFont = self.titleFont;
-//    item.textColor = self.titleColor;
-    item.text = self.sectionTitles[indexPath.row];
-    return item;
 }
 
 - (UICollectionView *)collectionView {

@@ -10,44 +10,6 @@
 
 #import "XYSegmentControl.h"
 
-@interface MySegmentBarCell : UICollectionViewCell <XYSegmentBarCellUpdatable>
-
-@property (nonatomic, strong) UILabel *textLabel;
-
-@end
-
-@implementation MySegmentBarCell
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.contentView.backgroundColor = [UIColor blueColor];
-        [self.contentView addSubview:self.textLabel];
-    }
-    return self;
-}
-
-- (void)updateViewData:(XYSegmentControlCellItem *)viewData {
-    self.textLabel.text = viewData.text;
-    self.textLabel.textColor = viewData.textColor;
-    self.textLabel.font = viewData.textFont;
-}
-
-- (UILabel *)textLabel {
-    if (!_textLabel) {
-        _textLabel = [UILabel new];
-        _textLabel.textAlignment = NSTextAlignmentCenter;
-    }
-    return _textLabel;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.textLabel.frame = self.bounds;
-}
-
-@end
-
 @interface SegmentController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) XYSegmentControl *bar;
@@ -113,9 +75,9 @@
 
     self.bar = [[XYSegmentControl alloc] initWithSectionTitles:titles];
     self.bar.frame = CGRectMake(0, 100, self.view.frame.size.width, 40);
-    [self.bar setSelectedSegmentIndex:3 animated:YES];
+//    [self.bar setSelectedSegmentIndex:3 animated:YES];
 
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
     
     [self.view addSubview:self.bar];
 
