@@ -197,7 +197,7 @@ UICollectionViewDelegateFlowLayout
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         CGRect newRect = cell.frame;
         self.indicatorMinX = newRect.origin.x;
-        self.indicatorWidth = cell.frame.size.width;
+        self->_indicatorWidth = cell.frame.size.width;
         [self updateIndicatorWithAnimation:animated];
     };
 
