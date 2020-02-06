@@ -83,7 +83,7 @@ UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout
 >
 
-@property (nonatomic, strong) NSMutableDictionary <NSString *, NSValue *>*titleSize;
+@property (nonatomic, strong) NSMutableDictionary <NSString *, NSValue *>*titleSizeCache;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -121,9 +121,8 @@ UICollectionViewDelegateFlowLayout
       sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages {
     if (self = [super initWithFrame:CGRectZero]) {
         [self commonInit];
-//        self.sectionImages = sectionImages;
-//        self.sectionSelectedImages = sectionSelectedImages;
-//        self.type = HMSegmentedControlTypeImages;
+        self.sectionImages = sectionImages;
+        self.sectionSelectedImages = sectionSelectedImages;
     }
 
     return self;
@@ -155,13 +154,20 @@ UICollectionViewDelegateFlowLayout
         self.selectedSegmentIndex = 0;
         self.selectionIndicatorColor = [UIColor blackColor];
 
+        self.selectionIndicatorEdgeInsets = UIEdgeInsetsZero;
+
         self.isFirst = YES;
 
-        self.titleSize = [NSMutableDictionary dictionary];
+        self.titleSizeCache = [NSMutableDictionary dictionary];
 
         [self addSubview:self.collectionView];
 
         [self.collectionView addSubview:self.indicator];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 }
 
 - (void)setSectionTitles:(NSArray<NSString *> *)sectionTitles {
@@ -197,7 +203,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated {
-    self.selectedSegmentIndex = index;
+    _selectedSegmentIndex = index;
 
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     dispatch_block_t block = ^{
@@ -248,7 +254,7 @@ UICollectionViewDelegateFlowLayout
 
 - (CGSize)measureTitleAtIndex:(nonnull NSIndexPath *)indexPath {
     NSString *title = self.sectionTitles[indexPath.row];
-    CGSize size = self.titleSize[title].CGSizeValue;
+    CGSize size = self.titleSizeCache[title].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
         size = [title boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX)
                                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
@@ -263,7 +269,7 @@ UICollectionViewDelegateFlowLayout
             self.indicatorWidth = size.width;
             [self updateIndicatorWithAnimation:YES];
         }
-        self.titleSize[title] = [NSValue valueWithCGSize:size];
+        self.titleSizeCache[title] = [NSValue valueWithCGSize:size];
     }
     return size;
 }
