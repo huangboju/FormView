@@ -16,6 +16,8 @@
 
 @property (nonatomic, copy) NSString *imageLink;
 
+@property (nonatomic, assign) BOOL selected;
+
 @property (nonatomic, copy) NSAttributedString *attributedText;
 
 @property (nonatomic, copy) NSAttributedString *selectedAttributedText;
@@ -52,13 +54,15 @@
 }
 
 - (void)updateViewData:(XYSegmentControlCellItem *)viewData {
-    self.textLabel.attributedText = viewData.attributedText;
+    self.textLabel.attributedText = viewData.selected ? viewData.selectedAttributedText : viewData.attributedText;
+    self.imageView.image = viewData.image;
 }
 
 - (UILabel *)textLabel {
     if (!_textLabel) {
         _textLabel = [UILabel new];
         _textLabel.textAlignment = NSTextAlignmentCenter;
+        _textLabel.hidden = YES;
     }
     return _textLabel;
 }
@@ -66,6 +70,7 @@
 - (UIImageView *)imageView {
     if (!_imageView) {
         _imageView = UIImageView.new;
+        _imageView.hidden = YES;
     }
     return _imageView;
 }
