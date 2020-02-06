@@ -91,8 +91,6 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic, assign) BOOL isFirst;
 
-@property (nonatomic, assign) NSInteger selectedIndex;
-
 
 @property (nonatomic) CGFloat indicatorMinX;
 
@@ -102,16 +100,60 @@ UICollectionViewDelegateFlowLayout
 
 @implementation XYSegmentControl
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles {
-    if ([super initWithFrame:frame]) {
-        
-        self.titles = titles;
+- (id)initWithFrame:(CGRect)frame {
 
-        self.indicatorHeight = 2;
+    if (self = [super initWithFrame:frame]) {
+        [self commonInit];
+    }
+
+    return self;
+}
+
+- (id)initWithSectionTitles:(NSArray<NSString *> *)sectiontitles {
+    if (self = [super initWithFrame:CGRectZero]) {
+        [self commonInit];
+        self.sectionTitles = sectiontitles;
+    }
+    return self;
+}
+
+- (id)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
+      sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages {
+    if (self = [super initWithFrame:CGRectZero]) {
+        [self commonInit];
+//        self.sectionImages = sectionImages;
+//        self.sectionSelectedImages = sectionSelectedImages;
+//        self.type = HMSegmentedControlTypeImages;
+    }
+
+    return self;
+}
+
+- (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
+                sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages titlesForSections:(NSArray<NSString *> *)sectiontitles {
+    
+    if (self = [super initWithFrame:CGRectZero]) {
+        [self commonInit];
+        
+        if (sectionImages.count != sectiontitles.count) {
+            [NSException raise:NSRangeException format:@"***%s: Images bounds (%ld) Don't match Title bounds (%ld)", sel_getName(_cmd), (unsigned long)sectionImages.count, (unsigned long)sectiontitles.count];
+        }
+
+        self.sectionImages = sectionImages;
+        self.sectionSelectedImages = sectionSelectedImages;
+        self.sectionTitles = sectiontitles;
+    }
+    
+    return self;
+}
+
+- (void)commonInit {
+
+        self.selectionIndicatorHeight = 2;
         self.indicatorInterval = 8;
         self.titleInterval = 8;
-        self.selectedIndex = 0;
-        self.indicatorBackgrounColor = [UIColor blackColor];
+        self.selectedSegmentIndex = 0;
+        self.selectionIndicatorColor = [UIColor blackColor];
 
         self.isFirst = YES;
 
@@ -120,22 +162,13 @@ UICollectionViewDelegateFlowLayout
         [self addSubview:self.collectionView];
 
         [self.collectionView addSubview:self.indicator];
-    }
-    return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame items:(NSArray<XYSegmentControlCellItem *> *)items {
-    if (self = [super initWithFrame:frame]) {
-        
-    }
-    return self;
+- (void)setSelectionIndicatorColor:(UIColor *)selectionIndicatorColor {
+    self.indicator.backgroundColor = selectionIndicatorColor;
 }
 
-- (void)setIndicatorBackgrounColor:(UIColor *)indicatorBackgrounColor {
-    self.indicator.backgroundColor = indicatorBackgrounColor;
-}
-
-- (UIColor *)indicatorBackgrounColor {
+- (UIColor *)selectionIndicatorColor {
     return self.indicator.backgroundColor;
 }
 
@@ -151,14 +184,10 @@ UICollectionViewDelegateFlowLayout
     self.collectionView.collectionViewLayout = layout;
 }
 
-- (NSInteger)currentIndex {
-    return self.selectedIndex;
-}
+- (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated {
+    self.selectedSegmentIndex = index;
 
-- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex animated:(BOOL)animated {
-    self.selectedIndex = currentTabIndex;
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.selectedIndex inSection:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     dispatch_block_t block = ^{
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         CGRect newRect = cell.frame;
@@ -184,7 +213,7 @@ UICollectionViewDelegateFlowLayout
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.titles.count;
+    return self.sectionTitles.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -198,7 +227,7 @@ UICollectionViewDelegateFlowLayout
         [self.delegate segmentBar:self didSelectItemAtIndex:indexPath.row];
     }
 
-    [self setCurrentTabIndex:indexPath.row animated:YES];
+    [self setSelectedSegmentIndex:indexPath.row animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -206,7 +235,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGSize)measureTitleAtIndex:(nonnull NSIndexPath *)indexPath {
-    NSString *title = self.titles[indexPath.row];
+    NSString *title = self.sectionTitles[indexPath.row];
     CGSize size = self.titleSize[title].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
         size = [title boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX)
@@ -260,12 +289,12 @@ UICollectionViewDelegateFlowLayout
 
     [self updateIndicatorWithAnimation:NO];
 
-    self.selectedIndex = toIndex;
+    self.selectedSegmentIndex = toIndex;
 }
 
 - (CGRect)rectForSegmentAtIndex:(NSUInteger)index {
-    index = MIN(MAX(index, 0), self.titles.count - 1);
-    return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame;
+    NSInteger idx = MIN(MAX(index, 0), self.sectionTitles.count - 1);
+    return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]].frame;
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {
@@ -276,7 +305,7 @@ UICollectionViewDelegateFlowLayout
         rect.origin.x = self.indicatorMinX;
         rect.origin.y = indicatorY;
         rect.size.width = self.indicatorWidth;
-        rect.size.height = self.indicatorHeight;
+        rect.size.height = self.selectionIndicatorHeight;
         self.indicator.frame = rect;
     };
 
@@ -316,7 +345,7 @@ UICollectionViewDelegateFlowLayout
     XYSegmentControlCellItem *item = [XYSegmentControlCellItem new];
 //    item.textFont = self.titleFont;
 //    item.textColor = self.titleColor;
-    item.text = self.titles[indexPath.row];
+    item.text = self.sectionTitles[indexPath.row];
     return item;
 }
 
@@ -343,3 +372,4 @@ UICollectionViewDelegateFlowLayout
 }
 
 @end
+

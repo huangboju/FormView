@@ -53,7 +53,11 @@
 @property (nonatomic) ItemClass itemClass;
 
 
-@property (nonatomic, strong) NSArray <NSString *> *titles;
+@property (nonatomic, strong) NSArray <NSString *> *sectionTitles;
+
+@property (nonatomic, strong) NSArray<UIImage *> *sectionImages;
+
+@property (nonatomic, strong) NSArray<UIImage *> *sectionSelectedImages;
 
 /**
  Text attributes to apply to item title text.
@@ -75,21 +79,25 @@
 @property (nonatomic, assign) CGFloat titleInterval;
 
 /// Default 0
-@property (nonatomic, assign, readonly) NSInteger currentIndex;
+@property (nonatomic, assign) NSInteger selectedSegmentIndex;
 
 /// Default 2
-@property (nonatomic, assign) CGFloat indicatorHeight;
+@property (nonatomic, assign) CGFloat selectionIndicatorHeight;
 
 /// 指示线与文字的间距
 /// Default 10
 @property (nonatomic, assign) CGFloat indicatorInterval;
 
-- (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles;
+- (id)initWithSectionTitles:(NSArray<NSString *> *)sectiontitles;
 
-- (instancetype)initWithFrame:(CGRect)frame items:(NSArray <XYSegmentControlCellItem *>*)items;
+- (id)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
+      sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages;
+
+- (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages
+                sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages titlesForSections:(NSArray<NSString *> *)sectiontitles;
 
 /// 设置默认位置
-- (void)setCurrentTabIndex:(NSUInteger)currentTabIndex animated:(BOOL)animated;
+- (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated;
 
 /// 给外部做联动用
 - (void)updateBottomIndicatorWithScrollView:(UIScrollView *)scrollView isLeft:(BOOL)isLeft;
