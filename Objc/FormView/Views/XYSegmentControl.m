@@ -62,7 +62,6 @@
     if (!_textLabel) {
         _textLabel = [UILabel new];
         _textLabel.textAlignment = NSTextAlignmentCenter;
-        _textLabel.hidden = YES;
     }
     return _textLabel;
 }
@@ -157,8 +156,10 @@ UICollectionViewDelegateFlowLayout
         item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.selectedTitleTextAttributes];
         item.imageLink = self.titleImageLinks[title];
         item.image = self.titleImages[title];
+        [result addObject:item];
     }
     self.items = result.copy;
+    [self.collectionView reloadData];
 }
 
 - (void)setIndicatorWidth:(CGFloat)indicatorWidth {
@@ -243,7 +244,12 @@ UICollectionViewDelegateFlowLayout
     NSString *key = attr.string;
     CGSize size = self.titleSizeCache[key].CGSizeValue;
     if (CGSizeEqualToSize(size, CGSizeZero)) {
-        size = attr.size;
+        
+        size = [key boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX)
+           options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+        attributes:self.resultingTitleTextAttributes
+           context:nil].size;
+
         self.titleSizeCache[key] = [NSValue valueWithCGSize:size];
     }
     return size;
@@ -282,7 +288,7 @@ UICollectionViewDelegateFlowLayout
 
     [self updateIndicatorWithAnimation:NO];
 
-    self.selectedSegmentIndex = toIndex;
+    _selectedSegmentIndex = toIndex;
 }
 
 - (CGRect)rectForSegmentAtIndex:(NSUInteger)index {
