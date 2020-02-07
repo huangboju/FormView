@@ -161,8 +161,8 @@ UICollectionViewDelegateFlowLayout
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:sectionTitles.count];
     for (NSString *title in sectionTitles) {
         XYSegmentControlCellItem *item = self.titleImages[title] ?: XYSegmentControlCellItem.new;
-        item.attributedText = [[NSAttributedString alloc] initWithString:title attributes:self.titleTextAttributes];
-        item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.selectedTitleTextAttributes];
+        item.attributedText = [[NSAttributedString alloc] initWithString:title attributes:self.resultingTitleTextAttributes];
+        item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.resultingSelectedTitleTextAttributes];
         [result addObject:item];
     }
     self.items = result.copy;
@@ -255,6 +255,16 @@ UICollectionViewDelegateFlowLayout
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger index = indexPath.row;
+    
+    self.items[self.selectedSegmentIndex].selected = NO;
+    self.items[index].selected = YES;
+
+    [self.collectionView performBatchUpdates:^{
+        [self.collectionView reloadItemsAtIndexPaths:@[
+            [NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0],
+            [NSIndexPath indexPathForItem:index inSection:0]
+        ]];
+    } completion:nil];
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(segmentControl:didSelectItemAtIndex:)]) {
         [self.delegate segmentControl:self didSelectItemAtIndex:index];
@@ -264,7 +274,7 @@ UICollectionViewDelegateFlowLayout
         self.indexChangeBlock(index);
     }
 
-    [self setSelectedSegmentIndex:indexPath.row animated:YES];
+    [self setSelectedSegmentIndex:index animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
