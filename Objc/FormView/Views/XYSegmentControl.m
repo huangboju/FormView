@@ -228,6 +228,17 @@ UICollectionViewDelegateFlowLayout
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView
+       willDisplayCell:(UICollectionViewCell *)cell
+    forItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.selectedSegmentIndex == indexPath.row) {
+        CGRect frame = self.indicator.frame;
+        frame.origin.y = CGRectGetMaxY(cell.frame) + self.indicatorInterval;
+        frame.size.width = CGRectGetWidth(cell.frame);
+        self.indicator.frame = frame;
+    }
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (self.delegate && [self.delegate respondsToSelector:@selector(segmentBar:didSelectItemAtIndex:)]) {
         [self.delegate segmentBar:self didSelectItemAtIndex:indexPath.row];
@@ -300,11 +311,10 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {
-    CGFloat indicatorY = CGRectGetMaxY(self.collectionView.frame) + self.indicatorInterval;
 
     dispatch_block_t block = ^{
         CGRect rect = self.indicator.frame;
-        rect.origin = CGPointMake(self.indicatorMinX, indicatorY);
+        rect.origin.x = self.indicatorMinX;
         rect.size = CGSizeMake(self.indicatorWidth, self.selectionIndicatorHeight);
         self.indicator.frame = rect;
     };
