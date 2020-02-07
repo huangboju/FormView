@@ -221,7 +221,8 @@ UICollectionViewDelegateFlowLayout
     return self.items.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+                  cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XYSegmentControlItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     [cell updateViewData:self.items[indexPath.row]];
     return cell;
@@ -235,7 +236,9 @@ UICollectionViewDelegateFlowLayout
     [self setSelectedSegmentIndex:indexPath.row animated:YES];
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout*)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return [self measureTitleAtIndex:indexPath];
 }
 
