@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^IndexChangeBlock)(NSInteger index);
+
 @class XYSegmentControl;
 
 @protocol XYSegmentBarDelegate <NSObject>
 
-- (void)segmentBar:(XYSegmentControl *)segmentBar didSelectItemAtIndex:(NSInteger )index;
+- (void)segmentControl:(XYSegmentControl *)segmentControl didSelectItemAtIndex:(NSInteger )index;
 
 @end
 
@@ -22,6 +24,8 @@
 
 
 @property (nonatomic, weak) id <XYSegmentBarDelegate> delegate;
+
+@property (nonatomic, copy) IndexChangeBlock indexChangeBlock;
 
 
 @property (nonatomic, strong) NSArray <NSString *> *sectionTitles;

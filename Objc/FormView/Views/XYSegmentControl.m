@@ -185,6 +185,13 @@ UICollectionViewDelegateFlowLayout
     self.collectionView.collectionViewLayout = layout;
 }
 
+- (void)setIndicatorInterval:(CGFloat)indicatorInterval {
+    _indicatorInterval = indicatorInterval;
+    CGRect frame = self.indicator.frame;
+    frame.origin.y += self.indicatorInterval;
+    self.indicator.frame = frame;
+}
+
 - (void)setSelectedSegmentIndex:(NSInteger)index {
     [self setSelectedSegmentIndex:index animated:NO];
 }
@@ -240,8 +247,14 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(segmentBar:didSelectItemAtIndex:)]) {
-        [self.delegate segmentBar:self didSelectItemAtIndex:indexPath.row];
+    NSInteger index = indexPath.row;
+
+    if (self.delegate && [self.delegate respondsToSelector:@selector(segmentControl:didSelectItemAtIndex:)]) {
+        [self.delegate segmentControl:self didSelectItemAtIndex:index];
+    }
+    
+    if (self.indexChangeBlock) {
+        self.indexChangeBlock(index);
     }
 
     [self setSelectedSegmentIndex:indexPath.row animated:YES];
@@ -324,6 +337,7 @@ UICollectionViewDelegateFlowLayout
     } else {
         block();
     }
+//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 - (NSDictionary *)resultingTitleTextAttributes {
