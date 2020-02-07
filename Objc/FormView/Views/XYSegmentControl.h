@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class XYSegmentControl;
+
 typedef void (^IndexChangeBlock)(NSInteger index);
 
-@class XYSegmentControl;
+
+@interface XYSegmentControlCellItem: NSObject
+
+@property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, copy) NSString *imageLink;
+
+@property (nonatomic, strong) UIImage *selectedImage;
+
+@property (nonatomic, copy) NSString *selectedImageLink;
+
+@end
+
 
 @protocol XYSegmentBarDelegate <NSObject>
 
@@ -30,9 +44,7 @@ typedef void (^IndexChangeBlock)(NSInteger index);
 
 @property (nonatomic, strong) NSArray <NSString *> *sectionTitles;
 
-@property (nonatomic, strong) NSDictionary<NSString *, NSString *> *titleImageLinks;
-
-@property (nonatomic, strong) NSDictionary<NSString *, UIImage *> *titleImages;
+@property (nonatomic, strong) NSDictionary<NSString *, XYSegmentControlCellItem *> *titleImages;
 
 /**
  Text attributes to apply to item title text.

@@ -10,11 +10,7 @@
 
 #pragma mark - SegmentBarCellItem
 
-@interface XYSegmentControlCellItem: NSObject
-
-@property (nonatomic, strong) UIImage *image;
-
-@property (nonatomic, copy) NSString *imageLink;
+@interface XYSegmentControlCellItem()
 
 @property (nonatomic, assign) BOOL selected;
 
@@ -27,7 +23,20 @@
 
 @implementation XYSegmentControlCellItem
 
+- (NSAttributedString *)displayAttr {
+    return self.selected ? self.selectedAttributedText : self.attributedText;
+}
+
+- (UIImage *)displayImage {
+    return self.selected ? self.selectedImage : self.image;
+}
+
+- (NSString *)displayImageLink {
+    return self.selected ? self.selectedImageLink : self.imageLink;
+}
+
 @end
+
 
 #pragma mark - SegmentBarCell
 
@@ -54,8 +63,8 @@
 }
 
 - (void)updateViewData:(XYSegmentControlCellItem *)viewData {
-    self.textLabel.attributedText = viewData.selected ? viewData.selectedAttributedText : viewData.attributedText;
-    self.imageView.image = viewData.image;
+    self.textLabel.attributedText = viewData.displayAttr;
+    self.imageView.image = viewData.displayImage;
 }
 
 - (UILabel *)textLabel {
@@ -151,11 +160,9 @@ UICollectionViewDelegateFlowLayout
     _sectionTitles = sectionTitles;
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:sectionTitles.count];
     for (NSString *title in sectionTitles) {
-        XYSegmentControlCellItem *item = XYSegmentControlCellItem.new;
+        XYSegmentControlCellItem *item = self.titleImages[title] ?: XYSegmentControlCellItem.new;
         item.attributedText = [[NSAttributedString alloc] initWithString:title attributes:self.titleTextAttributes];
         item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.selectedTitleTextAttributes];
-        item.imageLink = self.titleImageLinks[title];
-        item.image = self.titleImages[title];
         [result addObject:item];
     }
     self.items = result.copy;
