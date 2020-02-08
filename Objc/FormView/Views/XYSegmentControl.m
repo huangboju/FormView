@@ -207,8 +207,10 @@ UICollectionViewDelegateFlowLayout
 
     dispatch_block_t block = ^{
         CGRect newRect = [self rectForSegmentAtIndex:index];
-        self.indicatorMinX = newRect.origin.x;
-        self->_selectionIndicatorWidth = newRect.size.width;
+        self.indicatorMinX = CGRectGetMinX(newRect);
+        if (self.segmentWidthStyle == XYSegmentControlSegmentWidthStyleDynamic) {
+            self->_selectionIndicatorWidth = CGRectGetWidth(newRect);
+        }
         [self updateIndicatorWithAnimation:animated];
     };
 
