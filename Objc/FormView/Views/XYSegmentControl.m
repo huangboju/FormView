@@ -307,12 +307,14 @@ UICollectionViewDelegateFlowLayout
 
     NSInteger fromIndex = 0;
     NSInteger toIndex = 0;
+
+    NSInteger index = MIN(MAX((NSInteger)floor(offsetX / scrollViewWidth), 0), self.items.count - 1);
     
     if (isLeft) {
-        fromIndex = floor(offsetX / scrollViewWidth);
+        fromIndex = index;
         toIndex = fromIndex + 1;
     } else {
-        toIndex = floor(offsetX / scrollViewWidth);
+        toIndex = index;
         if (offsetX <= 0) {
             toIndex = 0;
         }
@@ -335,8 +337,7 @@ UICollectionViewDelegateFlowLayout
 }
 
 - (CGRect)rectForSegmentAtIndex:(NSUInteger)index {
-    NSInteger idx = MIN(MAX(index, 0), self.sectionTitles.count - 1);
-    return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]].frame;
+    return [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame;
 }
 
 - (void)updateIndicatorWithAnimation:(BOOL)animation {
@@ -354,7 +355,6 @@ UICollectionViewDelegateFlowLayout
     } else {
         block();
     }
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 - (NSDictionary *)resultingTitleTextAttributes {
