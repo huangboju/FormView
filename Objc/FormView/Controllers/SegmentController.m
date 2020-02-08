@@ -79,6 +79,10 @@
     self.bar.selectedTitleTextAttributes = @{
         NSForegroundColorAttributeName: UIColor.whiteColor
     };
+    __weak typeof(self) weakself = self;
+    self.bar.indexChangeBlock = ^(NSInteger index) {
+        [weakself.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    };
 //    [self.bar setSelectedSegmentIndex:3 animated:YES];
 
 //    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] atScrollPosition:UICollectionViewScrollPositionRight animated:YES];

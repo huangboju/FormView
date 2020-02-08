@@ -205,10 +205,8 @@ UICollectionViewDelegateFlowLayout
 - (void)setSelectedSegmentIndex:(NSUInteger)index animated:(BOOL)animated {
     _selectedSegmentIndex = index;
 
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     dispatch_block_t block = ^{
-        UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-        CGRect newRect = cell.frame;
+        CGRect newRect = [self rectForSegmentAtIndex:index];
         self.indicatorMinX = newRect.origin.x;
         self->_selectionIndicatorWidth = newRect.size.width;
         [self updateIndicatorWithAnimation:animated];
@@ -274,6 +272,8 @@ UICollectionViewDelegateFlowLayout
     }
 
     [self setSelectedSegmentIndex:index animated:YES];
+    
+    _selectedSegmentIndex = index;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
