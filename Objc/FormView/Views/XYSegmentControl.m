@@ -152,7 +152,8 @@ UICollectionViewDelegateFlowLayout
 
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    self.collectionView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    CGFloat height = CGRectGetHeight(frame);
+    self.collectionView.frame = CGRectMake(0, 0, CGRectGetWidth(frame), height);
     [self updateIndicatorWithAnimation:NO];
 }
 
@@ -296,7 +297,8 @@ UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout*)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return [self measureTitleAtIndex:indexPath];
+    CGSize size = [self measureTitleAtIndex:indexPath];
+    return CGSizeMake(size.width, CGRectGetHeight(collectionView.frame));
 }
 
 - (CGSize)measureTitleAtIndex:(nonnull NSIndexPath *)indexPath {
