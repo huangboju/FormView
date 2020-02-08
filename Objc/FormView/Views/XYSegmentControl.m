@@ -159,14 +159,27 @@ UICollectionViewDelegateFlowLayout
 - (void)setSectionTitles:(NSArray<NSString *> *)sectionTitles {
     _sectionTitles = sectionTitles;
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:sectionTitles.count];
+    NSInteger index = 0;
     for (NSString *title in sectionTitles) {
         XYSegmentControlCellItem *item = self.titleImages[title] ?: XYSegmentControlCellItem.new;
         item.attributedText = [[NSAttributedString alloc] initWithString:title attributes:self.resultingTitleTextAttributes];
         item.selectedAttributedText = [[NSAttributedString alloc] initWithString:title attributes:self.resultingSelectedTitleTextAttributes];
+        item.selected = self.selectedSegmentIndex == index;
         [result addObject:item];
+        index += 1;
     }
     self.items = result.copy;
     [self.collectionView reloadData];
+}
+
+- (void)setTitleTextAttributes:(NSDictionary *)titleTextAttributes {
+    _titleTextAttributes = titleTextAttributes;
+    self.sectionTitles = self.sectionTitles;
+}
+
+- (void)setSelectedTitleTextAttributes:(NSDictionary *)selectedTitleTextAttributes {
+    _selectedTitleTextAttributes = selectedTitleTextAttributes;
+    self.sectionTitles = self.sectionTitles;
 }
 
 - (void)setSelectionIndicatorWidth:(CGFloat)selectionIndicatorWidth {
@@ -258,12 +271,14 @@ UICollectionViewDelegateFlowLayout
     self.items[self.selectedSegmentIndex].selected = NO;
     self.items[index].selected = YES;
 
+    [UIView setAnimationsEnabled:NO];
     [self.collectionView performBatchUpdates:^{
         [self.collectionView reloadItemsAtIndexPaths:@[
             [NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0],
             [NSIndexPath indexPathForItem:index inSection:0]
         ]];
     } completion:nil];
+    [UIView setAnimationsEnabled:YES];
 
     if (self.delegate && [self.delegate respondsToSelector:@selector(segmentControl:didSelectItemAtIndex:)]) {
         [self.delegate segmentControl:self didSelectItemAtIndex:index];
