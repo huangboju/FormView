@@ -33,6 +33,12 @@ typedef void (^IndexChangeBlock)(NSInteger index);
 @end
 
 
+typedef NS_ENUM(NSInteger, XYSegmentControlSegmentWidthStyle) {
+    XYSegmentControlSegmentWidthStyleFixed,
+    XYSegmentControlSegmentWidthStyleDynamic
+};
+
+
 #pragma mark - XYSegmentBar
 @interface XYSegmentControl : UIView
 
@@ -74,6 +80,13 @@ typedef void (^IndexChangeBlock)(NSInteger index);
 /// 指示线与文字的间距
 /// Default 10
 @property (nonatomic, assign) CGFloat indicatorInterval;
+
+/**
+ Specifies the style of the segment's width.
+ 
+ Default is `HMSegmentedControlSegmentWidthStyleFixed`
+ */
+@property (nonatomic, assign) XYSegmentControlSegmentWidthStyle segmentWidthStyle;
 
 - (id)initWithSectionTitles:(NSArray<NSString *> *)sectiontitles;
 

@@ -111,7 +111,7 @@ UICollectionViewDelegateFlowLayout
 
 @property (nonatomic) CGFloat indicatorMinX;
 
-@property (nonatomic) CGFloat indicatorWidth;
+@property (nonatomic) CGFloat selectionIndicatorWidth;
 
 @property (nonatomic, strong) NSArray <XYSegmentControlCellItem *> *items;
 
@@ -169,8 +169,8 @@ UICollectionViewDelegateFlowLayout
     [self.collectionView reloadData];
 }
 
-- (void)setIndicatorWidth:(CGFloat)indicatorWidth {
-    _indicatorWidth = indicatorWidth;
+- (void)setSelectionIndicatorWidth:(CGFloat)selectionIndicatorWidth {
+    _selectionIndicatorWidth = selectionIndicatorWidth;
     [self updateIndicatorWithAnimation:NO];
 }
 
@@ -189,7 +189,6 @@ UICollectionViewDelegateFlowLayout
     _titleInterval = titleInterval;
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     layout.minimumInteritemSpacing = titleInterval;
-    self.collectionView.collectionViewLayout = layout;
 }
 
 - (void)setIndicatorInterval:(CGFloat)indicatorInterval {
@@ -211,7 +210,7 @@ UICollectionViewDelegateFlowLayout
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         CGRect newRect = cell.frame;
         self.indicatorMinX = newRect.origin.x;
-        self->_indicatorWidth = newRect.size.width;
+        self->_selectionIndicatorWidth = newRect.size.width;
         [self updateIndicatorWithAnimation:animated];
     };
 
@@ -328,7 +327,7 @@ UICollectionViewDelegateFlowLayout
     CGFloat targetIndexWidth = CGRectGetWidth([self rectForSegmentAtIndex:toIndex]);
 
     self.indicatorMinX = (targetIndexMinx - selectedIndexMinx) * progress + selectedIndexMinx;
-    self.indicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
+    _selectionIndicatorWidth = (targetIndexWidth - selectedIndexWidth) * progress + selectedIndexWidth;
 
     [self updateIndicatorWithAnimation:NO];
 
@@ -345,7 +344,8 @@ UICollectionViewDelegateFlowLayout
     dispatch_block_t block = ^{
         CGRect rect = self.indicator.frame;
         rect.origin.x = self.indicatorMinX;
-        rect.size = CGSizeMake(self.indicatorWidth, self.selectionIndicatorHeight);
+        rect.size = CGSizeMake(self.selectionIndicatorWidth, self.selectionIndicatorHeight);
+        self.indicator.layer.cornerRadius = CGRectGetHeight(rect) / 2;
         self.indicator.frame = rect;
     };
 
@@ -354,7 +354,7 @@ UICollectionViewDelegateFlowLayout
     } else {
         block();
     }
-//    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.selectedSegmentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 }
 
 - (NSDictionary *)resultingTitleTextAttributes {
@@ -401,6 +401,7 @@ UICollectionViewDelegateFlowLayout
 - (UIView *)indicator {
     if (!_indicator) {
         _indicator = [UIView new];
+        _indicator.clipsToBounds = YES;
     }
     return _indicator;
 }

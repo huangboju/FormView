@@ -75,6 +75,7 @@
 
     self.bar = [[XYSegmentControl alloc] initWithSectionTitles:titles];
     self.bar.frame = CGRectMake(0, 100, self.view.frame.size.width, 40);
+    self.bar.titleInterval = 20;
     self.bar.selectedTitleTextAttributes = @{
         NSForegroundColorAttributeName: UIColor.whiteColor
     };
