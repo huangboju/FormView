@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray *photos;
 
+@property (nonatomic, strong) NSMutableArray *thumbs;
+
 @end
 
 @implementation PhotoBrowser
@@ -69,11 +71,11 @@
     return nil;
 }
 
-//- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
-//    if (index < _thumbs.count)
-//        return [_thumbs objectAtIndex:index];
-//    return nil;
-//}
+- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+    if (index < _thumbs.count)
+        return [_thumbs objectAtIndex:index];
+    return nil;
+}
 
 //- (MWCaptionView *)photoBrowser:(MWPhotoBrowser *)photoBrowser captionViewForPhotoAtIndex:(NSUInteger)index {
 //    MWPhoto *photo = [self.photos objectAtIndex:index];
