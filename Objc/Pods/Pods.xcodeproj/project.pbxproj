@@ -612,7 +612,7 @@
 		1BF5B765E68C25A485C482387F10252F /* ALPHATCCAccessManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHATCCAccessManager.h; path = Alpha/Plugins/Permission/Library/ALPHATCCAccessManager.h; sourceTree = "<group>"; };
 		1C38F6704ADB90CA6D8D5CE2016C02E7 /* ALPHATCCAccessManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHATCCAccessManager.m; path = Alpha/Plugins/Permission/Library/ALPHATCCAccessManager.m; sourceTree = "<group>"; };
 		1C5493ADCBDE28BB032A3540DFEAFDFF /* ALPHAMotionPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAMotionPermission.m; path = Alpha/Plugins/Permission/Model/ALPHAMotionPermission.m; sourceTree = "<group>"; };
-		1C7C7AB6C52045AD0FA3004A9DBCA7E5 /* libPods-FormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7C7AB6C52045AD0FA3004A9DBCA7E5 /* libPods-FormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-FormView.a"; path = "libPods-FormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C88E404E9674242487A0289CA88A332 /* ALPHAConsoleIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAConsoleIcon.h; path = Alpha/Plugins/Console/Assets/ALPHAConsoleIcon.h; sourceTree = "<group>"; };
 		1CA1C38A5F53B4F717D8EAC8BF0AD9D4 /* Alpha.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		1CB89E8967DFACD775FC38357B894018 /* ALPHAEventIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAEventIcon.h; path = Alpha/Plugins/Event/Assets/ALPHAEventIcon.h; sourceTree = "<group>"; };
@@ -625,7 +625,7 @@
 		1EFC7B38DF2C8B7DDF51174BDCF75502 /* ALPHAModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAModel.m; path = Alpha/Model/Core/ALPHAModel.m; sourceTree = "<group>"; };
 		1F8ED8FDCBE66257998CC40C7C39AD24 /* ALPHAArgumentInputStructView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAArgumentInputStructView.h; path = Alpha/View/ArgumentInputViews/ALPHAArgumentInputStructView.h; sourceTree = "<group>"; };
 		1FE32DA45580EE4B03CB58D02543E319 /* ALPHARequestState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHARequestState.h; path = Alpha/Plugins/Network/Library/ALPHARequestState.h; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2016FAF67A43E8D04239566D0DC71439 /* ALPHAImageRendererViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAImageRendererViewController.h; path = Alpha/Renderers/ALPHAImageRendererViewController.h; sourceTree = "<group>"; };
 		202CFAE603ECA1109376155ECF923503 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Hardware.m"; path = "Alpha/Utility/Categories/UIKit/UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		206136EB73B4F2D9E31DE3359A0A4FA1 /* ALPHATouchViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHATouchViewController.h; path = Alpha/Plugins/Touch/Library/ALPHATouchViewController.h; sourceTree = "<group>"; };
@@ -780,7 +780,7 @@
 		6858D3599866EE4B6DED5E355A10CDC8 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		685B85C6B1F5002D2E6A67475EB75B82 /* ALPHAApplicationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAApplicationEvent.h; path = Alpha/Plugins/Event/Model/ALPHAApplicationEvent.h; sourceTree = "<group>"; };
 		6970E3857A432F064492D164D6D1F409 /* ALPHAColorPalette.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAColorPalette.m; path = Alpha/Themes/ALPHAColorPalette.m; sourceTree = "<group>"; };
-		698C3BD42D6B7E89281CF697D30D5CFC /* libTransitionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTransitionKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		698C3BD42D6B7E89281CF697D30D5CFC /* libTransitionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTransitionKit.a; path = libTransitionKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		69F88783C48F727D8E5524BFB1FB8CA0 /* ALPHAManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAManager.h; path = Alpha/Manager/ALPHAManager.h; sourceTree = "<group>"; };
 		6A06492B89AB222CF1F65395ED5BE3BC /* ALPHANetworkIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHANetworkIcon.m; path = Alpha/Plugins/Network/Assets/ALPHANetworkIcon.m; sourceTree = "<group>"; };
 		6A696E8A03E4786026C85C8A0E7181B9 /* ALPHAHealthPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAHealthPermission.h; path = Alpha/Plugins/Permission/Model/ALPHAHealthPermission.h; sourceTree = "<group>"; };
@@ -824,7 +824,7 @@
 		7E2BB7520D51E310BFED88625D482897 /* ALPHAActionItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAActionItem.h; path = Alpha/Model/Action/ALPHAActionItem.h; sourceTree = "<group>"; };
 		7E4FFA1ECA1615D582BE5466A07C0AC0 /* ALPHAPropertyRendererViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAPropertyRendererViewController.h; path = Alpha/Renderers/ALPHAPropertyRendererViewController.h; sourceTree = "<group>"; };
 		7F8C018BE03885F2C58A255978E8A819 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = YYModel/YYClassInfo.m; sourceTree = "<group>"; };
-		7F9EEBACDED01294EBA63C4841DE660B /* libAlpha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAlpha.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9EEBACDED01294EBA63C4841DE660B /* libAlpha.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAlpha.a; path = libAlpha.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8060D4D0881D05A56A559B7A133B7239 /* ALPHACoreAssets.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHACoreAssets.m; path = Alpha/Asset/ALPHACoreAssets.m; sourceTree = "<group>"; };
 		809DE74C573E7433DB1C93AC4B9DFD79 /* ALPHABaseDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHABaseDataSource.m; path = Alpha/Model/Source/ALPHABaseDataSource.m; sourceTree = "<group>"; };
 		8146CE3A59AFD3202CF2CC33855101B9 /* ALPHARequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHARequest.h; path = Alpha/Model/Network/ALPHARequest.h; sourceTree = "<group>"; };
@@ -887,7 +887,7 @@
 		9D4DCC3C31C4563D9C34CFAE3A2F3E76 /* ALPHANetworkRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHANetworkRequest.h; path = Alpha/Plugins/Network/Model/ALPHANetworkRequest.h; sourceTree = "<group>"; };
 		9D71C858276D8BF8E50ED3C5C4D3157C /* ALPHANetworkModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHANetworkModel.h; path = Alpha/Plugins/Network/Model/ALPHANetworkModel.h; sourceTree = "<group>"; };
 		9D8A921B29850D56B1B6816BBEE92129 /* ALPHAContactPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAContactPermission.m; path = Alpha/Plugins/Permission/Model/ALPHAContactPermission.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D97B83A6111D79E9E671D303BE0A34F /* ALPHABootstrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHABootstrap.m; path = Alpha/Plugins/Bootstrap/Library/ALPHABootstrap.m; sourceTree = "<group>"; };
 		9DACB202721377932D3F322F3A3E7376 /* YYModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYModel-dummy.m"; sourceTree = "<group>"; };
 		9E0A6D9B4629538AB6F799BC720559F7 /* UIApplication+Screenshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+Screenshot.h"; path = "Alpha/Utility/Categories/UIKit/UIApplication+Screenshot.h"; sourceTree = "<group>"; };
@@ -1038,7 +1038,7 @@
 		E398AA85512B9C8417E2A867B99B23FE /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		E3C18A4CE3E29DFFF1A9ED5B5BB34DDD /* ALPHAFieldEditorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAFieldEditorView.m; path = Alpha/View/ALPHAFieldEditorView.m; sourceTree = "<group>"; };
 		E3E0E3F44F097BBB7BD8B9D907E6DF30 /* ALPHANetworkConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHANetworkConnection.m; path = Alpha/Plugins/Network/Model/ALPHANetworkConnection.m; sourceTree = "<group>"; };
-		E460D5B0416D36F66EE8EC89E5D2FA0A /* libYYModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYYModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E460D5B0416D36F66EE8EC89E5D2FA0A /* libYYModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYYModel.a; path = libYYModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B05029309409F6BB97DAFA5E6A7A96 /* ALPHAFileSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHAFileSource.h; path = Alpha/Plugins/File/Sources/ALPHAFileSource.h; sourceTree = "<group>"; };
 		E4D33759536533BF43D3D7A8AB7DF6E6 /* ALPHATableScreenModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ALPHATableScreenModel.h; path = Alpha/Model/Screen/ALPHATableScreenModel.h; sourceTree = "<group>"; };
 		E546D7BA4F8EE74FB8312BB5014D3D3B /* ALPHAMethodRendererViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ALPHAMethodRendererViewController.m; path = Alpha/Renderers/ALPHAMethodRendererViewController.m; sourceTree = "<group>"; };
@@ -1411,6 +1411,7 @@
 				536F31CFD7975FD6A1D0640380D69F80 /* View */,
 				8419AAB517BE29EFCA421598F6B6111B /* ViewHierarchy */,
 			);
+			name = Alpha;
 			path = Alpha;
 			sourceTree = "<group>";
 		};
@@ -1484,6 +1485,7 @@
 				2229D932CBF7AFAC4DF091F78C8FC0C2 /* YYModel.h */,
 				97BF7CEFEA2E0C62582F0DCE285E0AC8 /* Support Files */,
 			);
+			name = YYModel;
 			path = YYModel;
 			sourceTree = "<group>";
 		};
@@ -1740,6 +1742,7 @@
 				0A5C2AB6904E9F8E96C904FE82D2500A /* ViewController+MASAdditions.m */,
 				C247A21CE3FE77FEDD43D81264557148 /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -1874,6 +1877,7 @@
 				5F770C2B14544D41E64148303DC52A26 /* TransitionKit.h */,
 				60B3363B4746870AC4CF6ED6E1FFB999 /* Support Files */,
 			);
+			name = TransitionKit;
 			path = TransitionKit;
 			sourceTree = "<group>";
 		};
@@ -2445,7 +2449,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -2816,7 +2820,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2840,7 +2844,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2884,7 +2888,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2929,7 +2933,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2953,7 +2957,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TransitionKit/TransitionKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3020,7 +3024,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -3123,7 +3128,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TransitionKit/TransitionKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";

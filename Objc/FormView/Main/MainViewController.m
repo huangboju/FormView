@@ -33,6 +33,8 @@
 #import "ShapeMaskController.h"
 #import "FilterRefactorVC.h"
 
+#import "PhotoBrowser.h"
+
 #import "ALPHAManager.h"
 
 @interface MainViewController ()<UITableViewDelegate>
@@ -98,7 +100,10 @@
                              ],
                          @[
                              FilterRefactorVC.class
-                             ]
+                             ],
+                         @[
+                             PhotoBrowser.class
+                         ]
                          ];
 
     NSMutableArray *sections = [NSMutableArray array];
