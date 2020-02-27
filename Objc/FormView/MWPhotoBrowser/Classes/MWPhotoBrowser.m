@@ -70,7 +70,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _performingLayout = NO; // Reset on view did appear
     _rotating = NO;
     _viewIsActive = NO;
-    _delayToHideElements = 5;
     _visiblePages = [[NSMutableSet alloc] init];
     _recycledPages = [[NSMutableSet alloc] init];
     _photos = [[NSMutableArray alloc] init];
@@ -340,7 +339,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             if ([_delegate respondsToSelector:@selector(photoBrowser:photoAtIndex:)]) {
                 photo = [_delegate photoBrowser:self photoAtIndex:index];
             } else if (_fixedPhotosArray && index < _fixedPhotosArray.count) {
-                photo = [_fixedPhotosArray objectAtIndex:index];
+                photo = _fixedPhotosArray[index];
             }
             if (photo) [_photos replaceObjectAtIndex:index withObject:photo];
         } else {
