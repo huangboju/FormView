@@ -6,7 +6,6 @@
 //  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
-#import "MWCommon.h"
 #import "XYPGZoomingScrollView.h"
 #import "XYPGPhotoBrowser.h"
 #import "XYPGPhoto.h"

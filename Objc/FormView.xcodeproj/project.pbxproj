@@ -376,7 +376,6 @@
 		BEC0EE20240692C6004EB022 /* XYPGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGPhoto.m; sourceTree = "<group>"; };
 		BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGTapDetectingView.m; sourceTree = "<group>"; };
 		BEC0EE22240692C6004EB022 /* XYPGPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoBrowser.h; sourceTree = "<group>"; };
-		BEC0EE23240692C6004EB022 /* MWCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommon.h; sourceTree = "<group>"; };
 		BEC0EE25240692C6004EB022 /* XYPGZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGZoomingScrollView.h; sourceTree = "<group>"; };
 		BEC0EE7224069318004EB022 /* PhotoBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowser.h; sourceTree = "<group>"; };
 		BEC0EE7324069318004EB022 /* PhotoBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowser.m; sourceTree = "<group>"; };
@@ -930,7 +929,6 @@
 		BEC0EE15240692C6004EB022 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BEC0EE23240692C6004EB022 /* MWCommon.h */,
 				BEC0EE17240692C6004EB022 /* XYPGPhoto.h */,
 				BEC0EE20240692C6004EB022 /* XYPGPhoto.m */,
 				BEC0EE22240692C6004EB022 /* XYPGPhotoBrowser.h */,

@@ -7,7 +7,6 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "MWCommon.h"
 #import "XYPGPhotoBrowser.h"
 #import "XYPGPhotoBrowserPrivate.h"
 #import "SDImageCache.h"
