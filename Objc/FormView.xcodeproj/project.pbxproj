@@ -104,6 +104,7 @@
 		BEC0EE97240694C4004EB022 /* photo8t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE85240694C3004EB022 /* photo8t.jpg */; };
 		BEC0EE98240694C4004EB022 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE86240694C3004EB022 /* photo1.jpg */; };
 		BEC0EE99240694C4004EB022 /* photo4t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE87240694C3004EB022 /* photo4t.jpg */; };
+		BEC0F9C02407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0F9BF2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m */; };
 		BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */; };
 		BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC43FAF20468F4400D46770 /* StateMachineController.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
@@ -397,6 +398,8 @@
 		BEC0EE85240694C3004EB022 /* photo8t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8t.jpg; sourceTree = "<group>"; };
 		BEC0EE86240694C3004EB022 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
 		BEC0EE87240694C3004EB022 /* photo4t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo4t.jpg; sourceTree = "<group>"; };
+		BEC0F9BE2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoBrowserSegmentView.h; sourceTree = "<group>"; };
+		BEC0F9BF2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPGPhotoBrowserSegmentView.m; sourceTree = "<group>"; };
 		BEC25B42206A40F300D0CEDA /* XYPHBindAccountBindStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountBindStatusView.h; sourceTree = "<group>"; };
 		BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountBindStatusView.m; sourceTree = "<group>"; };
 		BEC43FAE20468F4400D46770 /* StateMachineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineController.h; sourceTree = "<group>"; };
@@ -933,16 +936,10 @@
 				BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */,
 				BEC0EE25240692C6004EB022 /* XYPGZoomingScrollView.h */,
 				BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */,
-				BEC0EE15240692C6004EB022 /* Classes */,
+				BEC0F9BE2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.h */,
+				BEC0F9BF2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m */,
 			);
 			path = XYPGPhotoBrowser;
-			sourceTree = "<group>";
-		};
-		BEC0EE15240692C6004EB022 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		BEC0EE75240694C3004EB022 /* Local Media */ = {
@@ -1473,6 +1470,7 @@
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */,
+				BEC0F9C02407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m in Sources */,
 				BEEF6CB5200DE2A3001158A9 /* WechatButtonCell.m in Sources */,
 				BE2FB0AE227AE4970060A510 /* XYPHSearchFilterDismissAnimator.m in Sources */,
 				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
