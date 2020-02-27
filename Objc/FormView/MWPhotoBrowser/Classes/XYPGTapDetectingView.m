@@ -2,13 +2,13 @@
 //  UIViewTap.m
 //  Momento
 //
-//  Created by Michael Waterfall on 04/11/2009.
-//  Copyright 2009 d3i. All rights reserved.
+//  Created by 黄伯驹 on 2017/12/4.
+//  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
-#import "MWTapDetectingView.h"
+#import "XYPGTapDetectingView.h"
 
-@implementation MWTapDetectingView
+@implementation XYPGTapDetectingView
 
 - (id)init {
 	if ((self = [super init])) {

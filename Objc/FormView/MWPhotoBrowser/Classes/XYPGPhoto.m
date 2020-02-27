@@ -1,18 +1,18 @@
 //
-//  MWPhoto.m
-//  MWPhotoBrowser
+//  XYPGPhoto.m
+//  XYPGPhotoBrowser
 //
-//  Created by Michael Waterfall on 17/10/2010.
-//  Copyright 2010 d3i. All rights reserved.
+//  Created by 黄伯驹 on 2017/12/4.
+//  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
 #import <SDWebImage/SDWebImageManager.h>
 #import <SDWebImage/SDWebImageOperation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "MWPhoto.h"
-#import "MWPhotoBrowser.h"
+#import "XYPGPhoto.h"
+#import "XYPGPhotoBrowser.h"
 
-@interface MWPhoto () {
+@interface XYPGPhoto () {
 
     BOOL _loadingInProgress;
     id <SDWebImageOperation> _webImageOperation;
@@ -26,22 +26,22 @@
 
 @end
 
-@implementation MWPhoto
+@implementation XYPGPhoto
 
 @synthesize underlyingImage = _underlyingImage; // synth property from protocol
 
 #pragma mark - Class Methods
 
-+ (MWPhoto *)photoWithImage:(UIImage *)image {
-	return [[MWPhoto alloc] initWithImage:image];
++ (XYPGPhoto *)photoWithImage:(UIImage *)image {
+	return [[XYPGPhoto alloc] initWithImage:image];
 }
 
-+ (MWPhoto *)photoWithURL:(NSURL *)url {
-    return [[MWPhoto alloc] initWithURL:url];
++ (XYPGPhoto *)photoWithURL:(NSURL *)url {
+    return [[XYPGPhoto alloc] initWithURL:url];
 }
 
-+ (MWPhoto *)videoWithURL:(NSURL *)url {
-    return [[MWPhoto alloc] initWithVideoURL:url];
++ (XYPGPhoto *)videoWithURL:(NSURL *)url {
+    return [[XYPGPhoto alloc] initWithVideoURL:url];
 }
 
 #pragma mark - Init
@@ -93,7 +93,7 @@
     }
 }
 
-#pragma mark - MWPhoto Protocol Methods
+#pragma mark - XYPGPhoto Protocol Methods
 
 - (UIImage *)underlyingImage {
     return _underlyingImage;

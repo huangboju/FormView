@@ -1,6 +1,6 @@
 //
 //  MWPreprocessor.h
-//  MWPhotoBrowser
+//  XYPGPhotoBrowser
 //
 //  Created by Michael Waterfall on 01/10/2013.
 //

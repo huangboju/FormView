@@ -1,15 +1,15 @@
 //
-//  MWPhotoBrowser.m
-//  MWPhotoBrowser
+//  XYPGPhotoBrowser.m
+//  XYPGPhotoBrowser
 //
-//  Created by Michael Waterfall on 14/10/2010.
-//  Copyright 2010 d3i. All rights reserved.
+//  Created by 黄伯驹 on 2017/12/4.
+//  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
 #import <QuartzCore/QuartzCore.h>
 #import "MWCommon.h"
-#import "MWPhotoBrowser.h"
-#import "MWPhotoBrowserPrivate.h"
+#import "XYPGPhotoBrowser.h"
+#import "XYPGPhotoBrowserPrivate.h"
 #import "SDImageCache.h"
 
 #define PADDING                  10
@@ -17,7 +17,7 @@
 static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
 
-@implementation MWPhotoBrowser
+@implementation XYPGPhotoBrowser
 
 #pragma mark - Init
 
@@ -28,7 +28,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return self;
 }
 
-- (id)initWithDelegate:(id <MWPhotoBrowserDelegate>)delegate {
+- (id)initWithDelegate:(id <XYPGPhotoBrowserDelegate>)delegate {
     if ((self = [self init])) {
         _delegate = delegate;
     }
@@ -77,9 +77,9 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _didSavePreviousStateOfNavBar = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    // Listen for MWPhoto notifications
+    // Listen for XYPGPhoto notifications
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleMWPhotoLoadingDidEndNotification:)
+                                             selector:@selector(handleXYPGPhotoLoadingDidEndNotification:)
                                                  name:MWPHOTO_LOADING_DID_END_NOTIFICATION
                                                object:nil];
     
@@ -193,7 +193,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     // Autoplay if first is video
     if (!_viewHasAppearedInitially) {
         if (_autoPlayOnAppear) {
-            MWPhoto *photo = [self photoAtIndex:_currentPageIndex];
+            XYPGPhoto *photo = [self photoAtIndex:_currentPageIndex];
             if ([photo respondsToSelector:@selector(isVideo)] && photo.isVideo) {
                 [self playVideoAtIndex:_currentPageIndex];
             }
@@ -215,7 +215,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
 - (void)willMoveToParentViewController:(UIViewController *)parent {
     if (parent && _hasBelongedToViewController) {
-        [NSException raise:@"MWPhotoBrowser Instance Reuse" format:@"MWPhotoBrowser instances cannot be reused."];
+        [NSException raise:@"XYPGPhotoBrowser Instance Reuse" format:@"XYPGPhotoBrowser instances cannot be reused."];
     }
 }
 
@@ -251,7 +251,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
     
     // Adjust frames and configuration of each visible page
-    for (MWZoomingScrollView *page in _visiblePages) {
+    for (XYPGZoomingScrollView *page in _visiblePages) {
         NSUInteger index = page.index;
         page.frame = [self frameForPageAtIndex:index];
         if (page.playButton) {
@@ -331,8 +331,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return _photoCount;
 }
 
-- (id<MWPhoto>)photoAtIndex:(NSUInteger)index {
-    id <MWPhoto> photo = nil;
+- (id<XYPGPhoto>)photoAtIndex:(NSUInteger)index {
+    id <XYPGPhoto> photo = nil;
     if (index < _photos.count) {
         if ([_photos objectAtIndex:index] == [NSNull null]) {
             if ([_delegate respondsToSelector:@selector(photoBrowser:photoAtIndex:)]) {
@@ -348,8 +348,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return photo;
 }
 
-- (id<MWPhoto>)thumbPhotoAtIndex:(NSUInteger)index {
-    id <MWPhoto> photo = nil;
+- (id<XYPGPhoto>)thumbPhotoAtIndex:(NSUInteger)index {
+    id <XYPGPhoto> photo = nil;
     if (index < _thumbPhotos.count) {
         if ([_thumbPhotos objectAtIndex:index] == [NSNull null]) {
             if ([_delegate respondsToSelector:@selector(photoBrowser:thumbPhotoAtIndex:)]) {
@@ -363,7 +363,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return photo;
 }
 
-- (UIImage *)imageForPhoto:(id<MWPhoto>)photo {
+- (UIImage *)imageForPhoto:(id<XYPGPhoto>)photo {
     if (photo) {
         // Get image or obtain in background
         if ([photo underlyingImage]) {
@@ -375,15 +375,15 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return nil;
 }
 
-- (void)loadAdjacentPhotosIfNecessary:(id<MWPhoto>)photo {
-    MWZoomingScrollView *page = [self pageDisplayingPhoto:photo];
+- (void)loadAdjacentPhotosIfNecessary:(id<XYPGPhoto>)photo {
+    XYPGZoomingScrollView *page = [self pageDisplayingPhoto:photo];
     if (page) {
         // If page is current page then initiate loading of previous and next pages
         NSUInteger pageIndex = page.index;
         if (_currentPageIndex == pageIndex) {
             if (pageIndex > 0) {
                 // Preload index - 1
-                id <MWPhoto> photo = [self photoAtIndex:pageIndex-1];
+                id <XYPGPhoto> photo = [self photoAtIndex:pageIndex-1];
                 if (![photo underlyingImage]) {
                     [photo loadUnderlyingImageAndNotify];
                     MWLog(@"Pre-loading image at index %lu", (unsigned long)pageIndex-1);
@@ -391,7 +391,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             }
             if (pageIndex < [self numberOfPhotos] - 1) {
                 // Preload index + 1
-                id <MWPhoto> photo = [self photoAtIndex:pageIndex+1];
+                id <XYPGPhoto> photo = [self photoAtIndex:pageIndex+1];
                 if (![photo underlyingImage]) {
                     [photo loadUnderlyingImageAndNotify];
                     MWLog(@"Pre-loading image at index %lu", (unsigned long)pageIndex+1);
@@ -401,11 +401,11 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     }
 }
 
-#pragma mark - MWPhoto Loading Notification
+#pragma mark - XYPGPhoto Loading Notification
 
-- (void)handleMWPhotoLoadingDidEndNotification:(NSNotification *)notification {
-    id <MWPhoto> photo = [notification object];
-    MWZoomingScrollView *page = [self pageDisplayingPhoto:photo];
+- (void)handleXYPGPhotoLoadingDidEndNotification:(NSNotification *)notification {
+    id <XYPGPhoto> photo = [notification object];
+    XYPGZoomingScrollView *page = [self pageDisplayingPhoto:photo];
     if (page) {
         if ([photo underlyingImage]) {
             // Successful load
@@ -436,7 +436,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
     // Recycle no longer needed pages
     NSInteger pageIndex;
-    for (MWZoomingScrollView *page in _visiblePages) {
+    for (XYPGZoomingScrollView *page in _visiblePages) {
         pageIndex = page.index;
         if (pageIndex < (NSUInteger)iFirstIndex || pageIndex > (NSUInteger)iLastIndex) {
             [_recycledPages addObject:page];
@@ -455,9 +455,9 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         if (![self isDisplayingPageForIndex:index]) {
             
             // Add new page
-            MWZoomingScrollView *page = [self dequeueRecycledPage];
+            XYPGZoomingScrollView *page = [self dequeueRecycledPage];
             if (!page) {
-                page = [[MWZoomingScrollView alloc] initWithPhotoBrowser:self];
+                page = [[XYPGZoomingScrollView alloc] initWithPhotoBrowser:self];
             }
             [_visiblePages addObject:page];
             [self configurePage:page forIndex:index];
@@ -468,8 +468,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             // Add play button if needed
             if (page.displayingVideo) {
                 UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//                [playButton setImage:[UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/PlayButtonOverlayLarge" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
-//                [playButton setImage:[UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/PlayButtonOverlayLargeTap" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateHighlighted];
+//                [playButton setImage:[UIImage imageForResourcePath:@"XYPGPhotoBrowser.bundle/PlayButtonOverlayLarge" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
+//                [playButton setImage:[UIImage imageForResourcePath:@"XYPGPhotoBrowser.bundle/PlayButtonOverlayLargeTap" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateHighlighted];
                 [playButton addTarget:self action:@selector(playButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
                 [playButton sizeToFit];
                 playButton.frame = [self frameForPlayButton:playButton atIndex:index];
@@ -482,14 +482,14 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 - (BOOL)isDisplayingPageForIndex:(NSUInteger)index {
-    for (MWZoomingScrollView *page in _visiblePages)
+    for (XYPGZoomingScrollView *page in _visiblePages)
         if (page.index == index) return YES;
     return NO;
 }
 
-- (MWZoomingScrollView *)pageDisplayedAtIndex:(NSUInteger)index {
-    MWZoomingScrollView *thePage = nil;
-    for (MWZoomingScrollView *page in _visiblePages) {
+- (XYPGZoomingScrollView *)pageDisplayedAtIndex:(NSUInteger)index {
+    XYPGZoomingScrollView *thePage = nil;
+    for (XYPGZoomingScrollView *page in _visiblePages) {
         if (page.index == index) {
             thePage = page; break;
         }
@@ -497,9 +497,9 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return thePage;
 }
 
-- (MWZoomingScrollView *)pageDisplayingPhoto:(id<MWPhoto>)photo {
-    MWZoomingScrollView *thePage = nil;
-    for (MWZoomingScrollView *page in _visiblePages) {
+- (XYPGZoomingScrollView *)pageDisplayingPhoto:(id<XYPGPhoto>)photo {
+    XYPGZoomingScrollView *thePage = nil;
+    for (XYPGZoomingScrollView *page in _visiblePages) {
         if (page.photo == photo) {
             thePage = page; break;
         }
@@ -507,14 +507,14 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return thePage;
 }
 
-- (void)configurePage:(MWZoomingScrollView *)page forIndex:(NSUInteger)index {
+- (void)configurePage:(XYPGZoomingScrollView *)page forIndex:(NSUInteger)index {
     page.frame = [self frameForPageAtIndex:index];
     page.index = index;
     page.photo = [self photoAtIndex:index];
 }
 
-- (MWZoomingScrollView *)dequeueRecycledPage {
-    MWZoomingScrollView *page = [_recycledPages anyObject];
+- (XYPGZoomingScrollView *)dequeueRecycledPage {
+    XYPGZoomingScrollView *page = [_recycledPages anyObject];
     if (page) {
         [_recycledPages removeObject:page];
     }
@@ -562,7 +562,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
     // Load adjacent images if needed and the photo is already
     // loaded. Also called after photo has been loaded in background
-    id <MWPhoto> currentPhoto = [self photoAtIndex:index];
+    id <XYPGPhoto> currentPhoto = [self photoAtIndex:index];
     if ([currentPhoto underlyingImage]) {
         // photo loaded so load ajacent now
         [self loadAdjacentPhotosIfNecessary:currentPhoto];
@@ -703,7 +703,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
 - (NSUInteger)indexForPlayButton:(UIView *)playButton {
     NSUInteger index = NSUIntegerMax;
-    for (MWZoomingScrollView *page in _visiblePages) {
+    for (XYPGZoomingScrollView *page in _visiblePages) {
         if (page.playButton == playButton) {
             index = page.index;
             break;

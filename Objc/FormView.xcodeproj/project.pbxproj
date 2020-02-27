@@ -80,11 +80,11 @@
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
-		BEC0EE49240692C6004EB022 /* MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE19240692C6004EB022 /* MWPhotoBrowser.m */; };
-		BEC0EE4B240692C6004EB022 /* MWZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1D240692C6004EB022 /* MWZoomingScrollView.m */; };
-		BEC0EE4D240692C6004EB022 /* MWTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1F240692C6004EB022 /* MWTapDetectingImageView.m */; };
-		BEC0EE4E240692C6004EB022 /* MWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE20240692C6004EB022 /* MWPhoto.m */; };
-		BEC0EE4F240692C6004EB022 /* MWTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE21240692C6004EB022 /* MWTapDetectingView.m */; };
+		BEC0EE49240692C6004EB022 /* XYPGPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE19240692C6004EB022 /* XYPGPhotoBrowser.m */; };
+		BEC0EE4B240692C6004EB022 /* XYPGZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */; };
+		BEC0EE4D240692C6004EB022 /* XYPGTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1F240692C6004EB022 /* XYPGTapDetectingImageView.m */; };
+		BEC0EE4E240692C6004EB022 /* XYPGPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE20240692C6004EB022 /* XYPGPhoto.m */; };
+		BEC0EE4F240692C6004EB022 /* XYPGTapDetectingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */; };
 		BEC0EE7424069318004EB022 /* PhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE7324069318004EB022 /* PhotoBrowser.m */; };
 		BEC0EE88240694C4004EB022 /* photo7t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE76240694C3004EB022 /* photo7t.jpg */; };
 		BEC0EE89240694C4004EB022 /* photo6t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE77240694C3004EB022 /* photo6t.jpg */; };
@@ -365,19 +365,19 @@
 		BEB2222620206941009DD3B9 /* InputBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputBarController.m; sourceTree = "<group>"; };
 		BEB22228202069F3009DD3B9 /* XYInputBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBarView.h; sourceTree = "<group>"; };
 		BEB22229202069F3009DD3B9 /* XYInputBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBarView.m; sourceTree = "<group>"; };
-		BEC0EE16240692C6004EB022 /* MWTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTapDetectingImageView.h; sourceTree = "<group>"; };
-		BEC0EE17240692C6004EB022 /* MWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhoto.h; sourceTree = "<group>"; };
-		BEC0EE18240692C6004EB022 /* MWPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoProtocol.h; sourceTree = "<group>"; };
-		BEC0EE19240692C6004EB022 /* MWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhotoBrowser.m; sourceTree = "<group>"; };
-		BEC0EE1B240692C6004EB022 /* MWTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWTapDetectingView.h; sourceTree = "<group>"; };
-		BEC0EE1C240692C6004EB022 /* MWPhotoBrowserPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoBrowserPrivate.h; sourceTree = "<group>"; };
-		BEC0EE1D240692C6004EB022 /* MWZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWZoomingScrollView.m; sourceTree = "<group>"; };
-		BEC0EE1F240692C6004EB022 /* MWTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingImageView.m; sourceTree = "<group>"; };
-		BEC0EE20240692C6004EB022 /* MWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWPhoto.m; sourceTree = "<group>"; };
-		BEC0EE21240692C6004EB022 /* MWTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWTapDetectingView.m; sourceTree = "<group>"; };
-		BEC0EE22240692C6004EB022 /* MWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWPhotoBrowser.h; sourceTree = "<group>"; };
+		BEC0EE16240692C6004EB022 /* XYPGTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGTapDetectingImageView.h; sourceTree = "<group>"; };
+		BEC0EE17240692C6004EB022 /* XYPGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhoto.h; sourceTree = "<group>"; };
+		BEC0EE18240692C6004EB022 /* XYPGPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoProtocol.h; sourceTree = "<group>"; };
+		BEC0EE19240692C6004EB022 /* XYPGPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGPhotoBrowser.m; sourceTree = "<group>"; };
+		BEC0EE1B240692C6004EB022 /* XYPGTapDetectingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGTapDetectingView.h; sourceTree = "<group>"; };
+		BEC0EE1C240692C6004EB022 /* XYPGPhotoBrowserPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoBrowserPrivate.h; sourceTree = "<group>"; };
+		BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGZoomingScrollView.m; sourceTree = "<group>"; };
+		BEC0EE1F240692C6004EB022 /* XYPGTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGTapDetectingImageView.m; sourceTree = "<group>"; };
+		BEC0EE20240692C6004EB022 /* XYPGPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGPhoto.m; sourceTree = "<group>"; };
+		BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPGTapDetectingView.m; sourceTree = "<group>"; };
+		BEC0EE22240692C6004EB022 /* XYPGPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoBrowser.h; sourceTree = "<group>"; };
 		BEC0EE23240692C6004EB022 /* MWCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWCommon.h; sourceTree = "<group>"; };
-		BEC0EE25240692C6004EB022 /* MWZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWZoomingScrollView.h; sourceTree = "<group>"; };
+		BEC0EE25240692C6004EB022 /* XYPGZoomingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGZoomingScrollView.h; sourceTree = "<group>"; };
 		BEC0EE7224069318004EB022 /* PhotoBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowser.h; sourceTree = "<group>"; };
 		BEC0EE7324069318004EB022 /* PhotoBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowser.m; sourceTree = "<group>"; };
 		BEC0EE76240694C3004EB022 /* photo7t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo7t.jpg; sourceTree = "<group>"; };
@@ -931,18 +931,18 @@
 			isa = PBXGroup;
 			children = (
 				BEC0EE23240692C6004EB022 /* MWCommon.h */,
-				BEC0EE17240692C6004EB022 /* MWPhoto.h */,
-				BEC0EE20240692C6004EB022 /* MWPhoto.m */,
-				BEC0EE22240692C6004EB022 /* MWPhotoBrowser.h */,
-				BEC0EE19240692C6004EB022 /* MWPhotoBrowser.m */,
-				BEC0EE1C240692C6004EB022 /* MWPhotoBrowserPrivate.h */,
-				BEC0EE18240692C6004EB022 /* MWPhotoProtocol.h */,
-				BEC0EE16240692C6004EB022 /* MWTapDetectingImageView.h */,
-				BEC0EE1F240692C6004EB022 /* MWTapDetectingImageView.m */,
-				BEC0EE1B240692C6004EB022 /* MWTapDetectingView.h */,
-				BEC0EE21240692C6004EB022 /* MWTapDetectingView.m */,
-				BEC0EE25240692C6004EB022 /* MWZoomingScrollView.h */,
-				BEC0EE1D240692C6004EB022 /* MWZoomingScrollView.m */,
+				BEC0EE17240692C6004EB022 /* XYPGPhoto.h */,
+				BEC0EE20240692C6004EB022 /* XYPGPhoto.m */,
+				BEC0EE22240692C6004EB022 /* XYPGPhotoBrowser.h */,
+				BEC0EE19240692C6004EB022 /* XYPGPhotoBrowser.m */,
+				BEC0EE1C240692C6004EB022 /* XYPGPhotoBrowserPrivate.h */,
+				BEC0EE18240692C6004EB022 /* XYPGPhotoProtocol.h */,
+				BEC0EE16240692C6004EB022 /* XYPGTapDetectingImageView.h */,
+				BEC0EE1F240692C6004EB022 /* XYPGTapDetectingImageView.m */,
+				BEC0EE1B240692C6004EB022 /* XYPGTapDetectingView.h */,
+				BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */,
+				BEC0EE25240692C6004EB022 /* XYPGZoomingScrollView.h */,
+				BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1382,7 +1382,7 @@
 				BE37438420403941000D6F41 /* XYPHCountryItem.m in Sources */,
 				BE8ECEE020561AAF00FAC2E8 /* TimerController.m in Sources */,
 				BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */,
-				BEC0EE49240692C6004EB022 /* MWPhotoBrowser.m in Sources */,
+				BEC0EE49240692C6004EB022 /* XYPGPhotoBrowser.m in Sources */,
 				BE2FB0FB227AED460060A510 /* XYPHImageTextControl.m in Sources */,
 				BE2FB089227ADF3F0060A510 /* XYPHSFRecommendPriceView.m in Sources */,
 				F729CDA0213E5CA100A9B873 /* CustomDismissTransitionVC.m in Sources */,
@@ -1394,7 +1394,7 @@
 				F714480D206E047300405838 /* XYPHBindAccountTitleView.m in Sources */,
 				BE2FB0C7227AEC590060A510 /* XYPHSRGoodsSortButton.m in Sources */,
 				BE2FB0FE227AED470060A510 /* XYPHSRGoodsSortTabView.m in Sources */,
-				BEC0EE4B240692C6004EB022 /* MWZoomingScrollView.m in Sources */,
+				BEC0EE4B240692C6004EB022 /* XYPGZoomingScrollView.m in Sources */,
 				BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */,
 				BE2FB0B4227AE8980060A510 /* FilterRefactorVC.m in Sources */,
 				BE2FB077227AD99C0060A510 /* XYPHSearchFilterGroupButtonView.m in Sources */,
@@ -1446,7 +1446,7 @@
 				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
-				BEC0EE4F240692C6004EB022 /* MWTapDetectingView.m in Sources */,
+				BEC0EE4F240692C6004EB022 /* XYPGTapDetectingView.m in Sources */,
 				BECCEA361FD513DB00CBCC1F /* MainViewController.m in Sources */,
 				BE2FB0F5227AED460060A510 /* XYPHSFPriceFieldCellModel.m in Sources */,
 				BE5F0DD3206B34430061ED31 /* XYPHBindAccountUIGenerator.m in Sources */,
@@ -1480,8 +1480,8 @@
 				F7F2EEEB20A9759C00CDFD7B /* XYPHSearchResultNoteUserInfoLayer.m in Sources */,
 				F729CDA3213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m in Sources */,
 				BE2FB0AD227AE4970060A510 /* XYPHSearchFilterPresentAnimator.m in Sources */,
-				BEC0EE4E240692C6004EB022 /* MWPhoto.m in Sources */,
-				BEC0EE4D240692C6004EB022 /* MWTapDetectingImageView.m in Sources */,
+				BEC0EE4E240692C6004EB022 /* XYPGPhoto.m in Sources */,
+				BEC0EE4D240692C6004EB022 /* XYPGTapDetectingImageView.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE2FB0AC227AE4970060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m in Sources */,
 				BE697A95200DEDFB009C6762 /* ThirdPartButtonCell.m in Sources */,

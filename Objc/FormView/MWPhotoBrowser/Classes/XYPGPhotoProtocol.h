@@ -1,6 +1,6 @@
 //
-//  MWPhotoProtocol.h
-//  MWPhotoBrowser
+//  XYPGPhotoProtocol.h
+//  XYPGPhotoBrowser
 //
 //  Created by Michael Waterfall on 02/01/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
@@ -14,12 +14,12 @@
 
 // If you wish to use your own data models for photo then they must conform
 // to this protocol. See instructions for details on each method.
-// Otherwise you can use the MWPhoto object or subclass it yourself to
+// Otherwise you can use the XYPGPhoto object or subclass it yourself to
 // store more information per photo.
 //
-// You can see the MWPhoto class for an example implementation of this protocol
+// You can see the XYPGPhoto class for an example implementation of this protocol
 //
-@protocol MWPhoto <NSObject>
+@protocol XYPGPhoto <NSObject>
 
 @required
 
@@ -39,7 +39,7 @@
 // Fetch the image data from a source and notify when complete.
 // You must load the image asyncronously (and decompress it for better performance).
 // It is recommended that you use SDWebImageDecoder to perform the decompression.
-// See MWPhoto object for an example implementation.
+// See XYPGPhoto object for an example implementation.
 // When the underlying UIImage is loaded (or failed to load) you should post the following
 // notification:
 // [[NSNotificationCenter defaultCenter] postNotificationName:MWPHOTO_LOADING_DID_END_NOTIFICATION

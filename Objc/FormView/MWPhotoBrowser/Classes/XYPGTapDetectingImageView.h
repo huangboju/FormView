@@ -2,21 +2,21 @@
 //  UIImageViewTap.h
 //  Momento
 //
-//  Created by Michael Waterfall on 04/11/2009.
-//  Copyright 2009 d3i. All rights reserved.
+//  Created by 黄伯驹 on 2017/12/4.
+//  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@protocol MWTapDetectingImageViewDelegate;
+@protocol XYPGTapDetectingImageViewDelegate;
 
-@interface MWTapDetectingImageView : UIImageView {}
+@interface XYPGTapDetectingImageView : UIImageView {}
 
-@property (nonatomic, weak) id <MWTapDetectingImageViewDelegate> tapDelegate;
+@property (nonatomic, weak) id <XYPGTapDetectingImageViewDelegate> tapDelegate;
 
 @end
 
-@protocol MWTapDetectingImageViewDelegate <NSObject>
+@protocol XYPGTapDetectingImageViewDelegate <NSObject>
 
 @optional
 

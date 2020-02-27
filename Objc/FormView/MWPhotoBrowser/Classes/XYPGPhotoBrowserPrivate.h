@@ -1,17 +1,17 @@
 //
-//  MWPhotoBrowser_Private.h
-//  MWPhotoBrowser
+//  XYPGPhotoBrowser_Private.h
+//  XYPGPhotoBrowser
 //
-//  Created by Michael Waterfall on 08/10/2013.
+//  Created by 黄伯驹 on 2017/12/4.
 //
 //
 
 #import <UIKit/UIKit.h>
 #import <AVKit/AVKit.h>
-#import "MWZoomingScrollView.h"
+#import "XYPGZoomingScrollView.h"
 
 // Declare private methods of browser
-@interface MWPhotoBrowser () {
+@interface XYPGPhotoBrowser () {
     
 	// Data
     NSUInteger _photoCount;
@@ -54,10 +54,10 @@
 // Paging
 - (void)tilePages;
 - (BOOL)isDisplayingPageForIndex:(NSUInteger)index;
-- (MWZoomingScrollView *)pageDisplayedAtIndex:(NSUInteger)index;
-- (MWZoomingScrollView *)pageDisplayingPhoto:(id<MWPhoto>)photo;
-- (MWZoomingScrollView *)dequeueRecycledPage;
-- (void)configurePage:(MWZoomingScrollView *)page forIndex:(NSUInteger)index;
+- (XYPGZoomingScrollView *)pageDisplayedAtIndex:(NSUInteger)index;
+- (XYPGZoomingScrollView *)pageDisplayingPhoto:(id<XYPGPhoto>)photo;
+- (XYPGZoomingScrollView *)dequeueRecycledPage;
+- (void)configurePage:(XYPGZoomingScrollView *)page forIndex:(NSUInteger)index;
 - (void)didStartViewingPageAtIndex:(NSUInteger)index;
 
 // Frames
@@ -72,10 +72,10 @@
 
 // Data
 - (NSUInteger)numberOfPhotos;
-- (id<MWPhoto>)photoAtIndex:(NSUInteger)index;
-- (id<MWPhoto>)thumbPhotoAtIndex:(NSUInteger)index;
-- (UIImage *)imageForPhoto:(id<MWPhoto>)photo;
-- (void)loadAdjacentPhotosIfNecessary:(id<MWPhoto>)photo;
+- (id<XYPGPhoto>)photoAtIndex:(NSUInteger)index;
+- (id<XYPGPhoto>)thumbPhotoAtIndex:(NSUInteger)index;
+- (UIImage *)imageForPhoto:(id<XYPGPhoto>)photo;
+- (void)loadAdjacentPhotosIfNecessary:(id<XYPGPhoto>)photo;
 - (void)releaseAllUnderlyingPhotos:(BOOL)preserveCurrent;
 
 @end

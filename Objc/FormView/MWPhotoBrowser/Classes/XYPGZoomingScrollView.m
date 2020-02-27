@@ -1,32 +1,32 @@
 //
 //  ZoomingScrollView.m
-//  MWPhotoBrowser
+//  XYPGPhotoBrowser
 //
-//  Created by Michael Waterfall on 14/10/2010.
-//  Copyright 2010 d3i. All rights reserved.
+//  Created by 黄伯驹 on 2017/12/4.
+//  Copyright © 2017年 黄伯驹. All rights reserved.
 //
 
 #import "MWCommon.h"
-#import "MWZoomingScrollView.h"
-#import "MWPhotoBrowser.h"
-#import "MWPhoto.h"
-#import "MWPhotoBrowserPrivate.h"
+#import "XYPGZoomingScrollView.h"
+#import "XYPGPhotoBrowser.h"
+#import "XYPGPhoto.h"
+#import "XYPGPhotoBrowserPrivate.h"
 
 // Private methods and properties
-@interface MWZoomingScrollView () {
+@interface XYPGZoomingScrollView () {
     
-    MWPhotoBrowser __weak *_photoBrowser;
-	MWTapDetectingView *_tapView; // for background taps
-	MWTapDetectingImageView *_photoImageView;
+    XYPGPhotoBrowser __weak *_photoBrowser;
+	XYPGTapDetectingView *_tapView; // for background taps
+	XYPGTapDetectingImageView *_photoImageView;
     UIImageView *_loadingError;
     
 }
 
 @end
 
-@implementation MWZoomingScrollView
+@implementation XYPGZoomingScrollView
 
-- (id)initWithPhotoBrowser:(MWPhotoBrowser *)browser {
+- (id)initWithPhotoBrowser:(XYPGPhotoBrowser *)browser {
     if ((self = [super init])) {
         
         // Setup
@@ -34,14 +34,14 @@
         _photoBrowser = browser;
         
 		// Tap view for background
-		_tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
+		_tapView = [[XYPGTapDetectingView alloc] initWithFrame:self.bounds];
 		_tapView.tapDelegate = self;
 		_tapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 		_tapView.backgroundColor = [UIColor blackColor];
 		[self addSubview:_tapView];
 		
 		// Image view
-		_photoImageView = [[MWTapDetectingImageView alloc] initWithFrame:CGRectZero];
+		_photoImageView = [[XYPGTapDetectingImageView alloc] initWithFrame:CGRectZero];
 		_photoImageView.tapDelegate = self;
 		_photoImageView.contentMode = UIViewContentModeCenter;
 		_photoImageView.backgroundColor = [UIColor blackColor];
@@ -85,7 +85,7 @@
 
 #pragma mark - Image
 
-- (void)setPhoto:(id<MWPhoto>)photo {
+- (void)setPhoto:(id<XYPGPhoto>)photo {
     // Cancel any loading on old photo
     if (_photo && photo == nil) {
         if ([_photo respondsToSelector:@selector(cancelAnyLoading)]) {
@@ -147,7 +147,7 @@
     if (![_photo respondsToSelector:@selector(emptyImage)] || !_photo.emptyImage) {
         if (!_loadingError) {
             _loadingError = [UIImageView new];
-//            _loadingError.image = [UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/ImageError" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]];
+//            _loadingError.image = [UIImage imageForResourcePath:@"XYPGPhotoBrowser.bundle/ImageError" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]];
             _loadingError.userInteractionEnabled = NO;
             _loadingError.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin |
             UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;

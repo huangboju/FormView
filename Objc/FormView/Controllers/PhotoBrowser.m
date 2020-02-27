@@ -8,9 +8,9 @@
 
 #import "PhotoBrowser.h"
 
-#import "MWPhotoBrowser.h"
+#import "XYPGPhotoBrowser.h"
 
-@interface PhotoBrowser () <MWPhotoBrowserDelegate>
+@interface PhotoBrowser () <XYPGPhotoBrowserDelegate>
 
 @property (nonatomic, strong) NSMutableArray *photos;
 
@@ -29,21 +29,21 @@
     [super touchesBegan:touches withEvent:event];
     NSMutableArray *photos = NSMutableArray.array;
     _photos = photos;
-    MWPhoto *photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo5" ofType:@"jpg"]]];
+    XYPGPhoto *photo = [XYPGPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo5" ofType:@"jpg"]]];
     [photos addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo2" ofType:@"jpg"]]];
+    photo = [XYPGPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo2" ofType:@"jpg"]]];
     [photos addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo3" ofType:@"jpg"]]];
+    photo = [XYPGPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"photo3" ofType:@"jpg"]]];
     [photos addObject:photo];
-    photo = [MWPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"video_thumb" ofType:@"jpg"]]];
+    photo = [XYPGPhoto photoWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"video_thumb" ofType:@"jpg"]]];
     photo.videoURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4"]];
     [photos addObject:photo];
-    photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo4" ofType:@"jpg"]]];
+    photo = [XYPGPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo4" ofType:@"jpg"]]];
     [photos addObject:photo];
 
     BOOL autoPlayOnAppear = NO;
 
-    MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+    XYPGPhotoBrowser *browser = [[XYPGPhotoBrowser alloc] initWithDelegate:self];
     browser.zoomPhotosToFill = YES;
     browser.autoPlayOnAppear = autoPlayOnAppear;
     [browser setCurrentPhotoIndex:3];
@@ -51,30 +51,30 @@
     [self showViewController:browser sender:nil];
 }
 
-#pragma mark - MWPhotoBrowserDelegate
+#pragma mark - XYPGPhotoBrowserDelegate
 
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser {
+- (NSUInteger)numberOfPhotosInPhotoBrowser:(XYPGPhotoBrowser *)photoBrowser {
     return _photos.count;
 }
 
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
+- (id <XYPGPhoto>)photoBrowser:(XYPGPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index {
     if (index < _photos.count)
         return [_photos objectAtIndex:index];
     return nil;
 }
 
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
+- (id <XYPGPhoto>)photoBrowser:(XYPGPhotoBrowser *)photoBrowser thumbPhotoAtIndex:(NSUInteger)index {
     if (index < _thumbs.count)
         return [_thumbs objectAtIndex:index];
     return nil;
 }
 
 
-- (void)photoBrowser:(MWPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
+- (void)photoBrowser:(XYPGPhotoBrowser *)photoBrowser didDisplayPhotoAtIndex:(NSUInteger)index {
     NSLog(@"Did start viewing photo at index %lu", (unsigned long)index);
 }
 
-- (void)photoBrowserDidFinishModalPresentation:(MWPhotoBrowser *)photoBrowser {
+- (void)photoBrowserDidFinishModalPresentation:(XYPGPhotoBrowser *)photoBrowser {
     // If we subscribe to this method we must dismiss the view controller ourselves
     NSLog(@"Did finish modal presentation");
     [self dismissViewControllerAnimated:YES completion:nil];
