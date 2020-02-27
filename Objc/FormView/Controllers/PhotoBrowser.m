@@ -40,14 +40,12 @@
     [photos addObject:photo];
     photo = [MWPhoto photoWithImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"photo4" ofType:@"jpg"]]];
     [photos addObject:photo];
-    
-    BOOL displayActionButton = YES;
+
     BOOL displaySelectionButtons = NO;
     BOOL displayNavArrows = NO;
     BOOL autoPlayOnAppear = NO;
 
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    browser.displayActionButton = displayActionButton;
     browser.displayNavArrows = displayNavArrows;
     browser.displaySelectionButtons = displaySelectionButtons;
     browser.alwaysShowControls = displaySelectionButtons;
