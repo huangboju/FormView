@@ -8,5 +8,7 @@ target 'FormView' do
   pod 'YYModel'
   
   pod 'Alpha'
+  
+  pod 'SDWebImage'
 
 end

@@ -42,11 +42,9 @@
     [photos addObject:photo];
 
     BOOL displaySelectionButtons = NO;
-    BOOL displayNavArrows = NO;
     BOOL autoPlayOnAppear = NO;
 
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    browser.displayNavArrows = displayNavArrows;
     browser.displaySelectionButtons = displaySelectionButtons;
     browser.alwaysShowControls = displaySelectionButtons;
     browser.zoomPhotosToFill = YES;

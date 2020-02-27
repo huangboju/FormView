@@ -104,12 +104,16 @@ PODS:
     - Alpha/Integration
     - Alpha/Render
   - Masonry (1.1.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - TransitionKit (2.2.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alpha
   - Masonry
+  - SDWebImage
   - TransitionKit
   - YYModel
 
@@ -117,15 +121,17 @@ SPEC REPOS:
   trunk:
     - Alpha
     - Masonry
+    - SDWebImage
     - TransitionKit
     - YYModel
 
 SPEC CHECKSUMS:
   Alpha: ffe13f7d9c5f287b93398a01b67e9d44729c6630
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a0a6ff6aa6a56d7254179bd02952456875613286
+PODFILE CHECKSUM: df8f57608525943cd4ed701cfdedd1c252147c6e
 
 COCOAPODS: 1.8.4

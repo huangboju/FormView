@@ -312,7 +312,7 @@
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-	[_photoBrowser hideControlsAfterDelay];
+	
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
@@ -351,10 +351,6 @@
         [self zoomToRect:CGRectMake(touchPoint.x - xsize/2, touchPoint.y - ysize/2, xsize, ysize) animated:YES];
 
 	}
-	
-	// Delay controls
-	[_photoBrowser hideControlsAfterDelay];
-	
 }
 
 // Image View
