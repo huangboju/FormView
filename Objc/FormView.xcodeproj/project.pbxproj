@@ -918,15 +918,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		BEC0EE14240692C6004EB022 /* MWPhotoBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				BEC0EE15240692C6004EB022 /* Classes */,
-			);
-			path = MWPhotoBrowser;
-			sourceTree = "<group>";
-		};
-		BEC0EE15240692C6004EB022 /* Classes */ = {
+		BEC0EE14240692C6004EB022 /* XYPGPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
 				BEC0EE17240692C6004EB022 /* XYPGPhoto.h */,
@@ -941,6 +933,14 @@
 				BEC0EE21240692C6004EB022 /* XYPGTapDetectingView.m */,
 				BEC0EE25240692C6004EB022 /* XYPGZoomingScrollView.h */,
 				BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */,
+				BEC0EE15240692C6004EB022 /* Classes */,
+			);
+			path = XYPGPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		BEC0EE15240692C6004EB022 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -996,7 +996,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC0EE75240694C3004EB022 /* Local Media */,
-				BEC0EE14240692C6004EB022 /* MWPhotoBrowser */,
+				BEC0EE14240692C6004EB022 /* XYPGPhotoBrowser */,
 				BE2FB05A227AD4530060A510 /* Core */,
 				BEB2222420206924009DD3B9 /* Controllers */,
 				BE29FB321FFDD58000A27373 /* Views */,

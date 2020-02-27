@@ -13,8 +13,6 @@
 
 #define PADDING                  10
 
-static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
-
 
 @implementation XYPGPhotoBrowser
 

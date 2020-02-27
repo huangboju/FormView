@@ -8,7 +8,6 @@
 
 #import <SDWebImage/SDWebImageManager.h>
 #import <SDWebImage/SDWebImageOperation.h>
-#import <AssetsLibrary/AssetsLibrary.h>
 #import "XYPGPhoto.h"
 #import "XYPGPhotoBrowser.h"
 
@@ -216,10 +215,10 @@
 }
 
 - (void)cancelAnyLoading {
-//    if (_webImageOperation != nil) {
-//        [_webImageOperation cancel];
-//        _loadingInProgress = NO;
-//    }
+    if (_webImageOperation != nil) {
+        [_webImageOperation cancel];
+        _loadingInProgress = NO;
+    }
 }
 
 @end
