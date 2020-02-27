@@ -608,28 +608,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return CGPointMake(newOffset, 0);
 }
 
-- (CGRect)frameForToolbarAtOrientation:(UIInterfaceOrientation)orientation {
-    CGFloat height = 44;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone &&
-        UIInterfaceOrientationIsLandscape(orientation)) height = 32;
-    return CGRectIntegral(CGRectMake(0, self.view.bounds.size.height - height, self.view.bounds.size.width, height));
-}
-
-- (CGRect)frameForSelectedButton:(UIButton *)selectedButton atIndex:(NSUInteger)index {
-    CGRect pageFrame = [self frameForPageAtIndex:index];
-    CGFloat padding = 20;
-    CGFloat yOffset = 0;
-//    if (![self areControlsHidden]) {
-//        UINavigationBar *navBar = self.navigationController.navigationBar;
-//        yOffset = navBar.frame.origin.y + navBar.frame.size.height;
-//    }
-    CGRect selectedButtonFrame = CGRectMake(pageFrame.origin.x + pageFrame.size.width - selectedButton.frame.size.width - padding,
-                                            padding + yOffset,
-                                            selectedButton.frame.size.width,
-                                            selectedButton.frame.size.height);
-    return CGRectIntegral(selectedButtonFrame);
-}
-
 - (CGRect)frameForPlayButton:(UIButton *)playButton atIndex:(NSUInteger)index {
     CGRect pageFrame = [self frameForPageAtIndex:index];
     return CGRectMake(floorf(CGRectGetMidX(pageFrame) - playButton.frame.size.width / 2),
