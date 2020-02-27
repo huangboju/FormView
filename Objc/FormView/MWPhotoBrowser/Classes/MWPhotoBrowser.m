@@ -186,7 +186,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
     // Layout
     [self.view setNeedsLayout];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
