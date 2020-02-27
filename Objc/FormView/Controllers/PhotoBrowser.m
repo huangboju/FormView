@@ -45,7 +45,6 @@
     BOOL autoPlayOnAppear = NO;
 
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-    browser.displaySelectionButtons = displaySelectionButtons;
     browser.alwaysShowControls = displaySelectionButtons;
     browser.zoomPhotosToFill = YES;
     browser.enableSwipeToDismiss = NO;

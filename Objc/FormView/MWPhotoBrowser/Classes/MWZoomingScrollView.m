@@ -70,7 +70,6 @@
 - (void)prepareForReuse {
     [self hideImageFailure];
     self.photo = nil;
-    self.selectedButton = nil;
     self.playButton = nil;
     _photoImageView.hidden = NO;
     _photoImageView.image = nil;
@@ -323,7 +322,7 @@
 #pragma mark - Tap Detection
 
 - (void)handleSingleTap:(CGPoint)touchPoint {
-	[_photoBrowser performSelector:@selector(toggleControls) withObject:nil afterDelay:0.2];
+	
 }
 
 - (void)handleDoubleTap:(CGPoint)touchPoint {
@@ -357,6 +356,7 @@
 - (void)imageView:(UIImageView *)imageView singleTapDetected:(UITouch *)touch { 
     [self handleSingleTap:[touch locationInView:imageView]];
 }
+
 - (void)imageView:(UIImageView *)imageView doubleTapDetected:(UITouch *)touch {
     [self handleDoubleTap:[touch locationInView:imageView]];
 }
@@ -372,6 +372,7 @@
     touchY += self.contentOffset.y;
     [self handleSingleTap:CGPointMake(touchX, touchY)];
 }
+
 - (void)view:(UIView *)view doubleTapDetected:(UITouch *)touch {
     // Translate touch location to image view location
     CGFloat touchX = [touch locationInView:view].x;

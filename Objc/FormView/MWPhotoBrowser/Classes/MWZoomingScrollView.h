@@ -19,7 +19,6 @@
 
 @property () NSUInteger index;
 @property (nonatomic) id <MWPhoto> photo;
-@property (nonatomic, weak) UIButton *selectedButton;
 @property (nonatomic, weak) UIButton *playButton;
 
 - (id)initWithPhotoBrowser:(MWPhotoBrowser *)browser;

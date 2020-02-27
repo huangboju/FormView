@@ -263,20 +263,11 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
     // Detect if rotation occurs while we're presenting a modal
     _pageIndexBeforeRotation = _currentPageIndex;
-    
-    // Controls
-    [self.navigationController.navigationBar.layer removeAllAnimations]; // Stop all animations on nav bar
+
     [NSObject cancelPreviousPerformRequestsWithTarget:self]; // Cancel any pending toggles from taps
-    [self setControlsHidden:NO animated:NO permanent:YES];
-    
-    // Status bar
-    if (!_leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        [[UIApplication sharedApplication] setStatusBarStyle:_previousStatusBarStyle animated:animated];
-    }
     
     // Super
     [super viewWillDisappear:animated];
-    
 }
 
 - (void)willMoveToParentViewController:(UIViewController *)parent {
@@ -364,9 +355,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     for (MWZoomingScrollView *page in _visiblePages) {
         NSUInteger index = page.index;
         page.frame = [self frameForPageAtIndex:index];
-        if (page.selectedButton) {
-            page.selectedButton.frame = [self frameForSelectedButton:page.selectedButton atIndex:index];
-        }
         if (page.playButton) {
             page.playButton.frame = [self frameForPlayButton:page.playButton atIndex:index];
         }
@@ -476,24 +464,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     return photo;
 }
 
-- (BOOL)photoIsSelectedAtIndex:(NSUInteger)index {
-    BOOL value = NO;
-    if (_displaySelectionButtons) {
-        if ([self.delegate respondsToSelector:@selector(photoBrowser:isPhotoSelectedAtIndex:)]) {
-            value = [self.delegate photoBrowser:self isPhotoSelectedAtIndex:index];
-        }
-    }
-    return value;
-}
-
-- (void)setPhotoSelected:(BOOL)selected atIndex:(NSUInteger)index {
-    if (_displaySelectionButtons) {
-        if ([self.delegate respondsToSelector:@selector(photoBrowser:photoAtIndex:selectedChanged:)]) {
-            [self.delegate photoBrowser:self photoAtIndex:index selectedChanged:selected];
-        }
-    }
-}
-
 - (UIImage *)imageForPhoto:(id<MWPhoto>)photo {
     if (photo) {
         // Get image or obtain in background
@@ -573,7 +543,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         pageIndex = page.index;
         if (pageIndex < (NSUInteger)iFirstIndex || pageIndex > (NSUInteger)iLastIndex) {
             [_recycledPages addObject:page];
-            [page.selectedButton removeFromSuperview];
             [page.playButton removeFromSuperview];
             [page prepareForReuse];
             [page removeFromSuperview];
@@ -610,40 +579,9 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
                 [_pagingScrollView addSubview:playButton];
                 page.playButton = playButton;
             }
-            
-            // Add selected button
-            if (self.displaySelectionButtons) {
-                UIButton *selectedButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                [selectedButton setImage:[UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/ImageSelectedOff" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
-                UIImage *selectedOnImage;
-                if (self.customImageSelectedIconName) {
-                    selectedOnImage = [UIImage imageNamed:self.customImageSelectedIconName];
-                } else {
-                    selectedOnImage = [UIImage imageForResourcePath:@"MWPhotoBrowser.bundle/ImageSelectedOn" ofType:@"png" inBundle:[NSBundle bundleForClass:[self class]]];
-                }
-                [selectedButton setImage:selectedOnImage forState:UIControlStateSelected];
-                [selectedButton sizeToFit];
-                selectedButton.adjustsImageWhenHighlighted = NO;
-                [selectedButton addTarget:self action:@selector(selectedButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                selectedButton.frame = [self frameForSelectedButton:selectedButton atIndex:index];
-                [_pagingScrollView addSubview:selectedButton];
-                page.selectedButton = selectedButton;
-                selectedButton.selected = [self photoIsSelectedAtIndex:index];
-            }
-            
         }
     }
     
-}
-
-- (void)updateVisiblePageStates {
-    NSSet *copy = [_visiblePages copy];
-    for (MWZoomingScrollView *page in copy) {
-        
-        // Update selection
-        page.selectedButton.selected = [self photoIsSelectedAtIndex:page.index];
-        
-    }
 }
 
 - (BOOL)isDisplayingPageForIndex:(NSUInteger)index {
@@ -692,7 +630,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     // Handle 0 photos
     if (![self numberOfPhotos]) {
         // Show controls
-        [self setControlsHidden:NO animated:YES permanent:YES];
         return;
     }
     
@@ -833,8 +770,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    // Hide controls when dragging begins
-    [self setControlsHidden:YES animated:YES permanent:NO];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -885,21 +820,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 #pragma mark - Interactions
-
-- (void)selectedButtonTapped:(id)sender {
-    UIButton *selectedButton = (UIButton *)sender;
-    selectedButton.selected = !selectedButton.selected;
-    NSUInteger index = NSUIntegerMax;
-    for (MWZoomingScrollView *page in _visiblePages) {
-        if (page.selectedButton == selectedButton) {
-            index = page.index;
-            break;
-        }
-    }
-    if (index != NSUIntegerMax) {
-        [self setPhotoSelected:selectedButton.selected atIndex:index];
-    }
-}
 
 - (void)playButtonTapped:(id)sender {
     // Ignore if we're already playing a video
@@ -1037,64 +957,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     }
 }
 
-#pragma mark - Control Hiding / Showing
-
-// If permanent then we don't set timers to hide again
-// Fades all controls on iOS 5 & 6, and iOS 7 controls slide and fade
-- (void)setControlsHidden:(BOOL)hidden animated:(BOOL)animated permanent:(BOOL)permanent {
-    
-    // Force visible
-    if (![self numberOfPhotos] || _alwaysShowControls)
-        hidden = NO;
-    
-    // Cancel any timers
-    [self cancelControlHiding];
-    
-    // Animations & positions
-    CGFloat animatonOffset = 20;
-    CGFloat animationDuration = (animated ? 0.35 : 0);
-    
-    // Status bar
-    if (!_leaveStatusBarAlone) {
-        
-        // Hide status bar
-        if (!_isVCBasedStatusBarAppearance) {
-            
-            // Non-view controller based
-            [[UIApplication sharedApplication] setStatusBarHidden:hidden withAnimation:animated ? UIStatusBarAnimationSlide : UIStatusBarAnimationNone];
-            
-        } else {
-            
-            // View controller based so animate away
-            _statusBarShouldBeHidden = hidden;
-            [UIView animateWithDuration:animationDuration animations:^(void) {
-                [self setNeedsStatusBarAppearanceUpdate];
-            } completion:^(BOOL finished) {}];
-            
-        }
-        
-    }
-
-    [UIView animateWithDuration:animationDuration animations:^(void) {
-        
-        CGFloat alpha = hidden ? 0 : 1;
-        
-        // Nav bar slides up on it's own on iOS 7+
-        [self.navigationController.navigationBar setAlpha:alpha];
-
-        // Selected buttons
-        for (MWZoomingScrollView *page in self->_visiblePages) {
-            if (page.selectedButton) {
-                UIButton *v = page.selectedButton;
-                CGRect newFrame = [self frameForSelectedButton:v atIndex:0];
-                newFrame.origin.x = v.frame.origin.x;
-                v.frame = newFrame;
-            }
-        }
-        
-    } completion:^(BOOL finished) {}];
-}
-
 - (BOOL)prefersStatusBarHidden {
     if (!_leaveStatusBarAlone) {
         return _statusBarShouldBeHidden;
@@ -1118,10 +980,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         _controlVisibilityTimer = nil;
     }
 }
-
-- (void)hideControls { [self setControlsHidden:YES animated:YES permanent:NO]; }
-- (void)showControls { [self setControlsHidden:NO animated:YES permanent:NO]; }
-- (void)toggleControls { [self setControlsHidden:NO animated:YES permanent:NO]; }
 
 #pragma mark - Properties
 
