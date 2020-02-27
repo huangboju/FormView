@@ -302,12 +302,11 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-	[_photoBrowser cancelControlHiding];
+	
 }
 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view {
     self.scrollEnabled = YES; // reset
-	[_photoBrowser cancelControlHiding];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {

@@ -28,20 +28,6 @@
     NSUInteger _previousPageIndex;
     CGRect _previousLayoutBounds;
 	NSUInteger _pageIndexBeforeRotation;
-	
-	// Navigation & controls
-	NSTimer *_controlVisibilityTimer;
-    
-    // Appearance
-    BOOL _previousNavBarHidden;
-    BOOL _previousNavBarTranslucent;
-    UIBarStyle _previousNavBarStyle;
-    UIStatusBarStyle _previousStatusBarStyle;
-    UIColor *_previousNavBarTintColor;
-    UIColor *_previousNavBarBarTintColor;
-    UIBarButtonItem *_previousViewControllerBackButton;
-    UIImage *_previousNavigationBarBackgroundImageDefault;
-    UIImage *_previousNavigationBarBackgroundImageLandscapePhone;
     
     // Video
     AVPlayerViewController *_currentVideoPlayerViewController;
@@ -51,9 +37,6 @@
     // Misc
     BOOL _hasBelongedToViewController;
     BOOL _isVCBasedStatusBarAppearance;
-    BOOL _statusBarShouldBeHidden;
-    BOOL _displayActionButton;
-    BOOL _leaveStatusBarAlone;
 	BOOL _performingLayout;
 	BOOL _rotating;
     BOOL _viewIsActive; // active as in it's in the view heirarchy
@@ -70,12 +53,6 @@
 // Layout
 - (void)layoutVisiblePages;
 - (void)performLayout;
-- (BOOL)presentingViewControllerPrefersStatusBarHidden;
-
-// Nav Bar Appearance
-- (void)setNavBarAppearance:(BOOL)animated;
-- (void)storePreviousNavBarAppearance;
-- (void)restorePreviousNavBarAppearance:(BOOL)animated;
 
 // Paging
 - (void)tilePages;
@@ -94,14 +71,7 @@
 - (CGRect)frameForToolbarAtOrientation:(UIInterfaceOrientation)orientation;
 - (CGRect)frameForSelectedButton:(UIButton *)selectedButton atIndex:(NSUInteger)index;
 
-// Navigation
-- (void)updateNavigation;
 - (void)jumpToPageAtIndex:(NSUInteger)index animated:(BOOL)animated;
-- (void)gotoPreviousPage;
-- (void)gotoNextPage;
-
-// Controls
-- (void)cancelControlHiding;
 
 // Data
 - (NSUInteger)numberOfPhotos;

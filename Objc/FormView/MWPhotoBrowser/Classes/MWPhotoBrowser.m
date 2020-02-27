@@ -70,7 +70,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _performingLayout = NO; // Reset on view did appear
     _rotating = NO;
     _viewIsActive = NO;
-    _enableSwipeToDismiss = YES;
     _delayToHideElements = 5;
     _visiblePages = [[NSMutableSet alloc] init];
     _recycledPages = [[NSMutableSet alloc] init];
@@ -93,7 +92,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _pagingScrollView.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self releaseAllUnderlyingPhotos:NO];
-        [[SDImageCache sharedImageCache] clearMemory]; // clear memory
+    [[SDImageCache sharedImageCache] clearMemory]; // clear memory
 }
 
 - (void)releaseAllUnderlyingPhotos:(BOOL)preserveCurrent {
@@ -151,31 +150,19 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
     // Update
     [self reloadData];
-    
-    // Swipe to dismiss
-    if (_enableSwipeToDismiss) {
-        UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(doneButtonPressed:)];
-        swipeGesture.direction = UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionUp;
-        [self.view addGestureRecognizer:swipeGesture];
-    }
-    
+
     // Super
     [super viewDidLoad];
-    
 }
 
 - (void)performLayout {
     
     // Setup
     _performingLayout = YES;
-    NSUInteger numberOfPhotos = [self numberOfPhotos];
 
     // Setup pages
     [_visiblePages removeAllObjects];
     [_recycledPages removeAllObjects];
-
-    // Update nav
-    [self updateNavigation];
     
     // Content offset
     _pagingScrollView.contentOffset = [self contentOffsetForPageAtIndex:_currentPageIndex];
@@ -184,51 +171,12 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     
 }
 
-- (BOOL)presentingViewControllerPrefersStatusBarHidden {
-    UIViewController *presenting = self.presentingViewController;
-    if (presenting) {
-        if ([presenting isKindOfClass:[UINavigationController class]]) {
-            presenting = [(UINavigationController *)presenting topViewController];
-        }
-    } else {
-        // We're in a navigation controller so get previous one!
-        if (self.navigationController && self.navigationController.viewControllers.count > 1) {
-            presenting = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
-        }
-    }
-    if (presenting) {
-        return [presenting prefersStatusBarHidden];
-    } else {
-        return NO;
-    }
-}
-
 #pragma mark - Appearance
 
 - (void)viewWillAppear:(BOOL)animated {
     
     // Super
     [super viewWillAppear:animated];
-    
-    // Status bar
-    if (!_viewHasAppearedInitially) {
-        _leaveStatusBarAlone = [self presentingViewControllerPrefersStatusBarHidden];
-        // Check if status bar is hidden on first appear, and if so then ignore it
-        if (CGRectEqualToRect([[UIApplication sharedApplication] statusBarFrame], CGRectZero)) {
-            _leaveStatusBarAlone = YES;
-        }
-    }
-    // Set style
-    if (!_leaveStatusBarAlone && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        _previousStatusBarStyle = [[UIApplication sharedApplication] statusBarStyle];
-        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:animated];
-    }
-    
-    // Navigation bar appearance
-    if (!_viewIsActive && [self.navigationController.viewControllers objectAtIndex:0] != self) {
-        [self storePreviousNavBarAppearance];
-    }
-    [self setNavBarAppearance:animated];
     
     // If rotation occured while we're presenting a modal
     // and the index changed, make sure we show the right one now
@@ -264,8 +212,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     // Detect if rotation occurs while we're presenting a modal
     _pageIndexBeforeRotation = _currentPageIndex;
 
-    [NSObject cancelPreviousPerformRequestsWithTarget:self]; // Cancel any pending toggles from taps
-    
     // Super
     [super viewWillDisappear:animated];
 }
@@ -278,50 +224,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 
 - (void)didMoveToParentViewController:(UIViewController *)parent {
     if (!parent) _hasBelongedToViewController = YES;
-}
-
-#pragma mark - Nav Bar Appearance
-
-- (void)setNavBarAppearance:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    navBar.tintColor = [UIColor whiteColor];
-    navBar.barTintColor = nil;
-    navBar.shadowImage = nil;
-    navBar.translucent = YES;
-    navBar.barStyle = UIBarStyleBlackTranslucent;
-    [navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    [navBar setBackgroundImage:nil forBarMetrics:UIBarMetricsLandscapePhone];
-}
-
-- (void)storePreviousNavBarAppearance {
-    _didSavePreviousStateOfNavBar = YES;
-    _previousNavBarBarTintColor = self.navigationController.navigationBar.barTintColor;
-    _previousNavBarTranslucent = self.navigationController.navigationBar.translucent;
-    _previousNavBarTintColor = self.navigationController.navigationBar.tintColor;
-    _previousNavBarHidden = self.navigationController.navigationBarHidden;
-    _previousNavBarStyle = self.navigationController.navigationBar.barStyle;
-    _previousNavigationBarBackgroundImageDefault = [self.navigationController.navigationBar backgroundImageForBarMetrics:UIBarMetricsDefault];
-    _previousNavigationBarBackgroundImageLandscapePhone = [self.navigationController.navigationBar backgroundImageForBarMetrics:UIBarMetricsLandscapePhone];
-}
-
-- (void)restorePreviousNavBarAppearance:(BOOL)animated {
-    if (_didSavePreviousStateOfNavBar) {
-        [self.navigationController setNavigationBarHidden:_previousNavBarHidden animated:animated];
-        UINavigationBar *navBar = self.navigationController.navigationBar;
-        navBar.tintColor = _previousNavBarTintColor;
-        navBar.translucent = _previousNavBarTranslucent;
-        navBar.barTintColor = _previousNavBarBarTintColor;
-        navBar.barStyle = _previousNavBarStyle;
-        [navBar setBackgroundImage:_previousNavigationBarBackgroundImageDefault forBarMetrics:UIBarMetricsDefault];
-        [navBar setBackgroundImage:_previousNavigationBarBackgroundImageLandscapePhone forBarMetrics:UIBarMetricsLandscapePhone];
-        // Restore back button if we need to
-        if (_previousViewControllerBackButton) {
-            UIViewController *previousViewController = [self.navigationController topViewController]; // We've disappeared so previous is now top
-            previousViewController.navigationItem.backBarButtonItem = _previousViewControllerBackButton;
-            _previousViewControllerBackButton = nil;
-        }
-    }
 }
 
 #pragma mark - Layout
@@ -517,8 +419,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             // Failed to load
             [page displayImageFailure];
         }
-        // Update nav
-        [self updateNavigation];
     }
 }
 
@@ -677,10 +577,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             [_delegate photoBrowser:self didDisplayPhotoAtIndex:index];
         _previousPageIndex = index;
     }
-    
-    // Update nav
-    [self updateNavigation];
-    
 }
 
 #pragma mark - Frame Calculations
@@ -773,25 +669,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    // Update nav when page changes
-    [self updateNavigation];
-}
-
-#pragma mark - Navigation
-
-- (void)updateNavigation {
     
-    // Title
-    NSUInteger numberOfPhotos = [self numberOfPhotos];
-    if (numberOfPhotos > 1) {
-        if ([_delegate respondsToSelector:@selector(photoBrowser:titleForPhotoAtIndex:)]) {
-            self.title = [_delegate photoBrowser:self titleForPhotoAtIndex:_currentPageIndex];
-        } else {
-            self.title = [NSString stringWithFormat:@"%lu %@ %lu", (unsigned long)(_currentPageIndex+1), NSLocalizedString(@"of", @"Used in the context: 'Showing 1 of 3 items'"), (unsigned long)numberOfPhotos];
-        }
-    } else {
-        self.title = nil;
-    }
 }
 
 - (void)jumpToPageAtIndex:(NSUInteger)index animated:(BOOL)animated {
@@ -800,15 +678,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     if (index < [self numberOfPhotos]) {
         CGRect pageFrame = [self frameForPageAtIndex:index];
         [_pagingScrollView setContentOffset:CGPointMake(pageFrame.origin.x - PADDING, 0) animated:animated];
-        [self updateNavigation];
     }
-}
-
-- (void)gotoPreviousPage {
-    [self showPreviousPhotoAnimated:NO];
-}
-- (void)gotoNextPage {
-    [self showNextPhotoAnimated:NO];
 }
 
 - (void)showPreviousPhotoAnimated:(BOOL)animated {
@@ -957,28 +827,12 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     }
 }
 
-- (BOOL)prefersStatusBarHidden {
-    if (!_leaveStatusBarAlone) {
-        return _statusBarShouldBeHidden;
-    } else {
-        return [self presentingViewControllerPrefersStatusBarHidden];
-    }
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
 
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
     return UIStatusBarAnimationSlide;
-}
-
-- (void)cancelControlHiding {
-    // If a timer exists then cancel and release
-    if (_controlVisibilityTimer) {
-        [_controlVisibilityTimer invalidate];
-        _controlVisibilityTimer = nil;
-    }
 }
 
 #pragma mark - Properties
