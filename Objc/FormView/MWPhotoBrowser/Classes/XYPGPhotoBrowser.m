@@ -63,7 +63,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
     _previousLayoutBounds = CGRectZero;
     _currentPageIndex = 0;
     _previousPageIndex = NSUIntegerMax;
-    _currentVideoIndex = NSUIntegerMax;
     _zoomPhotosToFill = YES;
     _performingLayout = NO; // Reset on view did appear
     _rotating = NO;
@@ -85,7 +84,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 - (void)dealloc {
-    [self clearCurrentVideo];
     _pagingScrollView.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self releaseAllUnderlyingPhotos:NO];
@@ -194,7 +192,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         if (_autoPlayOnAppear) {
             XYPGPhoto *photo = [self photoAtIndex:_currentPageIndex];
             if ([photo respondsToSelector:@selector(isVideo)] && photo.isVideo) {
-                [self playVideoAtIndex:_currentPageIndex];
+//                [self playVideoAtIndex:_currentPageIndex];
             }
         }
     }
@@ -265,10 +263,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         }
         
     }
-    
-    // Adjust video loading indicator if it's visible
-    [self positionVideoLoadingIndicator];
-    
+
     // Adjust contentOffset to preserve page location based on values collected prior to location
     _pagingScrollView.contentOffset = [self contentOffsetForPageAtIndex:indexPriorToLayout];
     [self didStartViewingPageAtIndex:_currentPageIndex]; // initial
@@ -528,12 +523,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         // Show controls
         return;
     }
-    
-    // Handle video on page change
-    if (!_rotating && index != _currentVideoIndex) {
-        [self clearCurrentVideo];
-    }
-    
+
     // Release images further away than +/-1
     NSUInteger i;
     if (index > 0) {
@@ -666,16 +656,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 #pragma mark - Interactions
 
 - (void)playButtonTapped:(id)sender {
-    // Ignore if we're already playing a video
-    if (_currentVideoIndex != NSUIntegerMax) {
-        return;
-    }
-    NSUInteger index = [self indexForPlayButton:sender];
-    if (index != NSUIntegerMax) {
-        if (!_currentVideoPlayerViewController) {
-            [self playVideoAtIndex:index];
-        }
-    }
+    
 }
 
 - (NSUInteger)indexForPlayButton:(UIView *)playButton {
@@ -687,118 +668,6 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         }
     }
     return index;
-}
-
-#pragma mark - Video
-
-- (void)playVideoAtIndex:(NSUInteger)index {
-    id photo = [self photoAtIndex:index];
-    if ([photo respondsToSelector:@selector(getVideoURL:)]) {
-        
-        // Valid for playing
-        [self clearCurrentVideo];
-        _currentVideoIndex = index;
-        [self setVideoLoadingIndicatorVisible:YES atPageIndex:index];
-        
-        // Get video and play
-        typeof(self) __weak weakSelf = self;
-        [photo getVideoURL:^(NSURL *url) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // If the video is not playing anymore then bail
-                typeof(self) strongSelf = weakSelf;
-                if (!strongSelf) return;
-                if (strongSelf->_currentVideoIndex != index || !strongSelf->_viewIsActive) {
-                    return;
-                }
-                if (url) {
-                    [weakSelf _playVideo:url atPhotoIndex:index];
-                } else {
-                    [weakSelf setVideoLoadingIndicatorVisible:NO atPageIndex:index];
-                }
-            });
-        }];
-        
-    }
-}
-
-- (void)_playVideo:(NSURL *)videoURL atPhotoIndex:(NSUInteger)index {
-    
-    // Setup player
-    AVPlayer *player = [[AVPlayer alloc] initWithURL:videoURL];
-    _currentVideoPlayerViewController = AVPlayerViewController.new;
-    _currentVideoPlayerViewController.player = player;
-    
-    _currentVideoPlayerViewController.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    [_currentVideoPlayerViewController.player play];
-    _currentVideoPlayerViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    
-    // Remove the movie player view controller from the "playback did finish" notification observers
-    // Observe ourselves so we can get it to use the crossfade transition
-    [[NSNotificationCenter defaultCenter] removeObserver:_currentVideoPlayerViewController
-                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:_currentVideoPlayerViewController.player];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(videoFinishedCallback:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:_currentVideoPlayerViewController.player];
-    
-    // Show
-    [self presentViewController:_currentVideoPlayerViewController animated:YES completion:nil];
-    
-}
-
-- (void)videoFinishedCallback:(NSNotification*)notification {
-    
-    // Remove observer
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:AVPlayerItemDidPlayToEndTimeNotification
-                                                  object:_currentVideoPlayerViewController.player];
-    
-    // Clear up
-    [self clearCurrentVideo];
-    
-    // Dismiss
-//    BOOL error = [[[notification userInfo] objectForKey:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey] intValue] == MPMovieFinishReasonPlaybackError;
-//    if (error) {
-//        // Error occured so dismiss with a delay incase error was immediate and we need to wait to dismiss the VC
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [self dismissViewControllerAnimated:YES completion:nil];
-//        });
-//    } else {
-//        [self dismissViewControllerAnimated:YES completion:nil];
-//    }
-    
-}
-
-- (void)clearCurrentVideo {
-    [_currentVideoPlayerViewController.player pause];
-    [_currentVideoLoadingIndicator removeFromSuperview];
-    _currentVideoPlayerViewController = nil;
-    _currentVideoLoadingIndicator = nil;
-    [[self pageDisplayedAtIndex:_currentVideoIndex] playButton].hidden = NO;
-    _currentVideoIndex = NSUIntegerMax;
-}
-
-- (void)setVideoLoadingIndicatorVisible:(BOOL)visible atPageIndex:(NSUInteger)pageIndex {
-    if (_currentVideoLoadingIndicator && !visible) {
-        [_currentVideoLoadingIndicator removeFromSuperview];
-        _currentVideoLoadingIndicator = nil;
-        [[self pageDisplayedAtIndex:pageIndex] playButton].hidden = NO;
-    } else if (!_currentVideoLoadingIndicator && visible) {
-        _currentVideoLoadingIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
-        [_currentVideoLoadingIndicator sizeToFit];
-        [_currentVideoLoadingIndicator startAnimating];
-        [_pagingScrollView addSubview:_currentVideoLoadingIndicator];
-        [self positionVideoLoadingIndicator];
-        [[self pageDisplayedAtIndex:pageIndex] playButton].hidden = YES;
-    }
-}
-
-- (void)positionVideoLoadingIndicator {
-    if (_currentVideoLoadingIndicator && _currentVideoIndex != NSUIntegerMax) {
-        CGRect frame = [self frameForPageAtIndex:_currentVideoIndex];
-        _currentVideoLoadingIndicator.center = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
-    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

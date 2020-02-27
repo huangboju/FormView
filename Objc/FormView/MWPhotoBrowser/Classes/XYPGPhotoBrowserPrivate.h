@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVKit/AVKit.h>
 #import "XYPGZoomingScrollView.h"
 
 // Declare private methods of browser
@@ -29,11 +28,6 @@
     CGRect _previousLayoutBounds;
 	NSUInteger _pageIndexBeforeRotation;
     
-    // Video
-    AVPlayerViewController *_currentVideoPlayerViewController;
-    NSUInteger _currentVideoIndex;
-    UIActivityIndicatorView *_currentVideoLoadingIndicator;
-    
     // Misc
     BOOL _hasBelongedToViewController;
     BOOL _isVCBasedStatusBarAppearance;
@@ -44,7 +38,6 @@
     BOOL _skipNextPagingScrollViewPositioning;
     BOOL _viewHasAppearedInitially;
     CGPoint _currentGridContentOffset;
-    
 }
 
 // Layout
