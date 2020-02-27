@@ -104,7 +104,6 @@
 		BEC0EE97240694C4004EB022 /* photo8t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE85240694C3004EB022 /* photo8t.jpg */; };
 		BEC0EE98240694C4004EB022 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE86240694C3004EB022 /* photo1.jpg */; };
 		BEC0EE99240694C4004EB022 /* photo4t.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEC0EE87240694C3004EB022 /* photo4t.jpg */; };
-		BEC0F9BD24079A65004EB022 /* UIImage+MWPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0F9BB24079A65004EB022 /* UIImage+MWPhotoBrowser.m */; };
 		BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */; };
 		BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC43FAF20468F4400D46770 /* StateMachineController.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
@@ -399,8 +398,6 @@
 		BEC0EE85240694C3004EB022 /* photo8t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8t.jpg; sourceTree = "<group>"; };
 		BEC0EE86240694C3004EB022 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
 		BEC0EE87240694C3004EB022 /* photo4t.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo4t.jpg; sourceTree = "<group>"; };
-		BEC0F9BB24079A65004EB022 /* UIImage+MWPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MWPhotoBrowser.m"; sourceTree = "<group>"; };
-		BEC0F9BC24079A65004EB022 /* UIImage+MWPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MWPhotoBrowser.h"; sourceTree = "<group>"; };
 		BEC25B42206A40F300D0CEDA /* XYPHBindAccountBindStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHBindAccountBindStatusView.h; sourceTree = "<group>"; };
 		BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountBindStatusView.m; sourceTree = "<group>"; };
 		BEC43FAE20468F4400D46770 /* StateMachineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineController.h; sourceTree = "<group>"; };
@@ -933,8 +930,6 @@
 		BEC0EE15240692C6004EB022 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BEC0F9BC24079A65004EB022 /* UIImage+MWPhotoBrowser.h */,
-				BEC0F9BB24079A65004EB022 /* UIImage+MWPhotoBrowser.m */,
 				BEC0EE23240692C6004EB022 /* MWCommon.h */,
 				BEC0EE17240692C6004EB022 /* MWPhoto.h */,
 				BEC0EE20240692C6004EB022 /* MWPhoto.m */,
@@ -1421,7 +1416,6 @@
 				F73BBD9B21E2FDF800BC2E2D /* ShapeMaskController.m in Sources */,
 				BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */,
 				BE4E0A7320037C97005FFD77 /* UIScrollView+XYEmptyView.m in Sources */,
-				BEC0F9BD24079A65004EB022 /* UIImage+MWPhotoBrowser.m in Sources */,
 				BE2FB064227AD6F40060A510 /* XYPHSearchGoodsFilterTag.m in Sources */,
 				BE2FB061227AD6B60060A510 /* XYPHSearchGoodsFilterGroup.m in Sources */,
 				BE374388204144CC000D6F41 /* XYPHPhoneZonesSearchResultsVC.m in Sources */,
