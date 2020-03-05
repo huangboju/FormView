@@ -11,6 +11,7 @@
 		BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */; };
 		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
 		BE23ACD4227AFB35000DB8D8 /* filter.json in Resources */ = {isa = PBXBuildFile; fileRef = BE23ACD3227AFB35000DB8D8 /* filter.json */; };
+		BE29B69F2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29B69D2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.m */; };
 		BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB301FFDD4E300A27373 /* SegmentController.m */; };
 		BE29FB351FFDD5AB00A27373 /* XYSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BE29FB341FFDD5AB00A27373 /* XYSegmentControl.m */; };
 		BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2FB04C227AC27D0060A510 /* XYSFSelectedFilters.m */; };
@@ -80,6 +81,7 @@
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
+		BEC04A0B2410F93100CE553F /* PhotoBrowserTransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC04A0A2410F93100CE553F /* PhotoBrowserTransitionVC.m */; };
 		BEC0EE49240692C6004EB022 /* XYPGPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE19240692C6004EB022 /* XYPGPhotoBrowser.m */; };
 		BEC0EE4B240692C6004EB022 /* XYPGZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1D240692C6004EB022 /* XYPGZoomingScrollView.m */; };
 		BEC0EE4D240692C6004EB022 /* XYPGTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0EE1F240692C6004EB022 /* XYPGTapDetectingImageView.m */; };
@@ -184,6 +186,8 @@
 		BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesHelper.h; sourceTree = "<group>"; };
 		BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesHelper.m; sourceTree = "<group>"; };
 		BE23ACD3227AFB35000DB8D8 /* filter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = filter.json; sourceTree = "<group>"; };
+		BE29B69D2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowserInteractionDismissTransition.m; sourceTree = "<group>"; };
+		BE29B69E2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoBrowserInteractionDismissTransition.h; sourceTree = "<group>"; };
 		BE29FB2F1FFDD4E300A27373 /* SegmentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentController.h; sourceTree = "<group>"; };
 		BE29FB301FFDD4E300A27373 /* SegmentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentController.m; sourceTree = "<group>"; };
 		BE29FB331FFDD5AB00A27373 /* XYSegmentControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSegmentControl.h; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 		BEB2222620206941009DD3B9 /* InputBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputBarController.m; sourceTree = "<group>"; };
 		BEB22228202069F3009DD3B9 /* XYInputBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBarView.h; sourceTree = "<group>"; };
 		BEB22229202069F3009DD3B9 /* XYInputBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBarView.m; sourceTree = "<group>"; };
+		BEC04A092410F93100CE553F /* PhotoBrowserTransitionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowserTransitionVC.h; sourceTree = "<group>"; };
+		BEC04A0A2410F93100CE553F /* PhotoBrowserTransitionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowserTransitionVC.m; sourceTree = "<group>"; };
 		BEC0EE16240692C6004EB022 /* XYPGTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGTapDetectingImageView.h; sourceTree = "<group>"; };
 		BEC0EE17240692C6004EB022 /* XYPGPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhoto.h; sourceTree = "<group>"; };
 		BEC0EE18240692C6004EB022 /* XYPGPhotoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPGPhotoProtocol.h; sourceTree = "<group>"; };
@@ -891,6 +897,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEC04A082410F46900CE553F /* PhotoBrowserTransition */,
 				BE2FB04A227AC2550060A510 /* FilterRefactor */,
 				F73BBD9221E2FDB600BC2E2D /* ShapeMask */,
 				F729CD9D213E5C7900A9B873 /* DismissTransition */,
@@ -919,6 +926,17 @@
 				BEC0EE7324069318004EB022 /* PhotoBrowser.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEC04A082410F46900CE553F /* PhotoBrowserTransition */ = {
+			isa = PBXGroup;
+			children = (
+				BE29B69E2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.h */,
+				BE29B69D2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.m */,
+				BEC04A092410F93100CE553F /* PhotoBrowserTransitionVC.h */,
+				BEC04A0A2410F93100CE553F /* PhotoBrowserTransitionVC.m */,
+			);
+			path = PhotoBrowserTransition;
 			sourceTree = "<group>";
 		};
 		BEC0EE14240692C6004EB022 /* XYPGPhotoBrowser */ = {
@@ -1438,6 +1456,7 @@
 				BE37437B20401130000D6F41 /* XYPHPhoneZonesVC.m in Sources */,
 				BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */,
 				BE2FB058227ACC300060A510 /* XYPHSFGoodsViewModel.m in Sources */,
+				BEC04A0B2410F93100CE553F /* PhotoBrowserTransitionVC.m in Sources */,
 				F7BC371B2064DB7A009D3B22 /* XYPHBindAccountFailureController.m in Sources */,
 				BE7458AD1FD54BE8005D4D3A /* MessageCenterController.m in Sources */,
 				BECCEA2A1FD4FDF000CBCC1F /* SignInController.m in Sources */,
@@ -1485,6 +1504,7 @@
 				F7F98E3221D3A20E00E813B0 /* NSTimer+Weak.m in Sources */,
 				BE2FB0AB227AE4970060A510 /* XYPHSearchFilterPresentationController.m in Sources */,
 				BE697ABA200F1BDE009C6762 /* ScrollAnimationController.m in Sources */,
+				BE29B69F2410FE1300567E01 /* PhotoBrowserInteractionDismissTransition.m in Sources */,
 				BECCEA4A1FD532EA00CBCC1F /* UIColor+Hex.m in Sources */,
 				BE2FB05E227AD4DB0060A510 /* XYPHSearchGoodsFilter.m in Sources */,
 				BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */,

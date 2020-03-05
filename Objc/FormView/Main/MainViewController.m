@@ -34,6 +34,7 @@
 #import "FilterRefactorVC.h"
 
 #import "PhotoBrowser.h"
+#import "PhotoBrowserTransitionVC.h"
 
 #import "ALPHAManager.h"
 
@@ -102,7 +103,8 @@
                              FilterRefactorVC.class
                              ],
                          @[
-                             PhotoBrowser.class
+                             PhotoBrowser.class,
+                             PhotoBrowserTransitionVC.class
                          ]
                          ];
 
