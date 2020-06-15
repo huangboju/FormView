@@ -59,12 +59,19 @@
     UIView *containerView = transitionContext.containerView;
     [containerView addSubview:toView];
     [containerView addSubview:fromView];
-    
-    NSTimeInterval duration = [self transitionDuration:transitionContext];
-    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        CGRect rect = fromView.frame;
-        rect.origin.y = containerView.frame.size.height;
-        fromView.frame = rect;
+
+    [UIView animateKeyframesWithDuration:1 delay:0 options:UIViewKeyframeAnimationOptionCalculationModeLinear animations:^{
+        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1 animations:^{
+            CGRect rect = fromView.frame;
+            rect.origin.y = containerView.frame.size.height;
+            fromView.frame = rect;
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:0.3 animations:^{
+            fromView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        }];
+        [UIView addKeyframeWithRelativeStartTime:0.3 relativeDuration:0.9 animations:^{
+            fromView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+        }];
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];
