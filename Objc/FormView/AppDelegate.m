@@ -8,6 +8,13 @@
 
 #import "AppDelegate.h"
 
+typedef NS_OPTIONS(NSUInteger, Test) {
+    TestA = 1 << 0,
+    TestB = 1 << 1,
+    TestC = 1 << 2,
+    TestD = 1 << 3
+};
+
 @interface AppDelegate ()
 
 @end
