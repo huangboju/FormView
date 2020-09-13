@@ -200,6 +200,17 @@
  */
 - (BOOL)fireEvent:(id)eventOrEventName userInfo:(NSDictionary *)userInfo error:(NSError **)error;
 
+///------------------
+/// @name Description
+///------------------
+
+/**
+ A description of the state machine in the DOT graph description language.
+ 
+ @see http://en.wikipedia.org/wiki/DOT_(graph_description_language)
+ */
+@property (readonly) NSString *dotDescription;
+
 @end
 
 ///----------------
@@ -217,12 +228,12 @@ extern NSString *const TKErrorDomain;
 extern NSString *const TKStateMachineDidChangeStateNotification;
 
 /**
- A key in the `userInfo` dictionary of a `TKStateMachineDidChangeStateNotification` notification specifying the state of the machine before the transition occured.
+ A key in the `userInfo` dictionary of a `TKStateMachineDidChangeStateNotification` notification specifying the state of the machine before the transition occurred.
  */
 extern NSString *const TKStateMachineDidChangeStateOldStateUserInfoKey DEPRECATED_MSG_ATTRIBUTE("Use TKStateMachineDidChangeStateTransitionUserInfoKey instead (transition.sourceState).");
 
 /**
- A key in the `userInfo` dictionary of a `TKStateMachineDidChangeStateNotification` notification specifying the state of the machine after the transition occured.
+ A key in the `userInfo` dictionary of a `TKStateMachineDidChangeStateNotification` notification specifying the state of the machine after the transition occurred.
  */
 extern NSString *const TKStateMachineDidChangeStateNewStateUserInfoKey DEPRECATED_MSG_ATTRIBUTE("Use TKStateMachineDidChangeStateTransitionUserInfoKey instead (transition.destinationState).");
 

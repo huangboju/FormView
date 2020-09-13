@@ -22,6 +22,7 @@
 
 @interface TKState ()
 @property (nonatomic, copy, readwrite) NSString *name;
+@property (nonatomic, copy, readwrite) NSDictionary *userInfo;
 @property (nonatomic, copy) void (^willEnterStateBlock)(TKState *, TKTransition *);
 @property (nonatomic, copy) void (^didEnterStateBlock)(TKState *, TKTransition *);
 @property (nonatomic, copy) void (^willExitStateBlock)(TKState *, TKTransition *);
@@ -30,12 +31,39 @@
 
 @implementation TKState
 
-+ (instancetype)stateWithName:(NSString *)name
++ (instancetype)stateWithName:(NSString *)name userInfo:(NSDictionary *)userInfo
 {
     if (! [name length]) [NSException raise:NSInvalidArgumentException format:@"The `name` cannot be blank."];
-    TKState *state = [TKState new];
+    TKState *state = [self new];
     state.name = name;
+    state.userInfo = userInfo;
     return state;
+}
+
++ (instancetype)stateWithName:(NSString *)name
+{
+    return [self stateWithName:name userInfo:nil];
+}
+
+- (NSUInteger)hash
+{
+    return [self.name hash] ^ [self.userInfo hash];
+}
+
+- (BOOL)isEqual:(id)other
+{
+    if (![other isMemberOfClass:[self class]]) return NO;
+    TKState* otherState = (TKState*) other;
+    BOOL userInfoEquals = NO;
+    if (otherState.userInfo && self.userInfo)
+    {
+        userInfoEquals = [otherState.userInfo isEqualToDictionary:self.userInfo];
+    }
+    else
+    {
+        userInfoEquals = (!otherState.userInfo && !self.userInfo);
+    }
+    return [otherState.name isEqualToString:self.name] && userInfoEquals;
 }
 
 - (NSString *)description
@@ -49,6 +77,7 @@
 {
     TKState *copiedState = [[[self class] allocWithZone:zone] init];
     copiedState.name = self.name;
+    copiedState.userInfo = self.userInfo;
     copiedState.willEnterStateBlock = self.willEnterStateBlock;
     copiedState.didEnterStateBlock = self.didEnterStateBlock;
     copiedState.willExitStateBlock = self.willExitStateBlock;

@@ -104,9 +104,9 @@ PODS:
     - Alpha/Integration
     - Alpha/Render
   - Masonry (1.1.0)
-  - SDWebImage (5.5.2):
-    - SDWebImage/Core (= 5.5.2)
-  - SDWebImage/Core (5.5.2)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
   - TransitionKit (2.2.1)
   - YYModel (1.0.4)
 
@@ -114,7 +114,7 @@ DEPENDENCIES:
   - Alpha
   - Masonry
   - SDWebImage
-  - TransitionKit
+  - TransitionKit (from `https://github.com/raumfeld/TransitionKit.git`, branch `master`)
   - YYModel
 
 SPEC REPOS:
@@ -122,16 +122,25 @@ SPEC REPOS:
     - Alpha
     - Masonry
     - SDWebImage
-    - TransitionKit
     - YYModel
+
+EXTERNAL SOURCES:
+  TransitionKit:
+    :branch: master
+    :git: https://github.com/raumfeld/TransitionKit.git
+
+CHECKOUT OPTIONS:
+  TransitionKit:
+    :commit: 77885abe53f393e2409221c94cf965d6ca3962ae
+    :git: https://github.com/raumfeld/TransitionKit.git
 
 SPEC CHECKSUMS:
   Alpha: ffe13f7d9c5f287b93398a01b67e9d44729c6630
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: df8f57608525943cd4ed701cfdedd1c252147c6e
+PODFILE CHECKSUM: fd3cd488a44f127280a04b9b77912145c6b32fda
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

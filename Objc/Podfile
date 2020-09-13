@@ -4,7 +4,7 @@
 target 'FormView' do
 
   pod 'Masonry'
-  pod 'TransitionKit'
+  pod 'TransitionKit', :git => 'https://github.com/raumfeld/TransitionKit.git', :branch => 'master'
   pod 'YYModel'
   
   pod 'Alpha'

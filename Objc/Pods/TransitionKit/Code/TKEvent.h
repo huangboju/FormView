@@ -41,6 +41,15 @@
  */
 + (instancetype)eventWithName:(NSString *)name transitioningFromStates:(NSArray *)sourceStates toState:(TKState *)destinationState;
 
+/**
+ Adds further transitions for the same event. The new source states must be disjunct to existing source states for this
+ event. However, it is possible call this method multiple times to add source states for the same destination state.
+
+ @param sourceStates An array of `TKState` objects specifying the source states that the machine must be in for the event to be permitted to fire.
+ @param destinationState The state that the state machine will transition into after the event has fired.
+ */
+- (void)addTransitionFromStates:(NSArray *)sourceStates toState:(TKState *)destinationState;
+
 ///------------------------------
 /// @name Accessing Event Details
 ///------------------------------
@@ -52,14 +61,22 @@
  
  If `nil`, then the event can be fired when the state machine is in any state.
  */
-@property (nonatomic, copy, readonly) NSArray *sourceStates;
+@property (nonatomic, readonly) NSArray *sourceStates;
 
 /**
- The state that the state machine will transition into after the event has fired.
+ The possible states that the state machine will transition into after the event has fired.
  
  Cannot be `nil`.
  */
-@property (nonatomic, strong, readonly) TKState *destinationState;
+@property (nonatomic, readonly) NSArray *destinationStates;
+
+/**
+ There are multiple destination states allowed, this methods allows you to lookup the events destination state by
+ providing a source state.
+
+ @return the matching destination state for the given source state or `nil`
+ */
+- (TKState *)destinationStateForSourceState:(TKState *)sourceState;
 
 ///------------------------------
 /// @name Setting Callback Blocks
