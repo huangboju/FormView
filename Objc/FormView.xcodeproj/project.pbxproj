@@ -612,6 +612,8 @@
 				BE2FB059227AD41D0060A510 /* XYUpdatable.h */,
 				BECCEA221FD4F4C900CBCC1F /* XYRow.h */,
 				BECCEA231FD4F4C900CBCC1F /* XYRow.m */,
+				BECCE9F31FD4F2D400CBCC1F /* XYPHGroupTableController.h */,
+				BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1022,8 +1024,6 @@
 				BECCEA371FD514AE00CBCC1F /* Main */,
 				BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */,
 				BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */,
-				BECCE9F31FD4F2D400CBCC1F /* XYPHGroupTableController.h */,
-				BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */,
 				BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */,
 				BECCE9F91FD4F2D400CBCC1F /* Assets.xcassets */,
 				BECCE9FB1FD4F2D400CBCC1F /* LaunchScreen.storyboard */,
