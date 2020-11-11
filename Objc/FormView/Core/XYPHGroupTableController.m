@@ -8,8 +8,6 @@
 
 #import "XYPHGroupTableController.h"
 
-#import <Masonry.h>
-
 @interface XYPHGroupTableController () <UITableViewDataSource>
 
 @end
@@ -22,9 +20,11 @@
     [self initSubviews];
 
     [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(0);
-    }];
+
+    [self.tableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor].active = YES;
+    [self.tableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor].active = YES;
+    [self.tableView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [self.tableView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 
     [self tableViewDidMoveToSuperView];
 }
@@ -70,6 +70,7 @@
         _tableView.estimatedRowHeight = 44;
         _tableView.dataSource = self;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+        _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return _tableView;
 }
