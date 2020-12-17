@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "XYRow.h"
 
+@interface MainCellItem : NSObject
+
+@property (nonatomic, copy, readonly)  NSString *title;
+
+@property (nonatomic, readonly) SEL selector;
+
++ (instancetype)itemWithTitle:(NSString *)title selector:(SEL)selector;
+
+@end
+
 @interface MainCell : UITableViewCell <XYUpdatable>
 
 @end
