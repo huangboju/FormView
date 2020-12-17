@@ -11,7 +11,11 @@
 #import "MainCell.h"
 #import "NetworkServicer.h"
 
-@interface CronetViewController () <UITableViewDelegate>
+@interface CronetViewController ()
+<
+UITableViewDelegate,
+NSURLSessionDelegate
+>
 
 @end
 
@@ -47,24 +51,22 @@
 }
 
 - (void)requestData {
-    NSURLSession *session = NSURLSession.sharedSession;
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration delegate:self delegateQueue:nil];
     NSURL *url = [NSURL URLWithString:@"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8oeUYYsI1bna0kPb_B0bVyQH1ZKdusZyfTRoNwKcMOB8ffgAyBg"];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        UIImage *image = [UIImage imageWithData:data];
-        [NSOperationQueue.mainQueue addOperationWithBlock:^{
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            [self.view addSubview:imageView];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (ino64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [imageView removeFromSuperview];
-            });
-        }];
+        
     }];
     [task resume];
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics {
+    [NetworkServicer logMetrics:metrics];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MainCellItem *item = [self rowAtIndexPath:indexPath].model;
     [self performSelector:item.selector];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

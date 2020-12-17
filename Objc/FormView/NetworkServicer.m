@@ -48,45 +48,49 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            NSLog(@"%@ %@", response, responseObject);
-        }
+//        if (error) {
+//            NSLog(@"Error: %@", error);
+//        } else {
+//            NSLog(@"%@ %@", response, responseObject);
+//        }
     }];
     
     [manager setTaskDidFinishCollectingMetricsBlock:^(NSURLSession * _Nonnull session, NSURLSessionTask * _Nonnull task, NSURLSessionTaskMetrics * _Nullable metrics) {
-        NSURLSessionTaskTransactionMetrics *metric = [metrics.transactionMetrics lastObject];
-        //请求开始时间
-        NSString *startRequestTime = [NSString stringWithFormat:@"%.f", metric.fetchStartDate.timeIntervalSince1970 * 1000];
-        NSLog(@"startRequestTime = %@ms", startRequestTime);
-        //域名解析时长
-        NSString *dnsDuration = [NSString stringWithFormat:@"%.f", [metric.domainLookupEndDate timeIntervalSinceDate:metric.domainLookupStartDate] * 1000];
-        NSLog(@"dnsDuration = %@ms", dnsDuration);
-        //连接建立时长
-        NSString *connectDuration = [NSString stringWithFormat:@"%.f", [metric.connectEndDate timeIntervalSinceDate:metric.connectStartDate] * 1000];
-        NSLog(@"connectDuration = %@ms", connectDuration);
-        //https ssl验证时长
-        NSString *sslDuration = [NSString stringWithFormat:@"%.f", [metric.secureConnectionEndDate timeIntervalSinceDate:metric.secureConnectionStartDate] * 1000];
-        NSLog(@"sslDuration = %@ms", sslDuration);
-        //从客户端发送HTTP请求到服务器所耗费时长
-        NSString *sendDuration = [NSString stringWithFormat:@"%.f", [metric.requestEndDate timeIntervalSinceDate:metric.requestStartDate] * 1000];
-        NSLog(@"sendDuration = %@ms", sendDuration);
-        //响应报文首字节到达时长
-        NSString *waitDuration = [NSString stringWithFormat:@"%.f", [metric.responseStartDate timeIntervalSinceDate:metric.requestEndDate] * 1000];
-        NSLog(@"waitDuration = %@ms", waitDuration);
-        //客户端从开始接收数据到接收完所有数据时长
-        NSString *receiveDuration = [NSString stringWithFormat:@"%.f", [metric.responseEndDate timeIntervalSinceDate:metric.responseStartDate] * 1000];
-        NSLog(@"receiveDuration = %@ms", receiveDuration);
-        //请求结束时间
-        NSString *endResponseTime = [NSString stringWithFormat:@"%.f", [metric.responseEndDate timeIntervalSince1970] * 1000];
-        NSLog(@"endResponseTime = %@ms", endResponseTime);
-        //网络请求总时长
-        NSString *totalDuration = [NSString stringWithFormat:@"%.f", [metrics.taskInterval duration] * 1000];
-        NSLog(@"totalDuration = %@ms", totalDuration);
+        [self logMetrics:metrics];
     }];
     
     [dataTask resume];
+}
+
++ (void)logMetrics:(NSURLSessionTaskMetrics *)metrics {
+    NSURLSessionTaskTransactionMetrics *metric = [metrics.transactionMetrics lastObject];
+    //请求开始时间
+    NSString *startRequestTime = [NSString stringWithFormat:@"%.f", metric.fetchStartDate.timeIntervalSince1970 * 1000];
+    NSLog(@"startRequestTime = %@ms", startRequestTime);
+    //域名解析时长
+    NSString *dnsDuration = [NSString stringWithFormat:@"%.f", [metric.domainLookupEndDate timeIntervalSinceDate:metric.domainLookupStartDate] * 1000];
+    NSLog(@"dnsDuration = %@ms", dnsDuration);
+    //连接建立时长
+    NSString *connectDuration = [NSString stringWithFormat:@"%.f", [metric.connectEndDate timeIntervalSinceDate:metric.connectStartDate] * 1000];
+    NSLog(@"connectDuration = %@ms", connectDuration);
+    //https ssl验证时长
+    NSString *sslDuration = [NSString stringWithFormat:@"%.f", [metric.secureConnectionEndDate timeIntervalSinceDate:metric.secureConnectionStartDate] * 1000];
+    NSLog(@"sslDuration = %@ms", sslDuration);
+    //从客户端发送HTTP请求到服务器所耗费时长
+    NSString *sendDuration = [NSString stringWithFormat:@"%.f", [metric.requestEndDate timeIntervalSinceDate:metric.requestStartDate] * 1000];
+    NSLog(@"sendDuration = %@ms", sendDuration);
+    //响应报文首字节到达时长
+    NSString *waitDuration = [NSString stringWithFormat:@"%.f", [metric.responseStartDate timeIntervalSinceDate:metric.requestEndDate] * 1000];
+    NSLog(@"waitDuration = %@ms", waitDuration);
+    //客户端从开始接收数据到接收完所有数据时长
+    NSString *receiveDuration = [NSString stringWithFormat:@"%.f", [metric.responseEndDate timeIntervalSinceDate:metric.responseStartDate] * 1000];
+    NSLog(@"receiveDuration = %@ms", receiveDuration);
+    //请求结束时间
+    NSString *endResponseTime = [NSString stringWithFormat:@"%.f", [metric.responseEndDate timeIntervalSince1970] * 1000];
+    NSLog(@"endResponseTime = %@ms", endResponseTime);
+    //网络请求总时长
+    NSString *totalDuration = [NSString stringWithFormat:@"%.f", [metrics.taskInterval duration] * 1000];
+    NSLog(@"totalDuration = %@ms", totalDuration);
 }
 
 + (NSArray<NSString *> *)links {
