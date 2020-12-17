@@ -29,6 +29,15 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
+- (void)testIsEmptyId {
+    NSString *text = @"0";
+    NSAssert([self isEmptyId:text], @"");
+}
+
+- (BOOL)isEmptyId:(NSString *)idStr {
+    return !idStr || !idStr.length || [idStr isEqualToString:@"0"];
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
