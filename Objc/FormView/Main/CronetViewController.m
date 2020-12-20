@@ -57,7 +57,7 @@ NSURLSessionDelegate
 
 - (void)requestData {
     NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration delegate:self delegateQueue:nil];
-    NSURL *url = [NSURL URLWithString:@"https://www.google.com/logos/doodles/2020/december-holidays-days-2-30-6753651837108830.5-s.png"];
+    NSURL *url = [NSURL URLWithString:@"https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
     }];
