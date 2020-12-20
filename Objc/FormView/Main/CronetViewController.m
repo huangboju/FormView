@@ -56,7 +56,10 @@ NSURLSessionDelegate
 }
 
 - (void)requestData {
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration delegate:self delegateQueue:nil];
+    NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
+    config.protocolClasses = @[NSClassFromString(@"CRNHTTPProtocolHandler")];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+//    NSURL *url = [NSURL URLWithString:@"https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3"];
     NSURL *url = [NSURL URLWithString:@"https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         

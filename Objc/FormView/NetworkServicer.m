@@ -19,11 +19,10 @@
     [Cronet setBrotliEnabled:YES];
     [Cronet setHttpCacheType:CRNHttpCacheTypeDisk];
     
-    BOOL flag = [Cronet addQuicHint:@"www.chromium.org" port:443 altPort:443];
-    
-    [Cronet registerHttpProtocolHandler];
+//    BOOL flag = [Cronet addQuicHint:@"www.chromium.org" port:443 altPort:443];
     
     [Cronet start];
+    [Cronet registerHttpProtocolHandler];
     [Cronet startNetLogToFile:@"netlog.json" logBytes:NO];
 }
 
@@ -36,7 +35,8 @@
 }
 
 + (void)fetchImages {
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSessionConfiguration *configuration = NSURLSessionConfiguration.defaultSessionConfiguration;
+    configuration.protocolClasses = @[NSClassFromString(@"CRNHTTPProtocolHandler")];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     manager.responseSerializer = AFImageResponseSerializer.serializer;
     
