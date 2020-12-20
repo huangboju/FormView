@@ -132,7 +132,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     XYRow *row = [self rowAtIndexPath:indexPath];
-    NSString *clsName = row.model;
+    MainCellItem *item = row.model;
+    NSString *clsName = item.title;
     UIViewController *vc = [[NSClassFromString(clsName) alloc] init];
     vc.title = clsName;
     [self.navigationController pushViewController:vc animated:YES];

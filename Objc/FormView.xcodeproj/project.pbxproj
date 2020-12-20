@@ -80,6 +80,7 @@
 		BE8ECEE420561AE000FAC2E8 /* TimerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8ECEE320561AE000FAC2E8 /* TimerClass.m */; };
 		BE96C082258B469B001F3CD4 /* NetworkServicer.m in Sources */ = {isa = PBXBuildFile; fileRef = BE96C081258B469B001F3CD4 /* NetworkServicer.m */; };
 		BE96C0C1258B4D82001F3CD4 /* CronetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE96C0C0258B4D82001F3CD4 /* CronetViewController.m */; };
+		BE96C0D2258B81CA001F3CD4 /* WKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE96C0D1258B81CA001F3CD4 /* WKWebViewViewController.m */; };
 		BEB2222320206180009DD3B9 /* XYInputBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222220206180009DD3B9 /* XYInputBar.m */; };
 		BEB2222720206941009DD3B9 /* InputBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2222620206941009DD3B9 /* InputBarController.m */; };
 		BEB2222A202069F3009DD3B9 /* XYInputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB22229202069F3009DD3B9 /* XYInputBarView.m */; };
@@ -370,6 +371,8 @@
 		BE96C081258B469B001F3CD4 /* NetworkServicer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkServicer.m; sourceTree = "<group>"; };
 		BE96C0BF258B4D82001F3CD4 /* CronetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CronetViewController.h; sourceTree = "<group>"; };
 		BE96C0C0258B4D82001F3CD4 /* CronetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CronetViewController.m; sourceTree = "<group>"; };
+		BE96C0D0258B81CA001F3CD4 /* WKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewViewController.h; sourceTree = "<group>"; };
+		BE96C0D1258B81CA001F3CD4 /* WKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewViewController.m; sourceTree = "<group>"; };
 		BEB2222120206180009DD3B9 /* XYInputBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYInputBar.h; sourceTree = "<group>"; };
 		BEB2222220206180009DD3B9 /* XYInputBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYInputBar.m; sourceTree = "<group>"; };
 		BEB2222520206941009DD3B9 /* InputBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputBarController.h; sourceTree = "<group>"; };
@@ -1070,6 +1073,8 @@
 				BECCEA391FD514DA00CBCC1F /* MainCell.m */,
 				BE96C0BF258B4D82001F3CD4 /* CronetViewController.h */,
 				BE96C0C0258B4D82001F3CD4 /* CronetViewController.m */,
+				BE96C0D0258B81CA001F3CD4 /* WKWebViewViewController.h */,
+				BE96C0D1258B81CA001F3CD4 /* WKWebViewViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1496,6 +1501,7 @@
 				BE5F0DD3206B34430061ED31 /* XYPHBindAccountUIGenerator.m in Sources */,
 				F714480A206A33A500405838 /* XYPHBindAccountUserCardCellItem.m in Sources */,
 				BE2FB0F8227AED460060A510 /* XYPHSearchFilterButtonsView.m in Sources */,
+				BE96C0D2258B81CA001F3CD4 /* WKWebViewViewController.m in Sources */,
 				BE5F0DD9206E0DDF0061ED31 /* GroupButtonView.m in Sources */,
 				F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,

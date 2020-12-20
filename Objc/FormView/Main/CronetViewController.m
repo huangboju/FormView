@@ -11,6 +11,8 @@
 #import "MainCell.h"
 #import "NetworkServicer.h"
 
+#import "WKWebViewViewController.h"
+
 @interface CronetViewController ()
 <
 UITableViewDelegate,
@@ -27,6 +29,9 @@ NSURLSessionDelegate
             @"AFSession": @"fetchImages",
             @"URLSession": @"requestData",
         },
+        @{
+            @"showWebView": @"showWebView"
+        }
     ];
     
     NSMutableArray *form = NSMutableArray.array;
@@ -52,11 +57,16 @@ NSURLSessionDelegate
 
 - (void)requestData {
     NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.defaultSessionConfiguration delegate:self delegateQueue:nil];
-    NSURL *url = [NSURL URLWithString:@"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8oeUYYsI1bna0kPb_B0bVyQH1ZKdusZyfTRoNwKcMOB8ffgAyBg"];
+    NSURL *url = [NSURL URLWithString:@"https://www.google.com/logos/doodles/2020/december-holidays-days-2-30-6753651837108830.5-s.png"];
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
     }];
     [task resume];
+}
+
+- (void)showWebView {
+    WKWebViewViewController *webView = WKWebViewViewController.new;
+    [self showViewController:webView sender:nil];
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics {

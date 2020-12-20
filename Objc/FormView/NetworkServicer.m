@@ -17,11 +17,13 @@
     [Cronet setHttp2Enabled:YES];
     [Cronet setQuicEnabled:YES];
     [Cronet setBrotliEnabled:YES];
+    [Cronet setHttpCacheType:CRNHttpCacheTypeDisk];
     
-    BOOL flag = [Cronet addQuicHint:@"www.google.com" port:443 altPort:443];
+    BOOL flag = [Cronet addQuicHint:@"www.chromium.org" port:443 altPort:443];
+    
+    [Cronet registerHttpProtocolHandler];
     
     [Cronet start];
-    [Cronet registerHttpProtocolHandler];
     [Cronet startNetLogToFile:@"netlog.json" logBytes:NO];
 }
 
@@ -64,6 +66,7 @@
 
 + (void)logMetrics:(NSURLSessionTaskMetrics *)metrics {
     NSURLSessionTaskTransactionMetrics *metric = [metrics.transactionMetrics lastObject];
+    NSLog(@"request ul = %@", metric.request.URL);
     //请求开始时间
     NSString *startRequestTime = [NSString stringWithFormat:@"%.f", metric.fetchStartDate.timeIntervalSince1970 * 1000];
     NSLog(@"startRequestTime = %@ms", startRequestTime);
@@ -91,6 +94,8 @@
     //网络请求总时长
     NSString *totalDuration = [NSString stringWithFormat:@"%.f", [metrics.taskInterval duration] * 1000];
     NSLog(@"totalDuration = %@ms", totalDuration);
+    
+    NSLog(@"\n\n\n");
 }
 
 + (NSArray<NSString *> *)links {
@@ -145,3 +150,4 @@
 }
 
 @end
+ 
