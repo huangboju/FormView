@@ -6,6 +6,8 @@
 //  Copyright © 2020 黄伯驹. All rights reserved.
 //
 
+#import <Cronet/Cronet.h>
+
 #import "CronetViewController.h"
 
 #import "MainCell.h"
@@ -57,7 +59,7 @@ NSURLSessionDelegate
 
 - (void)requestData {
     NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
-    config.protocolClasses = @[NSClassFromString(@"CRNHTTPProtocolHandler")];
+    [Cronet installIntoSessionConfiguration:config];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
 //    NSURL *url = [NSURL URLWithString:@"https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif?revision=3"];
     NSURL *url = [NSURL URLWithString:@"https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"];

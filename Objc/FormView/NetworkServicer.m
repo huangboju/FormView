@@ -21,6 +21,10 @@
     
 //    BOOL flag = [Cronet addQuicHint:@"www.chromium.org" port:443 altPort:443];
     
+    [Cronet setRequestFilterBlock:^BOOL(NSURLRequest *request) {
+        return YES;
+    }];
+    
     [Cronet start];
     [Cronet registerHttpProtocolHandler];
     [Cronet startNetLogToFile:@"netlog.json" logBytes:NO];
