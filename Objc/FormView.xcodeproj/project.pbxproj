@@ -133,6 +133,7 @@
 		BECCEA4D1FD5371E00CBCC1F /* PasswordLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4C1FD5371E00CBCC1F /* PasswordLoginCell.m */; };
 		BECCEA501FD538EC00CBCC1F /* PasswordSignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */; };
 		BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */; };
+		BEEE924725BD90A20042C8BE /* InterviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEE924625BD90A20042C8BE /* InterviewController.m */; };
 		BEEF6CA6200CA669001158A9 /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */; };
 		BEEF6CA9200CA6FF001158A9 /* EffectButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CA8200CA6FF001158A9 /* EffectButtonController.m */; };
 		BEEF6CB2200DD925001158A9 /* AccountButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF6CB1200DD925001158A9 /* AccountButtonCell.m */; };
@@ -461,6 +462,8 @@
 		BECCEA4F1FD538EC00CBCC1F /* PasswordSignInController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordSignInController.m; sourceTree = "<group>"; };
 		BECCEA511FD53F3500CBCC1F /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
 		BECCEA521FD53F3500CBCC1F /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
+		BEEE924525BD90A10042C8BE /* InterviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterviewController.h; sourceTree = "<group>"; };
+		BEEE924625BD90A20042C8BE /* InterviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterviewController.m; sourceTree = "<group>"; };
 		BEEF6CA4200CA669001158A9 /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
 		BEEF6CA5200CA669001158A9 /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
 		BEEF6CA7200CA6FF001158A9 /* EffectButtonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectButtonController.h; sourceTree = "<group>"; };
@@ -935,6 +938,8 @@
 				F7BC371A2064DB7A009D3B22 /* XYPHBindAccountFailureController.m */,
 				BEC0EE7224069318004EB022 /* PhotoBrowser.h */,
 				BEC0EE7324069318004EB022 /* PhotoBrowser.m */,
+				BEEE924525BD90A10042C8BE /* InterviewController.h */,
+				BEEE924625BD90A20042C8BE /* InterviewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1533,6 +1538,7 @@
 				F729CDA3213E5D6C00A9B873 /* CustomDismissTransitionNavVC.m in Sources */,
 				BE2FB0AD227AE4970060A510 /* XYPHSearchFilterPresentAnimator.m in Sources */,
 				BEC0EE4E240692C6004EB022 /* XYPGPhoto.m in Sources */,
+				BEEE924725BD90A20042C8BE /* InterviewController.m in Sources */,
 				BEC0EE4D240692C6004EB022 /* XYPGTapDetectingImageView.m in Sources */,
 				BECCEA411FD5285800CBCC1F /* ButtonCell.m in Sources */,
 				BE2FB0AC227AE4970060A510 /* XYPHSearchFilterDismissPanGestureRecognizer.m in Sources */,

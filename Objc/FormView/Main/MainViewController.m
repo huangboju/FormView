@@ -36,6 +36,8 @@
 #import "PhotoBrowser.h"
 #import "PhotoBrowserTransitionVC.h"
 
+#import "InterviewController.h"
+
 #import "ALPHAManager.h"
 
 #import "NetworkServicer.h"
@@ -111,6 +113,9 @@
         @[
             PhotoBrowser.class,
             PhotoBrowserTransitionVC.class
+        ],
+        @[
+            InterviewController.class
         ]
     ];
     

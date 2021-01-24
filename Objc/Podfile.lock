@@ -120,9 +120,9 @@ PODS:
     - Alpha/Render
   - Cronet (87.0.4280.60)
   - Masonry (1.1.0)
-  - SDWebImage (5.10.0):
-    - SDWebImage/Core (= 5.10.0)
-  - SDWebImage/Core (5.10.0)
+  - SDWebImage (5.10.3):
+    - SDWebImage/Core (= 5.10.3)
+  - SDWebImage/Core (5.10.3)
   - TransitionKit (2.2.1)
   - YYModel (1.0.4)
 
@@ -159,10 +159,10 @@ SPEC CHECKSUMS:
   Alpha: ffe13f7d9c5f287b93398a01b67e9d44729c6630
   Cronet: 10093df403efaac6cfde7bf34e882a615223b52f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+  SDWebImage: e378178472b735e84b007bfb55514c97948a0598
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
 PODFILE CHECKSUM: b01329726d383a655addb1a2c2d171f3e050a5be
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
