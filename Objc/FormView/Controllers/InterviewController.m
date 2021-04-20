@@ -48,6 +48,8 @@ _Pragma("clang diagnostic pop")
 #endif
 #endif
 
+#import <Masonry/Masonry.h>
+
 @interface InterviewController ()
 
 @property (nonatomic, copy) dispatch_block_t block;
@@ -63,6 +65,8 @@ _Pragma("clang diagnostic pop")
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initAlertView];
+    
     self.view.backgroundColor = UIColor.whiteColor;
 
     @weakify(self);
@@ -76,6 +80,29 @@ _Pragma("clang diagnostic pop")
     self.block();
     
     [self threadTest];
+}
+
+- (void)initAlertView {
+    UIView *alertView = UIView.new;
+    alertView.backgroundColor = UIColor.redColor;
+    [self.view addSubview:alertView];
+    [alertView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.mas_equalTo(30);
+        make.centerY.centerX.mas_equalTo(0);
+        make.height.mas_equalTo(200);
+    }];
+    
+    UILabel *textLabel = UILabel.new;
+    textLabel.font = [UIFont monospacedDigitSystemFontOfSize:16 weight:UIFontWeightRegular];
+    textLabel.backgroundColor = UIColor.yellowColor;
+    textLabel.text = @"投票成功，获得一次摇一摇的机会，要马上使用吗？";
+    textLabel.numberOfLines = 0;
+    textLabel.lineBreakMode = NSLineBreakByTruncatingHead;
+    [alertView addSubview:textLabel];
+    [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.mas_equalTo(20);
+        make.centerX.centerY.mas_equalTo(0);
+    }];
 }
 
 - (void)excuteSome:(dispatch_block_t)block {
