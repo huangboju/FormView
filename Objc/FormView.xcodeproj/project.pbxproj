@@ -112,6 +112,7 @@
 		BEC0F9C02407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC0F9BF2407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m */; };
 		BEC25B44206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */; };
 		BEC43FB020468F4400D46770 /* StateMachineController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC43FAF20468F4400D46770 /* StateMachineController.m */; };
+		BEC8A6CE2646414D0006EE65 /* LiftCiycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A6CD2646414D0006EE65 /* LiftCiycleViewController.m */; };
 		BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */; };
 		BECCE9F51FD4F2D400CBCC1F /* XYPHGroupTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECCE9F41FD4F2D400CBCC1F /* XYPHGroupTableController.m */; };
 		BECCE9F81FD4F2D400CBCC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECCE9F61FD4F2D400CBCC1F /* Main.storyboard */; };
@@ -420,6 +421,8 @@
 		BEC25B43206A40F300D0CEDA /* XYPHBindAccountBindStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHBindAccountBindStatusView.m; sourceTree = "<group>"; };
 		BEC43FAE20468F4400D46770 /* StateMachineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateMachineController.h; sourceTree = "<group>"; };
 		BEC43FAF20468F4400D46770 /* StateMachineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateMachineController.m; sourceTree = "<group>"; };
+		BEC8A6CC2646414D0006EE65 /* LiftCiycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiftCiycleViewController.h; sourceTree = "<group>"; };
+		BEC8A6CD2646414D0006EE65 /* LiftCiycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftCiycleViewController.m; sourceTree = "<group>"; };
 		BECCE9ED1FD4F2D400CBCC1F /* FormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECCE9F01FD4F2D400CBCC1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BECCE9F11FD4F2D400CBCC1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -911,6 +914,7 @@
 		BEB2222420206924009DD3B9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BEC8A6CB264641340006EE65 /* LiftCiycle */,
 				BEC04A082410F46900CE553F /* PhotoBrowserTransition */,
 				BE2FB04A227AC2550060A510 /* FilterRefactor */,
 				F73BBD9221E2FDB600BC2E2D /* ShapeMask */,
@@ -999,6 +1003,15 @@
 				BEC0EE87240694C3004EB022 /* photo4t.jpg */,
 			);
 			path = "Local Media";
+			sourceTree = "<group>";
+		};
+		BEC8A6CB264641340006EE65 /* LiftCiycle */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8A6CC2646414D0006EE65 /* LiftCiycleViewController.h */,
+				BEC8A6CD2646414D0006EE65 /* LiftCiycleViewController.m */,
+			);
+			path = LiftCiycle;
 			sourceTree = "<group>";
 		};
 		BECCE9E41FD4F2D400CBCC1F = {
@@ -1528,6 +1541,7 @@
 				BE4E0A7420037C97005FFD77 /* XYEmptyView.m in Sources */,
 				BE2FB04D227AC27D0060A510 /* XYSFSelectedFilters.m in Sources */,
 				BECCEA531FD53F3600CBCC1F /* PasswordFieldCell.m in Sources */,
+				BEC8A6CE2646414D0006EE65 /* LiftCiycleViewController.m in Sources */,
 				BECCEA2D1FD4FE4F00CBCC1F /* SignUpController.m in Sources */,
 				F729CDAB213E5FE500A9B873 /* XYPHSearchDismissPanGestureRecognizer.m in Sources */,
 				BEC0F9C02407A1F2004EB022 /* XYPGPhotoBrowserSegmentView.m in Sources */,
