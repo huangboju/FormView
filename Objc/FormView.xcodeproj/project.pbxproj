@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE021BB01FF36BC400DCF9FE /* EmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */; };
+		BE132FCD26E64D59005A2C1F /* UIPasteboard+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132FCB26E64D58005A2C1F /* UIPasteboard+Test.m */; };
 		BE211A7A2049001100FCFE67 /* XYPHPhoneZonesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */; };
 		BE211A7D204915B200FCFE67 /* XYPHPhoneZonesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */; };
 		BE23ACD4227AFB35000DB8D8 /* filter.json in Resources */ = {isa = PBXBuildFile; fileRef = BE23ACD3227AFB35000DB8D8 /* filter.json */; };
@@ -187,6 +188,8 @@
 		3B4AD0F877626E02BB041F97 /* Pods-FormView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormView/Pods-FormView.release.xcconfig"; sourceTree = "<group>"; };
 		BE021BAE1FF36BC400DCF9FE /* EmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyViewController.h; sourceTree = "<group>"; };
 		BE021BAF1FF36BC400DCF9FE /* EmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyViewController.m; sourceTree = "<group>"; };
+		BE132FCB26E64D58005A2C1F /* UIPasteboard+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPasteboard+Test.m"; sourceTree = "<group>"; };
+		BE132FCC26E64D59005A2C1F /* UIPasteboard+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPasteboard+Test.h"; sourceTree = "<group>"; };
 		BE211A792049001100FCFE67 /* XYPHPhoneZonesViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XYPHPhoneZonesViewController.bundle; sourceTree = "<group>"; };
 		BE211A7B204915B200FCFE67 /* XYPHPhoneZonesHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPHPhoneZonesHelper.h; sourceTree = "<group>"; };
 		BE211A7C204915B200FCFE67 /* XYPHPhoneZonesHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPHPhoneZonesHelper.m; sourceTree = "<group>"; };
@@ -1039,6 +1042,8 @@
 		BECCE9EF1FD4F2D400CBCC1F /* FormView */ = {
 			isa = PBXGroup;
 			children = (
+				BE132FCC26E64D59005A2C1F /* UIPasteboard+Test.h */,
+				BE132FCB26E64D58005A2C1F /* UIPasteboard+Test.m */,
 				BEC0EE75240694C3004EB022 /* Local Media */,
 				BEC0EE14240692C6004EB022 /* XYPGPhotoBrowser */,
 				BE2FB05A227AD4530060A510 /* Core */,
@@ -1524,6 +1529,7 @@
 				F729CDAC213E5FE500A9B873 /* XYPHSearchInteractionDismissTransition.m in Sources */,
 				BECCE9F21FD4F2D400CBCC1F /* AppDelegate.m in Sources */,
 				F7F2EEE520A95FE700CDFD7B /* XYPHSearchResultNoteTagLayer.m in Sources */,
+				BE132FCD26E64D59005A2C1F /* UIPasteboard+Test.m in Sources */,
 				BE2FB06C227AD7DB0060A510 /* XYPHSearchFilterNotesCell.m in Sources */,
 				BE29FB311FFDD4E300A27373 /* SegmentController.m in Sources */,
 				F73BBD9E21E2FFAB00BC2E2D /* XYShapeMaskLayer.m in Sources */,
