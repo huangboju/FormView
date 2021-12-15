@@ -20,6 +20,8 @@
         SEL swiSelector = @selector(sw_setString:);
         SwizzleInstanceMethod(class, oriSelector, swiSelector);
 
+        
+
         SEL oriSelector1 = @selector(setData:forPasteboardType:);
         SEL swiSelector1 = @selector(sw_setData:forPasteboardType:);
         SwizzleInstanceMethod(class, oriSelector1, swiSelector1);

@@ -27,6 +27,7 @@ typedef NS_OPTIONS(NSUInteger, Test) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [NetworkServicer initCronet];
+
     return YES;
 }
 
