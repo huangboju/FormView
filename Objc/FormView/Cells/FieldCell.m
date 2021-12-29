@@ -7,6 +7,7 @@
 //
 
 #import "FieldCell.h"
+#import "NSString+LineSpacingFix.h"
 
 
 @interface FieldCell()
@@ -23,6 +24,7 @@
     if (!_textField) {
         _textField = [[UITextField alloc] init];
         _textField.translatesAutoresizingMaskIntoConstraints = NO;
+        [_textField addTarget:self action:@selector(textFieldEditingChanged:) forControlEvents:UIControlEventEditingChanged];
     }
     return _textField;
 }
@@ -38,6 +40,16 @@
         [self.textField.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor].active = YES;
     }
     return self;
+}
+
+- (void)textFieldEditingChanged:(UITextField *)sender {
+    NSString *string = [sender.text substringFromIndex:[sender.text length] - 1];
+    CGSize size = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) font:[UIFont systemFontOfSize:14 weight:UIFontWeightMedium] lineSpacing:5];
+    NSLog(@"@\"%@\": @(%f),", string, size.width);
+//    NSLog(@"if ([string isEqualToString:@\"%@\"]) {", string);
+//    NSLog(@"return %f;", size.width);
+//    NSLog(@"}");
+//    NSLog(@"%d", sender.text.isEmoji);
 }
 
 - (void)setInputText:(NSString *)inputText {

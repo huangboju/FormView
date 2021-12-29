@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NetworkServicer.h"
+#import "NSString+LineSpacingFix.h"
 
 // https://www.jianshu.com/p/740233c2d638
 typedef NS_OPTIONS(NSUInteger, Test) {
@@ -26,11 +27,27 @@ typedef NS_OPTIONS(NSUInteger, Test) {
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NetworkServicer initCronet];
+//    [NetworkServicer initCronet];
+    int asciiCode = 32;
+    for (int i = 0; i < 95; i++) {
+        NSString *string = [NSString stringWithFormat:@"%c", asciiCode + i];
+        CGSize size = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) font:[UIFont systemFontOfSize:14 weight:UIFontWeightMedium] lineSpacing:5];
+        [self ouputDictWithStr:string size:size];
+    }
 
     return YES;
 }
 
+
+- (void)ouputConditionWithStr:(NSString *)str size:(CGSize)size {
+    NSLog(@"if ([string isEqualToString:@\"%@\"]) {", str);
+    NSLog(@"return %f;", size.width);
+    NSLog(@"}");
+}
+
+- (void)ouputDictWithStr:(NSString *)str size:(CGSize)size {
+    NSLog(@"@\"%@\": @(%f),", str, size.width);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     [NetworkServicer stopNetLog];
