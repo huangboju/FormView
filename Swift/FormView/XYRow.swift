@@ -8,7 +8,7 @@
 
 struct NoneItem {}
 
-protocol Updatable: class {
+protocol Updatable: AnyObject {
     
     associatedtype ViewData
     
