@@ -33,13 +33,15 @@ class ListController: UIViewController {
     func initData() {
         for _ in 0 ..< 20 {
             let row: RowType
-            let i = arc4random_uniform(3)
+            let i = arc4random_uniform(5)
             if i == 0 {
                 row = generateTwoImageRow()
             } else if i == 1 {
                 row = generateImageTextCellRow()
-            } else {
+            } else if i == 2 {
                 row = generateImageRow()
+            } else {
+                row = XYRow<MarkdownCell>(viewData: NoneItem())
             }
             tableView.register(row.cellClass, forCellReuseIdentifier: row.reuseIdentifier)
             viewModel.rows.append(row)
