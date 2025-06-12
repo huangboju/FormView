@@ -35,17 +35,67 @@ class MarkdownCell: UITableViewCell, Updatable {
         contentView.backgroundColor = .systemGreen
         
         let markdownString = """
-          ## Try MarkdownUI
+            You can make an unordered list by preceding one or more lines of text with `-`, `*`, or `+`.
 
-          **MarkdownUI** is a native Markdown renderer for SwiftUI
-          compatible with the
-          [GitHub Flavored Markdown Spec](https://github.github.com/gfm/).
-          """
-        
+            ```
+            - George Washington
+            - John Adams
+            - Thomas Jefferson
+            ```
+
+            - George Washington
+            - John Adams
+            - Thomas Jefferson
+
+            To order your list, precede each line with a number.
+
+            ```
+            1. James Madison
+            2. James Monroe
+            3. John Quincy Adams
+            ```
+
+            1. James Madison
+            2. James Monroe
+            3. John Quincy Adams
+
+            ## Nested Lists
+
+            You can create a nested list by indenting one or more list items below another item.
+
+            ```
+            1. First list item
+               - First nested list item
+                 - Second nested list item
+            ```
+
+            1. First list item
+               - First nested list item
+                 - Second nested list item
+
+            ## Task lists
+
+            To create a task list, preface list items with a hyphen and space followed by [ ].
+            To mark a task as complete, use [x].
+
+            ```
+            - [x] Markdown rendering and styling
+            - [ ] Documentation and sample code
+            - [ ] Release MarkdownUI 2.0
+            ```
+
+            - [x] Markdown rendering and styling
+            - [ ] Documentation and sample code
+            - [ ] Release MarkdownUI 2.0
+
+            Note that the `DocC` theme doesn't have a task list marker style and uses simple
+            bullets.
+            """
+
         // Create the SwiftUI view and pass the markdown content
         let markdownView = MarkdownView(markdownString: markdownString)
 
-        
+
         // Embed the SwiftUI view in a UIHostingController
         let hostingController = UIHostingController(rootView: markdownView)
         
