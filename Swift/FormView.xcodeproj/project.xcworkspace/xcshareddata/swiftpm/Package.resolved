@@ -1,6 +1,15 @@
 {
-  "originHash" : "eb8e2058d5dcd0e833d5d349308643486e034881b523629d03989d62ee693a6c",
+  "originHash" : "cc11a882dd01af4be6ef30053b045b1a868da9b614cff8e88a36c9fffd241ce2",
   "pins" : [
+    {
+      "identity" : "markdown-webview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tomdai/markdown-webview",
+      "state" : {
+        "revision" : "a50704f158366705a1fcb0f6d6424b5522cd8b17",
+        "version" : "2.0.1"
+      }
+    },
     {
       "identity" : "networkimage",
       "kind" : "remoteSourceControl",

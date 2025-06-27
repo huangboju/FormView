@@ -29,6 +29,8 @@
 		BEFC2E6B201430D800643E6E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6A201430D800643E6E /* ImageCell.swift */; };
 		BEFC2E6D201440E500643E6E /* TwoImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6C201440E500643E6E /* TwoImageCell.swift */; };
 		BEFC2E6F2014411000643E6E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6E2014411000643E6E /* UIHelper.swift */; };
+		EE81344A2E0EC22900ACA6F0 /* WebMarkdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8134492E0EC22900ACA6F0 /* WebMarkdownCell.swift */; };
+		EE81344D2E0EC33500ACA6F0 /* MarkdownWebView in Frameworks */ = {isa = PBXBuildFile; productRef = EE81344C2E0EC33500ACA6F0 /* MarkdownWebView */; };
 		EE9D900D2DF2D9D900E75BF9 /* MarkdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D900C2DF2D9D900E75BF9 /* MarkdownCell.swift */; };
 		EE9D90112DF2DBFC00E75BF9 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = EE9D90102DF2DBFC00E75BF9 /* MarkdownUI */; };
 		EE9D90132DF2DC0000E75BF9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE9D90122DF2DC0000E75BF9 /* SnapKit */; };
@@ -81,6 +83,7 @@
 		BEFC2E6A201430D800643E6E /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		BEFC2E6C201440E500643E6E /* TwoImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoImageCell.swift; sourceTree = "<group>"; };
 		BEFC2E6E2014411000643E6E /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		EE8134492E0EC22900ACA6F0 /* WebMarkdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMarkdownCell.swift; sourceTree = "<group>"; };
 		EE9D900C2DF2D9D900E75BF9 /* MarkdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE81344D2E0EC33500ACA6F0 /* MarkdownWebView in Frameworks */,
 				EE9D90112DF2DBFC00E75BF9 /* MarkdownUI in Frameworks */,
 				EE9D90132DF2DC0000E75BF9 /* SnapKit in Frameworks */,
 			);
@@ -208,6 +212,7 @@
 				BEFC2E6C201440E500643E6E /* TwoImageCell.swift */,
 				BEE83BC820145BEB0014F6DE /* ImageTextCell.swift */,
 				EE9D900C2DF2D9D900E75BF9 /* MarkdownCell.swift */,
+				EE8134492E0EC22900ACA6F0 /* WebMarkdownCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			packageReferences = (
 				EE9D900B2DF2D95000E75BF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 				EE9D900E2DF2DBA200E75BF9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EE81344B2E0EC2B600ACA6F0 /* XCRemoteSwiftPackageReference "markdown-webview" */,
 			);
 			productRefGroup = BEFC2E212012DCA300643E6E /* Products */;
 			projectDirPath = "";
@@ -373,6 +379,7 @@
 				BEFC2E6F2014411000643E6E /* UIHelper.swift in Sources */,
 				BEFC2E242012DCA300643E6E /* AppDelegate.swift in Sources */,
 				BEFC2E5B201412C000643E6E /* ButtonCell.swift in Sources */,
+				EE81344A2E0EC22900ACA6F0 /* WebMarkdownCell.swift in Sources */,
 				BEFC2E5D2014144900643E6E /* LicenseCell.swift in Sources */,
 				BEFC2E6720142AF400643E6E /* ListController.swift in Sources */,
 				BEFC2E6D201440E500643E6E /* TwoImageCell.swift in Sources */,
@@ -702,6 +709,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EE81344B2E0EC2B600ACA6F0 /* XCRemoteSwiftPackageReference "markdown-webview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tomdai/markdown-webview";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
 		EE9D900B2DF2D95000E75BF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
@@ -721,6 +736,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE81344C2E0EC33500ACA6F0 /* MarkdownWebView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE81344B2E0EC2B600ACA6F0 /* XCRemoteSwiftPackageReference "markdown-webview" */;
+			productName = MarkdownWebView;
+		};
 		EE9D90102DF2DBFC00E75BF9 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EE9D900B2DF2D95000E75BF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;

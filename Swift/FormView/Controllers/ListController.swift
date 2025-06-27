@@ -31,7 +31,7 @@ class ListController: UIViewController {
     }
 
     func initData() {
-        for _ in 0 ..< 20 {
+        for _ in 0 ..< 10 {
             let row: RowType
             let i = arc4random_uniform(5)
             if i == 0 {
