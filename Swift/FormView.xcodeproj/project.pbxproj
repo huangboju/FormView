@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		BEFC2E6F2014411000643E6E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEFC2E6E2014411000643E6E /* UIHelper.swift */; };
 		EE81344A2E0EC22900ACA6F0 /* WebMarkdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8134492E0EC22900ACA6F0 /* WebMarkdownCell.swift */; };
 		EE81344D2E0EC33500ACA6F0 /* MarkdownWebView in Frameworks */ = {isa = PBXBuildFile; productRef = EE81344C2E0EC33500ACA6F0 /* MarkdownWebView */; };
+		EE8134552E0EC65B00ACA6F0 /* Markdown in Frameworks */ = {isa = PBXBuildFile; productRef = EE8134542E0EC65B00ACA6F0 /* Markdown */; };
 		EE9D900D2DF2D9D900E75BF9 /* MarkdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D900C2DF2D9D900E75BF9 /* MarkdownCell.swift */; };
 		EE9D90112DF2DBFC00E75BF9 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = EE9D90102DF2DBFC00E75BF9 /* MarkdownUI */; };
 		EE9D90132DF2DC0000E75BF9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EE9D90122DF2DC0000E75BF9 /* SnapKit */; };
@@ -87,6 +88,10 @@
 		EE9D900C2DF2D9D900E75BF9 /* MarkdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EE8134502E0EC61A00ACA6F0 /* Markdownosaur */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Markdownosaur; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		BEFC2E1D2012DCA300643E6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -95,6 +100,7 @@
 				EE81344D2E0EC33500ACA6F0 /* MarkdownWebView in Frameworks */,
 				EE9D90112DF2DBFC00E75BF9 /* MarkdownUI in Frameworks */,
 				EE9D90132DF2DC0000E75BF9 /* SnapKit in Frameworks */,
+				EE8134552E0EC65B00ACA6F0 /* Markdown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +192,7 @@
 		BEFC2E602014163C00643E6E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE8134502E0EC61A00ACA6F0 /* Markdownosaur */,
 				BEFC2E612014166100643E6E /* DetailController.swift */,
 				BEFC2E6620142AF400643E6E /* ListController.swift */,
 				BE6E3E2124BDE0DB0082EE2B /* EventController.swift */,
@@ -238,6 +245,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EE8134502E0EC61A00ACA6F0 /* Markdownosaur */,
 			);
 			name = FormView;
 			productName = FormView;
@@ -322,6 +332,7 @@
 				EE9D900B2DF2D95000E75BF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 				EE9D900E2DF2DBA200E75BF9 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				EE81344B2E0EC2B600ACA6F0 /* XCRemoteSwiftPackageReference "markdown-webview" */,
+				EE8134532E0EC65B00ACA6F0 /* XCRemoteSwiftPackageReference "swift-markdown" */,
 			);
 			productRefGroup = BEFC2E212012DCA300643E6E /* Products */;
 			projectDirPath = "";
@@ -717,6 +728,14 @@
 				minimumVersion = 2.0.1;
 			};
 		};
+		EE8134532E0EC65B00ACA6F0 /* XCRemoteSwiftPackageReference "swift-markdown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftlang/swift-markdown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
 		EE9D900B2DF2D95000E75BF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
@@ -740,6 +759,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EE81344B2E0EC2B600ACA6F0 /* XCRemoteSwiftPackageReference "markdown-webview" */;
 			productName = MarkdownWebView;
+		};
+		EE8134542E0EC65B00ACA6F0 /* Markdown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE8134532E0EC65B00ACA6F0 /* XCRemoteSwiftPackageReference "swift-markdown" */;
+			productName = Markdown;
 		};
 		EE9D90102DF2DBFC00E75BF9 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -19,6 +19,9 @@ class ViewController: GroupTableController {
             ],
             [
                 XYRow<MainCell>(viewData: MainCellItem(dest: .dest(EventController.self)))
+            ],
+            [
+                XYRow<MainCell>(viewData: MainCellItem(dest: .dest(MarkdownosaurVC.self)))
             ]
         ]
         tableView.delegate = self
